@@ -2,7 +2,7 @@
   "name": "daily-routine",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://buildit-poland.github.io/daily-routine/",
+  "homepage": ".",
   "dependencies": {
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -10,12 +10,17 @@
     "styled-components": "^4.3.1"
   },
   "devDependencies": {
-    "gh-pages": "^2.0.1"
+    "cypress": "^3.3.1",
+    "gh-pages": "^2.0.1",
+    "serve": "^11.0.1",
+    "serve-handler": "^6.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "e2e:dev": "node -e 'require(\"./src/e2eConfig\").e2eRunDev(\"http://localhost:3000\")'",
+    "e2e": "npm run build && node -e 'require(\"./src/e2eConfig\").e2eRun(\"5000\")'",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
