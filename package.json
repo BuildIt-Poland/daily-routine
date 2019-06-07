@@ -4,11 +4,13 @@
   "private": true,
   "homepage": "https://buildit-poland.github.io/daily-routine/",
   "dependencies": {
-    "gh-pages": "^2.0.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1",
     "styled-components": "^4.3.1"
+  },
+  "devDependencies": {
+    "gh-pages": "^2.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
