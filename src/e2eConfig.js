@@ -36,7 +36,7 @@ const runCypress = () =>
 
 const e2eRunDev = baseUrl => runApp().then(openCypress(baseUrl));
 
-const e2eRun = (port = 5000) => server().listen(port, runCypress);
+const e2eRun = (port = 3000) => server().listen(port, runCypress);
 
 module.exports = {
   e2eRun,
