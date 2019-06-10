@@ -21,17 +21,12 @@ jobs:
       - run:
           name: Run E2E tests on release ready code
           command: |
-            if [ "${CIRCLE_BRANCH}" == "feature/DR-15-ci-cd-setup" ]; then
+            if [ "${CIRCLE_BRANCH}" == "master" ]; then
               npm run e2e
             fi
-      - add_ssh_keys:
-          fingerprints:
-            - "93:d0:00:0b:e9:86:0a:4c:eb:e4:25:24:9e:6d:e6:a7"
       - deploy:
           name: Deploy DailyRoutine to GitHub Pages
           command: |
-            if [ "${CIRCLE_BRANCH}" == "feature/DR-15-ci-cd-setup" ]; then
-              git config --global user.email "$GH_EMAIL"
-              git config --global user.name "$GH_NAME"
-              npm run deploy
+            if [ "${CIRCLE_BRANCH}" == "master" ]; then
+              echo "Perform deployment script"
             fi
