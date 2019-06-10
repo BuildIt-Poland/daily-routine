@@ -1,6 +1,6 @@
 import React from 'react';
 
-function LandingRolePage() {
+function LandingPage() {
   return (
     <section>
       <h1>Daily Routine</h1>
@@ -8,4 +8,4 @@ function LandingRolePage() {
   );
 }
 
-export default LandingRolePage;
+export default LandingPage;
