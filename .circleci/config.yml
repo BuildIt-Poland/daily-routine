@@ -28,7 +28,5 @@ jobs:
           name: Deploy DailyRoutine to GitHub Pages
           command: |
             if [ "${CIRCLE_BRANCH}" == "feature/DR-15-ci-cd-setup" ]; then
-              git config --global user.email "marcin.golawski@wipro.com"
-              git config --global user.name "BuildIt-Poland"
               npm run deploy
             fi
