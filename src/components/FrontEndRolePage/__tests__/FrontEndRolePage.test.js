@@ -1,11 +1,11 @@
 import React from 'react';
 import { create } from 'react-test-renderer';
 
-import DevOpsRolePage from '../DevOpsRolePage';
+import FrontEndRolePage from '../FrontEndRolePage';
 
-describe('COMPONENT - DevOpsRolePage', () => {
+describe('COMPONENT - FrontEndRolePage', () => {
   it('renders correctly', () => {
-    const component = create(<DevOpsRolePage />);
+    const component = create(<FrontEndRolePage />);
 
     expect(component.toJSON()).toMatchSnapshot();
   });

@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`COMPONENT - FrontEndRolePage renders correctly 1`] = `
+<section>
+  <h1>
+    FrontEnd
+  </h1>
+</section>
+`;
