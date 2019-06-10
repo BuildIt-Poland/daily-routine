@@ -1,4 +1,4 @@
 export const ROOT_PATH = '/';
-export const FRONT_END_PATH = '/frontend';
-export const BACK_END_PATH = '/backend';
-export const DEV_OPS_PATH = '/devops';
+export const FRONT_END_ROLE_PATH = '/frontend';
+export const BACK_END_ROLE_PATH = '/backend';
+export const DEV_OPS_ROLE_PATH = '/devops';

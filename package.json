@@ -4,21 +4,21 @@
   "private": true,
   "homepage": "https://buildit-poland.github.io/daily-routine/",
   "dependencies": {
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-router-dom": "^5.0.1",
+    "react": "16.8.6",
+    "react-dom": "16.8.6",
+    "react-router-dom": "5.0.1",
     "react-scripts": "3.0.1",
-    "styled-components": "^4.3.1"
+    "styled-components": "4.3.1"
   },
   "devDependencies": {
-    "cypress": "^3.3.1",
-    "serve": "^11.0.1",
-    "serve-handler": "^6.0.1",
-    "eslint": "^5.16.0",
-    "gh-pages": "^2.0.1",
-    "husky": "^2.4.0",
-    "lint-staged": "^8.2.0",
-    "prettier": "^1.18.0"
+    "cypress": "3.3.1",
+    "serve": "11.0.1",
+    "serve-handler": "6.0.1",
+    "eslint": "5.16.0",
+    "gh-pages": "2.0.1",
+    "husky": "2.4.0",
+    "lint-staged": "8.2.0",
+    "prettier": "1.18.0"
   },
   "scripts": {
     "start": "react-scripts start",

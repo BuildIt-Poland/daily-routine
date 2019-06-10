@@ -1,6 +1,6 @@
 import React from 'react';
 
-function DevOps() {
+function DevOpsRolePage() {
   return (
     <section>
       <h1>DevOps</h1>
@@ -8,4 +8,4 @@ function DevOps() {
   );
 }
 
-export default DevOps;
+export default DevOpsRolePage;
