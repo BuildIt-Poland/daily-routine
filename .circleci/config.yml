@@ -18,12 +18,15 @@ jobs:
       - run:
           name: Build Application
           command: 'npm run build'
-      - deploy:
+      - run:
           name: Run E2E tests on release ready code
           command: |
             if [ "${CIRCLE_BRANCH}" == "feature/DR-15-ci-cd-setup" ]; then
               npm run e2e
             fi
+      - add_ssh_keys:
+        fingerprints:
+          - "93:d0:00:0b:e9:86:0a:4c:eb:e4:25:24:9e:6d:e6:a7"
       - deploy:
           name: Deploy DailyRoutine to GitHub Pages
           command: |
