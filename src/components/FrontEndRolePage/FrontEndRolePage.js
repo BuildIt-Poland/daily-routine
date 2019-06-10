@@ -1,6 +1,6 @@
 import React from 'react';
 
-function FrontEnd() {
+function FrontEndRolePage() {
   return (
     <section>
       <h1>FrontEnd</h1>
@@ -8,4 +8,4 @@ function FrontEnd() {
   );
 }
 
-export default FrontEnd;
+export default FrontEndRolePage;

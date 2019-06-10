@@ -1,6 +1,6 @@
 import React from 'react';
 
-function BackEnd() {
+function BackEndRolePage() {
   return (
     <section>
       <h1>BackEnd</h1>
@@ -8,4 +8,4 @@ function BackEnd() {
   );
 }
 
-export default BackEnd;
+export default BackEndRolePage;
