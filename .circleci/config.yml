@@ -18,3 +18,8 @@ jobs:
       - run:
           name: Build Application
           command: 'npm run build'
+  deploy:
+    branches:
+      only:
+        - master
+    command: 'npm run deploy'
