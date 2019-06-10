@@ -19,9 +19,8 @@ jobs:
           name: Build Application
           command: 'npm run build'
       - deploy:
-          filters:
-            branches:
-              only:
-                - master
           name: Deploy DailyRoutine to GitHub Pages
-          command: 'npm run deploy'
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "master" ]; then
+              npm run deploy
+            fi
