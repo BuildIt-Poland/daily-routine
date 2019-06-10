@@ -10,13 +10,18 @@
     "styled-components": "^4.3.1"
   },
   "devDependencies": {
-    "gh-pages": "^2.0.1"
+    "eslint": "^5.16.0",
+    "gh-pages": "^2.0.1",
+    "husky": "^2.4.0",
+    "lint-staged": "^8.2.0",
+    "prettier": "^1.18.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "lint": "eslint \"src/**/*.js\"",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
@@ -34,5 +39,22 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "none",
+    "printWidth": 120
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --single-quote --write",
+      "npm run lint",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }
