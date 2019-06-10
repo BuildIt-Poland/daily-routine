@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`COMPONENT - App renders correctly default route 1`] = `
+<main>
+  <section>
+    <h1>
+      Daily Routine
+    </h1>
+  </section>
+</main>
+`;
