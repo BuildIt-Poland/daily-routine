@@ -17,4 +17,4 @@ jobs:
           command: 'npm test'
       - run:
           name: Build Application
-          command: 'npm build'
+          command: 'npm run build'
