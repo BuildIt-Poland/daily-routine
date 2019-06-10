@@ -19,8 +19,16 @@ jobs:
           name: Build Application
           command: 'npm run build'
       - deploy:
+          name: Run E2E tests on release ready code
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "feature/DR-15-ci-cd-setup" ]; then
+              npm run e2e
+            fi
+      - deploy:
           name: Deploy DailyRoutine to GitHub Pages
           command: |
             if [ "${CIRCLE_BRANCH}" == "feature/DR-15-ci-cd-setup" ]; then
+              git config --global user.email "marcin.golawski@wipro.com"
+              git config --global user.name "BuildIt-Poland"
               npm run deploy
             fi
