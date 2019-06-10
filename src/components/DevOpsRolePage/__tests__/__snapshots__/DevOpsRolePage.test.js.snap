@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`COMPONENT - DevOpsRolePage renders correctly 1`] = `
+<section>
+  <h1>
+    DevOps
+  </h1>
+</section>
+`;
