@@ -4,22 +4,28 @@
   "private": true,
   "homepage": "https://buildit-poland.github.io/daily-routine/",
   "dependencies": {
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
+    "react": "16.8.6",
+    "react-dom": "16.8.6",
+    "react-router-dom": "5.0.1",
     "react-scripts": "3.0.1",
-    "styled-components": "^4.3.1"
+    "styled-components": "4.3.1"
   },
   "devDependencies": {
-    "eslint": "^5.16.0",
-    "gh-pages": "^2.0.1",
-    "husky": "^2.4.0",
-    "lint-staged": "^8.2.0",
-    "prettier": "^1.18.0"
+    "cypress": "3.3.1",
+    "serve": "11.0.1",
+    "serve-handler": "6.0.1",
+    "eslint": "5.16.0",
+    "gh-pages": "2.0.1",
+    "husky": "2.4.0",
+    "lint-staged": "8.2.0",
+    "prettier": "1.18.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "e2e:dev": "node -e 'require(\"./src/e2eConfig\").e2eRunDev(\"http://localhost:3000\")'",
+    "e2e": "PUBLIC_URL=http://localhost:3000 npm run build && node -e 'require(\"./src/e2eConfig\").e2eRun(\"3000\")'",
     "eject": "react-scripts eject",
     "lint": "eslint \"src/**/*.js\"",
     "predeploy": "npm run build",
