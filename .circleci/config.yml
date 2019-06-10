@@ -18,11 +18,9 @@ jobs:
       - run:
           name: Build Application
           command: 'npm run build'
-  deploy:
-    branches:
-      only:
-        - master
-    steps:
-      - run :
+      - deploy:
+          branches:
+            only:
+              - master
         name: Deploy DailyRoutine to GitHub Pages
         command: 'npm run deploy'
