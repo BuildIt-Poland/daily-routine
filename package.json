@@ -11,9 +11,13 @@
   },
   "devDependencies": {
     "cypress": "^3.3.1",
-    "gh-pages": "^2.0.1",
     "serve": "^11.0.1",
-    "serve-handler": "^6.0.1"
+    "serve-handler": "^6.0.1",
+    "eslint": "^5.16.0",
+    "gh-pages": "^2.0.1",
+    "husky": "^2.4.0",
+    "lint-staged": "^8.2.0",
+    "prettier": "^1.18.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -22,6 +26,7 @@
     "e2e:dev": "node -e 'require(\"./src/e2eConfig\").e2eRunDev(\"http://localhost:3000\")'",
     "e2e": "PUBLIC_URL=http://localhost:3000 npm run build && node -e 'require(\"./src/e2eConfig\").e2eRun(\"3000\")'",
     "eject": "react-scripts eject",
+    "lint": "eslint \"src/**/*.js\"",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
@@ -39,5 +44,22 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "none",
+    "printWidth": 120
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --single-quote --write",
+      "npm run lint",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }
