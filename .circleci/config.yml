@@ -22,4 +22,7 @@ jobs:
     branches:
       only:
         - master
-    command: 'npm run deploy'
+    steps:
+      - run :
+        name: Deploy DailyRoutine to GitHub Pages
+        command: 'npm run deploy'
