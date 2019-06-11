@@ -36,6 +36,6 @@ jobs:
       - deploy:
           name: Deploy DailyRoutine to GitHub Pages
           command: |
-            if [ "${CIRCLE_BRANCH}" == "feature/DR17-deployment-aws" ]; then
+            if [ "${CIRCLE_BRANCH}" == "master" ]; then
               npm run deploy
             fi
