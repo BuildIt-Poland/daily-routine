@@ -8,6 +8,7 @@ jobs:
     working_directory: ~/repo
     steps:
       - checkout
+      - aws-cli/install
       - run:
           name: Install Dependencies
           command: 'npm install'
