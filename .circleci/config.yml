@@ -27,13 +27,15 @@ jobs:
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
               npm run e2e
             fi
+  deploy:
+    docker:
+      - image: circleci/python:2.7-jessie
+    working_directory: ~/repo
+    steps:
       - run:
-          name: Install AWS-CLI
-          command: |
-            apt -y update
-            apt install -y python3-pip
-            pip3 install aws-cli
-      - deploy:
+          name: Install awscli
+          command: sudo pip install awscli
+      - run:
           name: Deploy DailyRoutine to GitHub Pages
           command: |
             if [ "${CIRCLE_BRANCH}" == "feature/DR17-deployment-aws" ]; then
