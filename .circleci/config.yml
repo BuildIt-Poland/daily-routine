@@ -30,6 +30,6 @@ jobs:
       - deploy:
           name: Deploy DailyRoutine to GitHub Pages
           command: |
-            if [ "${CIRCLE_BRANCH}" == "master" ]; then
+            if [ "${CIRCLE_BRANCH}" == "feature/DR17-deployment-aws" ]; then
               echo "Perform deployment script"
             fi
