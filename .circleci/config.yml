@@ -1,6 +1,4 @@
 version: 2
-orbs:
-  aws-cli: circleci/aws-cli@0.1.13
 jobs:
   build:
     docker:
@@ -8,7 +6,6 @@ jobs:
     working_directory: ~/repo
     steps:
       - checkout
-      - aws-cli/install
       - run:
           name: Install Dependencies
           command: 'npm install'
@@ -30,6 +27,9 @@ jobs:
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
               npm run e2e
             fi
+      - run:
+        name: Install AWS-CLI
+        command: sudo apt-get -y -qq install awscli
       - deploy:
           name: Deploy DailyRoutine to GitHub Pages
           command: |
