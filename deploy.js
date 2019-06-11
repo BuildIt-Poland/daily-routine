@@ -13,6 +13,10 @@ const BUILD_PATH = './build';
 const S3_BUCKET_PATH = process.env.S3_BUCKET_PATH;
 const AWS_S3_UPLOAD_CMD = `aws s3 sync ${BUILD_PATH} "${S3_BUCKET_PATH}" --acl public-read --delete`;
 
+async function installAwsCli() {
+  await exec('pip install awscli --upgrade --user');
+}
+
 // Ensure that dependencies are installed correctly
 async function checkDependencies() {
   console.log('Checking dependencies...');
@@ -45,6 +49,7 @@ async function deployApp() {
 
 checkDependencies()
   .then(checkBuild)
+  .then(installAwsCli)
   .then(deployApp)
   .catch(error => {
     console.error(`Deploy failed: ${error}`);
