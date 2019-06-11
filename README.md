@@ -1,4 +1,5 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![CircleCI](https://circleci.com/gh/BuildIt-Poland/daily-routine/tree/master.svg?style=svg)](https://circleci.com/gh/BuildIt-Poland/daily-routine/tree/master)
 
 ## Available Scripts
 
