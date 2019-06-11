@@ -30,8 +30,8 @@ jobs:
       - run:
           name: Install AWS-CLI
           command: |
-            apt-get -y -qq update
-            apt-get -y -qq install python3
+            apt -y -qq update
+            apt -y -qq install python3
             curl -O https://bootstrap.pypa.io/get-pip.py
             python3 get-pip.py --user
             pip install awscli --upgrade --user
