@@ -28,8 +28,8 @@ jobs:
               npm run e2e
             fi
       - run:
-        name: Install AWS-CLI
-        command: sudo apt-get -y -qq install awscli
+          name: Install AWS-CLI
+          command: sudo apt-get -y -qq install awscli
       - deploy:
           name: Deploy DailyRoutine to GitHub Pages
           command: |
