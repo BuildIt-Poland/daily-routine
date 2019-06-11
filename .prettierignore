@@ -1,3 +1,4 @@
 package.json
 package-lock.json
-.travis.yml
+.circleci
+src/styles/sanitize.css
