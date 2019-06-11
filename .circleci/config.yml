@@ -28,13 +28,13 @@ jobs:
               npm run e2e
             fi
       - run:
-        name: Install AWS-CLI
-        command: |
-          apt-get -y -qq update
-          apt-get -y -qq install python3.4-dev
-          curl -O https://bootstrap.pypa.io/get-pip.py
-          python3.4 get-pip.py --user
-          pip install awscli --upgrade --user
+          name: Install AWS-CLI
+          command: |
+            apt-get -y -qq update
+            apt-get -y -qq install python3.4-dev
+            curl -O https://bootstrap.pypa.io/get-pip.py
+            python3.4 get-pip.py --user
+            pip install awscli --upgrade --user
       - deploy:
           name: Deploy DailyRoutine to GitHub Pages
           command: |
