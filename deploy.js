@@ -17,7 +17,7 @@ async function installAwsCli() {
   console.log('Installing AWS-CLI...');
   try {
     await execAsync('pip install awscli --upgrade --user');
-    console.log('AWS-CLI installed correctly.')
+    console.log('AWS-CLI installed')
   } catch (err) {
     throw Error(err);
   }
@@ -55,7 +55,7 @@ async function deployApp() {
 
 checkDependencies()
   .then(checkBuild)
-  .then(installAwsCli)
+  // .then(installAwsCli)
   .then(deployApp)
   .catch(err => {
     console.error(`Deploy failed: ${err}`);
