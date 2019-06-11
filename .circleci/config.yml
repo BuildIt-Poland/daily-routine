@@ -13,10 +13,13 @@ jobs:
           name: Run Linter
           command: 'npm run lint'
       - run:
+          name: Code Formatting Check
+          command: 'npm run format:check'
+      - run:
           name: Run Unit Tests
           command: 'npm test'
       - run:
-          name: Build Application
+          name: Perform Test Application Build
           command: 'npm run build'
       - run:
           name: Run E2E tests on release ready code
