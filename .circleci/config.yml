@@ -30,7 +30,7 @@ jobs:
       - run:
           name: Install AWS-CLI
           command: |
-            apt -y update && apt -y install python3-pip
+            apt -y update || apt -y install python3-pip
             pip3 install --upgrade pip -i https://pypi.python.org/simple
             pip3 install awscli
       - deploy:
