@@ -4,6 +4,7 @@ import { Route, withRouter } from 'react-router-dom';
 
 import generateTheme from '../../styles/generateTheme';
 import { ROOT_PATH, FRONT_END_ROLE_PATH, BACK_END_ROLE_PATH, DEV_OPS_ROLE_PATH } from '../../constants/routes';
+import Header from '../Header';
 import LandingPage from '../LandingPage';
 import FrontEndRolePage from '../FrontEndRolePage';
 import BackEndRolePage from '../BackEndRolePage';
@@ -15,14 +16,17 @@ const Main = styled.main`
 
 function App({ location }) {
   return (
-    <ThemeProvider theme={generateTheme(location.pathname)}>
-      <Main>
-        <Route exact path={ROOT_PATH} component={LandingPage} />
-        <Route exact path={FRONT_END_ROLE_PATH} component={FrontEndRolePage} />
-        <Route exact path={BACK_END_ROLE_PATH} component={BackEndRolePage} />
-        <Route exact path={DEV_OPS_ROLE_PATH} component={DevOpsRolePage} />
-      </Main>
-    </ThemeProvider>
+    <>
+      <Header />
+      <ThemeProvider theme={generateTheme(location.pathname)}>
+        <Main>
+          <Route exact path={ROOT_PATH} component={LandingPage} />
+          <Route exact path={FRONT_END_ROLE_PATH} component={FrontEndRolePage} />
+          <Route exact path={BACK_END_ROLE_PATH} component={BackEndRolePage} />
+          <Route exact path={DEV_OPS_ROLE_PATH} component={DevOpsRolePage} />
+        </Main>
+      </ThemeProvider>
+    </>
   );
 }
 

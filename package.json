@@ -10,11 +10,14 @@
     "styled-components": "4.3.1"
   },
   "devDependencies": {
+    "@testing-library/react": "8.0.1",
     "check-dependencies": "1.1.0",
     "cypress": "3.3.1",
     "eslint": "5.16.0",
     "gh-pages": "2.0.1",
     "husky": "2.4.0",
+    "jest-dom": "3.5.0",
+    "jest-styled-components": "6.3.1",
     "lint-staged": "8.2.0",
     "prettier": "1.18.0",
     "prop-types": "15.7.2",
