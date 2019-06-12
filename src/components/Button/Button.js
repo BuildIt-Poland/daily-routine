@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 import {
   colorWhite,
@@ -44,5 +45,11 @@ function Button({ label, children, className }) {
     </StyledButton>
   );
 }
+
+Button.propTypes = {
+  label: PropTypes.string.isRequired,
+  children: PropTypes.node,
+  className: PropTypes.string
+};
 
 export default Button;

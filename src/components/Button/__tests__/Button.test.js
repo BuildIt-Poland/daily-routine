@@ -1,0 +1,12 @@
+import React from 'react';
+import { create } from 'react-test-renderer';
+
+import Button from '../Button';
+
+describe('COMPONENT - Button', () => {
+  it('renders correctly', () => {
+    const component = create(<Button label="Confess my mistake" />);
+
+    expect(component.toJSON()).toMatchSnapshot();
+  });
+});
