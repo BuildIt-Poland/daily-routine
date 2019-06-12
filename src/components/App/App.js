@@ -9,19 +9,19 @@ import FrontEndRolePage from '../FrontEndRolePage';
 import BackEndRolePage from '../BackEndRolePage';
 import DevOpsRolePage from '../DevOpsRolePage';
 
-const Wrapper = styled.main`
+const Main = styled.main`
   background-color: ${props => props.theme.primaryColor};
 `;
 
 function App({ location }) {
   return (
     <ThemeProvider theme={generateTheme(location.pathname)}>
-      <Wrapper>
+      <Main>
         <Route exact path={ROOT_PATH} component={LandingPage} />
         <Route exact path={FRONT_END_ROLE_PATH} component={FrontEndRolePage} />
         <Route exact path={BACK_END_ROLE_PATH} component={BackEndRolePage} />
         <Route exact path={DEV_OPS_ROLE_PATH} component={DevOpsRolePage} />
-      </Wrapper>
+      </Main>
     </ThemeProvider>
   );
 }
