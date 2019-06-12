@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`COMPONENT - Header Logo renders correctly 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+}
+
+.c1 {
+  padding-top: 0.35rem;
+  padding-right: 0.8rem;
+  margin-right: 0.8rem;
+  border-right: 1px solid #222222;
+}
+
+.c2 {
+  margin: 0;
+  padding: 0;
+  color: #222222;
+  font-size: 1.0rem;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+<Link
+  className="c0"
+  to="/"
+>
+  <div
+    className="c1"
+  >
+    <LogoIcon />
+  </div>
+  <p
+    className="c2"
+  >
+    Daily scrum 
+    <br />
+    absurd answers
+  </p>
+</Link>
+`;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Layout from './Wrapper';
+import Layout from './Layout';
 import Logo from './Logo';
 
 function Header() {
