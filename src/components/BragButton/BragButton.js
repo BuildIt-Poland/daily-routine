@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { Lightbulb } from '../Icons';
 import Button from '../Button';
+import { Lightbulb } from '../Icons';
 import { colorGreen } from '../../styles/designTokens';
 
 const GreenButton = styled(Button)`
