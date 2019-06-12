@@ -4,6 +4,8 @@ import { create } from 'react-test-renderer';
 
 import App from '../App';
 
+jest.mock('../../Header', () => 'Header');
+
 describe('COMPONENT - App', () => {
   it('renders correctly default route', () => {
     const component = create(

@@ -1,11 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`COMPONENT - App renders correctly default route 1`] = `
-<main>
-  <section>
-    <h1>
-      Daily Routine
-    </h1>
-  </section>
-</main>
+Array [
+  <Header />,
+  .c0 {
+  background-color: #80cbd6;
+}
+
+<main
+    className="c0"
+  >
+    <section>
+      <h1>
+        Daily Routine
+      </h1>
+    </section>
+  </main>,
+]
 `;
