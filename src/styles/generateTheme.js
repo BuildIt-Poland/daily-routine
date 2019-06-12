@@ -24,7 +24,7 @@ function getColors(currentLocation) {
 
 function generateTheme(currentLocation) {
   return {
-    ...getColors(currentLocation)
+    ...getColors(currentLocation.toLowerCase())
   };
 }
 
