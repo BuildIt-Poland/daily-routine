@@ -2,7 +2,6 @@
   "name": "daily-routine",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://buildit-poland.github.io/daily-routine/",
   "dependencies": {
     "react": "16.8.6",
     "react-dom": "16.8.6",
@@ -11,6 +10,7 @@
     "styled-components": "4.3.1"
   },
   "devDependencies": {
+    "check-dependencies": "1.1.0",
     "cypress": "3.3.1",
     "eslint": "5.16.0",
     "gh-pages": "2.0.1",
@@ -32,8 +32,7 @@
     "lint": "eslint \"src/**/*.js\"",
     "format": "prettier --write \"src/**/*.js\"",
     "format:check": "prettier --list-different \"src/**/*.js\"",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "node ./deploy.js"
   },
   "eslintConfig": {
     "extends": "react-app"
