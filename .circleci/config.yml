@@ -27,9 +27,15 @@ jobs:
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
               npm run e2e
             fi
+      - run:
+          name: Install AWS-CLI
+          command: |
+            apt -y update || apt -y install python3-pip
+            pip3 install --upgrade pip -i https://pypi.python.org/simple
+            pip3 install awscli
       - deploy:
           name: Deploy DailyRoutine to GitHub Pages
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
-              echo "Perform deployment script"
+              npm run deploy
             fi
