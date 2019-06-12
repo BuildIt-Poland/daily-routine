@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
-import { fontWeightNormal, fontWeightBold, fontMedium } from '../../styles/designTokens';
+import { fontWeightNormal, fontWeightBold, fontMedium, colorBlack, colorLightTeal } from '../../styles/designTokens';
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -16,7 +16,12 @@ const GlobalStyle = createGlobalStyle`
     overflow-y: scroll;
     font-weight: ${fontWeightNormal};
     font-size: ${fontMedium};
+    color: ${colorBlack};
     line-height: 1.4;
+  }
+
+  svg {
+    display: block;
   }
 
   strong {
