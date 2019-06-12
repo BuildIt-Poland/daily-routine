@@ -8,24 +8,6 @@ exports[`COMPONENT - App renders correctly default route 1`] = `
     <h1>
       Daily Routine
     </h1>
-    <a
-      href="/frontend"
-      onClick={[Function]}
-    >
-      FrontEnd
-    </a>
-    <a
-      href="/backend"
-      onClick={[Function]}
-    >
-      BackEnd
-    </a>
-    <a
-      href="/devops"
-      onClick={[Function]}
-    >
-      DevOps
-    </a>
   </section>
 </main>
 `;

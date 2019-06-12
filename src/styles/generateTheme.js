@@ -22,7 +22,7 @@ function generateTheme(currentLocation) {
     [ROOT_PATH]: getColorTheme(colorLightTeal, colorLightTeal)
   };
 
-  return colorTheme[currentLocation] || colorTheme[ROOT_PATH];
+  return colorTheme[currentLocation.toLowerCase()] || colorTheme[ROOT_PATH];
 }
 
 export default generateTheme;
