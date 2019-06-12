@@ -3,9 +3,9 @@ import { create } from 'react-test-renderer';
 
 import Button from '../Button';
 
-describe('COMPONENT - Button', () => {
+describe('COMPONENT - BragButton', () => {
   it('renders correctly', () => {
-    const component = create(<Button label="Confess my mistake" />);
+    const component = create(<Button label="Confess" />);
 
     expect(component.toJSON()).toMatchSnapshot();
   });
