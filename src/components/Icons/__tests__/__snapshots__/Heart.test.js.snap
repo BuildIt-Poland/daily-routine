@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`COMPONENT - Icons Heart renders correctly 1`] = `
+<svg
+  height="11"
+  viewBox="0 0 12 11"
+  width="12"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M6 11S0 7.336 0 3.075C0 1.377 1.343 0 3 0s3 1.377 3 3.075C6 1.377 7.343 0 9 0s3 1.377 3 3.075C12 7.336 6 11 6 11"
+    fill="#222"
+    opacity="0.2"
+  />
+</svg>
+`;
