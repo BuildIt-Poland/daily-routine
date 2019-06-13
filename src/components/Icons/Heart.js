@@ -2,11 +2,17 @@ import React from 'react';
 
 function Heart() {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="11" viewBox="0 0 12 11">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="17"
+      height="18"
+      viewBox="0 0 17 18"
+      aria-labelledby="buildit-logo-title"
+    >
+      <title id="buildit-logo-title">LOVE</title>
       <path
         fill="#222"
-        opacity="0.2"
-        d="M6 11S0 7.336 0 3.075C0 1.377 1.343 0 3 0s3 1.377 3 3.075C6 1.377 7.343 0 9 0s3 1.377 3 3.075C12 7.336 6 11 6 11"
+        d="M8.5 17.5S.113 12.504.113 6.694a4.194 4.194 0 1 1 8.387 0 4.194 4.194 0 0 1 8.388 0C16.887 12.504 8.5 17.5 8.5 17.5"
       />
     </svg>
   );
