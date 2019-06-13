@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`COMPONENT - Footer Layout renders correctly 1`] = `
+exports[`COMPONENT - Footer Wrapper renders correctly 1`] = `
 .c0 {
   height: 6rem;
   display: -webkit-box;
