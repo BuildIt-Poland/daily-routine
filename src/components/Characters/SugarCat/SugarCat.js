@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import SugarCatSVG from './SugarCatArtwork';
+import SugarCatArtwork from './SugarCatArtwork';
 
 const Wrapper = styled.div`
-  margin: 6rem 0;
+  margin: 4rem 0 6rem 0;
   display: flex;
   justify-content: center;
 `;
@@ -11,7 +11,7 @@ const Wrapper = styled.div`
 function SugarCat() {
   return (
     <Wrapper>
-      <SugarCatSVG />
+      <SugarCatArtwork />
     </Wrapper>
   );
 }

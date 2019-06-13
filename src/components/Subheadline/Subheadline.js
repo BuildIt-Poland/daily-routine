@@ -1,11 +1,10 @@
 import styled from 'styled-components';
-import { spacingSmall, fontWeightNormal } from '../../styles/designTokens';
+import { spacingSmall, fontWeightNormal, fontLarge } from '../../styles/designTokens';
 
 const Subheadline = styled.h2`
+  font-size: ${fontLarge};
   margin: ${spacingSmall} 0;
-  text-align: center;
   font-weight: ${fontWeightNormal};
-  line-height: 1;
 `;
 
 export default Subheadline;

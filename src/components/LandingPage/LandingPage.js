@@ -9,7 +9,7 @@ function LandingPage() {
   return (
     <Section>
       <Headline>Don't know what to say?</Headline>
-      <Subheadline>Find your perfect scenario for incoming daily.</Subheadline>
+      <Subheadline>Worry not! Find your perfect scenario for incoming daily.</Subheadline>
       <SugarCat />
     </Section>
   );

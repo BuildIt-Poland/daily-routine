@@ -2,7 +2,7 @@
 
 exports[`COMPONENT - Characters SugarCat renders correctly 1`] = `
 .c0 {
-  margin: 6rem 0;
+  margin: 4rem 0 6rem 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;

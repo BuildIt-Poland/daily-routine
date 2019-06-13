@@ -12,7 +12,7 @@ const StyledButton = styled(Button)`
 function BragButton() {
   return (
     <StyledButton to="/" icon={<Icon />}>
-      Brag about my achievements
+      Brag about my efforts
     </StyledButton>
   );
 }

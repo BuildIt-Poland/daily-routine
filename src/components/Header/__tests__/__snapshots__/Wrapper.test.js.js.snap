@@ -1,10 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`COMPONENT - Header Layout renders correctly 1`] = `
+exports[`COMPONENT - Header Wrapper renders correctly 1`] = `
 .c0 {
   width: 100%;
   background: #ffffff;
-  height: 4rem;
+  height: 6rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -13,7 +13,7 @@ exports[`COMPONENT - Header Layout renders correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 0 1.6rem;
+  padding: 0 2rem;
 }
 
 <header

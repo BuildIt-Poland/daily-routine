@@ -5,7 +5,6 @@ import {
   fontLarge,
   fontWeightBold,
   borderRadius,
-  spacingSmall,
   spacingMedium,
   darkGreen,
   colorGreen
@@ -17,7 +16,7 @@ const StyledButton = styled.button`
   color: ${colorWhite};
   display: flex;
   align-items: center;
-  padding: ${spacingSmall} 0 ${spacingSmall} ${spacingSmall};
+  padding: 0 ${spacingMedium};
   margin: ${spacingMedium} 0;
   border: 0;
   border-bottom: 0.3rem solid ${darkGreen};
@@ -27,7 +26,7 @@ const StyledButton = styled.button`
   text-align: left;
   text-decoration: none;
   width: 100%;
-  height: 4rem;
+  height: 4.7rem;
 
   &:not(:disabled) {
     cursor: pointer;

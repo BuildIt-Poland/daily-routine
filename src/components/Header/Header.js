@@ -1,13 +1,13 @@
 import React from 'react';
 
-import Layout from './Layout';
+import Wrapper from './Wrapper';
 import Logo from './Logo';
 
 function Header() {
   return (
-    <Layout role="banner">
+    <Wrapper role="banner">
       <Logo />
-    </Layout>
+    </Wrapper>
   );
 }
 
