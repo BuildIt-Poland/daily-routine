@@ -16,7 +16,7 @@ Array [
   margin: 0.8rem 0;
   text-align: center;
   font-weight: 500;
-  line-height: 1.0;
+  line-height: 1;
 }
 
 .c4 {

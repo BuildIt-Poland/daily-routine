@@ -1,5 +1,5 @@
 // Main characters
-export { default as SugarCat } from './SugarCat/SugarCat';
+export { default as SugarCat } from './SugarCat';
 
 // Decors
 export { default as GenderFlower } from './GenderFlower';
