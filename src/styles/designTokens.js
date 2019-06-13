@@ -18,9 +18,9 @@ export const colorYellow = '#f5ca1d';
 export const colorDarkYellow = '#d18b13';
 
 // Spacing (mainly for paddings and margins)
-export const spacingLarge = '2.4rem';
-export const spacingMedium = '1.6rem';
-export const spacingSmall = '0.8rem';
+export const spacingLarge = '3rem';
+export const spacingMedium = '2rem';
+export const spacingSmall = '1rem';
 export const borderWidthThick = '2px';
 export const borderWidthThin = '1px';
 
@@ -31,8 +31,8 @@ export const borderRadius = '0.4rem';
 // Font size
 export const fontSmall = '1.0rem';
 export const fontMedium = '1.4rem';
-export const fontLarge = '1.8rem';
-export const fontXLarge = '2.2rem';
+export const fontLarge = '2.0rem';
+export const fontXLarge = '2.4rem';
 
 // Font weight
 export const fontWeightNormal = 400;

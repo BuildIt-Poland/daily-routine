@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import SugarCatSVG from './SugarCatArtwork';
 
 const Wrapper = styled.div`
-  margin: 6rem 0;
+  margin: 4rem 0;
   display: flex;
   justify-content: center;
 `;
