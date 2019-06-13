@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import SugarCatSVG from './SugarCatSVG';
+import SugarCatSVG from './SugarCatArtwork';
 
 const Wrapper = styled.div`
   margin: 6rem 0;
