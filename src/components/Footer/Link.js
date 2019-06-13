@@ -9,7 +9,7 @@ const Link = styled.a.attrs({
   min-width: 6rem;
   font-size: ${fontMedium};
   color: ${colorBlack};
-  opacity: 0.3;
+  opacity: 0.4;
   display: flex;
   align-items: center;
   justify-content: center;
