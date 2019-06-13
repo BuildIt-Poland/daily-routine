@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Icon from './Icon';
-import Button from '../Button';
 import { colorRed, darkRed } from '../../styles/designTokens';
+import Button from '../Button';
+import Icon from './Icon';
 
 const StyledButton = styled(Button)`
   background: ${colorRed};
