@@ -5,6 +5,7 @@ import { create } from 'react-test-renderer';
 import App from '../App';
 
 jest.mock('../../Header', () => 'Header');
+jest.mock('../../Footer', () => 'Footer');
 
 describe('COMPONENT - App', () => {
   it('renders correctly default route', () => {
