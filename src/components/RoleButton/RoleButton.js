@@ -12,7 +12,7 @@ function RoleButton({ className, children, to }) {
   );
 }
 
-Button.propTypes = {
+RoleButton.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
   to: PropTypes.string.isRequired

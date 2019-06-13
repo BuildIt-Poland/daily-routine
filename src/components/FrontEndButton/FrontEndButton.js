@@ -10,7 +10,7 @@ const StyledRoleButton = styled(RoleButton)`
 `;
 
 function FrontEndButton() {
-  return <StyledRoleButton to="/frontend">Front End Engeener</StyledRoleButton>;
+  return <StyledRoleButton to="/frontend">Front End Engineer</StyledRoleButton>;
 }
 
 export default FrontEndButton;
