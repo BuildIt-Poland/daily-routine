@@ -10,10 +10,11 @@ const Link = styled(LinkBase)`
   text-decoration: none;
   align-items: center;
   height: 100%;
+  cursor: pointer;
 `;
 
 const LogoWrapper = styled.div`
-  padding-top: 0.35rem;
+  padding-top: 0.6rem;
   padding-right: ${spacingSmall};
   margin-right: ${spacingSmall};
   border-right: ${borderWidthThin} solid ${colorBlack};
@@ -23,7 +24,7 @@ const Tagline = styled.p`
   margin: 0;
   padding: 0;
   color: ${colorBlack};
-  font-size: ${fontSmall};
+  font-size: 1.2rem;
   line-height: 1;
   text-transform: uppercase;
 `;
