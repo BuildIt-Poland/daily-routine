@@ -2,8 +2,9 @@
 
 exports[`COMPONENT - Headline renders correctly 1`] = `
 .c0 {
-  margin: 0.8rem 0;
-  text-align: center;
+  font-size: 2.4rem;
+  margin: 0;
+  margin-bottom: 1rem;
 }
 
 <h1

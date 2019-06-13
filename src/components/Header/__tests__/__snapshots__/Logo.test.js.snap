@@ -18,8 +18,8 @@ exports[`COMPONENT - Header Logo renders correctly 1`] = `
 
 .c1 {
   padding-top: 0.6rem;
-  padding-right: 0.8rem;
-  margin-right: 0.8rem;
+  padding-right: 1rem;
+  margin-right: 1rem;
   border-right: 1px solid #222222;
 }
 

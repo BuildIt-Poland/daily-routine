@@ -13,16 +13,16 @@ exports[`COMPONENT - ConfessButton renders correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 0.8rem 0;
-  margin: 1.6rem 0;
+  padding: 0 2rem;
+  margin: 2rem 0;
   border: 0;
   border-bottom: 0.3rem solid #138a1e;
-  border-radius: 0.4rem;
+  border-radius: 0.6rem;
   font-size: 1.8rem;
   font-weight: 700;
   text-align: left;
   width: 100%;
-  height: 4rem;
+  height: 4.7rem;
 }
 
 .c1:not(:disabled) {
@@ -31,8 +31,8 @@ exports[`COMPONENT - ConfessButton renders correctly 1`] = `
 
 .c2 {
   position: absolute;
-  right: 0;
-  bottom: -1rem;
+  right: 0.4rem;
+  bottom: -0.9rem;
 }
 
 .c0 {

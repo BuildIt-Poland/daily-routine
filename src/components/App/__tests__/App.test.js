@@ -6,6 +6,9 @@ import App from '../App';
 
 jest.mock('../../Header', () => 'Header');
 jest.mock('../../Footer', () => 'Footer');
+jest.mock('../../Characters', () => ({
+  SugarCat: 'SugarCat'
+}));
 
 describe('COMPONENT - App', () => {
   it('renders correctly default route', () => {
