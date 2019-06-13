@@ -6,7 +6,7 @@ import { Lightbulb } from '../Icons';
 const Wrapper = styled.div`
   position: absolute;
   right: 0;
-  bottom: -0.8rem;
+  bottom: -1rem;
 `;
 
 function Icon() {
