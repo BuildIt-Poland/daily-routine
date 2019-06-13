@@ -1,8 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`COMPONENT - BackEndRolePage renders correctly 1`] = `
-<section>
-  <h1>
+.c0 {
+  padding: 1.6rem;
+}
+
+.c1 {
+  margin: 0.8rem 0;
+  text-align: center;
+}
+
+<section
+  className="c0"
+>
+  <h1
+    className="c1"
+  >
     BackEnd
   </h1>
 </section>

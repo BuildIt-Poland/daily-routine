@@ -1,6 +1,6 @@
 import React from 'react';
 
-function SugarCat() {
+function SugarCatSVG() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -32,4 +32,4 @@ function SugarCat() {
   );
 }
 
-export default SugarCat;
+export default SugarCatSVG;
