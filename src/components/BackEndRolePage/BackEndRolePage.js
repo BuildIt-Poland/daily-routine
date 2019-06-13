@@ -1,10 +1,12 @@
 import React from 'react';
+import Section from '../Section';
+import Headline from '../Headline';
 
 function BackEndRolePage() {
   return (
-    <section>
-      <h1>BackEnd</h1>
-    </section>
+    <Section>
+      <Headline>BackEnd</Headline>
+    </Section>
   );
 }
 

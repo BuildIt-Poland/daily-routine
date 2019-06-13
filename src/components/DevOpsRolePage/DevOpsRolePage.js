@@ -1,10 +1,12 @@
 import React from 'react';
+import Section from '../Section';
+import Headline from '../Headline';
 
 function DevOpsRolePage() {
   return (
-    <section>
-      <h1>DevOps</h1>
-    </section>
+    <Section>
+      <Headline>DevOps</Headline>
+    </Section>
   );
 }
 
