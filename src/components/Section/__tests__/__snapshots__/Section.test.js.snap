@@ -2,7 +2,7 @@
 
 exports[`COMPONENT - Section renders correctly 1`] = `
 .c0 {
-  padding: 1.6rem;
+  padding: 2rem;
 }
 
 <section

@@ -2,10 +2,9 @@
 
 exports[`COMPONENT - Subheadline renders correctly 1`] = `
 .c0 {
-  margin: 0.8rem 0;
-  text-align: center;
+  font-size: 1.8rem;
+  margin: 1rem 0;
   font-weight: 400;
-  line-height: 1;
 }
 
 <h2

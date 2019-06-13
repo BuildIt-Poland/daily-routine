@@ -1,9 +1,10 @@
 import styled from 'styled-components';
-import { spacingSmall } from '../../styles/designTokens';
+import { spacingSmall, fontXLarge } from '../../styles/designTokens';
 
 const Headline = styled.h1`
-  margin: ${spacingSmall} 0;
-  text-align: center;
+  font-size: ${fontXLarge};
+  margin: 0;
+  margin-bottom: ${spacingSmall};
 `;
 
 export default Headline;

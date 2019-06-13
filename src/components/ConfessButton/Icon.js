@@ -5,8 +5,8 @@ import { SaltGrinder } from '../Icons';
 
 const Wrapper = styled.div`
   position: absolute;
-  right: 0;
-  bottom: -1rem;
+  right: 0.4rem;
+  bottom: -0.9rem;
 `;
 
 function Icon() {
