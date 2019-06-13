@@ -11,7 +11,11 @@ const StyledButton = styled(Button)`
 `;
 
 function ConfessButton() {
-  return <StyledButton icon={<Icon />}>Confess my mistake</StyledButton>;
+  return (
+    <StyledButton to="/" icon={<Icon />}>
+      Confess my mistake
+    </StyledButton>
+  );
 }
 
 export default ConfessButton;

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`COMPONENT - ConfessButton renders correctly 1`] = `
+exports[`COMPONENT - DevOpsButton renders correctly 1`] = `
 .c1 {
   position: relative;
   background: #21c230;
@@ -33,23 +33,24 @@ exports[`COMPONENT - ConfessButton renders correctly 1`] = `
 
 .c2 {
   position: absolute;
-  right: 0;
-  bottom: -1rem;
+  right: 0.8rem;
+  bottom: 0.9rem;
 }
 
 .c0 {
-  background: #eb4640;
-  border-bottom-color: #a32f2a;
+  background: #2784e6;
+  border-bottom-color: #1558a1;
 }
 
-<button
+<Link
   className="c0 c1"
+  to="/devops"
 >
-  Confess my mistake
+  Dev Ops
   <div
     className="c2"
   >
-    <SaltGrinder />
+    <LongArrow />
   </div>
-</button>
+</Link>
 `;

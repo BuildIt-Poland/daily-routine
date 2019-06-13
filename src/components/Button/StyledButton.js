@@ -17,7 +17,7 @@ const StyledButton = styled.button`
   color: ${colorWhite};
   display: flex;
   align-items: center;
-  padding: ${spacingSmall} 0;
+  padding: ${spacingSmall} 0 ${spacingSmall} ${spacingSmall};
   margin: ${spacingMedium} 0;
   border: 0;
   border-bottom: 0.3rem solid ${darkGreen};
@@ -25,6 +25,7 @@ const StyledButton = styled.button`
   font-size: ${fontLarge};
   font-weight: ${fontWeightBold};
   text-align: left;
+  text-decoration: none;
   width: 100%;
   height: 4rem;
 
