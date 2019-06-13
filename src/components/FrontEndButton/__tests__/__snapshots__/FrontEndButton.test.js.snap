@@ -46,7 +46,7 @@ exports[`COMPONENT - FrontEndButton renders correctly 1`] = `
   className="c0 c1"
   to="/frontend"
 >
-  Front End Engeener
+  Front End Engineer
   <div
     className="c2"
   >

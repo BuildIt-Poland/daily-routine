@@ -41,8 +41,9 @@ exports[`COMPONENT - BragButton renders correctly 1`] = `
   background: #21c230;
 }
 
-<button
+<Link
   className="c0 c1"
+  to="/"
 >
   Brag about my achievements
   <div
@@ -50,5 +51,5 @@ exports[`COMPONENT - BragButton renders correctly 1`] = `
   >
     <Lightbulb />
   </div>
-</button>
+</Link>
 `;

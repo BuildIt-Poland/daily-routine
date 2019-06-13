@@ -42,8 +42,9 @@ exports[`COMPONENT - ConfessButton renders correctly 1`] = `
   border-bottom-color: #a32f2a;
 }
 
-<button
+<Link
   className="c0 c1"
+  to="/"
 >
   Confess my mistake
   <div
@@ -51,5 +52,5 @@ exports[`COMPONENT - ConfessButton renders correctly 1`] = `
   >
     <SaltGrinder />
   </div>
-</button>
+</Link>
 `;
