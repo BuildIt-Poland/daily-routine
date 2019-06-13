@@ -2,7 +2,7 @@ import React from 'react';
 import { Link as LinkBase } from 'react-router-dom';
 import styled from 'styled-components';
 
-import { colorBlack, spacingSmall, borderWidthThin, fontSmall } from '../../styles/designTokens';
+import { colorBlack, spacingSmall, borderWidthThin } from '../../styles/designTokens';
 import { Logo as LogoIcon } from '../Icons';
 
 const Link = styled(LinkBase)`
