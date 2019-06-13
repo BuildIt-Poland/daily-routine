@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`COMPONENT - SugarCat renders correctly 1`] = `
+exports[`COMPONENT - Characters SugarCat renders correctly 1`] = `
 .c0 {
   margin: 6rem 0;
   display: -webkit-box;
