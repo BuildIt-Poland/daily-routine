@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import { colorWhite, spacingMedium } from '../../styles/designTokens';
 
-const Layout = styled.header`
+const Wrapper = styled.header`
   width: 100%;
   background: ${colorWhite};
   height: 6rem;
@@ -11,4 +11,4 @@ const Layout = styled.header`
   padding: 0 ${spacingMedium};
 `;
 
-export default Layout;
+export default Wrapper;

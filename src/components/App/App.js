@@ -10,12 +10,12 @@ import LandingPage from '../LandingPage';
 import FrontEndRolePage from '../FrontEndRolePage';
 import BackEndRolePage from '../BackEndRolePage';
 import DevOpsRolePage from '../DevOpsRolePage';
-import Layout from './Layout';
+import Wrapper from './Wrapper';
 
 function App({ location }) {
   return (
     <ThemeProvider theme={generateTheme(location.pathname)}>
-      <Layout>
+      <Wrapper>
         <Header />
         <main>
           <Route exact path={ROOT_PATH} component={LandingPage} />
@@ -24,7 +24,7 @@ function App({ location }) {
           <Route exact path={DEV_OPS_ROLE_PATH} component={DevOpsRolePage} />
         </main>
         <Footer />
-      </Layout>
+      </Wrapper>
     </ThemeProvider>
   );
 }

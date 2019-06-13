@@ -1,11 +1,11 @@
 import React from 'react';
 import { create } from 'react-test-renderer';
 
-import Layout from '../Layout';
+import Wrapper from '../Wrapper';
 
-describe('COMPONENT - Footer Layout', () => {
+describe('COMPONENT - Footer Wrapper', () => {
   it('renders correctly', () => {
-    const component = create(<Layout />);
+    const component = create(<Wrapper />);
 
     expect(component.toJSON()).toMatchSnapshot();
   });

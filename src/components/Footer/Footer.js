@@ -1,13 +1,13 @@
 import React from 'react';
 
 import { Heart, BuilditLogo, GithubLogo } from '../Icons';
-import Layout from './Layout';
+import Wrapper from './Wrapper';
 import Link from './Link';
 import DesktopOnly from './DesktopOnly';
 
 function Footer() {
   return (
-    <Layout>
+    <Wrapper>
       <Link href="https://buildit.wiprodigital.com/">
         Crafted with <Heart /> by <BuilditLogo />
       </Link>
@@ -16,7 +16,7 @@ function Footer() {
         <DesktopOnly>Contribute</DesktopOnly>
       </Link>
       <Link href="https://buildit.wiprodigital.com/careers/">We are hiring!</Link>
-    </Layout>
+    </Wrapper>
   );
 }
 

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import { spacingMedium } from '../../styles/designTokens';
 
-const Layout = styled.footer`
+const Wrapper = styled.footer`
   height: 6rem;
   display: flex;
   align-items: center;
@@ -10,4 +10,4 @@ const Layout = styled.footer`
   padding: 0 ${spacingMedium};
 `;
 
-export default Layout;
+export default Wrapper;
