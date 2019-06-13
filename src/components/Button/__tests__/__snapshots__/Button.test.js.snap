@@ -3,7 +3,7 @@
 exports[`COMPONENT - BragButton renders correctly 1`] = `
 .c0 {
   position: relative;
-  background: #222222;
+  background: #21c230;
   color: #ffffff;
   display: block;
   font-size: 1.8rem;
@@ -12,18 +12,14 @@ exports[`COMPONENT - BragButton renders correctly 1`] = `
   border-radius: 0.4rem;
   text-align: left;
   width: 100%;
-  margin: 1.6rem auto;
-  box-shadow: 0 0.5rem 0.4rem -0.4rem #222222;
+  height: 4rem;
+  margin: 1.6rem 0;
+  border: 0;
+  border-bottom: 0.3rem solid #138a1e;
 }
 
 .c0:not(:disabled) {
   cursor: pointer;
-}
-
-.c0 svg {
-  position: absolute;
-  right: 0;
-  bottom: -1rem;
 }
 
 <button

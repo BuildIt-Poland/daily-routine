@@ -5,7 +5,7 @@ import Button from '../Button';
 
 describe('COMPONENT - BragButton', () => {
   it('renders correctly', () => {
-    const component = create(<Button label="Confess" />);
+    const component = create(<Button>Confess</Button>);
 
     expect(component.toJSON()).toMatchSnapshot();
   });

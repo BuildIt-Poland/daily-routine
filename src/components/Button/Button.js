@@ -3,18 +3,18 @@ import PropTypes from 'prop-types';
 
 import StyledButton from './StyledButton';
 
-function Button({ label, children, className }) {
+function Button({ children, icon, className }) {
   return (
     <StyledButton className={className}>
-      {label}
       {children}
+      {icon}
     </StyledButton>
   );
 }
 
 Button.propTypes = {
-  label: PropTypes.string.isRequired,
   children: PropTypes.node,
+  icon: PropTypes.element,
   className: PropTypes.string
 };
 

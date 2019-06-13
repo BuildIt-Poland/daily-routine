@@ -1,20 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import Icon from './Icon';
 import Button from '../Button';
-import { SaltGrinder } from '../Icons';
-import { colorRed } from '../../styles/designTokens';
+import { colorRed, darkRed } from '../../styles/designTokens';
 
-const RedButton = styled(Button)`
+const StyledButton = styled(Button)`
   background: ${colorRed};
+  border-bottom-color: ${darkRed};
 `;
 
 function ConfessButton() {
-  return (
-    <RedButton label="Confess my mistake">
-      <SaltGrinder />
-    </RedButton>
-  );
+  return <StyledButton icon={<Icon />}>Confess my mistake</StyledButton>;
 }
 
 export default ConfessButton;

@@ -2,17 +2,18 @@ import styled from 'styled-components';
 
 import {
   colorWhite,
-  colorBlack,
   fontLarge,
   fontWeightBold,
   borderRadius,
   spacingSmall,
-  spacingMedium
+  spacingMedium,
+  darkGreen,
+  colorGreen
 } from '../../styles/designTokens';
 
 const StyledButton = styled.button`
   position: relative;
-  background: ${colorBlack};
+  background: ${colorGreen};
   color: ${colorWhite};
   display: block;
   font-size: ${fontLarge};
@@ -21,17 +22,12 @@ const StyledButton = styled.button`
   border-radius: ${borderRadius};
   text-align: left;
   width: 100%;
-  margin: ${spacingMedium} auto;
-  box-shadow: 0 0.5rem 0.4rem -0.4rem ${colorBlack};
-
+  height: 4rem;
+  margin: ${spacingMedium} 0;
+  border: 0;
+  border-bottom: 0.3rem solid ${darkGreen};
   &:not(:disabled) {
     cursor: pointer;
-  }
-
-  svg {
-    position: absolute;
-    right: 0;
-    bottom: -1rem;
   }
 `;
 

@@ -1,20 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import Icon from './Icon';
 import Button from '../Button';
-import { Lightbulb } from '../Icons';
 import { colorGreen } from '../../styles/designTokens';
 
-const GreenButton = styled(Button)`
+const StyledButton = styled(Button)`
   background: ${colorGreen};
 `;
 
 function BragButton() {
-  return (
-    <GreenButton label="Brag about my achievements">
-      <Lightbulb />
-    </GreenButton>
-  );
+  return <StyledButton icon={<Icon />}>Brag about my achievements</StyledButton>;
 }
 
 export default BragButton;
