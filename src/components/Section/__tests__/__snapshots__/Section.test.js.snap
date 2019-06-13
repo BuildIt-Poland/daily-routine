@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`COMPONENT - Section renders correctly 1`] = `
+.c0 {
+  padding: 1.6rem;
+}
+
+<section
+  className="c0"
+/>
+`;

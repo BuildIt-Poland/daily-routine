@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`COMPONENT - Subheadline renders correctly 1`] = `
+.c0 {
+  margin: 0.8rem 0;
+  text-align: center;
+  font-weight: 500;
+  line-height: 1.0;
+}
+
+<h2
+  className="c0"
+/>
+`;

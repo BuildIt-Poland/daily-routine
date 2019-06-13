@@ -1,11 +1,11 @@
 import React from 'react';
 import { create } from 'react-test-renderer';
 
-import SugarCat from '../SugarCat';
+import Subheadline from '../Subheadline';
 
-describe('COMPONENT - Characters SugarCat', () => {
+describe('COMPONENT - Subheadline', () => {
   it('renders correctly', () => {
-    const component = create(<SugarCat />);
+    const component = create(<Subheadline />);
 
     expect(component.toJSON()).toMatchSnapshot();
   });
