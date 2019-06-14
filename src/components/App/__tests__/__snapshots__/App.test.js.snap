@@ -1,6 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`COMPONENT - App renders correctly default route 1`] = `
+.c1 {
+  padding: 2rem;
+}
+
+.c2 {
+  font-size: 2.4rem;
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+.c3 {
+  font-size: 1.8rem;
+  margin: 1rem 0;
+  font-weight: 400;
+}
+
 .c0 {
   min-height: 100%;
   display: grid;
@@ -13,57 +29,39 @@ exports[`COMPONENT - App renders correctly default route 1`] = `
 >
   <Header />
   <main>
-    <LandingPage
-      history={
-        Object {
-          "action": "POP",
-          "block": [Function],
-          "canGo": [Function],
-          "createHref": [Function],
-          "entries": Array [
-            Object {
-              "hash": "",
-              "key": "jieq76",
-              "pathname": "/",
-              "search": "",
-              "state": undefined,
-            },
-          ],
-          "go": [Function],
-          "goBack": [Function],
-          "goForward": [Function],
-          "index": 0,
-          "length": 1,
-          "listen": [Function],
-          "location": Object {
-            "hash": "",
-            "key": "jieq76",
-            "pathname": "/",
-            "search": "",
-            "state": undefined,
-          },
-          "push": [Function],
-          "replace": [Function],
-        }
-      }
-      location={
-        Object {
-          "hash": "",
-          "key": "jieq76",
-          "pathname": "/",
-          "search": "",
-          "state": undefined,
-        }
-      }
-      match={
-        Object {
-          "isExact": true,
-          "params": Object {},
-          "path": "/",
-          "url": "/",
-        }
-      }
-    />
+    <section
+      className="c1"
+    >
+      <h1
+        className="c2"
+      >
+        Don't know what to say?
+      </h1>
+      <h2
+        className="c3"
+      >
+        Worry not! Find your perfect scenario for incoming daily.
+      </h2>
+      <SugarCat />
+      <WideButton
+        to="/frontend"
+        variant="frontend"
+      >
+        Front End Engineer
+      </WideButton>
+      <WideButton
+        to="/backend"
+        variant="backend"
+      >
+        Back End Developer
+      </WideButton>
+      <WideButton
+        to="/devops"
+        variant="devops"
+      >
+        Dev Ops
+      </WideButton>
+    </section>
   </main>
   <Footer />
 </div>
