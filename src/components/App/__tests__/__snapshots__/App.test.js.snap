@@ -2,6 +2,7 @@
 
 exports[`COMPONENT - App renders correctly default route 1`] = `
 .c1 {
+  position: relative;
   padding: 2rem;
 }
 

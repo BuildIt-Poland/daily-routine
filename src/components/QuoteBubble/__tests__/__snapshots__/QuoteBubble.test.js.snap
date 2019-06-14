@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`COMPONENT - QuoteBubble renders correctly 1`] = `
+.c2 {
+  position: absolute;
+  top: 6rem;
+  right: 0;
+}
+
+.c0 {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+}
+
+.c1 {
+  margin: 0;
+  position: absolute;
+  padding: 0.6rem 1.6rem;
+}
+
+<section
+  className="c0"
+>
+  <p
+    className="c1"
+  >
+    Yesterday I was implementing PUT method for missing RESTful API endpoint with complex database transactions.
+  </p>
+  <SpeechBubble />
+  <button
+    className="c2"
+    onClick={[Function]}
+  >
+    <CopyCards />
+  </button>
+</section>
+`;
