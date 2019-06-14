@@ -1,118 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`COMPONENT - App renders correctly default route 1`] = `
-.c1 {
-  padding: 2rem;
-}
-
-.c2 {
-  font-size: 2.4rem;
-  margin: 0;
-  margin-bottom: 1rem;
-}
-
-.c3 {
-  font-size: 1.8rem;
-  margin: 1rem 0;
-  font-weight: 400;
-}
-
-.c4 {
-  position: relative;
-  background: #f5ca1d;
-  color: #ffffff;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 0 2rem;
-  margin: 2rem 0;
-  border: 0;
-  border-bottom: 0.3rem solid #d18b13;
-  border-radius: 0.6rem;
-  font-size: 1.8rem;
-  font-weight: 700;
-  text-align: left;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  width: 100%;
-  height: 4.7rem;
-}
-
-.c4:not(:disabled) {
-  cursor: pointer;
-}
-
-.c6 {
-  position: relative;
-  background: #923be3;
-  color: #ffffff;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 0 2rem;
-  margin: 2rem 0;
-  border: 0;
-  border-bottom: 0.3rem solid #6926a6;
-  border-radius: 0.6rem;
-  font-size: 1.8rem;
-  font-weight: 700;
-  text-align: left;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  width: 100%;
-  height: 4.7rem;
-}
-
-.c6:not(:disabled) {
-  cursor: pointer;
-}
-
-.c7 {
-  position: relative;
-  background: #2784e6;
-  color: #ffffff;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 0 2rem;
-  margin: 2rem 0;
-  border: 0;
-  border-bottom: 0.3rem solid #1558a1;
-  border-radius: 0.6rem;
-  font-size: 1.8rem;
-  font-weight: 700;
-  text-align: left;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  width: 100%;
-  height: 4.7rem;
-}
-
-.c7:not(:disabled) {
-  cursor: pointer;
-}
-
-.c5 {
-  position: absolute;
-  right: 1.3rem;
-  bottom: 1.3rem;
-}
-
 .c0 {
   min-height: 100%;
   display: grid;
@@ -125,108 +13,57 @@ exports[`COMPONENT - App renders correctly default route 1`] = `
 >
   <Header />
   <main>
-    <section
-      className="c1"
-    >
-      <h1
-        className="c2"
-      >
-        Don't know what to say?
-      </h1>
-      <h2
-        className="c3"
-      >
-        Worry not! Find your perfect scenario for incoming daily.
-      </h2>
-      <SugarCat />
-      <a
-        className="c4"
-        href="/frontend"
-        onClick={[Function]}
-        variant={
-          Object {
-            "primaryColor": "#f2de6f",
-            "secondaryColor": "#f5ca1d",
-            "tertiaryColor": "#d18b13",
-          }
+    <LandingPage
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "canGo": [Function],
+          "createHref": [Function],
+          "entries": Array [
+            Object {
+              "hash": "",
+              "key": "jieq76",
+              "pathname": "/",
+              "search": "",
+              "state": undefined,
+            },
+          ],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "index": 0,
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "key": "jieq76",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
         }
-      >
-        Front End Engineer
-        <span
-          className="c5"
-        >
-          <svg
-            height="17"
-            viewBox="0 0 28 17"
-            width="28"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M19.5.015l-2.121 2.121L22.243 7H0v3h22.243l-4.864 4.864 2.121 2.121L27.985 8.5z"
-              fill="#fff"
-            />
-          </svg>
-        </span>
-      </a>
-      <a
-        className="c6"
-        href="/backend"
-        onClick={[Function]}
-        variant={
-          Object {
-            "primaryColor": "#cfaded",
-            "secondaryColor": "#923be3",
-            "tertiaryColor": "#6926a6",
-          }
+      }
+      location={
+        Object {
+          "hash": "",
+          "key": "jieq76",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
         }
-      >
-        Back End Developer
-        <span
-          className="c5"
-        >
-          <svg
-            height="17"
-            viewBox="0 0 28 17"
-            width="28"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M19.5.015l-2.121 2.121L22.243 7H0v3h22.243l-4.864 4.864 2.121 2.121L27.985 8.5z"
-              fill="#fff"
-            />
-          </svg>
-        </span>
-      </a>
-      <a
-        className="c7"
-        href="/devops"
-        onClick={[Function]}
-        variant={
-          Object {
-            "primaryColor": "#93bce6",
-            "secondaryColor": "#2784e6",
-            "tertiaryColor": "#1558a1",
-          }
+      }
+      match={
+        Object {
+          "isExact": true,
+          "params": Object {},
+          "path": "/",
+          "url": "/",
         }
-      >
-        Dev Ops
-        <span
-          className="c5"
-        >
-          <svg
-            height="17"
-            viewBox="0 0 28 17"
-            width="28"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M19.5.015l-2.121 2.121L22.243 7H0v3h22.243l-4.864 4.864 2.121 2.121L27.985 8.5z"
-              fill="#fff"
-            />
-          </svg>
-        </span>
-      </a>
-    </section>
+      }
+    />
   </main>
   <Footer />
 </div>

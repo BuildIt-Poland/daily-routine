@@ -17,102 +17,6 @@ exports[`COMPONENT - LandingPage renders correctly 1`] = `
   font-weight: 400;
 }
 
-.c3 {
-  position: relative;
-  background: #f5ca1d;
-  color: #ffffff;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 0 2rem;
-  margin: 2rem 0;
-  border: 0;
-  border-bottom: 0.3rem solid #d18b13;
-  border-radius: 0.6rem;
-  font-size: 1.8rem;
-  font-weight: 700;
-  text-align: left;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  width: 100%;
-  height: 4.7rem;
-}
-
-.c3:not(:disabled) {
-  cursor: pointer;
-}
-
-.c5 {
-  position: relative;
-  background: #923be3;
-  color: #ffffff;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 0 2rem;
-  margin: 2rem 0;
-  border: 0;
-  border-bottom: 0.3rem solid #6926a6;
-  border-radius: 0.6rem;
-  font-size: 1.8rem;
-  font-weight: 700;
-  text-align: left;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  width: 100%;
-  height: 4.7rem;
-}
-
-.c5:not(:disabled) {
-  cursor: pointer;
-}
-
-.c6 {
-  position: relative;
-  background: #2784e6;
-  color: #ffffff;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 0 2rem;
-  margin: 2rem 0;
-  border: 0;
-  border-bottom: 0.3rem solid #1558a1;
-  border-radius: 0.6rem;
-  font-size: 1.8rem;
-  font-weight: 700;
-  text-align: left;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  width: 100%;
-  height: 4.7rem;
-}
-
-.c6:not(:disabled) {
-  cursor: pointer;
-}
-
-.c4 {
-  position: absolute;
-  right: 1.3rem;
-  bottom: 1.3rem;
-}
-
 <section
   className="c0"
 >
@@ -127,89 +31,23 @@ exports[`COMPONENT - LandingPage renders correctly 1`] = `
     Worry not! Find your perfect scenario for incoming daily.
   </h2>
   <SugarCat />
-  <Link
-    className="c3"
+  <WideButton
     to="/frontend"
-    variant={
-      Object {
-        "primaryColor": "#f2de6f",
-        "secondaryColor": "#f5ca1d",
-        "tertiaryColor": "#d18b13",
-      }
-    }
+    variant="frontend"
   >
     Front End Engineer
-    <span
-      className="c4"
-    >
-      <svg
-        height="17"
-        viewBox="0 0 28 17"
-        width="28"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M19.5.015l-2.121 2.121L22.243 7H0v3h22.243l-4.864 4.864 2.121 2.121L27.985 8.5z"
-          fill="#fff"
-        />
-      </svg>
-    </span>
-  </Link>
-  <Link
-    className="c5"
+  </WideButton>
+  <WideButton
     to="/backend"
-    variant={
-      Object {
-        "primaryColor": "#cfaded",
-        "secondaryColor": "#923be3",
-        "tertiaryColor": "#6926a6",
-      }
-    }
+    variant="backend"
   >
     Back End Developer
-    <span
-      className="c4"
-    >
-      <svg
-        height="17"
-        viewBox="0 0 28 17"
-        width="28"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M19.5.015l-2.121 2.121L22.243 7H0v3h22.243l-4.864 4.864 2.121 2.121L27.985 8.5z"
-          fill="#fff"
-        />
-      </svg>
-    </span>
-  </Link>
-  <Link
-    className="c6"
+  </WideButton>
+  <WideButton
     to="/devops"
-    variant={
-      Object {
-        "primaryColor": "#93bce6",
-        "secondaryColor": "#2784e6",
-        "tertiaryColor": "#1558a1",
-      }
-    }
+    variant="devops"
   >
     Dev Ops
-    <span
-      className="c4"
-    >
-      <svg
-        height="17"
-        viewBox="0 0 28 17"
-        width="28"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M19.5.015l-2.121 2.121L22.243 7H0v3h22.243l-4.864 4.864 2.121 2.121L27.985 8.5z"
-          fill="#fff"
-        />
-      </svg>
-    </span>
-  </Link>
+  </WideButton>
 </section>
 `;
