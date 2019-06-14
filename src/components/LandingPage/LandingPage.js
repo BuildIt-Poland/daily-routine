@@ -1,11 +1,11 @@
 import React from 'react';
 
+import { FRONT_END_VARIANT, BACK_END_VARIANT, DEV_OPS_VARIANT } from '../../constants/colourVariants';
 import Section from '../Section';
 import Headline from '../Headline';
 import Subheadline from '../Subheadline';
 import { SugarCat } from '../Characters';
 import WhideButton from '../WideButton';
-import { FRONT_END_VARIANT, BACK_END_VARIANT, DEV_OPS_VARIANT } from '../../constants/colourVariants';
 
 function LandingPage() {
   return (
