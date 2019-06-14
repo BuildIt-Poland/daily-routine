@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`COMPONENT - Characters Robot renders confusion marks and flower if female robot is confused 1`] = `
+.c0 {
+  margin: 7.6rem 0 3rem 0;
+  position: relative;
+}
+
+<div
+  className="c0"
+>
+  <RobotArtwork
+    mood="confused"
+  />
+  <ConfusionMarks />
+  <GenderFlower />
+</div>
+`;
+
+exports[`COMPONENT - Characters Robot renders confusion marks if robot is confused 1`] = `
+.c0 {
+  margin: 7.6rem 0 3rem 0;
+  position: relative;
+}
+
+<div
+  className="c0"
+>
+  <RobotArtwork
+    mood="confused"
+  />
+  <ConfusionMarks />
+</div>
+`;
+
+exports[`COMPONENT - Characters Robot renders correctly with default props 1`] = `
+.c0 {
+  margin: 7.6rem 0 3rem 0;
+  position: relative;
+}
+
+<div
+  className="c0"
+>
+  <RobotArtwork
+    mood="confused"
+  />
+  <ConfusionMarks />
+</div>
+`;
+
+exports[`COMPONENT - Characters Robot renders flower if female gender is passed 1`] = `
+.c0 {
+  margin: 7.6rem 0 3rem 0;
+  position: relative;
+}
+
+<div
+  className="c0"
+>
+  <RobotArtwork
+    mood="confused"
+  />
+  <ConfusionMarks />
+  <GenderFlower />
+</div>
+`;

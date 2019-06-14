@@ -1,24 +1,41 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`COMPONENT - BackEndRolePage renders correctly 1`] = `
+exports[`COMPONENT - BackEndRolePage renders correctly for /backend path 1`] = `
 .c0 {
   padding: 2rem;
-}
-
-.c1 {
-  font-size: 2.4rem;
-  margin: 0;
-  margin-bottom: 1rem;
 }
 
 <section
   className="c0"
 >
-  <h1
-    className="c1"
-  >
-    BackEnd
-  </h1>
+  <Robot
+    mood="confused"
+  />
+</section>
+`;
+
+exports[`COMPONENT - BackEndRolePage renders correctly for /backend/brag path 1`] = `
+.c0 {
+  padding: 2rem;
+}
+
+<section
+  className="c0"
+>
+  <Robot
+    mood="confident"
+  />
+</section>
+`;
+
+exports[`COMPONENT - BackEndRolePage renders correctly for /backend/confess path 1`] = `
+.c0 {
+  padding: 2rem;
+}
+
+<section
+  className="c0"
+>
   <Robot
     mood="sad"
   />
