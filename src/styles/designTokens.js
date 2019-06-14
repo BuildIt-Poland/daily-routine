@@ -43,4 +43,6 @@ export const fontWeightThin = 300;
 export const zIndexModal = 9000;
 export const zIndexModalOverlay = 8000;
 export const zIndexStickyElement = 6000;
+export const zIndexArtworkMainDecor = 20;
+export const zIndexArtworkSecondaryDecor = 10;
 export const zIndexDefault = 1;
