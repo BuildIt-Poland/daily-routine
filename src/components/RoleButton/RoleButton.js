@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 import Button from '../Button';
 import Icon from './Icon';
 
-function RoleButton({ className, children, to }) {
+function RoleButton({ className, children, to, variant }) {
   return (
-    <Button to={to} className={className} icon={<Icon />}>
+    <Button to={to} variant={variant} className={className} icon={<Icon />}>
       {children}
     </Button>
   );
@@ -15,7 +15,8 @@ function RoleButton({ className, children, to }) {
 RoleButton.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
-  to: PropTypes.string.isRequired
+  to: PropTypes.string.isRequired,
+  variant: PropTypes.string
 };
 
 export default RoleButton;

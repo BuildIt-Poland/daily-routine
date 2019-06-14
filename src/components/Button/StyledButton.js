@@ -1,25 +1,17 @@
 import styled from 'styled-components';
 
-import {
-  colorWhite,
-  fontLarge,
-  fontWeightBold,
-  borderRadius,
-  spacingMedium,
-  darkGreen,
-  colorGreen
-} from '../../styles/designTokens';
+import { colorWhite, fontLarge, fontWeightBold, borderRadius, spacingMedium } from '../../styles/designTokens';
 
 const StyledButton = styled.button`
   position: relative;
-  background: ${colorGreen};
+  background: ${props => props.variant.backgroundColor};
   color: ${colorWhite};
   display: flex;
   align-items: center;
   padding: 0 ${spacingMedium};
   margin: ${spacingMedium} 0;
   border: 0;
-  border-bottom: 0.3rem solid ${darkGreen};
+  border-bottom: 0.3rem solid ${props => props.variant.borderBottomColor};
   border-radius: ${borderRadius};
   font-size: ${fontLarge};
   font-weight: ${fontWeightBold};

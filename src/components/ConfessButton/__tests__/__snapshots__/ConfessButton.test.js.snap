@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`COMPONENT - ConfessButton renders correctly 1`] = `
-.c1 {
+.c0 {
   position: relative;
-  background: #21c230;
+  background: #eb4640;
   color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -16,7 +16,7 @@ exports[`COMPONENT - ConfessButton renders correctly 1`] = `
   padding: 0 2rem;
   margin: 2rem 0;
   border: 0;
-  border-bottom: 0.3rem solid #138a1e;
+  border-bottom: 0.3rem solid #a32f2a;
   border-radius: 0.6rem;
   font-size: 1.8rem;
   font-weight: 700;
@@ -27,28 +27,29 @@ exports[`COMPONENT - ConfessButton renders correctly 1`] = `
   height: 4.7rem;
 }
 
-.c1:not(:disabled) {
+.c0:not(:disabled) {
   cursor: pointer;
 }
 
-.c2 {
+.c1 {
   position: absolute;
   right: 0.4rem;
   bottom: -0.9rem;
 }
 
-.c0 {
-  background: #eb4640;
-  border-bottom-color: #a32f2a;
-}
-
 <Link
-  className="c0 c1"
+  className="c0"
   to="/"
+  variant={
+    Object {
+      "backgroundColor": "#eb4640",
+      "borderBottomColor": "#a32f2a",
+    }
+  }
 >
   Confess my mistake
   <div
-    className="c2"
+    className="c1"
   >
     <SaltGrinder />
   </div>

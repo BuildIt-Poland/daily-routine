@@ -5,8 +5,8 @@ import { LongArrow } from '../Icons';
 
 const Wrapper = styled.div`
   position: absolute;
-  right: 0.8rem;
-  bottom: 0.9rem;
+  right: 1.3rem;
+  bottom: 1.3rem;
 `;
 
 function Icon() {

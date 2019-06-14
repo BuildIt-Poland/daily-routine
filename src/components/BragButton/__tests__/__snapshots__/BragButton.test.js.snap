@@ -2,6 +2,12 @@
 
 exports[`COMPONENT - BragButton renders correctly 1`] = `
 .c1 {
+  position: absolute;
+  right: 0;
+  bottom: -1rem;
+}
+
+.c0 {
   position: relative;
   background: #21c230;
   color: #ffffff;
@@ -27,27 +33,23 @@ exports[`COMPONENT - BragButton renders correctly 1`] = `
   height: 4.7rem;
 }
 
-.c1:not(:disabled) {
+.c0:not(:disabled) {
   cursor: pointer;
 }
 
-.c2 {
-  position: absolute;
-  right: 0;
-  bottom: -1rem;
-}
-
-.c0 {
-  background: #21c230;
-}
-
 <Link
-  className="c0 c1"
+  className="c0"
   to="/"
+  variant={
+    Object {
+      "backgroundColor": "#21c230",
+      "borderBottomColor": "#138a1e",
+    }
+  }
 >
   Brag about my efforts
   <div
-    className="c2"
+    className="c1"
   >
     <Lightbulb />
   </div>

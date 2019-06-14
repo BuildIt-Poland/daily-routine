@@ -3,7 +3,7 @@
 exports[`COMPONENT - BragButton render button if onClick handler is provided 1`] = `
 .c0 {
   position: relative;
-  background: #21c230;
+  background: #f5ca1d;
   color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -16,7 +16,7 @@ exports[`COMPONENT - BragButton render button if onClick handler is provided 1`]
   padding: 0 2rem;
   margin: 2rem 0;
   border: 0;
-  border-bottom: 0.3rem solid #138a1e;
+  border-bottom: 0.3rem solid #d18b13;
   border-radius: 0.6rem;
   font-size: 1.8rem;
   font-weight: 700;
@@ -40,7 +40,7 @@ exports[`COMPONENT - BragButton render button if onClick handler is provided 1`]
 exports[`COMPONENT - BragButton renders Link if to prop is provided 1`] = `
 .c0 {
   position: relative;
-  background: #21c230;
+  background: #f5ca1d;
   color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -53,7 +53,7 @@ exports[`COMPONENT - BragButton renders Link if to prop is provided 1`] = `
   padding: 0 2rem;
   margin: 2rem 0;
   border: 0;
-  border-bottom: 0.3rem solid #138a1e;
+  border-bottom: 0.3rem solid #d18b13;
   border-radius: 0.6rem;
   font-size: 1.8rem;
   font-weight: 700;
@@ -71,5 +71,11 @@ exports[`COMPONENT - BragButton renders Link if to prop is provided 1`] = `
 <Link
   className="c0"
   to="/frontend"
+  variant={
+    Object {
+      "backgroundColor": "#f5ca1d",
+      "borderBottomColor": "#d18b13",
+    }
+  }
 />
 `;
