@@ -4,14 +4,14 @@ import { colorWhite, fontLarge, fontWeightBold, borderRadius, spacingMedium } fr
 
 const Wrapper = styled.button`
   position: relative;
-  background: ${({ colourset }) => colourset.secondaryColor};
+  background: ${({ colours }) => colours.secondaryColor};
   color: ${colorWhite};
   display: flex;
   align-items: center;
   padding: 0 ${spacingMedium};
   margin: ${spacingMedium} 0;
   border: 0;
-  border-bottom: 0.3rem solid ${({ colourset }) => colourset.tertiaryColor};
+  border-bottom: 0.3rem solid ${({ colours }) => colours.tertiaryColor};
   border-radius: ${borderRadius};
   font-size: ${fontLarge};
   font-weight: ${fontWeightBold};

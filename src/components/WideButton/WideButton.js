@@ -32,7 +32,7 @@ function WideButton({ variant = 'frontend', children, to, onClick = () => {} }) 
   const Icon = ICONS[variant];
 
   return (
-    <Wrapper colourset={generateColors(variant)} {...props}>
+    <Wrapper colours={generateColors(variant)} {...props}>
       {children}
       {<Icon />}
     </Wrapper>

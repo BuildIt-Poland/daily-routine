@@ -1,5 +1,5 @@
 function extractRoleFromPath(path) {
-  return path.replace(/\//g, '').toLowerCase();
+  return path.split('/')[0].toLowerCase();
 }
 
 export default extractRoleFromPath;

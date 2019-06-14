@@ -8,13 +8,13 @@ jest.mock('react-router-dom', () => ({
 }));
 
 describe('COMPONENT - BragButton', () => {
-  it('renders Link if to prop is provided', () => {
+  it('renders Link if `to` prop is provided', () => {
     const component = create(<WideButton to="/frontend" />);
 
     expect(component.toJSON()).toMatchSnapshot();
   });
 
-  it('render button if onClick is provided', () => {
+  it('render button if `onClick` is provided', () => {
     const component = create(<WideButton onClick={jest.fn()} />);
 
     expect(component.toJSON()).toMatchSnapshot();
