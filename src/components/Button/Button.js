@@ -8,7 +8,6 @@ const Button = styled.button`
   background: none;
   display: flex;
   align-items: center;
-  justify-content: center;
   min-width: 4rem;
   min-height: 4rem;
   cursor: pointer;

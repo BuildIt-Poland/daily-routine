@@ -13,10 +13,6 @@ Array [
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
   min-width: 4rem;
   min-height: 4rem;
   cursor: pointer;
@@ -94,7 +90,7 @@ Array [
     <WideButton
       variant="brag"
     >
-      Brag about my achievements
+      Brag about my efforts
     </WideButton>
     <WideButton
       variant="confess"

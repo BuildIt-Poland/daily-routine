@@ -7,8 +7,6 @@ const Wrapper = styled(Button)`
   position: relative;
   background-color: ${({ colours }) => colours.secondaryColor};
   color: ${colorWhite};
-  display: flex;
-  align-items: center;
   padding: 0 ${spacingMedium};
   margin: ${spacingMedium} 0;
   border: 0;

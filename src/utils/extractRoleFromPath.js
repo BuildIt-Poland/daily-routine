@@ -1,5 +1,6 @@
 function extractRoleFromPath(path) {
-  return path.split('/')[0].toLowerCase();
+  const role = path.match(/([^/]+)/);
+  return role ? role[0] : '';
 }
 
 export default extractRoleFromPath;

@@ -12,7 +12,7 @@ function BackEndRolePage() {
       <RoleBar />
       <Section>
         <Robot mood="sad" />
-        <WideButton variant={BRAG_VARIANT}>Brag about my achievements</WideButton>
+        <WideButton variant={BRAG_VARIANT}>Brag about my efforts</WideButton>
         <WideButton variant={CONFESS_VARIANT}>Confess my mistake</WideButton>
       </Section>
     </>
