@@ -3,9 +3,8 @@ import {
   CONFESS_VARIANT,
   FRONT_END_VARIANT,
   BACK_END_VARIANT,
-  DEV_OPS_VARIANT,
-  BASE_VARIANT
-} from '../constants/colourVariants';
+  DEV_OPS_VARIANT
+} from '../constants/coloursVariants';
 
 import {
   colorBlue,
@@ -36,11 +35,10 @@ function generateColors(colourVariant) {
     [CONFESS_VARIANT]: composeColors(colorRed, colorRed, darkRed),
     [FRONT_END_VARIANT]: composeColors(colorLightYellow, colorYellow, colorDarkYellow),
     [BACK_END_VARIANT]: composeColors(colorLightPurple, colorPurple, colorDeepPurple),
-    [DEV_OPS_VARIANT]: composeColors(colorLightBlue, colorBlue, colorDarkBlue),
-    [BASE_VARIANT]: composeColors(colorLightTeal, colorLightTeal, colorLightTeal)
+    [DEV_OPS_VARIANT]: composeColors(colorLightBlue, colorBlue, colorDarkBlue)
   };
 
-  return colorTheme[colourVariant] || colorTheme[BASE_VARIANT];
+  return colorTheme[colourVariant] || composeColors(colorLightTeal, colorLightTeal, colorLightTeal);
 }
 
 export default generateColors;

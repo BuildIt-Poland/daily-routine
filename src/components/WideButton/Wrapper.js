@@ -2,16 +2,16 @@ import styled from 'styled-components';
 
 import { colorWhite, fontLarge, fontWeightBold, borderRadius, spacingMedium } from '../../styles/designTokens';
 
-const Button = styled.button`
+const Wrapper = styled.button`
   position: relative;
-  background: ${({ variant }) => variant.secondaryColor};
+  background: ${({ colourset }) => colourset.secondaryColor};
   color: ${colorWhite};
   display: flex;
   align-items: center;
   padding: 0 ${spacingMedium};
   margin: ${spacingMedium} 0;
   border: 0;
-  border-bottom: 0.3rem solid ${({ variant }) => variant.tertiaryColor};
+  border-bottom: 0.3rem solid ${({ colourset }) => colourset.tertiaryColor};
   border-radius: ${borderRadius};
   font-size: ${fontLarge};
   font-weight: ${fontWeightBold};
@@ -25,4 +25,4 @@ const Button = styled.button`
   }
 `;
 
-export default Button;
+export default Wrapper;

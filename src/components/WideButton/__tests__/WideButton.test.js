@@ -7,7 +7,7 @@ jest.mock('react-router-dom', () => ({
   Link: 'Link'
 }));
 
-describe('COMPONENT - WideButton', () => {
+describe('COMPONENT - BragButton', () => {
   it('renders Link if to prop is provided', () => {
     const component = create(<WideButton to="/frontend" />);
 

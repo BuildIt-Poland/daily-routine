@@ -1,5 +1,5 @@
 import generateTheme from '../generateTheme';
-import { BASE_VARIANT, FRONT_END_VARIANT, BACK_END_VARIANT, DEV_OPS_VARIANT } from '../../constants/colourVariants';
+import { FRONT_END_VARIANT, BACK_END_VARIANT, DEV_OPS_VARIANT } from '../../constants/coloursVariants';
 import {
   colorLightTeal,
   colorLightYellow,
@@ -11,13 +11,13 @@ import {
 } from '../../styles/designTokens';
 
 describe('COMPONENT - LandingPage', () => {
-  it('should return default color theme for BASE_VARIANT', () => {
+  it('should return default color', () => {
     const expectedTheme = {
       primaryColor: colorLightTeal,
       secondaryColor: colorLightTeal
     };
 
-    const theme = generateTheme(BASE_VARIANT);
+    const theme = generateTheme('');
 
     expect(theme.primaryColor).toEqual(expectedTheme.primaryColor);
     expect(theme.secondaryColor).toEqual(expectedTheme.secondaryColor);

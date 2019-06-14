@@ -2,10 +2,10 @@ import generateColors from '../utils/generateColors';
 import extractRoleFromPath from './extractRoleFromPath';
 
 function generateTheme(currentLocation) {
-  const roleAsColorVariant = extractRoleFromPath(currentLocation.toLowerCase());
+  const role = extractRoleFromPath(currentLocation);
 
   return {
-    ...generateColors(roleAsColorVariant)
+    ...generateColors(role)
   };
 }
 
