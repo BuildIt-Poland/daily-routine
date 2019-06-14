@@ -1,29 +1,46 @@
-import { BRAG, CONFESS, FRONT_END, BACK_END, DEV_OPS } from '../constants/buttonVariants';
 import {
-  colorPurple,
-  colorDeepPurple,
-  colorYellow,
-  colorDarkYellow,
+  BRAG_VARIANT,
+  CONFESS_VARIANT,
+  FRONT_END_VARIANT,
+  BACK_END_VARIANT,
+  DEV_OPS_VARIANT,
+  BASE_VARIANT
+} from '../constants/colourVariants';
+
+import {
   colorBlue,
+  colorLightBlue,
+  colorPurple,
+  colorLightPurple,
+  colorYellow,
+  colorLightYellow,
+  colorLightTeal,
   colorDarkBlue,
+  colorDarkYellow,
+  colorDeepPurple,
   colorGreen,
   darkGreen,
   colorRed,
   darkRed
 } from '../styles/designTokens';
 
-function generateColors(buttonVariant) {
-  const composeColors = (backgroundColor, borderBottomColor) => ({ backgroundColor, borderBottomColor });
+function generateColors(colourVariant) {
+  const composeColors = (primaryColor, secondaryColor, tertiaryColor) => ({
+    primaryColor,
+    secondaryColor,
+    tertiaryColor
+  });
 
-  const buttonColors = {
-    [BRAG]: composeColors(colorGreen, darkGreen),
-    [CONFESS]: composeColors(colorRed, darkRed),
-    [FRONT_END]: composeColors(colorYellow, colorDarkYellow),
-    [BACK_END]: composeColors(colorPurple, colorDeepPurple),
-    [DEV_OPS]: composeColors(colorBlue, colorDarkBlue)
+  const colorTheme = {
+    [BRAG_VARIANT]: composeColors(colorGreen, colorGreen, darkGreen),
+    [CONFESS_VARIANT]: composeColors(colorRed, colorRed, darkRed),
+    [FRONT_END_VARIANT]: composeColors(colorLightYellow, colorYellow, colorDarkYellow),
+    [BACK_END_VARIANT]: composeColors(colorLightPurple, colorPurple, colorDeepPurple),
+    [DEV_OPS_VARIANT]: composeColors(colorLightBlue, colorBlue, colorDarkBlue),
+    [BASE_VARIANT]: composeColors(colorLightTeal, colorLightTeal, colorLightTeal)
   };
 
-  return buttonColors[buttonVariant] || buttonColors[FRONT_END];
+  return colorTheme[colourVariant] || colorTheme[BASE_VARIANT];
 }
 
 export default generateColors;

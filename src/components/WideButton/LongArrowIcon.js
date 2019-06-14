@@ -3,13 +3,13 @@ import styled from 'styled-components';
 
 import { LongArrow } from '../Icons';
 
-const Wrapper = styled.div`
+const Wrapper = styled.span`
   position: absolute;
   right: 1.3rem;
   bottom: 1.3rem;
 `;
 
-function Icon() {
+function LongArrowIcon() {
   return (
     <Wrapper>
       <LongArrow />
@@ -17,4 +17,4 @@ function Icon() {
   );
 }
 
-export default Icon;
+export default LongArrowIcon;

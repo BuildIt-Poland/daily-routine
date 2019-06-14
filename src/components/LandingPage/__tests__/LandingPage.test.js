@@ -3,6 +3,10 @@ import { create } from 'react-test-renderer';
 
 import LandingPage from '../LandingPage';
 
+jest.mock('react-router-dom', () => ({
+  Link: 'Link'
+}));
+
 jest.mock('../../Characters', () => ({
   SugarCat: 'SugarCat'
 }));

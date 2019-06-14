@@ -2,16 +2,16 @@ import styled from 'styled-components';
 
 import { colorWhite, fontLarge, fontWeightBold, borderRadius, spacingMedium } from '../../styles/designTokens';
 
-const StyledButton = styled.button`
+const Button = styled.button`
   position: relative;
-  background: ${props => props.variant.backgroundColor};
+  background: ${({ variant }) => variant.secondaryColor};
   color: ${colorWhite};
   display: flex;
   align-items: center;
   padding: 0 ${spacingMedium};
   margin: ${spacingMedium} 0;
   border: 0;
-  border-bottom: 0.3rem solid ${props => props.variant.borderBottomColor};
+  border-bottom: 0.3rem solid ${({ variant }) => variant.tertiaryColor};
   border-radius: ${borderRadius};
   font-size: ${fontLarge};
   font-weight: ${fontWeightBold};
@@ -25,4 +25,4 @@ const StyledButton = styled.button`
   }
 `;
 
-export default StyledButton;
+export default Button;

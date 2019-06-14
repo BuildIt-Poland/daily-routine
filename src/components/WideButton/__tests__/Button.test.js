@@ -9,13 +9,13 @@ jest.mock('react-router-dom', () => ({
 
 describe('COMPONENT - BragButton', () => {
   it('renders Link if to prop is provided', () => {
-    const component = create(<Button to="/frontend" />);
+    const component = create(<Button variant="frontend" to="/frontend" />);
 
     expect(component.toJSON()).toMatchSnapshot();
   });
 
   it('render button if onClick handler is provided', () => {
-    const component = create(<Button onClick={jest.fn()} />);
+    const component = create(<Button variant="frontend" onClick={jest.fn()} />);
 
     expect(component.toJSON()).toMatchSnapshot();
   });

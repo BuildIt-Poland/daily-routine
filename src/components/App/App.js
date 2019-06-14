@@ -2,7 +2,7 @@ import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import { Route, withRouter } from 'react-router-dom';
 
-import generateTheme from '../../styles/generateTheme';
+import generateTheme from '../../utils/generateTheme';
 import { ROOT_PATH, FRONT_END_ROLE_PATH, BACK_END_ROLE_PATH, DEV_OPS_ROLE_PATH } from '../../constants/routes';
 import Header from '../Header';
 import Footer from '../Footer';
