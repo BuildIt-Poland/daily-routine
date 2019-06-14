@@ -1,69 +1,45 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Daily Routine - Daily Scrum Absurd Answers](https://user-images.githubusercontent.com/20565536/59495052-d1ed4980-8e8e-11e9-9dc9-e8fe0d037469.png)
+
 [![CircleCI](https://circleci.com/gh/BuildIt-Poland/daily-routine/tree/master.svg?style=svg)](https://circleci.com/gh/BuildIt-Poland/daily-routine/tree/master)
 
-## Available Scripts
+> An artificial intelligence dedicated to generating absurd and useful daily meeting quotes for endless enrichment of pointless developers existence.
 
-In the project directory, you can run:
+Check the [live version of Daily Routine](https://dailyroutine.buildit.digital/) app!
 
-### `npm start`
+## Getting started!
+A few easy steps to set up a project:
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+* Make sure you've got **Node** installed, preferably version above **10**
+* Run `npm install` from project root
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+Most useful scripts for development:
 
-### `npm test`
+* `npm start` - starts the project in a development mode
+* `npm test` - fires up Jest test runner
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Other scripts which could be helpful:
+* `e2e:dev` - runs all e2e tests locally
+* `npm run start:build` -  starts a production version of app locally
+* `npm run format` - formats whole codebase with prettier
 
-### `npm run build`
+## Conventions
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Issuing PR
+Please make sure that your **branch** names are correct. For example: `feature/dr-10-robot-expressions` -- start with type of PR (*feature/fix/chore*) followed by a slash, followed by Jira issue ID and a very short description at the end.
+For the *pull request* title use Jira ID in brackets followed by short description: `[DR-10] Robot expressions`. Put short summary of your contribution in PR's description field and in case of *components* attach a screenshot.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+### Coding style
+Please follow a few simple rules (prettier and linter takes care of the rest):
+* use regular **function()** instead of **arrow functions** at the top level (applies for functional components as well)
+* use **arrow functions** for anonymous functions
+* for targeting components directly in tests (e2e and unit) use **data-testid** property, for example: `<button data-testid="forontend-role-button">Front End Developer</button>`
+* follow TODO comments with @ symbol and your GitHub handle, for instance: `// TODO Implement something important @myhandle`
+* separate external and internal imports with new line
+* keep your imports order correct -- the higher a file is in directory structure, the higher on the list it should be:
+```
+import React from 'react';
+import PropTypes from 'prop-types';
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+import Headline from '../../Headline';
+import { SugarCat } from './Characters';
+```
