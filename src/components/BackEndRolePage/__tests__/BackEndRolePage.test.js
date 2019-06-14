@@ -6,6 +6,7 @@ import BackEndRolePage from '../BackEndRolePage';
 jest.mock('../../Characters', () => ({
   Robot: 'Robot'
 }));
+jest.mock('../../WideButton', () => 'WideButton');
 
 describe('COMPONENT - BackEndRolePage', () => {
   it('renders correctly', () => {

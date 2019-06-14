@@ -38,6 +38,10 @@ const GlobalStyle = createGlobalStyle`
     font-style: italic;
     font-weight: ${fontWeightNormal};
   }
+
+  input, textarea, button, select, label, a, li {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
 `;
 
 export default GlobalStyle;

@@ -1,15 +1,21 @@
 import React from 'react';
 
+import { BRAG_VARIANT, CONFESS_VARIANT } from '../../constants/coloursVariants';
+import WideButton from '../WideButton';
+import RoleBar from '../RoleBar';
 import Section from '../Section';
-import Headline from '../Headline';
 import { Robot } from '../Characters';
 
 function BackEndRolePage() {
   return (
-    <Section>
-      <Headline>BackEnd</Headline>
-      <Robot mood="sad" />
-    </Section>
+    <>
+      <RoleBar />
+      <Section>
+        <Robot mood="sad" />
+        <WideButton variant={BRAG_VARIANT}>Brag about my achievements</WideButton>
+        <WideButton variant={CONFESS_VARIANT}>Confess my mistake</WideButton>
+      </Section>
+    </>
   );
 }
 

@@ -2,15 +2,15 @@ import React from 'react';
 import { render, cleanup } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 
-import Header from '../Header';
+import AppBar from '../AppBar';
 
 afterEach(cleanup);
 
-describe('COMPONENT - Header', () => {
+describe('COMPONENT - AppBar', () => {
   it('renders correct logo', () => {
     const { container } = render(
       <MemoryRouter initialEntries={['/']} initialIndex={1}>
-        <Header />
+        <AppBar />
       </MemoryRouter>
     );
 

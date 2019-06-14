@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 
 import { colorWhite, fontLarge, fontWeightBold, borderRadius, spacingMedium } from '../../styles/designTokens';
+import Button from '../Button';
 
-const Wrapper = styled.button`
+const Wrapper = styled(Button)`
   position: relative;
-  background: ${({ colours }) => colours.secondaryColor};
+  background-color: ${({ colours }) => colours.secondaryColor};
   color: ${colorWhite};
   display: flex;
   align-items: center;
@@ -16,7 +17,6 @@ const Wrapper = styled.button`
   font-size: ${fontLarge};
   font-weight: ${fontWeightBold};
   text-align: left;
-  text-decoration: none;
   width: 100%;
   height: 4.7rem;
 

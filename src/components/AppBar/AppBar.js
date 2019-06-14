@@ -3,7 +3,7 @@ import React from 'react';
 import Wrapper from './Wrapper';
 import Logo from './Logo';
 
-function Header() {
+function AppBar() {
   return (
     <Wrapper role="banner">
       <Logo />
@@ -11,4 +11,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default AppBar;
