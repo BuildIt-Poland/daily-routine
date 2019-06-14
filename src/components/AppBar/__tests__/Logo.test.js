@@ -10,7 +10,7 @@ jest.mock('../../Icons', () => ({
   Logo: 'LogoIcon'
 }));
 
-describe('COMPONENT - Header Logo', () => {
+describe('COMPONENT - AppBar Logo', () => {
   it('renders correctly', () => {
     const component = create(<Logo />);
 

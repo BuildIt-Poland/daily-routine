@@ -4,7 +4,7 @@ import { create } from 'react-test-renderer';
 
 import App from '../App';
 
-jest.mock('../../Header', () => 'Header');
+jest.mock('../../AppBar', () => 'AppBar');
 jest.mock('../../Footer', () => 'Footer');
 jest.mock('../../Characters', () => ({
   SugarCat: 'SugarCat'
