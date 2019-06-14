@@ -19,5 +19,8 @@ exports[`COMPONENT - BackEndRolePage renders correctly 1`] = `
   >
     BackEnd
   </h1>
+  <Robot
+    mood="sad"
+  />
 </section>
 `;
