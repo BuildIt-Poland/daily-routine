@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`COMPONENT - BragButton render button if onClick is provided 1`] = `
+exports[`COMPONENT - WideButton render button if onClick is provided 1`] = `
 .c0 {
   position: relative;
-  background: #f5ca1d;
+  background: #80cbd6;
   color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -16,7 +16,7 @@ exports[`COMPONENT - BragButton render button if onClick is provided 1`] = `
   padding: 0 2rem;
   margin: 2rem 0;
   border: 0;
-  border-bottom: 0.3rem solid #d18b13;
+  border-bottom: 0.3rem solid #80cbd6;
   border-radius: 0.6rem;
   font-size: 1.8rem;
   font-weight: 700;
@@ -29,40 +29,18 @@ exports[`COMPONENT - BragButton render button if onClick is provided 1`] = `
 
 .c0:not(:disabled) {
   cursor: pointer;
-}
-
-.c1 {
-  position: absolute;
-  right: 1.3rem;
-  bottom: 1.3rem;
 }
 
 <button
   className="c0"
   onClick={[MockFunction]}
->
-  <span
-    className="c1"
-  >
-    <svg
-      height="17"
-      viewBox="0 0 28 17"
-      width="28"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M19.5.015l-2.121 2.121L22.243 7H0v3h22.243l-4.864 4.864 2.121 2.121L27.985 8.5z"
-        fill="#fff"
-      />
-    </svg>
-  </span>
-</button>
+/>
 `;
 
-exports[`COMPONENT - BragButton renders Link if to prop is provided 1`] = `
+exports[`COMPONENT - WideButton renders Link if to prop is provided 1`] = `
 .c0 {
   position: relative;
-  background: #f5ca1d;
+  background: #80cbd6;
   color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -75,7 +53,7 @@ exports[`COMPONENT - BragButton renders Link if to prop is provided 1`] = `
   padding: 0 2rem;
   margin: 2rem 0;
   border: 0;
-  border-bottom: 0.3rem solid #d18b13;
+  border-bottom: 0.3rem solid #80cbd6;
   border-radius: 0.6rem;
   font-size: 1.8rem;
   font-weight: 700;
@@ -88,12 +66,6 @@ exports[`COMPONENT - BragButton renders Link if to prop is provided 1`] = `
 
 .c0:not(:disabled) {
   cursor: pointer;
-}
-
-.c1 {
-  position: absolute;
-  right: 1.3rem;
-  bottom: 1.3rem;
 }
 
 <Link
@@ -101,26 +73,10 @@ exports[`COMPONENT - BragButton renders Link if to prop is provided 1`] = `
   to="/frontend"
   variant={
     Object {
-      "primaryColor": "#f2de6f",
-      "secondaryColor": "#f5ca1d",
-      "tertiaryColor": "#d18b13",
+      "primaryColor": "#80cbd6",
+      "secondaryColor": "#80cbd6",
+      "tertiaryColor": "#80cbd6",
     }
   }
->
-  <span
-    className="c1"
-  >
-    <svg
-      height="17"
-      viewBox="0 0 28 17"
-      width="28"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M19.5.015l-2.121 2.121L22.243 7H0v3h22.243l-4.864 4.864 2.121 2.121L27.985 8.5z"
-        fill="#fff"
-      />
-    </svg>
-  </span>
-</Link>
+/>
 `;
