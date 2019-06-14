@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { spacingMedium } from '../../styles/designTokens';
 import GearButton from '../GearButton';
 import Subheadline from '../Subheadline';
-import { spacingMedium } from '../../styles/designTokens';
 
 const Header = styled.header`
   display: flex;
