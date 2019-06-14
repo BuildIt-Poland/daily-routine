@@ -1,6 +1,31 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`COMPONENT - RoleBar renders correctly 1`] = `
+.c2 {
+  border: 0;
+  background: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  min-width: 4rem;
+  min-height: 4rem;
+  cursor: pointer;
+  outline: 0;
+}
+
+.c2 svg {
+  display: block;
+}
+
 .c1 {
   font-size: 1.8rem;
   margin: 1rem 0;
@@ -37,6 +62,7 @@ exports[`COMPONENT - RoleBar renders correctly 1`] = `
     </strong>
   </h2>
   <button
+    className="c2"
     onClick={[Function]}
   >
     <svg

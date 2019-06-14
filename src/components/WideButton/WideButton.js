@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import StyledButton from './StyledButton';
 
-function Button({ children, icon, className }) {
+function WideButton({ children, icon, className }) {
   return (
     <StyledButton className={className}>
       {children}
@@ -12,10 +12,10 @@ function Button({ children, icon, className }) {
   );
 }
 
-Button.propTypes = {
+WideButton.propTypes = {
   children: PropTypes.node,
   icon: PropTypes.element,
   className: PropTypes.string
 };
 
-export default Button;
+export default WideButton;

@@ -42,10 +42,6 @@ const GlobalStyle = createGlobalStyle`
   input, textarea, button, select, label, a, li {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
-
-  button {
-    outline: 0;
-  }
 `;
 
 export default GlobalStyle;

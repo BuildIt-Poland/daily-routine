@@ -1,11 +1,11 @@
 import React from 'react';
 import { create } from 'react-test-renderer';
 
-import Button from '../Button';
+import WideButton from '../WideButton';
 
-describe('COMPONENT - BragButton', () => {
+describe('COMPONENT - WideButton', () => {
   it('renders correctly', () => {
-    const component = create(<Button>Confess</Button>);
+    const component = create(<WideButton>Confess</WideButton>);
 
     expect(component.toJSON()).toMatchSnapshot();
   });
