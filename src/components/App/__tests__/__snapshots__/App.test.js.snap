@@ -27,7 +27,7 @@ exports[`COMPONENT - App renders correctly default route 1`] = `
 <div
   className="c0"
 >
-  <Header />
+  <AppBar />
   <main>
     <section
       className="c1"

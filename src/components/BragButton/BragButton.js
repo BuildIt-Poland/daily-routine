@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { colorGreen } from '../../styles/designTokens';
-import Button from '../Button';
+import Button from '../WideButton';
 import Icon from './Icon';
 
 const StyledButton = styled(Button)`

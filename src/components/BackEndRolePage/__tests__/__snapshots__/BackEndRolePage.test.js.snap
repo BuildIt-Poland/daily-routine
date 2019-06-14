@@ -1,26 +1,68 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`COMPONENT - BackEndRolePage renders correctly 1`] = `
+Array [
+  .c1 {
+  font-size: 1.8rem;
+  margin: 1rem 0;
+  font-weight: 400;
+}
+
 .c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0 2rem;
+  height: 5rem;
+  background-color: rgba(255,255,255,0.5);
+}
+
+<header
+    className="c0"
+  >
+    <h2
+      className="c1"
+    >
+      I am 
+      <strong>
+        The FrontEnd Developer
+      </strong>
+    </h2>
+    <button
+      onClick={[Function]}
+    >
+      <svg
+        height="24"
+        viewBox="0 0 24 24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M24 14.035v-4.07l-2.597-.438a9.677 9.677 0 0 0-1.006-2.424l1.528-2.148-2.878-2.878-2.148 1.528a9.603 9.603 0 0 0-2.424-1.006L14.035 0h-4.07l-.439 2.597a9.658 9.658 0 0 0-2.424 1.007L4.954 2.076 2.076 4.954l1.528 2.148a9.603 9.603 0 0 0-1.006 2.424L0 9.965v4.071l2.597.438a9.677 9.677 0 0 0 1.006 2.424l-1.528 2.148 2.878 2.878 2.148-1.528c.75.439 1.563.781 2.424 1.006L9.965 24h4.071l.438-2.597a9.677 9.677 0 0 0 2.424-1.006l2.148 1.528 2.878-2.878-1.528-2.148a9.603 9.603 0 0 0 1.006-2.424l2.598-.44zM16.629 12a4.629 4.629 0 1 1-9.258 0 4.629 4.629 0 0 1 9.258 0z"
+          fill="#fff"
+        />
+      </svg>
+    </button>
+  </header>,
+  .c0 {
   padding: 2rem;
 }
 
-.c1 {
-  font-size: 2.4rem;
-  margin: 0;
-  margin-bottom: 1rem;
-}
-
 <section
-  className="c0"
->
-  <h1
-    className="c1"
+    className="c0"
   >
-    BackEnd
-  </h1>
-  <Robot
-    mood="sad"
-  />
-</section>
+    <Robot
+      mood="sad"
+    />
+  </section>,
+]
 `;

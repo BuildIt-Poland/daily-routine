@@ -1,21 +1,22 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+// Button wrapper with all styles removed
+// Useful for accessible action icons / target areas
 
-import StyledButton from './StyledButton';
+import styled from 'styled-components';
 
-function Button({ children, icon, className }) {
-  return (
-    <StyledButton className={className}>
-      {children}
-      {icon}
-    </StyledButton>
-  );
-}
+const Button = styled.button`
+  border: 0;
+  background: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 4rem;
+  min-height: 4rem;
+  cursor: pointer;
+  outline: 0;
 
-Button.propTypes = {
-  children: PropTypes.node,
-  icon: PropTypes.element,
-  className: PropTypes.string
-};
+  svg {
+    display: block;
+  }
+`;
 
 export default Button;

@@ -1,11 +1,11 @@
 import React from 'react';
 import { create } from 'react-test-renderer';
 
-import Wrapper from '../Wrapper';
+import RoleBar from '../RoleBar';
 
-describe('COMPONENT - Header Wrapper', () => {
+describe('COMPONENT - RoleBar', () => {
   it('renders correctly', () => {
-    const component = create(<Wrapper />);
+    const component = create(<RoleBar />);
 
     expect(component.toJSON()).toMatchSnapshot();
   });
