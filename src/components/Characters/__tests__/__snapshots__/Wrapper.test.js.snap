@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`COMPONENT - Wrapper renders correctly 1`] = `
+.c0 {
+  margin: 7.6rem 0 3rem 0;
+  position: relative;
+}
+
+<div
+  className="c0"
+/>
+`;

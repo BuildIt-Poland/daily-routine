@@ -1,9 +1,9 @@
 import React from 'react';
-import { mood } from '../../types';
 
-import { CONFUSED, CONFIDENT, SAD } from '../../constants/characterMoods';
+import { mood } from '../../../types';
+import { CONFUSED, CONFIDENT, SAD } from '../../../constants/characterMoods';
 
-function Whale({ mood = CONFUSED }) {
+function WhaleArtwork({ mood = CONFUSED }) {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="270" height="225" viewBox="0 0 270 225">
       {/* Smiling face expression */}
@@ -110,8 +110,8 @@ function Whale({ mood = CONFUSED }) {
   );
 }
 
-Whale.propTypes = {
+WhaleArtwork.propTypes = {
   mood
 };
 
-export default Whale;
+export default WhaleArtwork;
