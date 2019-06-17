@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { CONFUSED } from '../../../constants/characterMoods';
-import { gender, mood } from '../../../types';
+import { mood } from '../../../types';
 import Wrapper from '../Wrapper';
 import ConfusionMarks from './ConfusionMarks';
 import WhaleArtwork from './WhaleArtwork';
@@ -16,7 +16,6 @@ function Whale({ mood = CONFUSED }) {
 }
 
 Whale.propTypes = {
-  gender,
   mood
 };
 
