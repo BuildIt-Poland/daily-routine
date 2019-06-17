@@ -12,14 +12,12 @@ exports[`COMPONENT - RoleBar renders correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
   min-width: 4rem;
   min-height: 4rem;
   cursor: pointer;
   outline: 0;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c2 svg {

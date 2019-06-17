@@ -13,14 +13,12 @@ Array [
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
   min-width: 4rem;
   min-height: 4rem;
   cursor: pointer;
   outline: 0;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c2 svg {
@@ -148,8 +146,16 @@ Array [
         </svg>
       </button>
     </section>
-    <BragButton />
-    <ConfessButton />
+    <WideButton
+      variant="brag"
+    >
+      Brag about my efforts
+    </WideButton>
+    <WideButton
+      variant="confess"
+    >
+      Confess my mistake
+    </WideButton>
   </section>,
 ]
 `;

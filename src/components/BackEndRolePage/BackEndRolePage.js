@@ -1,7 +1,7 @@
 import React from 'react';
 
-import BragButton from '../BragButton';
-import ConfessButton from '../ConfessButton';
+import { BRAG_VARIANT, CONFESS_VARIANT } from '../../constants/coloursVariants';
+import WideButton from '../WideButton';
 import RoleBar from '../RoleBar';
 import Section from '../Section';
 import QuoteBubble from '../QuoteBubble';
@@ -14,8 +14,8 @@ function BackEndRolePage() {
       <Section>
         <Robot mood="sad" />
         <QuoteBubble />
-        <BragButton />
-        <ConfessButton />
+        <WideButton variant={BRAG_VARIANT}>Brag about my efforts</WideButton>
+        <WideButton variant={CONFESS_VARIANT}>Confess my mistake</WideButton>
       </Section>
     </>
   );
