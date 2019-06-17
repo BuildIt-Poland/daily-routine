@@ -1,5 +1,5 @@
 import generateTheme from '../generateTheme';
-import { FRONT_END_VARIANT, BACK_END_VARIANT, DEV_OPS_VARIANT } from '../../constants/coloursVariants';
+import { FRONT_END_ROLE, BACK_END_ROLE, DEV_OPS_ROLE } from '../../constants/roles';
 import {
   colorLightTeal,
   colorLightYellow,
@@ -29,7 +29,7 @@ describe('COMPONENT - LandingPage', () => {
       secondaryColor: colorYellow
     };
 
-    const theme = generateTheme(FRONT_END_VARIANT);
+    const theme = generateTheme(FRONT_END_ROLE);
 
     expect(theme.primaryColor).toEqual(expectedTheme.primaryColor);
     expect(theme.secondaryColor).toEqual(expectedTheme.secondaryColor);
@@ -41,7 +41,7 @@ describe('COMPONENT - LandingPage', () => {
       secondaryColor: colorPurple
     };
 
-    const theme = generateTheme(BACK_END_VARIANT);
+    const theme = generateTheme(BACK_END_ROLE);
 
     expect(theme.primaryColor).toEqual(expectedTheme.primaryColor);
     expect(theme.secondaryColor).toEqual(expectedTheme.secondaryColor);
@@ -53,7 +53,7 @@ describe('COMPONENT - LandingPage', () => {
       secondaryColor: colorBlue
     };
 
-    const theme = generateTheme(DEV_OPS_VARIANT);
+    const theme = generateTheme(DEV_OPS_ROLE);
 
     expect(theme.primaryColor).toEqual(expectedTheme.primaryColor);
     expect(theme.secondaryColor).toEqual(expectedTheme.secondaryColor);

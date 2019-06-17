@@ -19,18 +19,16 @@ Array [
     <QuoteBubble
       quote="Yesterday I was implementing PUT method for missing RESTful API endpoint."
     />
-    <WideButton
-      to="/backend/brag"
-      variant="brag"
-    >
-      Brag about my efforts
-    </WideButton>
-    <WideButton
-      to="/backend/confess"
-      variant="confess"
-    >
-      Confess my mistake
-    </WideButton>
+    <nav>
+      <RoleActionButton
+        to="/backend/brag"
+        variant="brag"
+      />
+      <RoleActionButton
+        to="/backend/confess"
+        variant="confess"
+      />
+    </nav>
   </section>,
 ]
 `;
@@ -54,18 +52,16 @@ Array [
     <QuoteBubble
       quote="Yesterday I was implementing PUT method for missing RESTful API endpoint."
     />
-    <WideButton
-      to="/backend/brag"
-      variant="brag"
-    >
-      Brag about my efforts
-    </WideButton>
-    <WideButton
-      to="/backend/confess"
-      variant="confess"
-    >
-      Confess my mistake
-    </WideButton>
+    <nav>
+      <RoleActionButton
+        to="/backend/brag"
+        variant="brag"
+      />
+      <RoleActionButton
+        to="/backend/confess"
+        variant="confess"
+      />
+    </nav>
   </section>,
 ]
 `;
@@ -89,18 +85,16 @@ Array [
     <QuoteBubble
       quote="Yesterday I was implementing PUT method for missing RESTful API endpoint."
     />
-    <WideButton
-      to="/backend/brag"
-      variant="brag"
-    >
-      Brag about my efforts
-    </WideButton>
-    <WideButton
-      to="/backend/confess"
-      variant="confess"
-    >
-      Confess my mistake
-    </WideButton>
+    <nav>
+      <RoleActionButton
+        to="/backend/brag"
+        variant="brag"
+      />
+      <RoleActionButton
+        to="/backend/confess"
+        variant="confess"
+      />
+    </nav>
   </section>,
 ]
 `;
