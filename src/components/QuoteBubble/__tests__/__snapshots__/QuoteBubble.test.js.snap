@@ -45,7 +45,9 @@ exports[`COMPONENT - QuoteBubble renders correctly 1`] = `
 >
   <p
     className="c1"
-  />
+  >
+    Hello! I'm Taylor Swift!
+  </p>
   <SpeechBubble />
   <button
     className="c2"
