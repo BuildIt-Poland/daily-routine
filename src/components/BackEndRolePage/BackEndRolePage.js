@@ -23,8 +23,12 @@ function BackEndRolePage() {
         <Route exact path={BACK_END_ROLE_PATH + BRAG_PATH} component={Brag} />
         <Route exact path={BACK_END_ROLE_PATH + CONFESS_PATH} component={Confess} />
         <QuoteBubble quote={QUOTE} />
-        <WideButton variant={BRAG_VARIANT}>Brag about my efforts</WideButton>
-        <WideButton variant={CONFESS_VARIANT}>Confess my mistake</WideButton>
+        <WideButton variant={BRAG_VARIANT} to={BACK_END_ROLE_PATH + BRAG_PATH}>
+          Brag about my efforts
+        </WideButton>
+        <WideButton variant={CONFESS_VARIANT} to={BACK_END_ROLE_PATH + CONFESS_PATH}>
+          Confess my mistake
+        </WideButton>
       </Section>
     </>
   );

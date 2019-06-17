@@ -20,11 +20,13 @@ Array [
       quote="Yesterday I was implementing PUT method for missing RESTful API endpoint."
     />
     <WideButton
+      to="/backend/brag"
       variant="brag"
     >
       Brag about my efforts
     </WideButton>
     <WideButton
+      to="/backend/confess"
       variant="confess"
     >
       Confess my mistake
@@ -53,11 +55,13 @@ Array [
       quote="Yesterday I was implementing PUT method for missing RESTful API endpoint."
     />
     <WideButton
+      to="/backend/brag"
       variant="brag"
     >
       Brag about my efforts
     </WideButton>
     <WideButton
+      to="/backend/confess"
       variant="confess"
     >
       Confess my mistake
@@ -86,11 +90,13 @@ Array [
       quote="Yesterday I was implementing PUT method for missing RESTful API endpoint."
     />
     <WideButton
+      to="/backend/brag"
       variant="brag"
     >
       Brag about my efforts
     </WideButton>
     <WideButton
+      to="/backend/confess"
       variant="confess"
     >
       Confess my mistake
