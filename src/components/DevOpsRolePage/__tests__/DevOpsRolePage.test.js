@@ -19,7 +19,7 @@ describe('COMPONENT - DevOpsRolePage', () => {
     expect(component.toJSON()).toMatchSnapshot();
   });
 
-  it('renders correctly for /backend/brag path', () => {
+  it('renders correctly for /devops/brag path', () => {
     const component = create(
       <MemoryRouter initialEntries={['/devops/brag']}>
         <DevOpsRolePage />
@@ -29,7 +29,7 @@ describe('COMPONENT - DevOpsRolePage', () => {
     expect(component.toJSON()).toMatchSnapshot();
   });
 
-  it('renders correctly for /backend/confess path', () => {
+  it('renders correctly for /devops/confess path', () => {
     const component = create(
       <MemoryRouter initialEntries={['/devops/confess']}>
         <DevOpsRolePage />
