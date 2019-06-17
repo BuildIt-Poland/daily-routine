@@ -28,7 +28,7 @@ exports[`COMPONENT - AppBar Logo renders correctly 1`] = `
   padding: 0;
   color: #222222;
   font-size: 1.2rem;
-  line-height: 1;
+  line-height: 1.2;
   text-transform: uppercase;
 }
 
