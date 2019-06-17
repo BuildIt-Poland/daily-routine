@@ -1,7 +1,7 @@
 import React from 'react';
 import { create } from 'react-test-renderer';
 
-import LightBulbIcon from '../LightBulbIcon';
+import LightbulbIcon from '../LightbulbIcon';
 
 jest.mock('../../Icons', () => ({
   Lightbulb: 'Lightbulb'
@@ -9,7 +9,7 @@ jest.mock('../../Icons', () => ({
 
 describe('COMPONENT - RoleActionButton LightBulbIcon', () => {
   it('renders correctly', () => {
-    const component = create(<LightBulbIcon />);
+    const component = create(<LightbulbIcon />);
 
     expect(component.toJSON()).toMatchSnapshot();
   });
