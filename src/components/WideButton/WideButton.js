@@ -13,14 +13,14 @@ import {
 import Wrapper from './Wrapper';
 import LightbublIcon from './LightbulbIcon';
 import SaltGrignderIcon from './SaltGrinderIcon';
-import LongArrow from './LongArrowIcon';
+import LongArrowIcon from './LongArrowIcon';
 
 const ICONS = {
   [BRAG_VARIANT]: LightbublIcon,
   [CONFESS_VARIANT]: SaltGrignderIcon,
-  [FRONT_END_VARIANT]: LongArrow,
-  [BACK_END_VARIANT]: LongArrow,
-  [DEV_OPS_VARIANT]: LongArrow
+  [FRONT_END_VARIANT]: LongArrowIcon,
+  [BACK_END_VARIANT]: LongArrowIcon,
+  [DEV_OPS_VARIANT]: LongArrowIcon
 };
 
 function WideButton({ variant = 'frontend', children, to, onClick = () => {} }) {
