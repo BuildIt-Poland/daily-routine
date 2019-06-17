@@ -8,6 +8,7 @@ jest.mock('../../Characters', () => ({
   Robot: 'Robot'
 }));
 jest.mock('../../WideButton', () => 'WideButton');
+jest.mock('../../RoleBar', () => 'RoleBar');
 
 describe('COMPONENT - BackEndRolePage', () => {
   it('renders correctly for /backend path', () => {

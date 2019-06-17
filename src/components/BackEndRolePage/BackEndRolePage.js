@@ -14,7 +14,7 @@ import Confess from './Confess';
 function BackEndRolePage() {
   return (
     <>
-      <RoleBar />
+      <RoleBar label="Back End Developer" />
       <Section>
         <Route exact path={BACK_END_ROLE_PATH} component={Default} />
         <Route exact path={BACK_END_ROLE_PATH + BRAG_PATH} component={Brag} />

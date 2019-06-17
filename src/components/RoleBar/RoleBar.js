@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import { spacingMedium } from '../../styles/designTokens';
@@ -14,15 +15,19 @@ const Header = styled.header`
   background-color: rgba(255, 255, 255, 0.5);
 `;
 
-function RoleBar() {
+function RoleBar({ label }) {
   return (
     <Header>
       <Subheadline>
-        I am <strong>The FrontEnd Developer</strong>
+        I am <strong>{label}</strong>
       </Subheadline>
       <GearButton />
     </Header>
   );
 }
+
+RoleBar.propTypes = {
+  label: PropTypes.string.isRequired
+};
 
 export default RoleBar;
