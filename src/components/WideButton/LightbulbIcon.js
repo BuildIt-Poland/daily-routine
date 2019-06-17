@@ -3,13 +3,13 @@ import styled from 'styled-components';
 
 import { Lightbulb } from '../Icons';
 
-const Wrapper = styled.div`
+const Wrapper = styled.span`
   position: absolute;
   right: 0;
   bottom: -1rem;
 `;
 
-function Icon() {
+function LightbulbIcon() {
   return (
     <Wrapper>
       <Lightbulb />
@@ -17,4 +17,4 @@ function Icon() {
   );
 }
 
-export default Icon;
+export default LightbulbIcon;

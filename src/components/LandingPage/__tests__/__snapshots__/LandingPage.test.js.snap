@@ -32,5 +32,23 @@ exports[`COMPONENT - LandingPage renders correctly 1`] = `
     Worry not! Find your perfect scenario for incoming daily.
   </h2>
   <SugarCat />
+  <WideButton
+    to="/frontend"
+    variant="frontend"
+  >
+    Front End Engineer
+  </WideButton>
+  <WideButton
+    to="/backend"
+    variant="backend"
+  >
+    Back End Developer
+  </WideButton>
+  <WideButton
+    to="/devops"
+    variant="devops"
+  >
+    Dev Ops
+  </WideButton>
 </section>
 `;

@@ -3,13 +3,13 @@ import styled from 'styled-components';
 
 import { SaltGrinder } from '../Icons';
 
-const Wrapper = styled.div`
+const Wrapper = styled.span`
   position: absolute;
   right: 0.4rem;
   bottom: -0.9rem;
 `;
 
-function Icon() {
+function SaltGrinderIcon() {
   return (
     <Wrapper>
       <SaltGrinder />
@@ -17,4 +17,4 @@ function Icon() {
   );
 }
 
-export default Icon;
+export default SaltGrinderIcon;
