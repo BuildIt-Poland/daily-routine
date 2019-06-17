@@ -19,7 +19,7 @@ const GlobalStyle = createGlobalStyle`
     font-weight: ${fontWeightNormal};
     font-size: ${fontMedium};
     color: ${colorBlack};
-    line-height: 1.4;
+    line-height: 1.2;
   }
 
   #root {
@@ -37,6 +37,10 @@ const GlobalStyle = createGlobalStyle`
   em {
     font-style: italic;
     font-weight: ${fontWeightNormal};
+  }
+
+  input, textarea, button, select, label, a, li {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
 `;
 

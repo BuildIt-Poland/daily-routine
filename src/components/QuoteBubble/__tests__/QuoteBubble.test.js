@@ -1,15 +1,16 @@
 import React from 'react';
 import { create } from 'react-test-renderer';
 
-import Button from '../Button';
+import QuoteBubble from '../QuoteBubble';
 
 jest.mock('../../Icons', () => ({
-  Lightbulb: 'Lightbulb'
+  SpeechBubble: 'SpeechBubble',
+  CopyCards: 'CopyCards'
 }));
 
-describe('COMPONENT - Button', () => {
+describe('COMPONENT - QuoteBubble', () => {
   it('renders correctly', () => {
-    const component = create(<Button />);
+    const component = create(<QuoteBubble />);
 
     expect(component.toJSON()).toMatchSnapshot();
   });

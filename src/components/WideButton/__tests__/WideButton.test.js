@@ -1,11 +1,11 @@
 import React from 'react';
 import { create } from 'react-test-renderer';
 
-import Wrapper from '../Wrapper';
+import WideButton from '../WideButton';
 
-describe('COMPONENT - AppBar Wrapper', () => {
+describe('COMPONENT - WideButton', () => {
   it('renders correctly', () => {
-    const component = create(<Wrapper />);
+    const component = create(<WideButton>Confess</WideButton>);
 
     expect(component.toJSON()).toMatchSnapshot();
   });

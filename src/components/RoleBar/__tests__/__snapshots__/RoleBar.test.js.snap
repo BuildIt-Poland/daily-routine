@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`COMPONENT - ConfessButton renders correctly 1`] = `
-.c1 {
+exports[`COMPONENT - RoleBar renders correctly 1`] = `
+.c2 {
   border: 0;
   background: none;
   display: -webkit-box;
@@ -20,7 +20,19 @@ exports[`COMPONENT - ConfessButton renders correctly 1`] = `
   min-height: 4rem;
   cursor: pointer;
   outline: 0;
-  position: relative;
+}
+
+.c2 svg {
+  display: block;
+}
+
+.c1 {
+  font-size: 1.8rem;
+  margin: 1rem 0;
+  font-weight: 400;
+}
+
+.c0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -33,47 +45,27 @@ exports[`COMPONENT - ConfessButton renders correctly 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  background-color: #21c230;
-  color: #ffffff;
-  width: 100%;
-  height: 4.7rem;
-  margin: 2rem 0;
   padding: 0 2rem;
-  border: 0;
-  border-bottom: 0.3rem solid #138a1e;
-  border-radius: 0.6rem;
-  font-size: 1.8rem;
-  font-weight: 700;
-  text-align: left;
+  height: 5rem;
+  background-color: rgba(255,255,255,0.5);
 }
 
-.c1 svg {
-  display: block;
-}
-
-.c1:not(:disabled) {
-  cursor: pointer;
-}
-
-.c2 {
-  position: absolute;
-  right: 0.4rem;
-  bottom: -0.9rem;
-}
-
-.c0 {
-  background-color: #eb4640;
-  border-bottom-color: #a32f2a;
-}
-
-<button
-  className="c0 c1"
+<header
+  className="c0"
 >
-  Confess my mistake
-  <div
-    className="c2"
+  <h2
+    className="c1"
   >
-    <SaltGrinder />
-  </div>
-</button>
+    I am 
+    <strong>
+      The FrontEnd Developer
+    </strong>
+  </h2>
+  <button
+    className="c2"
+    onClick={[Function]}
+  >
+    <GearIcon />
+  </button>
+</header>
 `;
