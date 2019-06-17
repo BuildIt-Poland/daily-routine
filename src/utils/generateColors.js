@@ -1,10 +1,4 @@
-import {
-  BRAG_VARIANT,
-  CONFESS_VARIANT,
-  FRONT_END_VARIANT,
-  BACK_END_VARIANT,
-  DEV_OPS_VARIANT
-} from '../constants/coloursVariants';
+import { FRONT_END_ROLE, BACK_END_ROLE, DEV_OPS_ROLE } from '../constants/roles';
 
 import {
   colorBlue,
@@ -13,32 +7,22 @@ import {
   colorLightPurple,
   colorYellow,
   colorLightYellow,
-  colorLightTeal,
-  colorDarkBlue,
-  colorDarkYellow,
-  colorDeepPurple,
-  colorGreen,
-  darkGreen,
-  colorRed,
-  darkRed
+  colorLightTeal
 } from '../styles/designTokens';
 
 function generateColors(colourVariant) {
-  const composeColors = (primaryColor, secondaryColor, tertiaryColor) => ({
+  const composeColors = (primaryColor, secondaryColor) => ({
     primaryColor,
-    secondaryColor,
-    tertiaryColor
+    secondaryColor
   });
 
   const colorTheme = {
-    [BRAG_VARIANT]: composeColors(colorGreen, colorGreen, darkGreen),
-    [CONFESS_VARIANT]: composeColors(colorRed, colorRed, darkRed),
-    [FRONT_END_VARIANT]: composeColors(colorLightYellow, colorYellow, colorDarkYellow),
-    [BACK_END_VARIANT]: composeColors(colorLightPurple, colorPurple, colorDeepPurple),
-    [DEV_OPS_VARIANT]: composeColors(colorLightBlue, colorBlue, colorDarkBlue)
+    [FRONT_END_ROLE]: composeColors(colorLightYellow, colorYellow),
+    [BACK_END_ROLE]: composeColors(colorLightPurple, colorPurple),
+    [DEV_OPS_ROLE]: composeColors(colorLightBlue, colorBlue)
   };
 
-  return colorTheme[colourVariant] || composeColors(colorLightTeal, colorLightTeal, colorLightTeal);
+  return colorTheme[colourVariant] || composeColors(colorLightTeal, colorLightTeal);
 }
 
 export default generateColors;
