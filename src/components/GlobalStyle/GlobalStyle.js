@@ -19,7 +19,7 @@ const GlobalStyle = createGlobalStyle`
     font-weight: ${fontWeightNormal};
     font-size: ${fontMedium};
     color: ${colorBlack};
-    line-height: 1.4;
+    line-height: 1.2;
   }
 
   #root {

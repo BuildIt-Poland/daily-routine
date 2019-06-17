@@ -4,6 +4,7 @@ import BragButton from '../BragButton';
 import ConfessButton from '../ConfessButton';
 import RoleBar from '../RoleBar';
 import Section from '../Section';
+import QuoteBubble from '../QuoteBubble';
 import { Robot } from '../Characters';
 
 function BackEndRolePage() {
@@ -12,6 +13,7 @@ function BackEndRolePage() {
       <RoleBar />
       <Section>
         <Robot mood="sad" />
+        <QuoteBubble />
         <BragButton />
         <ConfessButton />
       </Section>
