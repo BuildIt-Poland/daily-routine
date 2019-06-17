@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+
 import SugarCatArtwork from './SugarCatArtwork';
 
 const Wrapper = styled.div`

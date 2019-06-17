@@ -3,7 +3,9 @@ import { create } from 'react-test-renderer';
 
 import GenderFlower from '../GenderFlower';
 
-describe('COMPONENT - Characters GenderFlower', () => {
+jest.mock('../../GenderFlower', () => 'GenderFlower');
+
+describe('COMPONENT - Characters Robot GenderFlower', () => {
   it('renders correctly', () => {
     const component = create(<GenderFlower />);
 

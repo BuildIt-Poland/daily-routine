@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`COMPONENT - Characters Robot GenderFlower renders correctly 1`] = `
+.c0 {
+  top: -1.6rem;
+  left: 3rem;
+}
+
+<GenderFlower
+  className="c0"
+/>
+`;
