@@ -2,8 +2,8 @@ import React from 'react';
 import { Route } from 'react-router-dom';
 
 import { BACK_END_ROLE_PATH, BRAG_PATH, CONFESS_PATH } from '../../constants/routes';
-import { BRAG_VARIANT, CONFESS_VARIANT } from '../../constants/coloursVariants';
-import WideButton from '../WideButton';
+import { BRAG_ROLE_ACTION, CONFESS_ROLE_ACTION } from '../../constants/roles';
+import RoleActionButton from '../RoleActionButton';
 import RoleBar from '../RoleBar';
 import Section from '../Section';
 import QuoteBubble from '../QuoteBubble';
@@ -23,12 +23,10 @@ function BackEndRolePage() {
         <Route exact path={BACK_END_ROLE_PATH + BRAG_PATH} component={Brag} />
         <Route exact path={BACK_END_ROLE_PATH + CONFESS_PATH} component={Confess} />
         <QuoteBubble quote={QUOTE} />
-        <WideButton variant={BRAG_VARIANT} to={BACK_END_ROLE_PATH + BRAG_PATH}>
-          Brag about my efforts
-        </WideButton>
-        <WideButton variant={CONFESS_VARIANT} to={BACK_END_ROLE_PATH + CONFESS_PATH}>
-          Confess my mistake
-        </WideButton>
+        <nav>
+          <RoleActionButton variant={BRAG_ROLE_ACTION} to={BACK_END_ROLE_PATH + BRAG_PATH} />
+          <RoleActionButton variant={CONFESS_ROLE_ACTION} to={BACK_END_ROLE_PATH + CONFESS_PATH} />
+        </nav>
       </Section>
     </>
   );
