@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Button from '../Button';
+import Hitbox from '../Hitbox';
 import { Gear } from '../Icons';
 
 function GearButton({ onClick = () => {} }) {
   return (
-    <Button onClick={onClick}>
+    <Hitbox onClick={onClick}>
       <Gear />
-    </Button>
+    </Hitbox>
   );
 }
 
