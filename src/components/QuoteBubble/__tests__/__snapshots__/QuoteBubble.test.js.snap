@@ -2,8 +2,27 @@
 
 exports[`COMPONENT - QuoteBubble renders correctly 1`] = `
 .c2 {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  background: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  min-width: 4rem;
+  min-height: 4rem;
+  cursor: pointer;
   position: absolute;
-  top: 6rem;
+  top: 5rem;
   right: 0;
 }
 
@@ -15,8 +34,10 @@ exports[`COMPONENT - QuoteBubble renders correctly 1`] = `
 
 .c1 {
   margin: 0;
+  top: 0;
+  left: 0;
   position: absolute;
-  padding: 0.6rem 1.6rem;
+  padding: 1.4rem 1.8rem;
 }
 
 <section
@@ -24,9 +45,7 @@ exports[`COMPONENT - QuoteBubble renders correctly 1`] = `
 >
   <p
     className="c1"
-  >
-    Yesterday I was implementing PUT method for missing RESTful API endpoint with complex database transactions.
-  </p>
+  />
   <SpeechBubble />
   <button
     className="c2"
