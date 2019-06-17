@@ -11,6 +11,9 @@ import Default from './Default';
 import Brag from './Brag';
 import Confess from './Confess';
 
+// TODO Replace with auto-generated message @blurbyte
+const QUOTE = 'Yesterday I was implementing PUT method for missing RESTful API endpoint.';
+
 function BackEndRolePage() {
   return (
     <>
@@ -19,7 +22,7 @@ function BackEndRolePage() {
         <Route exact path={BACK_END_ROLE_PATH} component={Default} />
         <Route exact path={BACK_END_ROLE_PATH + BRAG_PATH} component={Brag} />
         <Route exact path={BACK_END_ROLE_PATH + CONFESS_PATH} component={Confess} />
-        <QuoteBubble />
+        <QuoteBubble quote={QUOTE} />
         <WideButton variant={BRAG_VARIANT}>Brag about my efforts</WideButton>
         <WideButton variant={CONFESS_VARIANT}>Confess my mistake</WideButton>
       </Section>
