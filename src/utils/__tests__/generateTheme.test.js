@@ -10,7 +10,7 @@ import {
   colorBlue
 } from '../../styles/designTokens';
 
-describe('COMPONENT - LandingPage', () => {
+describe('FUNC - generateTheme', () => {
   it('should return default color', () => {
     const expectedTheme = {
       primaryColor: colorLightTeal,

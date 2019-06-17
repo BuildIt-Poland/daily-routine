@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`COMPONENT - RoleButton DevOpsButton renders correctly 1`] = `
+.c1 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: #21c230;
+  color: #ffffff;
+  padding: 0 2rem;
+  margin: 2rem 0;
+  border: 0;
+  border-bottom: 0.3rem solid #138a1e;
+  border-radius: 0.6rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: left;
+  width: 100%;
+  height: 4.7rem;
+}
+
+.c1:not(:disabled) {
+  cursor: pointer;
+}
+
+.c2 {
+  position: absolute;
+  right: 1.3rem;
+  bottom: 1.3rem;
+}
+
+.c0 {
+  background-color: #2784e6;
+  border-bottom-color: #1558a1;
+}
+
+<Link
+  className="c0 c1"
+  to="/devops"
+>
+  Dev Ops
+  <span
+    className="c2"
+  >
+    <LongArrow />
+  </span>
+</Link>
+`;
