@@ -1,12 +1,12 @@
 import React from 'react';
 
 import Section from '../Section';
-import Headline from '../Headline';
+import { Whale } from '../Characters';
 
 function DevOpsRolePage() {
   return (
     <Section>
-      <Headline>DevOps</Headline>
+      <Whale />
     </Section>
   );
 }
