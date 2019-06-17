@@ -21,7 +21,7 @@ function App({ location }) {
           <Route exact path={ROOT_PATH} component={LandingPage} />
           <Route exact path={FRONT_END_ROLE_PATH} component={FrontEndRolePage} />
           <Route path={BACK_END_ROLE_PATH} component={BackEndRolePage} />
-          <Route exact path={DEV_OPS_ROLE_PATH} component={DevOpsRolePage} />
+          <Route path={DEV_OPS_ROLE_PATH} component={DevOpsRolePage} />
         </main>
         <Footer />
       </Wrapper>
