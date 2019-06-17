@@ -1,26 +1,23 @@
 import React from 'react';
 
-import { MALE, FEMALE } from '../../../constants/genders';
 import { CONFUSED } from '../../../constants/characterMoods';
 import { gender, mood } from '../../../types';
 import Wrapper from '../Wrapper';
-import RobotArtwork from './RobotArtwork';
 import ConfusionMarks from './ConfusionMarks';
-import GenderFlower from './GenderFlower';
+import WhaleArtwork from './WhaleArtwork';
 
-function Robot({ gender = MALE, mood = CONFUSED }) {
+function Whale({ mood = CONFUSED }) {
   return (
     <Wrapper>
-      <RobotArtwork mood={mood} />
+      <WhaleArtwork mood={mood} />
       {mood === CONFUSED && <ConfusionMarks />}
-      {gender === FEMALE && <GenderFlower />}
     </Wrapper>
   );
 }
 
-Robot.propTypes = {
+Whale.propTypes = {
   gender,
   mood
 };
 
-export default Robot;
+export default Whale;
