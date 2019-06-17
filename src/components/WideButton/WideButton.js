@@ -23,7 +23,7 @@ const ICONS = {
   [DEV_OPS_VARIANT]: LongArrowIcon
 };
 
-function WideButton({ variant = 'frontend', children, to, onClick = () => {} }) {
+function WideButton({ variant = 'frontend', children, to, onClick }) {
   // Render link if 'to' prop is passed, button with handler otherwise
   const props = {
     ...(to ? { as: Link, to } : { onClick: onClick })
