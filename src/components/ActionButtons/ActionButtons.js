@@ -6,7 +6,7 @@ import { role } from '../../types';
 import BragButton from './BragButton';
 import ConfessButton from './ConfessButton';
 
-function RoleActionButtons({ role }) {
+function ActionButtons({ role }) {
   return (
     <nav>
       <BragButton role={role} />
@@ -15,8 +15,8 @@ function RoleActionButtons({ role }) {
   );
 }
 
-RoleActionButtons.propTypes = {
+ActionButtons.propTypes = {
   role: role.isRequired
 };
 
-export default RoleActionButtons;
+export default ActionButtons;
