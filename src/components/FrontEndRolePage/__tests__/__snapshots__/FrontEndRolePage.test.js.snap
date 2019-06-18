@@ -20,5 +20,8 @@ exports[`COMPONENT - FrontEndRolePage renders correctly 1`] = `
   >
     FrontEnd
   </h1>
+  <Fox
+    mood="sad"
+  />
 </section>
 `;
