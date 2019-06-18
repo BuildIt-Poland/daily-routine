@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`COMPONENT - RoleButtons Icon renders correctly 1`] = `
+.c0 {
+  position: absolute;
+  right: 1.3rem;
+  bottom: 1.3rem;
+}
+
+<span
+  className="c0"
+>
+  <LongArrow />
+</span>
+`;

@@ -42,17 +42,7 @@ exports[`COMPONENT - LandingPage renders correctly 1`] = `
     >
       Pick your role!
     </h2>
-    <nav>
-      <RoleButton
-        variant="frontend"
-      />
-      <RoleButton
-        variant="backend"
-      />
-      <RoleButton
-        variant="devops"
-      />
-    </nav>
+    <RoleButtons />
   </section>
 </article>
 `;

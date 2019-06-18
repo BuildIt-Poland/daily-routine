@@ -4,7 +4,7 @@ import { create } from 'react-test-renderer';
 
 import App from '../App';
 
-jest.mock('../../RoleButton', () => 'RoleButton');
+jest.mock('../../RoleButtons', () => 'RoleButtons');
 jest.mock('../../AppBar', () => 'AppBar');
 jest.mock('../../Footer', () => 'Footer');
 jest.mock('../../Characters', () => ({

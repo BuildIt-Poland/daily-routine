@@ -19,16 +19,9 @@ Array [
     <QuoteBubble
       quote="Yesterday I was implementing PUT method for missing RESTful API endpoint."
     />
-    <nav>
-      <RoleActionButton
-        to="/backend/brag"
-        variant="brag"
-      />
-      <RoleActionButton
-        to="/backend/confess"
-        variant="confess"
-      />
-    </nav>
+    <ActionButtons
+      role="backend"
+    />
   </section>,
 ]
 `;
@@ -52,16 +45,9 @@ Array [
     <QuoteBubble
       quote="Yesterday I was implementing PUT method for missing RESTful API endpoint."
     />
-    <nav>
-      <RoleActionButton
-        to="/backend/brag"
-        variant="brag"
-      />
-      <RoleActionButton
-        to="/backend/confess"
-        variant="confess"
-      />
-    </nav>
+    <ActionButtons
+      role="backend"
+    />
   </section>,
 ]
 `;
@@ -85,16 +71,9 @@ Array [
     <QuoteBubble
       quote="Yesterday I was implementing PUT method for missing RESTful API endpoint."
     />
-    <nav>
-      <RoleActionButton
-        to="/backend/brag"
-        variant="brag"
-      />
-      <RoleActionButton
-        to="/backend/confess"
-        variant="confess"
-      />
-    </nav>
+    <ActionButtons
+      role="backend"
+    />
   </section>,
 ]
 `;

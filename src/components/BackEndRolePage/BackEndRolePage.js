@@ -1,9 +1,8 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 
-import { BACK_END_ROLE_PATH, BRAG_PATH, CONFESS_PATH } from '../../constants/routes';
-import { BRAG_ROLE_ACTION, CONFESS_ROLE_ACTION } from '../../constants/roles';
-import RoleActionButton from '../RoleActionButton';
+import { BACK_END_ROLE, BRAG_ROLE_ACTION, CONFESS_ROLE_ACTION } from '../../constants/roles';
+import ActionButtons from '../ActionButtons';
 import RoleBar from '../RoleBar';
 import Section from '../Section';
 import QuoteBubble from '../QuoteBubble';
@@ -19,14 +18,11 @@ function BackEndRolePage() {
     <>
       <RoleBar label="Back End Developer" />
       <Section>
-        <Route exact path={BACK_END_ROLE_PATH} component={Default} />
-        <Route exact path={BACK_END_ROLE_PATH + BRAG_PATH} component={Brag} />
-        <Route exact path={BACK_END_ROLE_PATH + CONFESS_PATH} component={Confess} />
+        <Route exact path={`/${BACK_END_ROLE}`} component={Default} />
+        <Route exact path={`/${BACK_END_ROLE}/${BRAG_ROLE_ACTION}`} component={Brag} />
+        <Route exact path={`/${BACK_END_ROLE}/${CONFESS_ROLE_ACTION}`} component={Confess} />
         <QuoteBubble quote={QUOTE} />
-        <nav>
-          <RoleActionButton variant={BRAG_ROLE_ACTION} to={BACK_END_ROLE_PATH + BRAG_PATH} />
-          <RoleActionButton variant={CONFESS_ROLE_ACTION} to={BACK_END_ROLE_PATH + CONFESS_PATH} />
-        </nav>
+        <ActionButtons role={BACK_END_ROLE} />
       </Section>
     </>
   );

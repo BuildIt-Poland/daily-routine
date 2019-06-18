@@ -7,7 +7,7 @@ import BackEndRolePage from '../BackEndRolePage';
 jest.mock('../../Characters', () => ({
   Robot: 'Robot'
 }));
-jest.mock('../../RoleActionButton', () => 'RoleActionButton');
+jest.mock('../../ActionButtons', () => 'ActionButtons');
 jest.mock('../../RoleBar', () => 'RoleBar');
 jest.mock('../../QuoteBubble', () => 'QuoteBubble');
 

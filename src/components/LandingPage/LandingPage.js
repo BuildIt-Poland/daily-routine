@@ -1,11 +1,10 @@
 import React from 'react';
 
-import { FRONT_END_ROLE, BACK_END_ROLE, DEV_OPS_ROLE } from '../../constants/roles';
 import Section from '../Section';
 import Headline from '../Headline';
 import Subheadline from '../Subheadline';
 import { SugarCat } from '../Characters';
-import RoleButton from '../RoleButton';
+import RoleButtons from '../RoleButtons';
 
 function LandingPage() {
   return (
@@ -17,11 +16,7 @@ function LandingPage() {
       </Section>
       <Section>
         <Subheadline>Pick your role!</Subheadline>
-        <nav>
-          <RoleButton variant={FRONT_END_ROLE} />
-          <RoleButton variant={BACK_END_ROLE} />
-          <RoleButton variant={DEV_OPS_ROLE} />
-        </nav>
+        <RoleButtons />
       </Section>
     </article>
   );

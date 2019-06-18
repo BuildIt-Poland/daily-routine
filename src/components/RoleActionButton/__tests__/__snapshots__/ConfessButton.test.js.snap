@@ -1,7 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`COMPONENT - RoleButton ConfessButton renders correctly 1`] = `
-<ConfessButton
-  to="/devops/brag"
-/>
-`;
