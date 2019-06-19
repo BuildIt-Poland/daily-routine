@@ -3,8 +3,8 @@
 exports[`COMPONENT - RoleButtons Icon renders correctly 1`] = `
 .c0 {
   position: absolute;
-  right: 1.3rem;
-  bottom: 1.3rem;
+  right: 1.4rem;
+  bottom: 1.4rem;
 }
 
 <span
