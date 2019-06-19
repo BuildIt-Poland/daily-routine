@@ -2,7 +2,13 @@
 
 exports[`COMPONENT - BackEndRolePage renders correctly for /backend path 1`] = `
 Array [
-  .c2 {
+  .c1 {
+  font-size: 1.8rem;
+  margin: 1rem 0;
+  font-weight: 400;
+}
+
+.c2 {
   border: 0;
   background: none;
   display: -webkit-box;
@@ -23,12 +29,6 @@ Array [
 
 .c2 svg {
   display: block;
-}
-
-.c1 {
-  font-size: 1.8rem;
-  margin: 1rem 0;
-  font-weight: 400;
 }
 
 .c0 {
@@ -62,6 +62,7 @@ Array [
     </h2>
     <button
       className="c2"
+      data-testid="gear-button"
       onClick={[Function]}
     >
       <svg
@@ -162,7 +163,13 @@ Array [
 
 exports[`COMPONENT - BackEndRolePage renders correctly for /backend/brag path 1`] = `
 Array [
-  .c2 {
+  .c1 {
+  font-size: 1.8rem;
+  margin: 1rem 0;
+  font-weight: 400;
+}
+
+.c2 {
   border: 0;
   background: none;
   display: -webkit-box;
@@ -183,12 +190,6 @@ Array [
 
 .c2 svg {
   display: block;
-}
-
-.c1 {
-  font-size: 1.8rem;
-  margin: 1rem 0;
-  font-weight: 400;
 }
 
 .c0 {
@@ -222,6 +223,7 @@ Array [
     </h2>
     <button
       className="c2"
+      data-testid="gear-button"
       onClick={[Function]}
     >
       <svg
@@ -322,7 +324,13 @@ Array [
 
 exports[`COMPONENT - BackEndRolePage renders correctly for /backend/confess path 1`] = `
 Array [
-  .c2 {
+  .c1 {
+  font-size: 1.8rem;
+  margin: 1rem 0;
+  font-weight: 400;
+}
+
+.c2 {
   border: 0;
   background: none;
   display: -webkit-box;
@@ -343,12 +351,6 @@ Array [
 
 .c2 svg {
   display: block;
-}
-
-.c1 {
-  font-size: 1.8rem;
-  margin: 1rem 0;
-  font-weight: 400;
 }
 
 .c0 {
@@ -382,6 +384,7 @@ Array [
     </h2>
     <button
       className="c2"
+      data-testid="gear-button"
       onClick={[Function]}
     >
       <svg

@@ -1,23 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
-import Subheadline from '../Subheadline';
-import Header from './Header';
+import GearButton from '../GearButton';
 import SideBar from './SideBar';
 import Overlay from './Overlay';
 
-function SlidingPanel({ onClose }) {
+function SlidingPanel() {
+  const [isSlidingPanelOpen, setSlidingPanelVisible] = useState(false);
+
+  const toogleSlidingPanel = () => setSlidingPanelVisible(!isSlidingPanelOpen);
+
   return (
     <>
-      <Overlay />
-      <SideBar>
-        <Header>
-          <Subheadline>
-            My role <strong>settings</strong>
-          </Subheadline>
-          <button onClick={onClose}>Close</button>
-        </Header>
-      </SideBar>
+      <GearButton onClick={toogleSlidingPanel} />
+      <Overlay show={isSlidingPanelOpen} />
+      <SideBar show={isSlidingPanelOpen} onClose={toogleSlidingPanel} />
     </>
   );
 }

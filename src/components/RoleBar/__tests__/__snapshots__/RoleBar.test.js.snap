@@ -1,6 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`COMPONENT - RoleBar renders correctly 1`] = `
+.c1 {
+  font-size: 1.8rem;
+  margin: 1rem 0;
+  font-weight: 400;
+}
+
 .c2 {
   border: 0;
   background: none;
@@ -22,12 +28,6 @@ exports[`COMPONENT - RoleBar renders correctly 1`] = `
 
 .c2 svg {
   display: block;
-}
-
-.c1 {
-  font-size: 1.8rem;
-  margin: 1rem 0;
-  font-weight: 400;
 }
 
 .c0 {
@@ -61,6 +61,7 @@ exports[`COMPONENT - RoleBar renders correctly 1`] = `
   </h2>
   <button
     className="c2"
+    data-testid="gear-button"
     onClick={[Function]}
   >
     <GearIcon />

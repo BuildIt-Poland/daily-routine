@@ -6,7 +6,7 @@ import { Gear } from '../Icons';
 
 function GearButton({ onClick = () => {} }) {
   return (
-    <Button onClick={onClick}>
+    <Button onClick={onClick} data-testid="gear-button">
       <Gear />
     </Button>
   );
