@@ -16,7 +16,7 @@ const QUOTE = 'Yesterday I was implementing PUT method for missing RESTful API e
 function DevOpsRolePage() {
   return (
     <>
-      <RoleBar label="Front End Developer" />
+      <RoleBar label="Dev Ops" />
       <Section>
         <QuoteBubble quote={QUOTE} />
         <Route exact path={`/${DEV_OPS_ROLE}`} component={Default} />
