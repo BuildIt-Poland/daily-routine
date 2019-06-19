@@ -4,14 +4,14 @@ import { CONFUSED } from '../../../constants/characterMoods';
 import { FEMALE, MALE } from '../../../constants/genders';
 import { gender, mood } from '../../../types';
 import Wrapper from '../Wrapper';
-import FoxArtWork from './FoxArtWork';
+import FoxArtwork from './FoxArtwork';
 import ConfusionMarks from './ConfusionMarks';
 import GenderFlower from './GenderFlower';
 
 function Fox({ gender = MALE, mood = CONFUSED }) {
   return (
     <Wrapper>
-      <FoxArtWork mood={mood} />
+      <FoxArtwork mood={mood} />
       {mood === CONFUSED && <ConfusionMarks />}
       {gender === FEMALE && <GenderFlower />}
     </Wrapper>
