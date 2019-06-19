@@ -4,25 +4,25 @@ import { create } from 'react-test-renderer';
 import Fox from '../index';
 
 describe('COMPONENT - Characters Fox', () => {
-  it('renders confused robot when mood is not set', () => {
+  it('renders confused fox when mood is not set', () => {
     const component = create(<Fox />);
 
     expect(component.toJSON()).toMatchSnapshot();
   });
 
-  it("renders sad robot when 'sad' mood is provided", () => {
+  it("renders sad fox when 'sad' mood is provided", () => {
     const component = create(<Fox mood="sad" />);
 
     expect(component.toJSON()).toMatchSnapshot();
   });
 
-  it("renders confused robot when 'confused' mood is provided", () => {
+  it("renders confused fox when 'confused' mood is provided", () => {
     const component = create(<Fox mood="confused" />);
 
     expect(component.toJSON()).toMatchSnapshot();
   });
 
-  it("renders confident robot when 'confident' mood is provided", () => {
+  it("renders confident fox when 'confident' mood is provided", () => {
     const component = create(<Fox mood="confident" />);
 
     expect(component.toJSON()).toMatchSnapshot();

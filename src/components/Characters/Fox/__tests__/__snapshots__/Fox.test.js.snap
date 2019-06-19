@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`COMPONENT - Characters Fox renders confident robot when 'confident' mood is provided 1`] = `
+exports[`COMPONENT - Characters Fox renders confident fox when 'confident' mood is provided 1`] = `
 .c1 {
   position: absolute;
   z-index: 20;
@@ -89,7 +89,7 @@ exports[`COMPONENT - Characters Fox renders confident robot when 'confident' moo
 </div>
 `;
 
-exports[`COMPONENT - Characters Fox renders confused robot when 'confused' mood is provided 1`] = `
+exports[`COMPONENT - Characters Fox renders confused fox when 'confused' mood is provided 1`] = `
 .c1 {
   position: absolute;
   z-index: 10;
@@ -197,7 +197,7 @@ exports[`COMPONENT - Characters Fox renders confused robot when 'confused' mood 
 </div>
 `;
 
-exports[`COMPONENT - Characters Fox renders confused robot when mood is not set 1`] = `
+exports[`COMPONENT - Characters Fox renders confused fox when mood is not set 1`] = `
 .c1 {
   position: absolute;
   z-index: 10;
@@ -305,7 +305,7 @@ exports[`COMPONENT - Characters Fox renders confused robot when mood is not set 
 </div>
 `;
 
-exports[`COMPONENT - Characters Fox renders sad robot when 'sad' mood is provided 1`] = `
+exports[`COMPONENT - Characters Fox renders sad fox when 'sad' mood is provided 1`] = `
 .c1 {
   position: absolute;
   z-index: 20;
