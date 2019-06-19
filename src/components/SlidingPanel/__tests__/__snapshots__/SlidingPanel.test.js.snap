@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`COMPONENT - SlidingPanel renders closed SlidingPanel 1`] = `
+.c0 {
+  border: 0;
+  background: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-width: 4rem;
+  min-height: 4rem;
+  cursor: pointer;
+  outline: 0;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c0 svg {
+  display: block;
+}
+
+<div>
+  <button
+    class="c0"
+    data-testid="gear-button"
+  >
+    <svg
+      height="24"
+      viewBox="0 0 24 24"
+      width="24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M24 14.035v-4.07l-2.597-.438a9.677 9.677 0 0 0-1.006-2.424l1.528-2.148-2.878-2.878-2.148 1.528a9.603 9.603 0 0 0-2.424-1.006L14.035 0h-4.07l-.439 2.597a9.658 9.658 0 0 0-2.424 1.007L4.954 2.076 2.076 4.954l1.528 2.148a9.603 9.603 0 0 0-1.006 2.424L0 9.965v4.071l2.597.438a9.677 9.677 0 0 0 1.006 2.424l-1.528 2.148 2.878 2.878 2.148-1.528c.75.439 1.563.781 2.424 1.006L9.965 24h4.071l.438-2.597a9.677 9.677 0 0 0 2.424-1.006l2.148 1.528 2.878-2.878-1.528-2.148a9.603 9.603 0 0 0 1.006-2.424l2.598-.44zM16.629 12a4.629 4.629 0 1 1-9.258 0 4.629 4.629 0 0 1 9.258 0z"
+        fill="#fff"
+      />
+    </svg>
+  </button>
+</div>
+`;
