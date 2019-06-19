@@ -26,7 +26,7 @@ const Button = styled.button`
   font-weight: ${fontWeightBold};
   text-align: left;
   width: 100%;
-  height: 4.7rem;
+  height: 5rem;
 
   &:not(:disabled) {
     cursor: pointer;

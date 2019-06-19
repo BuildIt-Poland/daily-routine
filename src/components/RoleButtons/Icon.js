@@ -5,8 +5,8 @@ import { LongArrow } from '../Icons';
 
 const Wrapper = styled.span`
   position: absolute;
-  right: 1.3rem;
-  bottom: 1.3rem;
+  right: 1.4rem;
+  bottom: 1.4rem;
 `;
 
 function Icon() {

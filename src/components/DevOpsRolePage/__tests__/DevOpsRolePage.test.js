@@ -7,6 +7,9 @@ import DevOpsRolePage from '../DevOpsRolePage';
 jest.mock('../../Characters', () => ({
   Whale: 'Whale'
 }));
+jest.mock('../../ActionButtons', () => 'ActionButtons');
+jest.mock('../../RoleBar', () => 'RoleBar');
+jest.mock('../../QuoteBubble', () => 'QuoteBubble');
 
 describe('COMPONENT - DevOpsRolePage', () => {
   it('renders correctly for /devops path', () => {
