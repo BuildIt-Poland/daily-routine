@@ -21,7 +21,7 @@ function App({ location }) {
         <AppBar />
         <main>
           <Route exact path={ROOT_PATH} component={LandingPage} />
-          <Route exact path={`/${FRONT_END_ROLE}`} component={FrontEndRolePage} />
+          <Route path={`/${FRONT_END_ROLE}`} component={FrontEndRolePage} />
           <Route path={`/${BACK_END_ROLE}`} component={BackEndRolePage} />
           <Route path={`/${DEV_OPS_ROLE}`} component={DevOpsRolePage} />
         </main>

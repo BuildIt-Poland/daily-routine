@@ -1,9 +1,9 @@
 import React from 'react';
 import { create } from 'react-test-renderer';
 
-import Fox from '../Fox';
+import Fox from '../index';
 
-describe('COMPONENT - Characters Robot', () => {
+describe('COMPONENT - Characters Fox', () => {
   it('renders confused robot when mood is not set', () => {
     const component = create(<Fox />);
 

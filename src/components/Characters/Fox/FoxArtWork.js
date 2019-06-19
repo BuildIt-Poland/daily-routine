@@ -1,9 +1,9 @@
 import React from 'react';
 
-import { mood } from '../../types';
-import { CONFUSED, CONFIDENT, SAD } from '../../constants/characterMoods';
+import { mood } from '../../../types';
+import { CONFUSED, CONFIDENT, SAD } from '../../../constants/characterMoods';
 
-function Fox({ mood = CONFUSED }) {
+function FoxArtwork({ mood = CONFUSED }) {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="317" height="157" viewBox="0 0 317 157">
       <g>
@@ -61,8 +61,8 @@ function Fox({ mood = CONFUSED }) {
   );
 }
 
-Fox.propTypes = {
+FoxArtwork.propTypes = {
   mood
 };
 
-export default Fox;
+export default FoxArtwork;
