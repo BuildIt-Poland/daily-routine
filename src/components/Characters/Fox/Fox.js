@@ -1,12 +1,12 @@
 import React from 'react';
 
-import FoxArtWork from './FoxArtWork';
 import { CONFUSED } from '../../../constants/characterMoods';
-import ConfusionMarks from './ConfusionMarks';
 import { FEMALE, MALE } from '../../../constants/genders';
-import GenderFlower from './GenderFlower';
 import { gender, mood } from '../../../types';
 import Wrapper from '../Wrapper';
+import FoxArtWork from './FoxArtWork';
+import ConfusionMarks from './ConfusionMarks';
+import GenderFlower from './GenderFlower';
 
 function Fox({ gender = MALE, mood = CONFUSED }) {
   return (
