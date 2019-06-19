@@ -7,29 +7,6 @@ exports[`COMPONENT - RoleBar renders correctly 1`] = `
   font-weight: 400;
 }
 
-.c2 {
-  border: 0;
-  background: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-width: 4rem;
-  min-height: 4rem;
-  cursor: pointer;
-  outline: 0;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c2 svg {
-  display: block;
-}
-
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -43,9 +20,31 @@ exports[`COMPONENT - RoleBar renders correctly 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding: 0 2rem;
+  padding: 0 1.4rem 0 2rem;
   height: 5rem;
   background-color: rgba(255,255,255,0.5);
+}
+
+.c2 {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  background: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  min-width: 4rem;
+  min-height: 4rem;
+  cursor: pointer;
 }
 
 <header
@@ -56,7 +55,7 @@ exports[`COMPONENT - RoleBar renders correctly 1`] = `
   >
     I am 
     <strong>
-      The FrontEnd Developer
+      Frond End Developer
     </strong>
   </h2>
   <button

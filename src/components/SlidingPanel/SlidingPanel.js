@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
-import GearButton from '../GearButton';
+import GearButton from './GearButton';
 import SideBar from './SideBar';
 import Overlay from './Overlay';
 

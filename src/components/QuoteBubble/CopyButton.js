@@ -3,23 +3,24 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import { CopyCards } from '../Icons';
+import HitboxBase from '../Hitbox';
 
-const Wrapper = styled.button`
+const Hitbox = styled(HitboxBase)`
   position: absolute;
-  top: 6rem;
+  top: 5rem;
   right: 0;
 `;
 
-function CopyButton({ onCopy = () => {} }) {
+function CopyButton({ onCopy }) {
   return (
-    <Wrapper onClick={onCopy}>
+    <Hitbox onClick={onCopy}>
       <CopyCards />
-    </Wrapper>
+    </Hitbox>
   );
 }
 
 CopyButton.propTypes = {
-  onCopy: PropTypes.func
+  onCopy: PropTypes.func.isRequired
 };
 
 export default CopyButton;

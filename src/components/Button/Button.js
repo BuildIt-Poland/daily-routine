@@ -1,21 +1,35 @@
-// Button wrapper with all styles removed
-// Useful for accessible action icons / target areas
-
 import styled from 'styled-components';
 
+import {
+  colorWhite,
+  colorGreen,
+  colorDarkGreen,
+  fontLarge,
+  fontWeightBold,
+  borderRadius,
+  spacingMedium
+} from '../../styles/designTokens';
+
 const Button = styled.button`
-  border: 0;
-  background: none;
+  position: relative;
   display: flex;
   align-items: center;
-  min-width: 4rem;
-  min-height: 4rem;
-  cursor: pointer;
-  outline: 0;
   text-decoration: none;
+  background-color: ${colorGreen};
+  color: ${colorWhite};
+  padding: 0 ${spacingMedium};
+  margin: ${spacingMedium} 0;
+  border: 0;
+  border-bottom: 0.3rem solid ${colorDarkGreen};
+  border-radius: ${borderRadius};
+  font-size: ${fontLarge};
+  font-weight: ${fontWeightBold};
+  text-align: left;
+  width: 100%;
+  height: 4.7rem;
 
-  svg {
-    display: block;
+  &:not(:disabled) {
+    cursor: pointer;
   }
 `;
 

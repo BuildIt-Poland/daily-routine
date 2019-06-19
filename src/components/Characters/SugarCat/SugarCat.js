@@ -4,7 +4,8 @@ import styled from 'styled-components';
 import SugarCatArtwork from './SugarCatArtwork';
 
 const Wrapper = styled.div`
-  margin: 4rem 0 6rem 0;
+  margin: 0;
+  margin-top: 4rem;
   display: flex;
   justify-content: center;
 `;

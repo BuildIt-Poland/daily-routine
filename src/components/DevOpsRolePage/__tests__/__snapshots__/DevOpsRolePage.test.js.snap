@@ -7,8 +7,27 @@ exports[`COMPONENT - DevOpsRolePage renders correctly for /devops path 1`] = `
 }
 
 .c3 {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  background: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  min-width: 4rem;
+  min-height: 4rem;
+  cursor: pointer;
   position: absolute;
-  top: 6rem;
+  top: 5rem;
   right: 0;
 }
 
@@ -20,8 +39,10 @@ exports[`COMPONENT - DevOpsRolePage renders correctly for /devops path 1`] = `
 
 .c2 {
   margin: 0;
+  top: 0;
+  left: 0;
   position: absolute;
-  padding: 0.6rem 1.6rem;
+  padding: 1.4rem 1.8rem;
 }
 
 <section
@@ -33,7 +54,7 @@ exports[`COMPONENT - DevOpsRolePage renders correctly for /devops path 1`] = `
     <p
       className="c2"
     >
-      Yesterday I was implementing PUT method for missing RESTful API endpoint with complex database transactions.
+      Yesterday I was implementing PUT method for missing RESTful API endpoint.
     </p>
     <svg
       height="135"
@@ -55,11 +76,17 @@ exports[`COMPONENT - DevOpsRolePage renders correctly for /devops path 1`] = `
       onClick={[Function]}
     >
       <svg
+        aria-labelledby="copy-cards-title"
         height="20"
         viewBox="0 0 17 20"
         width="17"
         xmlns="http://www.w3.org/2000/svg"
       >
+        <title
+          id="copy-cards-title"
+        >
+          Copy
+        </title>
         <path
           d="M2 15.444C.81 14.75 0 13.474 0 12V4c0-2.206 1.794-4 4-4h5c1.474 0 2.75.81 3.444 2H4a2 2 0 0 0-2 2v11.444zM13 4H8C5.794 4 4 5.794 4 8v8c0 2.206 1.794 4 4 4h5c2.206 0 4-1.794 4-4V8c0-2.206-1.794-4-4-4zm2 12c0 1.1-.9 2-2 2H8c-1.1 0-2-.9-2-2V8a2 2 0 0 1 2-2h5c1.1 0 2 .9 2 2v8z"
           fill="#ccc"
@@ -80,8 +107,27 @@ exports[`COMPONENT - DevOpsRolePage renders correctly for /devops/brag path 1`] 
 }
 
 .c3 {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  background: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  min-width: 4rem;
+  min-height: 4rem;
+  cursor: pointer;
   position: absolute;
-  top: 6rem;
+  top: 5rem;
   right: 0;
 }
 
@@ -93,8 +139,10 @@ exports[`COMPONENT - DevOpsRolePage renders correctly for /devops/brag path 1`] 
 
 .c2 {
   margin: 0;
+  top: 0;
+  left: 0;
   position: absolute;
-  padding: 0.6rem 1.6rem;
+  padding: 1.4rem 1.8rem;
 }
 
 <section
@@ -106,7 +154,7 @@ exports[`COMPONENT - DevOpsRolePage renders correctly for /devops/brag path 1`] 
     <p
       className="c2"
     >
-      Yesterday I was implementing PUT method for missing RESTful API endpoint with complex database transactions.
+      Yesterday I was implementing PUT method for missing RESTful API endpoint.
     </p>
     <svg
       height="135"
@@ -128,11 +176,17 @@ exports[`COMPONENT - DevOpsRolePage renders correctly for /devops/brag path 1`] 
       onClick={[Function]}
     >
       <svg
+        aria-labelledby="copy-cards-title"
         height="20"
         viewBox="0 0 17 20"
         width="17"
         xmlns="http://www.w3.org/2000/svg"
       >
+        <title
+          id="copy-cards-title"
+        >
+          Copy
+        </title>
         <path
           d="M2 15.444C.81 14.75 0 13.474 0 12V4c0-2.206 1.794-4 4-4h5c1.474 0 2.75.81 3.444 2H4a2 2 0 0 0-2 2v11.444zM13 4H8C5.794 4 4 5.794 4 8v8c0 2.206 1.794 4 4 4h5c2.206 0 4-1.794 4-4V8c0-2.206-1.794-4-4-4zm2 12c0 1.1-.9 2-2 2H8c-1.1 0-2-.9-2-2V8a2 2 0 0 1 2-2h5c1.1 0 2 .9 2 2v8z"
           fill="#ccc"
@@ -153,8 +207,27 @@ exports[`COMPONENT - DevOpsRolePage renders correctly for /devops/confess path 1
 }
 
 .c3 {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  background: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  min-width: 4rem;
+  min-height: 4rem;
+  cursor: pointer;
   position: absolute;
-  top: 6rem;
+  top: 5rem;
   right: 0;
 }
 
@@ -166,8 +239,10 @@ exports[`COMPONENT - DevOpsRolePage renders correctly for /devops/confess path 1
 
 .c2 {
   margin: 0;
+  top: 0;
+  left: 0;
   position: absolute;
-  padding: 0.6rem 1.6rem;
+  padding: 1.4rem 1.8rem;
 }
 
 <section
@@ -179,7 +254,7 @@ exports[`COMPONENT - DevOpsRolePage renders correctly for /devops/confess path 1
     <p
       className="c2"
     >
-      Yesterday I was implementing PUT method for missing RESTful API endpoint with complex database transactions.
+      Yesterday I was implementing PUT method for missing RESTful API endpoint.
     </p>
     <svg
       height="135"
@@ -201,11 +276,17 @@ exports[`COMPONENT - DevOpsRolePage renders correctly for /devops/confess path 1
       onClick={[Function]}
     >
       <svg
+        aria-labelledby="copy-cards-title"
         height="20"
         viewBox="0 0 17 20"
         width="17"
         xmlns="http://www.w3.org/2000/svg"
       >
+        <title
+          id="copy-cards-title"
+        >
+          Copy
+        </title>
         <path
           d="M2 15.444C.81 14.75 0 13.474 0 12V4c0-2.206 1.794-4 4-4h5c1.474 0 2.75.81 3.444 2H4a2 2 0 0 0-2 2v11.444zM13 4H8C5.794 4 4 5.794 4 8v8c0 2.206 1.794 4 4 4h5c2.206 0 4-1.794 4-4V8c0-2.206-1.794-4-4-4zm2 12c0 1.1-.9 2-2 2H8c-1.1 0-2-.9-2-2V8a2 2 0 0 1 2-2h5c1.1 0 2 .9 2 2v8z"
           fill="#ccc"

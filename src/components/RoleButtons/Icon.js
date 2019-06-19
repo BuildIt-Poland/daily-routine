@@ -9,7 +9,7 @@ const Wrapper = styled.span`
   bottom: 1.3rem;
 `;
 
-function LongArrowIcon() {
+function Icon() {
   return (
     <Wrapper>
       <LongArrow />
@@ -17,4 +17,4 @@ function LongArrowIcon() {
   );
 }
 
-export default LongArrowIcon;
+export default Icon;

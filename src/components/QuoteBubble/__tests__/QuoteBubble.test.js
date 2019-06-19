@@ -10,7 +10,7 @@ jest.mock('../../Icons', () => ({
 
 describe('COMPONENT - QuoteBubble', () => {
   it('renders correctly', () => {
-    const component = create(<QuoteBubble />);
+    const component = create(<QuoteBubble quote="Hello! I'm Taylor Swift!" />);
 
     expect(component.toJSON()).toMatchSnapshot();
   });

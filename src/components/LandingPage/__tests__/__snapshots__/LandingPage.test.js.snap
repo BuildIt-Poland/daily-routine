@@ -18,37 +18,31 @@ exports[`COMPONENT - LandingPage renders correctly 1`] = `
   font-weight: 400;
 }
 
-<section
-  className="c0"
->
-  <h1
-    className="c1"
+<article>
+  <section
+    className="c0"
   >
-    Don't know what to say?
-  </h1>
-  <h2
-    className="c2"
+    <h1
+      className="c1"
+    >
+      Don't know what to say?
+    </h1>
+    <h2
+      className="c2"
+    >
+      Worry not! Find your perfect scenario for incoming daily.
+    </h2>
+    <SugarCat />
+  </section>
+  <section
+    className="c0"
   >
-    Worry not! Find your perfect scenario for incoming daily.
-  </h2>
-  <SugarCat />
-  <WideButton
-    to="/frontend"
-    variant="frontend"
-  >
-    Front End Engineer
-  </WideButton>
-  <WideButton
-    to="/backend"
-    variant="backend"
-  >
-    Back End Developer
-  </WideButton>
-  <WideButton
-    to="/devops"
-    variant="devops"
-  >
-    Dev Ops
-  </WideButton>
-</section>
+    <h2
+      className="c2"
+    >
+      Pick your role!
+    </h2>
+    <RoleButtons />
+  </section>
+</article>
 `;

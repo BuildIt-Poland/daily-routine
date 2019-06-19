@@ -7,7 +7,7 @@ jest.mock('../../Icons/Gear', () => 'GearIcon');
 
 describe('COMPONENT - RoleBar', () => {
   it('renders correctly', () => {
-    const component = create(<RoleBar />);
+    const component = create(<RoleBar label="Frond End Developer" />);
 
     expect(component.toJSON()).toMatchSnapshot();
   });
