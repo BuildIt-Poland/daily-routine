@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Subheadline from '../Subheadline';
-import Header from './Header';
 import SlidingPanel from '../SlidingPanel';
+import Header from './Header';
 
 function RoleBar({ label }) {
   return (
