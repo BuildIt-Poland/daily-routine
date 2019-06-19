@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`COMPONENT - GearButton renders correctly 1`] = `
+exports[`COMPONENT - CloseButton renders correctly 1`] = `
 .c0 {
   border: 0;
   margin: 0;
@@ -24,8 +24,9 @@ exports[`COMPONENT - GearButton renders correctly 1`] = `
 }
 
 <button
+  aria-label="Close"
   className="c0"
-  onClick={[Function]}
+  onClick={[MockFunction]}
 >
   <Cross />
 </button>

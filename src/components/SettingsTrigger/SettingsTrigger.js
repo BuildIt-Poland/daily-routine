@@ -1,26 +1,18 @@
 import React, { useState } from 'react';
 
-import GearButton from './GearButton';
 import SidePanel from '../SidePanel';
-import Subheadline from '../Subheadline';
+import GearButton from './GearButton';
+import Header from './Header';
 
 function SettingsTrigger() {
   const [isVisible, setIsVisible] = useState(false);
 
-  const toogleSettings = () => setIsVisible(!isVisible);
-
-  const Header = () => {
-    return (
-      <Subheadline>
-        My role <strong>settings</strong>
-      </Subheadline>
-    );
-  };
+  const toggleSettings = () => setIsVisible(!isVisible);
 
   return (
     <>
-      <GearButton onClick={toogleSettings} />
-      <SidePanel header={<Header />} isVisible={isVisible} onClose={toogleSettings} />
+      <GearButton onClick={toggleSettings} />
+      <SidePanel header={<Header />} isVisible={isVisible} onClose={toggleSettings} />
     </>
   );
 }

@@ -7,7 +7,7 @@ import CloseButton from './CloseButton';
 import Wrapper from './Wrapper';
 import Overlay from './Overlay';
 
-function SidePanel({ header = '', content = '', isVisible = true, onClose = () => {} }) {
+function SidePanel({ header, content, isVisible = true, onClose }) {
   const transitions = useTransition(isVisible, null, {
     from: {
       transform: 'translateX(26rem)'
@@ -46,7 +46,7 @@ SidePanel.prototype = {
   header: PropTypes.node,
   content: PropTypes.node,
   isVisible: PropTypes.bool,
-  onClose: PropTypes.func
+  onClose: PropTypes.func.isRequired
 };
 
 export default SidePanel;

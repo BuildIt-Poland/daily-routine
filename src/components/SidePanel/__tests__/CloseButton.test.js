@@ -5,9 +5,9 @@ import CloseButton from '../CloseButton';
 
 jest.mock('../../Icons/Cross', () => 'Cross');
 
-describe('COMPONENT - GearButton', () => {
+describe('COMPONENT - CloseButton', () => {
   it('renders correctly', () => {
-    const component = create(<CloseButton />);
+    const component = create(<CloseButton onClick={jest.fn()} />);
 
     expect(component.toJSON()).toMatchSnapshot();
   });

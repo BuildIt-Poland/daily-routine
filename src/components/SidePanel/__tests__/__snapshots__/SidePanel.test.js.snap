@@ -81,15 +81,14 @@ Array [
     <header
       className="c1"
     >
-      
       <button
+        aria-label="Close"
         className="c2"
-        onClick={[Function]}
+        onClick={[MockFunction]}
       >
         <Cross />
       </button>
     </header>
-    
   </section>,
 ]
 `;

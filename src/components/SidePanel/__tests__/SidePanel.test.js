@@ -7,7 +7,7 @@ jest.mock('../../Icons/Cross', () => 'Cross');
 
 describe('COMPONENT - SidePanel', () => {
   it('renders correctly', () => {
-    const component = create(<SidePanel />);
+    const component = create(<SidePanel onClose={jest.fn()} />);
 
     expect(component.toJSON()).toMatchSnapshot();
   });
