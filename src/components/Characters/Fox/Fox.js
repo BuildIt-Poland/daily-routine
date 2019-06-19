@@ -4,7 +4,7 @@ import { CONFUSED } from '../../../constants/characterMoods';
 import { FEMALE, MALE } from '../../../constants/genders';
 import { gender, mood } from '../../../types';
 import Wrapper from '../Wrapper';
-import FoxArtwork from './FoxArtwork';
+import FoxArtwork from './FoxArtwork.js';
 import ConfusionMarks from './ConfusionMarks';
 import GenderFlower from './GenderFlower';
 
