@@ -1,5 +1,6 @@
 import React from 'react';
 import { create } from 'react-test-renderer';
+
 import FoxArtwork from '../FoxArtWork';
 
 describe('COMPONENT - Characters Fox', () => {
