@@ -3,7 +3,7 @@ import { create } from 'react-test-renderer';
 
 import LandingPage from '../LandingPage';
 
-jest.mock('../../WideButton', () => 'WideButton');
+jest.mock('../../RoleButtons', () => 'RoleButtons');
 jest.mock('react-router-dom', () => ({
   Link: 'Link'
 }));

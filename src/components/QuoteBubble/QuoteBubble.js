@@ -1,29 +1,31 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import { SpeechBubble } from '../Icons';
 import CopyButton from './CopyButton';
 import Wrapper from './Wrapper';
 import Quote from './Quote';
 
-const QUOTE =
-  'Yesterday I was implementing PUT method for missing RESTful API endpoint with complex database transactions.';
-
 function copyTextFromBubble(text) {
   navigator.clipboard.writeText(text);
 }
 
-function QuoteBubble() {
+function QuoteBubble({ quote }) {
   const onCopy = () => {
-    copyTextFromBubble(QUOTE);
+    copyTextFromBubble(quote);
   };
 
   return (
     <Wrapper>
-      <Quote>{QUOTE}</Quote>
+      <Quote>{quote}</Quote>
       <SpeechBubble />
-      <CopyButton onCopy={onCopy}>copy</CopyButton>
+      <CopyButton onCopy={onCopy} />
     </Wrapper>
   );
 }
+
+QuoteBubble.propTypes = {
+  quote: PropTypes.string.isRequired
+};
 
 export default QuoteBubble;
