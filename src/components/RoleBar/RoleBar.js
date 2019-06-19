@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Subheadline from '../Subheadline';
-import SlidingPanel from '../SlidingPanel';
+import SettingsTrigger from '../SettingsTrigger';
 import Header from './Header';
 
 function RoleBar({ label }) {
@@ -11,7 +11,7 @@ function RoleBar({ label }) {
       <Subheadline>
         I am <strong>{label}</strong>
       </Subheadline>
-      <SlidingPanel />
+      <SettingsTrigger />
     </Header>
   );
 }

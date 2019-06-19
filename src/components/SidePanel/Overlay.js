@@ -5,7 +5,7 @@ import { useTransition, animated } from 'react-spring';
 
 import { zIndexModalOverlay, colorBlack } from '../../styles/designTokens';
 
-const StyledOverlay = styled(animated.div)`
+const Wrapper = styled(animated.div)`
   height: 100%;
   width: 100%;
   position: fixed;
@@ -15,8 +15,8 @@ const StyledOverlay = styled(animated.div)`
   z-index: ${zIndexModalOverlay};
 `;
 
-function Overlay({ show }) {
-  const transitions = useTransition(show, null, {
+function Overlay({ isVisible = true }) {
+  const transitions = useTransition(isVisible, null, {
     from: { opacity: 0 },
     enter: { opacity: 0.6 },
     leave: { opacity: 0 },
@@ -25,11 +25,11 @@ function Overlay({ show }) {
     }
   });
 
-  return transitions.map(({ item, props, key }) => item && <StyledOverlay key={key} style={props} />);
+  return transitions.map(({ item, props, key }) => item && <Wrapper key={key} style={props} />);
 }
 
 Overlay.prototype = {
-  show: PropTypes.bool.isRequired
+  isVisible: PropTypes.bool
 };
 
 export default Overlay;

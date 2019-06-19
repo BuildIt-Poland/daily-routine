@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`COMPONENT - SlidingPanel renders closed SlidingPanel 1`] = `
+exports[`COMPONENT - SettingsTrigger renders closed SettingsTrigger 1`] = `
 .c0 {
   border: 0;
   margin: 0;
