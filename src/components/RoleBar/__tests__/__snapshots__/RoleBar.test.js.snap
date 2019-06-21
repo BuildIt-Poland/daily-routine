@@ -60,6 +60,7 @@ exports[`COMPONENT - RoleBar renders correctly 1`] = `
   </h2>
   <button
     className="c2"
+    data-testid="gear-button"
     onClick={[Function]}
   >
     <GearIcon />

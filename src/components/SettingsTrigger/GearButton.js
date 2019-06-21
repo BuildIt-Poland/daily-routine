@@ -6,7 +6,7 @@ import { Gear } from '../Icons';
 
 function GearButton({ onClick = () => {} }) {
   return (
-    <Hitbox onClick={onClick}>
+    <Hitbox onClick={onClick} data-testid="gear-button">
       <Gear />
     </Hitbox>
   );
