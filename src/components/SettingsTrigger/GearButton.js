@@ -6,7 +6,7 @@ import { Gear } from '../Icons';
 
 function GearButton({ onClick = () => {} }) {
   return (
-    <Hitbox onClick={onClick} data-testid="gear-button">
+    <Hitbox aria-label="Open settings" onClick={onClick} data-testid="gear-button">
       <Gear />
     </Hitbox>
   );
