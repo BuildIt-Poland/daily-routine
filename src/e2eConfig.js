@@ -1,7 +1,7 @@
-const handler = require('serve-handler');
 const { createServer } = require('http');
 const { exec } = require('child_process');
 const { open, run } = require('cypress');
+const handler = require('serve-handler');
 
 const server = () =>
   createServer((request, response) =>

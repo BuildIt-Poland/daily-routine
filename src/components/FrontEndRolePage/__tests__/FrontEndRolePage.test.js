@@ -1,9 +1,9 @@
 import React from 'react';
 import { create } from 'react-test-renderer';
-
-import FrontEndRolePage from '../FrontEndRolePage';
 import { MemoryRouter } from 'react-router-dom';
+
 import { FRONT_END_ROLE } from '../../../constants/roles';
+import FrontEndRolePage from '../FrontEndRolePage';
 
 jest.mock('../../Characters', () => ({
   Fox: 'Fox'
