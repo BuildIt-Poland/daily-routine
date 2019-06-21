@@ -6,7 +6,7 @@ import { Cross } from '../Icons';
 
 function CloseButton({ onClick }) {
   return (
-    <Hitbox aria-label="Close" onClick={onClick}>
+    <Hitbox aria-label="Close" onClick={onClick} data-testid="close-button">
       <Cross />
     </Hitbox>
   );
