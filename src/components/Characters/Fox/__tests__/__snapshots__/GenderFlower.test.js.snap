@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`COMPONENT - Characters Fox GenderFlower renders correctly 1`] = `<GenderFlower />`;
