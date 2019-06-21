@@ -3,7 +3,7 @@ import { create } from 'react-test-renderer';
 
 import Wrapper from '../Wrapper';
 
-describe('COMPONENT - Wrapper', () => {
+describe('COMPONENT - Characters Whale Wrapper', () => {
   it('renders correctly', () => {
     const component = create(<Wrapper />);
 

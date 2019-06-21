@@ -37,11 +37,11 @@ exports[`COMPONENT - LandingPage renders correctly 1`] = `
   <section
     className="c0"
   >
-    <h2
-      className="c2"
+    <h1
+      className="c1"
     >
       Pick your role!
-    </h2>
+    </h1>
     <RoleButtons />
   </section>
 </article>

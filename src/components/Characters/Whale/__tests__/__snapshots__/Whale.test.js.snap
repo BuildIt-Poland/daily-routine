@@ -1,15 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`COMPONENT - Characters Robot renders confusion marks and flower if female fox is confused 1`] = `
+exports[`COMPONENT - Characters Robot renders confusion marks and flower if female whale is confused 1`] = `
 .c0 {
-  margin: 14rem 0 3rem 0;
+  margin: 6rem 0 3rem 0;
   position: relative;
 }
 
 <div
   className="c0"
 >
-  <FoxArtwork
+  <WhaleArtwork
     mood="confused"
   />
   <ConfusionMarks />
@@ -17,16 +17,16 @@ exports[`COMPONENT - Characters Robot renders confusion marks and flower if fema
 </div>
 `;
 
-exports[`COMPONENT - Characters Robot renders confusion marks if fox is confused 1`] = `
+exports[`COMPONENT - Characters Robot renders confusion marks if whale is confused 1`] = `
 .c0 {
-  margin: 14rem 0 3rem 0;
+  margin: 6rem 0 3rem 0;
   position: relative;
 }
 
 <div
   className="c0"
 >
-  <FoxArtwork
+  <WhaleArtwork
     mood="confused"
   />
   <ConfusionMarks />
@@ -35,14 +35,14 @@ exports[`COMPONENT - Characters Robot renders confusion marks if fox is confused
 
 exports[`COMPONENT - Characters Robot renders correctly with default props 1`] = `
 .c0 {
-  margin: 14rem 0 3rem 0;
+  margin: 6rem 0 3rem 0;
   position: relative;
 }
 
 <div
   className="c0"
 >
-  <FoxArtwork
+  <WhaleArtwork
     mood="confused"
   />
   <ConfusionMarks />
@@ -51,14 +51,14 @@ exports[`COMPONENT - Characters Robot renders correctly with default props 1`] =
 
 exports[`COMPONENT - Characters Robot renders flower if female gender is passed 1`] = `
 .c0 {
-  margin: 14rem 0 3rem 0;
+  margin: 6rem 0 3rem 0;
   position: relative;
 }
 
 <div
   className="c0"
 >
-  <FoxArtwork
+  <WhaleArtwork
     mood="confused"
   />
   <ConfusionMarks />

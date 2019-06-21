@@ -13,11 +13,11 @@ Array [
 <section
     className="c0"
   >
-    <QuoteBubble
-      quote="Yesterday I was implementing PUT method for missing RESTful API endpoint."
-    />
     <Whale
       mood="confused"
+    />
+    <QuoteBubble
+      quote="Yesterday I was implementing PUT method for missing RESTful API endpoint."
     />
     <ActionButtons
       role="devops"
@@ -39,11 +39,11 @@ Array [
 <section
     className="c0"
   >
-    <QuoteBubble
-      quote="Yesterday I was implementing PUT method for missing RESTful API endpoint."
-    />
     <Whale
       mood="confident"
+    />
+    <QuoteBubble
+      quote="Yesterday I was implementing PUT method for missing RESTful API endpoint."
     />
     <ActionButtons
       role="devops"
@@ -65,11 +65,11 @@ Array [
 <section
     className="c0"
   >
-    <QuoteBubble
-      quote="Yesterday I was implementing PUT method for missing RESTful API endpoint."
-    />
     <Whale
       mood="sad"
+    />
+    <QuoteBubble
+      quote="Yesterday I was implementing PUT method for missing RESTful API endpoint."
     />
     <ActionButtons
       role="devops"

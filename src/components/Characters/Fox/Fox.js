@@ -3,8 +3,8 @@ import React from 'react';
 import { CONFUSED } from '../../../constants/characterMoods';
 import { FEMALE, MALE } from '../../../constants/genders';
 import { gender, mood } from '../../../types';
-import Wrapper from '../Wrapper';
-import FoxArtwork from './FoxArtWork';
+import Wrapper from './Wrapper';
+import FoxArtwork from './FoxArtwork';
 import ConfusionMarks from './ConfusionMarks';
 import GenderFlower from './GenderFlower';
 

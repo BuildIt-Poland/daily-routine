@@ -1,7 +1,7 @@
 import React from 'react';
 import { create } from 'react-test-renderer';
 
-import FoxArtwork from '../FoxArtWork';
+import FoxArtwork from '../FoxArtwork';
 
 describe('COMPONENT - Characters Fox', () => {
   it('renders confused Fox when mood is not set', () => {
