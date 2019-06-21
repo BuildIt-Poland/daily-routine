@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`COMPONENT - SidePanel renders correctly when visible 1`] = `
+Array [
+  .c0 {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #222222;
+  z-index: 8000;
+}
+
+<div
+    className="c0"
+    style={
+      Object {
+        "opacity": 0,
+      }
+    }
+  />,
+  .c0 {
+  height: 100%;
+  width: 26rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #ffffff;
+  z-index: 9000;
+}
+
+<section
+    className="c0"
+    style={
+      Object {
+        "transform": "translateX(26rem)",
+      }
+    }
+  >
+    Taylor Swift
+  </section>,
+]
+`;
+
+exports[`COMPONENT - SidePanel renders nothing if not visible 1`] = `null`;
