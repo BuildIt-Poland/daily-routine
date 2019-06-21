@@ -15,7 +15,7 @@ function LandingPage() {
         <SugarCat />
       </Section>
       <Section>
-        <Subheadline>Pick your role!</Subheadline>
+        <Headline>Pick your role!</Headline>
         <RoleButtons />
       </Section>
     </article>
