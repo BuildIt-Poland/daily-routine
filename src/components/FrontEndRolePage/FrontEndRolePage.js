@@ -16,7 +16,7 @@ const QUOTE = 'Yesterday I was implementing PUT method for missing RESTful API e
 function FrontEndRolePage() {
   return (
     <>
-      <RoleBar label="Front End Developer" />
+      <RoleBar label="Front End Engineer" />
       <Section>
         <Route exact path={`/${FRONT_END_ROLE}`} component={Default} />
         <Route exact path={`/${FRONT_END_ROLE}/${BRAG_ROLE_ACTION}`} component={Brag} />
