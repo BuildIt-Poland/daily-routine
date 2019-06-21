@@ -20,6 +20,7 @@ Most useful scripts for development:
 Other scripts which could be helpful:
 * `e2e:dev` - runs all e2e tests locally
 * `npm run start:build` -  starts a production version of app locally
+* `npm run test:update` - updates all tests' snapshots from scratch
 * `npm run format` - formats whole codebase with prettier
 
 ## Conventions
