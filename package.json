@@ -28,6 +28,8 @@
     "check-dependencies": "1.1.0",
     "cypress": "3.3.1",
     "eslint": "5.16.0",
+    "eslint-config-prettier": "5.0.0",
+    "eslint-plugin-import": "2.17.3",
     "gh-pages": "2.0.1",
     "husky": "2.4.0",
     "jest-dom": "3.5.0",
@@ -40,7 +42,33 @@
     "serve-handler": "6.0.1"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": [
+      "react-app",
+      "plugin:import/errors",
+      "plugin:import/warnings",
+      "prettier"
+    ],
+    "plugins": [
+      "import"
+    ],
+    "rules": {
+      "no-console": [
+        "error"
+      ],
+      "import/order": [
+        "error",
+        {
+          "groups": [
+            "builtin",
+            "external",
+            "internal",
+            "parent",
+            "sibling",
+            "index"
+          ]
+        }
+      ]
+    }
   },
   "browserslist": {
     "production": [
