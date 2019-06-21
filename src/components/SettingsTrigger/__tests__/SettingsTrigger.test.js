@@ -14,7 +14,7 @@ describe('COMPONENT - SettingsTrigger', () => {
     expect(queryByTestId('close-button')).toBeNull();
   });
 
-  it('renders opened settings panel correctly', () => {
+  it('renders settings panel correctly after it got opened', () => {
     const { getByTestId, container } = render(<SettingsTrigger />);
 
     fireEvent.click(getByTestId('gear-button'));
