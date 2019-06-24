@@ -6,9 +6,9 @@ import ActionButtons from '../ActionButtons';
 import RoleBar from '../RoleBar';
 import Section from '../Section';
 import QuoteBubble from '../QuoteBubble';
-import Default from './Default';
-import Brag from './Brag';
 import Confess from './Confess';
+import Brag from './Brag';
+import Default from './Default';
 
 // TODO Replace with auto-generated message @blurbyte
 const QUOTE = 'Yesterday I was implementing PUT method for missing RESTful API endpoint.';

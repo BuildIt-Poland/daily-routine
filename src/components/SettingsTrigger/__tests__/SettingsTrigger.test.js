@@ -6,16 +6,20 @@ import SettingsTrigger from '../SettingsTrigger';
 afterEach(cleanup);
 
 describe('COMPONENT - SettingsTrigger', () => {
-  it('renders closed SettingsTrigger', () => {
-    const { container } = render(<SettingsTrigger />);
+  it('renders closed settings panel correctly', () => {
+    const { queryByTestId } = render(<SettingsTrigger />);
 
-    expect(container).toMatchSnapshot();
+    expect(queryByTestId('gear-button')).toBeTruthy();
+    // Check if close button exists
+    expect(queryByTestId('close-button')).toBeNull();
   });
-  it('renders SettingsTrigger component after clicking GearButton', () => {
+
+  it('renders settings panel correctly after it got opened', () => {
     const { getByTestId, container } = render(<SettingsTrigger />);
 
     fireEvent.click(getByTestId('gear-button'));
 
+    expect(getByTestId('close-button')).toBeDefined();
     expect(container.querySelector('h2')).toHaveTextContent('My role settings');
   });
 });

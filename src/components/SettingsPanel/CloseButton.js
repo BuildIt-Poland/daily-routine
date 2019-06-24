@@ -6,14 +6,14 @@ import { Cross } from '../Icons';
 
 function CloseButton({ onClick }) {
   return (
-    <Hitbox aria-label="Close" onClick={onClick}>
+    <Hitbox aria-label="Close" onClick={onClick} data-testid="close-button">
       <Cross />
     </Hitbox>
   );
 }
 
 CloseButton.propTypes = {
-  onClick: PropTypes.func.isRequired
+  onClick: PropTypes.func
 };
 
 export default CloseButton;

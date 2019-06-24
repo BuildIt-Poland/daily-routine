@@ -3,7 +3,7 @@
 exports[`COMPONENT - FrontEndRolePage renders correctly 1`] = `
 Array [
   <RoleBar
-    label="Front End Developer"
+    label="Front End Engineer"
   />,
   .c0 {
   position: relative;

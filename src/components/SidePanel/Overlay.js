@@ -15,13 +15,15 @@ const Wrapper = styled(animated.div)`
   z-index: ${zIndexModalOverlay};
 `;
 
-function Overlay({ isVisible = true }) {
+function Overlay({ isVisible }) {
   const transitions = useTransition(isVisible, null, {
     from: { opacity: 0 },
     enter: { opacity: 0.6 },
     leave: { opacity: 0 },
     config: {
-      duration: 150
+      mass: 1,
+      tension: 240,
+      friction: 24
     }
   });
 

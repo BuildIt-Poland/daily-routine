@@ -1,18 +1,19 @@
+// Settings trigger with side panel
+
 import React, { useState } from 'react';
 
-import SidePanel from '../SidePanel';
+import SettingsPanel from '../SettingsPanel';
 import GearButton from './GearButton';
-import Header from './Header';
 
 function SettingsTrigger() {
   const [isVisible, setIsVisible] = useState(false);
 
-  const toggleSettings = () => setIsVisible(!isVisible);
+  const togglSettingsPanel = () => setIsVisible(!isVisible);
 
   return (
     <>
-      <GearButton onClick={toggleSettings} />
-      <SidePanel header={<Header />} isVisible={isVisible} onClose={toggleSettings} />
+      <GearButton onClick={togglSettingsPanel} />
+      <SettingsPanel isVisible={isVisible} onClose={togglSettingsPanel} />
     </>
   );
 }

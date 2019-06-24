@@ -18,10 +18,10 @@ function DevOpsRolePage() {
     <>
       <RoleBar label="Dev Ops" />
       <Section>
-        <QuoteBubble quote={QUOTE} />
         <Route exact path={`/${DEV_OPS_ROLE}`} component={Default} />
         <Route exact path={`/${DEV_OPS_ROLE}/${BRAG_ROLE_ACTION}`} component={Brag} />
         <Route exact path={`/${DEV_OPS_ROLE}/${CONFESS_ROLE_ACTION}`} component={Confess} />
+        <QuoteBubble quote={QUOTE} />
         <ActionButtons role={DEV_OPS_ROLE} />
       </Section>
     </>

@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 import Hitbox from '../Hitbox';
 import { Gear } from '../Icons';
 
-function GearButton({ onClick = () => {} }) {
+function GearButton({ onClick }) {
   return (
-    <Hitbox onClick={onClick} data-testid="gear-button">
+    <Hitbox aria-label="Open settings" onClick={onClick} data-testid="gear-button">
       <Gear />
     </Hitbox>
   );

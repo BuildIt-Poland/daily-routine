@@ -59,6 +59,7 @@ exports[`COMPONENT - RoleBar renders correctly 1`] = `
     </strong>
   </h2>
   <button
+    aria-label="Open settings"
     className="c2"
     data-testid="gear-button"
     onClick={[Function]}

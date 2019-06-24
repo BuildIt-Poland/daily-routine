@@ -1,13 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`COMPONENT - App renders correctly default route 1`] = `
-.c0 {
-  min-height: 100%;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  background-color: #80cbd6;
-}
-
 .c1 {
   position: relative;
   padding: 2rem;
@@ -23,6 +16,13 @@ exports[`COMPONENT - App renders correctly default route 1`] = `
   font-size: 1.8rem;
   margin: 1rem 0;
   font-weight: 400;
+}
+
+.c0 {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  background-color: #80cbd6;
 }
 
 <div
@@ -49,11 +49,11 @@ exports[`COMPONENT - App renders correctly default route 1`] = `
       <section
         className="c1"
       >
-        <h2
-          className="c3"
+        <h1
+          className="c2"
         >
           Pick your role!
-        </h2>
+        </h1>
         <RoleButtons />
       </section>
     </article>

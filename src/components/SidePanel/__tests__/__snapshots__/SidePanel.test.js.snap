@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`COMPONENT - SidePanel renders correctly 1`] = `
+exports[`COMPONENT - SidePanel renders correctly when visible 1`] = `
 Array [
   .c0 {
   height: 100%;
@@ -20,47 +20,7 @@ Array [
       }
     }
   />,
-  .c1 {
-  height: 6rem;
-  width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 0 1rem 0 2rem;
-}
-
-.c2 {
-  border: 0;
-  margin: 0;
-  padding: 0;
-  background: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  min-width: 4rem;
-  min-height: 4rem;
-  cursor: pointer;
-}
-
-.c0 {
+  .c0 {
   height: 100%;
   width: 26rem;
   position: fixed;
@@ -78,17 +38,9 @@ Array [
       }
     }
   >
-    <header
-      className="c1"
-    >
-      <button
-        aria-label="Close"
-        className="c2"
-        onClick={[MockFunction]}
-      >
-        <Cross />
-      </button>
-    </header>
+    Taylor Swift
   </section>,
 ]
 `;
+
+exports[`COMPONENT - SidePanel renders nothing if not visible 1`] = `null`;

@@ -3,9 +3,11 @@ import { create } from 'react-test-renderer';
 
 import GearButton from '../GearButton';
 
-jest.mock('../../Icons/Gear', () => 'GearIcon');
+jest.mock('../../Icons', () => ({
+  Gear: 'Gear'
+}));
 
-describe('COMPONENT - RoleBar GearButton', () => {
+describe('COMPONENT - SettingsTrigger GearButton', () => {
   it('renders correctly', () => {
     const component = create(<GearButton />);
 

@@ -4,13 +4,13 @@ import { Route, withRouter } from 'react-router-dom';
 
 import { FRONT_END_ROLE, BACK_END_ROLE, DEV_OPS_ROLE } from '../../constants/roles';
 import generateTheme from '../../utils/generateTheme';
-import Wrapper from './Wrapper';
 import AppBar from '../AppBar';
 import Footer from '../Footer';
 import LandingPage from '../LandingPage';
 import FrontEndRolePage from '../FrontEndRolePage';
 import BackEndRolePage from '../BackEndRolePage';
 import DevOpsRolePage from '../DevOpsRolePage';
+import Wrapper from './Wrapper';
 
 const ROOT_PATH = '/';
 
