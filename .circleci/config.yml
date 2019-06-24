@@ -16,6 +16,9 @@ jobs:
           name: Code Formatting Check
           command: 'npm run format:check'
       - run:
+          name: Install codecov
+          command: 'npm install -g codecov'
+      - run:
           name: Run Unit Tests With Code Coverage
           command: 'npm run test:coverage'
       - run:
