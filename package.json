@@ -108,7 +108,10 @@
       "!src/index.js",
       "!src/serviceWorker.js",
       "!src/setupTests.js",
-      "!src/constants/**/*"
+      "!src/constants/**/*",
+      "!src/components/Root/**/*",
+      "!src/components/**/index.js",
+      "!src/components/GlobalStyle/**/*"
     ]
   }
 }
