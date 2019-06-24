@@ -16,8 +16,8 @@ jobs:
           name: Code Formatting Check
           command: 'npm run format:check'
       - run:
-          name: Run Unit Tests
-          command: 'npm test'
+          name: Run Unit Tests With Code Coverage
+          command: 'npm run test:coverage'
       - run:
           name: Run E2E tests on release ready code
           command: |

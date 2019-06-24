@@ -8,6 +8,7 @@
     "start:build": "npm run build && serve -s build",
     "test": "react-scripts test",
     "test:update": "npm run test -- --watchAll=false --updateSnapshot",
+    "test:coverage": "react-scripts test --coverage --watchAll=false",
     "e2e:dev": "node -e 'require(\"./src/e2eConfig\").e2eRunDev(\"http://localhost:3000\")'",
     "e2e": "PUBLIC_URL=http://localhost:3000 npm run build && node -e 'require(\"./src/e2eConfig\").e2eRun(\"3000\")'",
     "eject": "react-scripts eject",
@@ -99,5 +100,15 @@
     "hooks": {
       "pre-commit": "lint-staged"
     }
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!src/e2eConfig.js",
+      "!src/index.js",
+      "!src/serviceWorker.js",
+      "!src/setupTests.js",
+      "!src/constants/**/*"
+    ]
   }
 }
