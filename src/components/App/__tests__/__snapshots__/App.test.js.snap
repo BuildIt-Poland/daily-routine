@@ -27,6 +27,11 @@ exports[`COMPONENT - App renders correctly default route 1`] = `
 
 <div
   className="c0"
+  style={
+    Object {
+      "backgroundColor": "rgba(128, 203, 214, 1)",
+    }
+  }
 >
   <AppBar />
   <main>
