@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { CONFIDENT } from '../../constants/characterMoods';
-import { Robot } from '../Characters/';
+import { Robot } from '../Characters';
 import QuoteBubble from '../QuoteBubble';
 
 // TODO Replace with auto-generated message
