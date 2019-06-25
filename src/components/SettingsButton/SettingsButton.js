@@ -11,7 +11,7 @@ const Label = styled.label`
   font-weight: ${fontWeightBold};
 `;
 
-const Wrapper = styled.div`
+const ButtonGroup = styled.div`
   display: flex;
   justify-content: center;
   margin: ${spacingSmall} 0;
@@ -21,10 +21,10 @@ function SettingsButton({ gender, onChange }) {
   return (
     <div>
       <Label>Gender</Label>
-      <Wrapper>
+      <ButtonGroup>
         <MaleButton checked={gender === MALE_GENDER} onChange={onChange} />
         <FemaleButton checked={gender === FEMALE_GENDER} onChange={onChange} />
-      </Wrapper>
+      </ButtonGroup>
     </div>
   );
 }

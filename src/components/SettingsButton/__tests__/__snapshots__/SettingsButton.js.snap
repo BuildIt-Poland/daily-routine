@@ -1,0 +1,109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`COMPONENT - SettingsButton renders correctly 1`] = `
+.c2 {
+  display: none;
+}
+
+.c2:checked + .c3 {
+  color: #ffffff;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  height: 4rem;
+  width: 100%;
+  background-color: #ffffff;
+  border: 2px solid;
+  border-radius: 0.6rem 0 0 0.6rem;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  height: 4rem;
+  width: 100%;
+  background-color: #ffffff;
+  border: 2px solid;
+  border-radius: 0 0.6rem 0.6rem 0;
+}
+
+.c0 {
+  font-weight: 700;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+<div>
+  <label
+    className="c0"
+  >
+    Gender
+  </label>
+  <div
+    className="c1"
+  >
+    <input
+      checked={true}
+      className="c2"
+      id="male-button"
+      onChange={[MockFunction]}
+      type="radio"
+      value="male"
+    />
+    <label
+      className="c3 c4"
+      htmlFor="male-button"
+    >
+      Male
+    </label>
+    <input
+      checked={false}
+      className="c2"
+      id="female-button"
+      onChange={[MockFunction]}
+      type="radio"
+      value="female"
+    />
+    <label
+      className="c3 c5"
+      htmlFor="female-button"
+    >
+      Female
+    </label>
+  </div>
+</div>
+`;
