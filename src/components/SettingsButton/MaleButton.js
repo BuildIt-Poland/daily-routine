@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import { MALE_GENDER } from '../../constants/gender';
+import { MALE } from '../../constants/genders';
 import { borderRadius } from '../../styles/designTokens';
 import BaseLabel from './BaseLabel';
 import BaseButton from './BaseButton';
@@ -14,7 +14,7 @@ const Label = styled(BaseLabel)`
 function MaleButton({ checked, onChange }) {
   return (
     <>
-      <BaseButton id="male-button" type="radio" value={MALE_GENDER} checked={checked} onChange={onChange} />
+      <BaseButton id="male-button" type="radio" value={MALE} checked={checked} onChange={onChange} />
       <Label htmlFor="male-button">Male</Label>
     </>
   );

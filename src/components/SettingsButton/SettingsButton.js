@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import { MALE_GENDER, FEMALE_GENDER } from '../../constants/gender';
+import { MALE, FEMALE } from '../../constants/genders';
 import { fontWeightBold, spacingSmall } from '../../styles/designTokens';
 import MaleButton from './MaleButton';
 import FemaleButton from './FemaleButton';
@@ -22,8 +22,8 @@ function SettingsButton({ gender, onChange }) {
     <div>
       <Label>Gender</Label>
       <ButtonGroup>
-        <MaleButton checked={gender === MALE_GENDER} onChange={onChange} />
-        <FemaleButton checked={gender === FEMALE_GENDER} onChange={onChange} />
+        <MaleButton checked={gender === MALE} onChange={onChange} />
+        <FemaleButton checked={gender === FEMALE} onChange={onChange} />
       </ButtonGroup>
     </div>
   );
