@@ -1,12 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
+import { MALE_GENDER } from '../../constants/gender';
 import SidePanel from '../SidePanel';
 import Subheadline from '../Subheadline';
+import SettingsButton from '../SettingsButton';
+import Content from './Content';
 import Header from './Header';
 import CloseButton from './CloseButton';
 
 function SettingsPanel({ isVisible, onClose }) {
+  const [gender, setGender] = useState(MALE_GENDER);
+
   return (
     <SidePanel isVisible={isVisible}>
       <Header>
@@ -15,7 +20,9 @@ function SettingsPanel({ isVisible, onClose }) {
         </Subheadline>
         <CloseButton onClick={onClose} />
       </Header>
-      {/* TODO: Settings content goes here */}
+      <Content>
+        <SettingsButton gender={gender} onChange={event => setGender(event.target.value)} />
+      </Content>
     </SidePanel>
   );
 }
