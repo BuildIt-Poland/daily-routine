@@ -17,7 +17,8 @@ Array [
       mood="confused"
     />
     <QuoteBubble
-      quote="Yesterday I was implementing PUT method for missing RESTful API endpoint."
+      noCopyToClipboard={true}
+      variant="thought"
     />
     <ActionButtons
       role="devops"

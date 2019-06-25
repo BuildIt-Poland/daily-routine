@@ -5,9 +5,10 @@ import { THOUGHT } from '../../../constants/speechBubbleVariant';
 import QuoteBubble from '../QuoteBubble';
 
 jest.mock('../../Icons', () => ({
-  SpeechBubble: 'SpeechBubble',
-  CopyCards: 'CopyCards'
+  SpeechBubble: 'SpeechBubble'
 }));
+
+jest.mock('../CopyButton', () => 'CopyButton');
 
 describe('COMPONENT - QuoteBubble', () => {
   it('renders correct defaults when no props are provieded', () => {
