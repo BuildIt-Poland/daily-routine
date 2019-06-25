@@ -1,14 +1,14 @@
 import styled from 'styled-components';
 
 import { colorWhite } from '../../styles/designTokens';
-import BaseLabel from './BaseLabel';
+import RadioLabel from './RadioLabel';
 
-const BaseButton = styled.input`
+const RadioOption = styled.input`
   display: none;
-  &:checked + ${BaseLabel} {
+  &:checked + ${RadioLabel} {
     background-color: ${({ theme }) => theme.secondaryColor};
     color: ${colorWhite};
   }
 `;
 
-export default BaseButton;
+export default RadioOption;

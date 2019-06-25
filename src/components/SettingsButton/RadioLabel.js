@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import { borderWidthThick, colorWhite } from '../../styles/designTokens';
 
-const BaseLabel = styled.label`
+const RadioLabel = styled.label`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,4 +14,4 @@ const BaseLabel = styled.label`
   border: ${borderWidthThick} solid ${({ theme }) => theme.secondaryColor};
 `;
 
-export default BaseLabel;
+export default RadioLabel;
