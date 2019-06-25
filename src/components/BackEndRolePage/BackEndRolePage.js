@@ -5,13 +5,9 @@ import { BACK_END_ROLE, BRAG_ROLE_ACTION, CONFESS_ROLE_ACTION } from '../../cons
 import ActionButtons from '../ActionButtons';
 import RoleBar from '../RoleBar';
 import Section from '../Section';
-import QuoteBubble from '../QuoteBubble';
 import Confess from './Confess';
 import Brag from './Brag';
 import Default from './Default';
-
-// TODO Replace with auto-generated message @blurbyte
-const QUOTE = 'Yesterday I was implementing PUT method for missing RESTful API endpoint.';
 
 function BackEndRolePage() {
   return (
@@ -21,7 +17,6 @@ function BackEndRolePage() {
         <Route exact path={`/${BACK_END_ROLE}`} component={Default} />
         <Route exact path={`/${BACK_END_ROLE}/${BRAG_ROLE_ACTION}`} component={Brag} />
         <Route exact path={`/${BACK_END_ROLE}/${CONFESS_ROLE_ACTION}`} component={Confess} />
-        <QuoteBubble quote={QUOTE} />
         <ActionButtons role={BACK_END_ROLE} />
       </Section>
     </>
