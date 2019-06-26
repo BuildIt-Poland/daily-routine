@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import { borderWidthThick, colorWhite, borderRadius } from '../../styles/designTokens';
 
-const Wrapper = styled.label`
+const Label = styled.label`
   position: relative;
   display: flex;
   justify-content: center;
@@ -24,4 +24,4 @@ const Wrapper = styled.label`
   }
 `;
 
-export default Wrapper;
+export default Label;
