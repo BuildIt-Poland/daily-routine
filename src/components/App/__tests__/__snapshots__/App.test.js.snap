@@ -22,7 +22,6 @@ exports[`COMPONENT - App renders correctly default route 1`] = `
   min-height: 100%;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  background-color: #80cbd6;
 }
 
 <div
