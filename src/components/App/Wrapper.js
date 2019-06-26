@@ -4,20 +4,20 @@ import { animated, useTransition, config } from 'react-spring';
 import { colorLightTeal } from '../../styles/designTokens';
 import extractRoleFromPath from '../../utils/extractRoleFromPath';
 
-const AnimatedDiv = styled(animated.div)`
+const Wrapper = styled(animated.div)`
   min-height: 100%;
   display: grid;
   grid-template-rows: auto 1fr auto;
   background-color: ${props => props.theme.primaryColor};
 `;
 
-function Wrapper({ children, location, theme }) {
+function Animator({ children, location, theme }) {
   const { pathname } = location;
-  const currentRole = extractRoleFromPath(pathname);
 
   const [savedRoute, setRoute] = useState(pathname);
   useEffect(() => setRoute(pathname), [savedRoute, pathname]);
 
+  const currentRole = extractRoleFromPath(pathname);
   const hasRouteChanged = () => savedRoute !== pathname;
 
   const bgTransitions = useTransition(pathname, currentRole, {
@@ -30,11 +30,11 @@ function Wrapper({ children, location, theme }) {
   return bgTransitions.map(
     ({ item, props, key }) =>
       item && (
-        <AnimatedDiv key={key} style={props}>
+        <Wrapper key={key} style={props}>
           {children}
-        </AnimatedDiv>
+        </Wrapper>
       )
   );
 }
 
-export default withTheme(Wrapper);
+export default withTheme(Animator);
