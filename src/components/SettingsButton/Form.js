@@ -2,8 +2,8 @@ import styled from 'styled-components';
 
 import { spacingMedium } from '../../styles/designTokens';
 
-const Content = styled.form`
+const Form = styled.form`
   margin: ${spacingMedium};
 `;
 
-export default Content;
+export default Form;

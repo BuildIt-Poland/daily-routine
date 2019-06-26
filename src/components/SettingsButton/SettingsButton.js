@@ -1,23 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Gender from './Gender';
-import Male from './Male';
-import Female from './Female';
-import Wrapper from './Wrapper';
+import { MALE, FEMALE } from '../../constants/genders';
+import RadioButton from './RadioButton';
+import RadioButtonGroup from './RadioButtonGroup';
 import Text from './Text';
-import Input from './Input';
+import Form from './Form';
 
-function SettingsButton({ checked, onChange }) {
+function SettingsButton({ gender, onChange }) {
   return (
-    <Wrapper>
+    <Form>
       <Text>Gender</Text>
-      <Input type="checkbox" checked={checked} onChange={onChange} />
-      <Gender>
-        <Male checked={checked}>Male</Male>
-        <Female checked={checked}>Female</Female>
-      </Gender>
-    </Wrapper>
+      <RadioButtonGroup>
+        <RadioButton value={MALE} checked={gender === MALE} onChange={onChange}>
+          Male
+        </RadioButton>
+        <RadioButton value={FEMALE} checked={gender === FEMALE} onChange={onChange}>
+          Female
+        </RadioButton>
+      </RadioButtonGroup>
+    </Form>
   );
 }
 

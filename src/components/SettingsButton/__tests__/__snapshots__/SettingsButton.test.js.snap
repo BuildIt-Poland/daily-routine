@@ -1,19 +1,45 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`COMPONENT - SettingsButton renders correctly 1`] = `
+.c4 {
+  visibility: hidden;
+  position: absolute;
+}
+
 .c3 {
+  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
   height: 4rem;
   width: 100%;
-  cursor: pointer;
+  background-color: #ffffff;
   border: 2px solid;
-  border-radius: 0.6rem;
 }
 
-.c4 {
+.c3:first-child {
+  border-radius: 0.6rem 0 0 0.6rem;
+}
+
+.c3:last-child {
+  border-radius: 0 0.6rem 0.6rem 0;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -22,38 +48,6 @@ exports[`COMPONENT - SettingsButton renders correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  color: #ffffff;
-}
-
-.c5 {
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  background-color: initial;
-}
-
-.c0 {
-  position: relative;
-  display: block;
 }
 
 .c1 {
@@ -61,12 +55,11 @@ exports[`COMPONENT - SettingsButton renders correctly 1`] = `
   margin: 0 0 1rem;
 }
 
-.c2 {
-  position: absolute;
-  visibility: hidden;
+.c0 {
+  margin: 2rem;
 }
 
-<label
+<form
   className="c0"
 >
   <p
@@ -74,27 +67,37 @@ exports[`COMPONENT - SettingsButton renders correctly 1`] = `
   >
     Gender
   </p>
-  <input
-    checked="false"
+  <div
     className="c2"
-    onChange={[MockFunction]}
-    type="checkbox"
-  />
-  <span
-    className="c3"
   >
-    <span
-      checked="false"
-      className="c4"
+    <label
+      checked={false}
+      className="c3"
     >
+      <input
+        checked={false}
+        className="c4"
+        name="radio-button"
+        onChange={[MockFunction]}
+        type="radio"
+        value="male"
+      />
       Male
-    </span>
-    <span
-      checked="false"
-      className="c5"
+    </label>
+    <label
+      checked={false}
+      className="c3"
     >
+      <input
+        checked={false}
+        className="c4"
+        name="radio-button"
+        onChange={[MockFunction]}
+        type="radio"
+        value="female"
+      />
       Female
-    </span>
-  </span>
-</label>
+    </label>
+  </div>
+</form>
 `;
