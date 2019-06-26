@@ -1,18 +1,18 @@
 import React from 'react';
 
-import { CONFUSED } from '../../../constants/characterMoods';
+import { DEFAULT } from '../../../constants/roleActions';
 import { FEMALE, MALE } from '../../../constants/genders';
-import { gender, mood } from '../../../types';
+import { gender, pose } from '../../../types';
 import Wrapper from './Wrapper';
 import WhaleArtwork from './WhaleArtwork';
 import ConfusionMarks from './ConfusionMarks';
 import GenderFlower from './GenderFlower';
 
-function Whale({ gender = MALE, mood = CONFUSED }) {
+function Whale({ gender = MALE, pose = DEFAULT }) {
   return (
     <Wrapper>
-      <WhaleArtwork mood={mood} />
-      {mood === CONFUSED && <ConfusionMarks />}
+      <WhaleArtwork pose={pose} />
+      {pose === DEFAULT && <ConfusionMarks />}
       {gender === FEMALE && <GenderFlower />}
     </Wrapper>
   );
@@ -20,7 +20,7 @@ function Whale({ gender = MALE, mood = CONFUSED }) {
 
 Whale.propTypes = {
   gender,
-  mood
+  pose
 };
 
 export default Whale;

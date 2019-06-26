@@ -1,14 +1,14 @@
 import React from 'react';
 
 import { THOUGHT } from '../../constants/speechBubbleVariant';
-import { CONFUSED } from '../../constants/characterMoods';
+import { DEFAULT } from '../../constants/roleActions';
 import { Fox } from '../Characters';
 import QuoteBubble from '../QuoteBubble';
 
 function FrontEndDefault() {
   return (
     <>
-      <Fox mood={CONFUSED} />
+      <Fox pose={DEFAULT} />
       <QuoteBubble variant={THOUGHT} noCopyToClipboard />
     </>
   );

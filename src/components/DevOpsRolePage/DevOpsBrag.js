@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { CONFIDENT } from '../../constants/characterMoods';
+import { BRAG } from '../../constants/roleActions';
 import { Whale } from '../Characters';
 import QuoteBubble from '../QuoteBubble';
 
@@ -10,7 +10,7 @@ const QUOTE = 'Yesterday I was implementing PUT method for missing RESTful API e
 function DevOpsBrag() {
   return (
     <>
-      <Whale mood={CONFIDENT} />
+      <Whale pose={BRAG} />
       <QuoteBubble quote={QUOTE} />
     </>
   );

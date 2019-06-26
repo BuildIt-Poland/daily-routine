@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { SAD } from '../../constants/characterMoods';
+import { CONFESS } from '../../constants/roleActions';
 import { Robot } from '../Characters';
 import QuoteBubble from '../QuoteBubble';
 
@@ -11,7 +11,7 @@ function BackEndConfess() {
   return (
     <>
       <QuoteBubble quote={QUOTE} />
-      <Robot mood={SAD} />
+      <Robot pose={CONFESS} />
     </>
   );
 }

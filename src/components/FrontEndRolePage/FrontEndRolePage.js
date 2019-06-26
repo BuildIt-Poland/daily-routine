@@ -1,7 +1,8 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 
-import { BRAG_ROLE_ACTION, CONFESS_ROLE_ACTION, FRONT_END_ROLE } from '../../constants/roles';
+import { FRONT_END_ROLE } from '../../constants/roles';
+import { BRAG, CONFESS } from '../../constants/roleActions';
 import RoleBar from '../RoleBar';
 import ActionButtons from '../ActionButtons';
 import Section from '../Section';
@@ -15,8 +16,8 @@ function FrontEndRolePage() {
       <RoleBar label="Front End Engineer" />
       <Section>
         <Route exact path={`/${FRONT_END_ROLE}`} component={Default} />
-        <Route exact path={`/${FRONT_END_ROLE}/${BRAG_ROLE_ACTION}`} component={Brag} />
-        <Route exact path={`/${FRONT_END_ROLE}/${CONFESS_ROLE_ACTION}`} component={Confess} />
+        <Route exact path={`/${FRONT_END_ROLE}/${BRAG}`} component={Brag} />
+        <Route exact path={`/${FRONT_END_ROLE}/${CONFESS}`} component={Confess} />
         <ActionButtons role={FRONT_END_ROLE} />
       </Section>
     </>

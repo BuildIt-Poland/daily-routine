@@ -1,18 +1,18 @@
 import React from 'react';
 
+import { DEFAULT } from '../../../constants/roleActions';
 import { MALE, FEMALE } from '../../../constants/genders';
-import { CONFUSED } from '../../../constants/characterMoods';
-import { gender, mood } from '../../../types';
+import { gender, pose } from '../../../types';
 import Wrapper from './Wrapper';
 import RobotArtwork from './RobotArtwork';
 import ConfusionMarks from './ConfusionMarks';
 import GenderFlower from './GenderFlower';
 
-function Robot({ gender = MALE, mood = CONFUSED }) {
+function Robot({ gender = MALE, pose = DEFAULT }) {
   return (
     <Wrapper>
-      <RobotArtwork mood={mood} />
-      {mood === CONFUSED && <ConfusionMarks />}
+      <RobotArtwork pose={pose} />
+      {pose === DEFAULT && <ConfusionMarks />}
       {gender === FEMALE && <GenderFlower />}
     </Wrapper>
   );
@@ -20,7 +20,7 @@ function Robot({ gender = MALE, mood = CONFUSED }) {
 
 Robot.propTypes = {
   gender,
-  mood
+  pose
 };
 
 export default Robot;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { SAD } from '../../constants/characterMoods';
+import { CONFESS } from '../../constants/roleActions';
 import { Fox } from '../Characters';
 import QuoteBubble from '../QuoteBubble';
 
@@ -10,7 +10,7 @@ const QUOTE = 'Yesterday I was implementing PUT method for missing RESTful API e
 function FrontEndConfess() {
   return (
     <>
-      <Fox mood={SAD} />
+      <Fox pose={CONFESS} />
       <QuoteBubble quote={QUOTE} />
     </>
   );

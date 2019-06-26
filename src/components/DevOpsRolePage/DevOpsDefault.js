@@ -1,14 +1,14 @@
 import React from 'react';
 
 import { THOUGHT } from '../../constants/speechBubbleVariant';
-import { CONFUSED } from '../../constants/characterMoods';
+import { DEFAULT } from '../../constants/roleActions';
 import { Whale } from '../Characters';
 import QuoteBubble from '../QuoteBubble';
 
 function DevOpsDefault() {
   return (
     <>
-      <Whale mood={CONFUSED} />
+      <Whale pose={DEFAULT} />
       <QuoteBubble variant={THOUGHT} noCopyToClipboard />
     </>
   );
