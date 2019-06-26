@@ -17,12 +17,6 @@ function GenderButton() {
         <RadioButton value={MALE} checked={gender === MALE} onChange={onGenderChange}>
           Male
         </RadioButton>
-        <RadioButton value={'TEST'} checked={gender === 'TEST'} onChange={onGenderChange}>
-          Female
-        </RadioButton>
-        <RadioButton value={'TEST1'} checked={gender === 'TEST1'} onChange={onGenderChange}>
-          Female
-        </RadioButton>
         <RadioButton value={FEMALE} checked={gender === FEMALE} onChange={onGenderChange}>
           Female
         </RadioButton>
