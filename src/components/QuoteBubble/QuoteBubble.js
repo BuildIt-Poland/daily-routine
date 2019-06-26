@@ -8,7 +8,7 @@ import CopyButton from './CopyButton';
 import Wrapper from './Wrapper';
 import Quote from './Quote';
 
-const DEFAULT_QUOTE = "Daily in 5 minutes and I'm still not sure what tot say...";
+const DEFAULT_QUOTE = "Daily in 5 minutes and I'm still not sure what to say...";
 
 function copyTextFromBubble(text) {
   navigator.clipboard.writeText(text);

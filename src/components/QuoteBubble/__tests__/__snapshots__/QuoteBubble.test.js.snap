@@ -50,7 +50,7 @@ exports[`COMPONENT - QuoteBubble renders correct defaults when no props are prov
   <p
     className="c1"
   >
-    Daily in 5 minutes and I'm still not sure what tot say...
+    Daily in 5 minutes and I'm still not sure what to say...
   </p>
   <SpeechBubble
     variant="speech"
