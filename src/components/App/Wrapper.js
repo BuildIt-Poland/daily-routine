@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled, { withTheme } from 'styled-components';
 import { animated, useTransition, config } from 'react-spring';
 import { colorLightTeal } from '../../styles/designTokens';
@@ -12,12 +12,19 @@ const AnimatedDiv = styled(animated.div)`
 `;
 
 function Wrapper({ children, location, theme }) {
-  const currentRole = extractRoleFromPath(location.pathname);
-  const bgTransitions = useTransition(location.pathname, currentRole, {
-    from: { backgroundColor: colorLightTeal },
+  const { pathname } = location;
+  const currentRole = extractRoleFromPath(pathname);
+
+  const [savedRoute, setRoute] = useState(pathname);
+  useEffect(() => setRoute(pathname), [savedRoute, pathname]);
+
+  const hasRouteChanged = () => savedRoute !== pathname;
+
+  const bgTransitions = useTransition(pathname, currentRole, {
+    from: { backgroundColor: hasRouteChanged() ? colorLightTeal : theme.primaryColor },
     enter: { backgroundColor: theme.primaryColor },
     leave: { backgroundColor: colorLightTeal },
-    config: config.woobly
+    config: config.wobbly
   });
 
   return bgTransitions.map(
