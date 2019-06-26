@@ -1,6 +1,7 @@
 ![Daily Routine - Daily Scrum Absurd Answers](https://user-images.githubusercontent.com/20565536/59495052-d1ed4980-8e8e-11e9-9dc9-e8fe0d037469.png)
 
 [![CircleCI](https://circleci.com/gh/BuildIt-Poland/daily-routine/tree/master.svg?style=svg)](https://circleci.com/gh/BuildIt-Poland/daily-routine/tree/master)
+[![codecov](https://codecov.io/gh/BuildIt-Poland/daily-routine/branch/master/graph/badge.svg)](https://codecov.io/gh/BuildIt-Poland/daily-routine)
 
 > An artificial intelligence dedicated to generating absurd and useful daily meeting quotes for endless enrichment of pointless developers existence.
 
