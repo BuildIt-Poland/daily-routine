@@ -30,7 +30,8 @@ function AnimatedWrapper({ children, location, theme }) {
   const previousRole = usePreviousRole(currentRole);
 
   const didRouteChanged = previousRole !== currentRole;
-  const { primaryColor: previousPrimaryColor } = generateColors(previousRole);
+  const previousTheme = generateColors(previousRole);
+  const previousPrimaryColor = previousTheme.primaryColor;
 
   const bgTransitions = useTransition(pathname, currentRole, {
     from: { backgroundColor: didRouteChanged ? previousPrimaryColor : primaryColor },
