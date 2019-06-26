@@ -4,4 +4,5 @@ const Input = styled.input`
   position: absolute;
   visibility: hidden;
 `;
+
 export default Input;
