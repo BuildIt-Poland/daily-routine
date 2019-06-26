@@ -19,14 +19,20 @@ exports[`COMPONENT - App renders correctly default route 1`] = `
 }
 
 .c0 {
+  position: absolute;
+  width: 100%;
   min-height: 100%;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  background-color: #80cbd6;
 }
 
 <div
   className="c0"
+  style={
+    Object {
+      "backgroundColor": "rgba(128, 203, 214, 1)",
+    }
+  }
 >
   <AppBar />
   <main>

@@ -10,14 +10,14 @@ import LandingPage from '../LandingPage';
 import FrontEndRolePage from '../FrontEndRolePage';
 import BackEndRolePage from '../BackEndRolePage';
 import DevOpsRolePage from '../DevOpsRolePage';
-import Wrapper from './Wrapper';
+import Wrapper from './AnimatedWrapper';
 
 const ROOT_PATH = '/';
 
 function App({ location }) {
   return (
     <ThemeProvider theme={generateTheme(location.pathname)}>
-      <Wrapper>
+      <Wrapper location={location}>
         <AppBar />
         <main>
           <Route exact path={ROOT_PATH} component={LandingPage} />
