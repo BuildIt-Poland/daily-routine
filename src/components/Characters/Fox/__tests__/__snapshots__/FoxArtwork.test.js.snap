@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`COMPONENT - Characters Fox renders confident Fox when 'confident' mood is provided 1`] = `
+exports[`COMPONENT - Characters Fox renders confident Fox when 'brag' pose is provided 1`] = `
 <svg
   height="157"
   viewBox="0 0 317 157"
@@ -37,7 +37,7 @@ exports[`COMPONENT - Characters Fox renders confident Fox when 'confident' mood 
 </svg>
 `;
 
-exports[`COMPONENT - Characters Fox renders confused Fox when 'confused' mood is provided 1`] = `
+exports[`COMPONENT - Characters Fox renders confused Fox when 'default' pose is provided 1`] = `
 <svg
   height="157"
   viewBox="0 0 317 157"
@@ -74,7 +74,7 @@ exports[`COMPONENT - Characters Fox renders confused Fox when 'confused' mood is
 </svg>
 `;
 
-exports[`COMPONENT - Characters Fox renders confused Fox when mood is not set 1`] = `
+exports[`COMPONENT - Characters Fox renders confused Fox when pose is not set 1`] = `
 <svg
   height="157"
   viewBox="0 0 317 157"
@@ -111,7 +111,7 @@ exports[`COMPONENT - Characters Fox renders confused Fox when mood is not set 1`
 </svg>
 `;
 
-exports[`COMPONENT - Characters Fox renders sad Fox when 'sad' mood is provided 1`] = `
+exports[`COMPONENT - Characters Fox renders sad Fox when 'confess' pose is provided 1`] = `
 <svg
   height="157"
   viewBox="0 0 317 157"

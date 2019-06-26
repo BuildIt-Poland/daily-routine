@@ -14,10 +14,11 @@ Array [
     className="c0"
   >
     <Whale
-      mood="confused"
+      pose="default"
     />
     <QuoteBubble
-      quote="Yesterday I was implementing PUT method for missing RESTful API endpoint."
+      noCopyToClipboard={true}
+      variant="thought"
     />
     <ActionButtons
       role="devops"
@@ -40,7 +41,7 @@ Array [
     className="c0"
   >
     <Whale
-      mood="confident"
+      pose="brag"
     />
     <QuoteBubble
       quote="Yesterday I was implementing PUT method for missing RESTful API endpoint."
@@ -66,7 +67,7 @@ Array [
     className="c0"
   >
     <Whale
-      mood="sad"
+      pose="confess"
     />
     <QuoteBubble
       quote="Yesterday I was implementing PUT method for missing RESTful API endpoint."

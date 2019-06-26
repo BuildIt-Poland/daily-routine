@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`COMPONENT - Characters Robot renders confident robot when 'confident' mood is provided 1`] = `
+exports[`COMPONENT - Characters Robot renders confident robot when 'brag' pose is provided 1`] = `
 <svg
   height="244"
   viewBox="0 0 148 244"
@@ -27,7 +27,7 @@ exports[`COMPONENT - Characters Robot renders confident robot when 'confident' m
 </svg>
 `;
 
-exports[`COMPONENT - Characters Robot renders confused robot when 'confused' mood is provided 1`] = `
+exports[`COMPONENT - Characters Robot renders confused robot when 'default' pose is provided 1`] = `
 <svg
   height="244"
   viewBox="0 0 148 244"
@@ -54,7 +54,7 @@ exports[`COMPONENT - Characters Robot renders confused robot when 'confused' moo
 </svg>
 `;
 
-exports[`COMPONENT - Characters Robot renders confused robot when mood is not set 1`] = `
+exports[`COMPONENT - Characters Robot renders confused robot when pose is not set 1`] = `
 <svg
   height="244"
   viewBox="0 0 148 244"
@@ -81,7 +81,7 @@ exports[`COMPONENT - Characters Robot renders confused robot when mood is not se
 </svg>
 `;
 
-exports[`COMPONENT - Characters Robot renders sad robot when 'sad' mood is provided 1`] = `
+exports[`COMPONENT - Characters Robot renders sad robot when 'confess' pose is provided 1`] = `
 <svg
   height="244"
   viewBox="0 0 148 244"

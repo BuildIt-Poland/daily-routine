@@ -4,26 +4,26 @@ import { create } from 'react-test-renderer';
 import FoxArtwork from '../FoxArtwork';
 
 describe('COMPONENT - Characters Fox', () => {
-  it('renders confused Fox when mood is not set', () => {
+  it('renders confused Fox when pose is not set', () => {
     const component = create(<FoxArtwork />);
 
     expect(component.toJSON()).toMatchSnapshot();
   });
 
-  it("renders sad Fox when 'sad' mood is provided", () => {
-    const component = create(<FoxArtwork mood="sad" />);
+  it("renders sad Fox when 'confess' pose is provided", () => {
+    const component = create(<FoxArtwork pose="confess" />);
 
     expect(component.toJSON()).toMatchSnapshot();
   });
 
-  it("renders confused Fox when 'confused' mood is provided", () => {
-    const component = create(<FoxArtwork mood="confused" />);
+  it("renders confused Fox when 'default' pose is provided", () => {
+    const component = create(<FoxArtwork pose="default" />);
 
     expect(component.toJSON()).toMatchSnapshot();
   });
 
-  it("renders confident Fox when 'confident' mood is provided", () => {
-    const component = create(<FoxArtwork mood="confident" />);
+  it("renders confident Fox when 'brag' pose is provided", () => {
+    const component = create(<FoxArtwork pose="brag" />);
 
     expect(component.toJSON()).toMatchSnapshot();
   });
