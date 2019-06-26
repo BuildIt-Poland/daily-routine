@@ -1,18 +1,18 @@
 import React from 'react';
 
-import { CONFUSED } from '../../../constants/characterMoods';
+import { DEFAULT } from '../../../constants/roleActions';
 import { FEMALE, MALE } from '../../../constants/genders';
-import { gender, mood } from '../../../types';
+import { gender, pose } from '../../../types';
 import Wrapper from './Wrapper';
 import FoxArtwork from './FoxArtwork';
 import ConfusionMarks from './ConfusionMarks';
 import GenderFlower from './GenderFlower';
 
-function Fox({ gender = MALE, mood = CONFUSED }) {
+function Fox({ gender = MALE, pose = DEFAULT }) {
   return (
     <Wrapper>
-      <FoxArtwork mood={mood} />
-      {mood === CONFUSED && <ConfusionMarks />}
+      <FoxArtwork pose={pose} />
+      {pose === DEFAULT && <ConfusionMarks />}
       {gender === FEMALE && <GenderFlower />}
     </Wrapper>
   );
@@ -20,7 +20,7 @@ function Fox({ gender = MALE, mood = CONFUSED }) {
 
 Fox.propTypes = {
   gender,
-  mood
+  pose
 };
 
 export default Fox;

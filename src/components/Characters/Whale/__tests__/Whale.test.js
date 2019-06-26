@@ -2,7 +2,7 @@ import React from 'react';
 import { create } from 'react-test-renderer';
 
 import { FEMALE } from '../../../../constants/genders';
-import { CONFUSED } from '../../../../constants/characterMoods';
+import { DEFAULT } from '../../../../constants/roleActions';
 import Whale from '../Whale';
 
 jest.mock('../GenderFlower', () => 'GenderFlower');
@@ -22,14 +22,14 @@ describe('COMPONENT - Characters Robot', () => {
     expect(component.toJSON()).toMatchSnapshot();
   });
 
-  it('renders confusion marks if whale is confused', () => {
-    const component = create(<Whale mood={CONFUSED} />);
+  it('renders confusion marks if whale is in default pose', () => {
+    const component = create(<Whale pose={DEFAULT} />);
 
     expect(component.toJSON()).toMatchSnapshot();
   });
 
-  it('renders confusion marks and flower if female whale is confused', () => {
-    const component = create(<Whale mood={CONFUSED} gender={FEMALE} />);
+  it('renders confusion marks and flower if female whale is in default pose', () => {
+    const component = create(<Whale pose={DEFAULT} gender={FEMALE} />);
 
     expect(component.toJSON()).toMatchSnapshot();
   });
