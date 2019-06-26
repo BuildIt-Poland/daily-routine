@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
+import { node } from 'prop-types';
 import styled, { withTheme } from 'styled-components';
 import { animated, useTransition, config } from 'react-spring';
-import { colorLightTeal } from '../../styles/designTokens';
+
+import { location, theme } from '../../types';
 import extractRoleFromPath from '../../utils/extractRoleFromPath';
 import generateColors from '../../utils/generateColors';
 
@@ -13,13 +15,19 @@ const Wrapper = styled(animated.div)`
   grid-template-rows: auto 1fr auto;
 `;
 
-function Animator({ children, location, theme }) {
+function usePreviousRole(currentRole) {
+  const [previousRole, setPreviousRole] = useState(currentRole);
+  useEffect(() => setPreviousRole(currentRole), [currentRole]);
+
+  return previousRole;
+}
+
+function AnimatedWrapper({ children, location, theme }) {
   const { pathname } = location;
   const { primaryColor } = theme;
-  const currentRole = extractRoleFromPath(pathname);
 
-  const [previousRole, setPreviousRole] = useState(currentRole);
-  useEffect(() => setPreviousRole(currentRole), [previousRole, currentRole]);
+  const currentRole = extractRoleFromPath(pathname);
+  const previousRole = usePreviousRole(currentRole);
 
   const didRouteChanged = previousRole !== currentRole;
   const { primaryColor: previousPrimaryColor } = generateColors(previousRole);
@@ -28,7 +36,7 @@ function Animator({ children, location, theme }) {
     from: { backgroundColor: didRouteChanged ? previousPrimaryColor : primaryColor },
     enter: { backgroundColor: primaryColor },
     leave: { backgroundColor: primaryColor },
-    config: config.wobbly
+    config: config.gentle
   });
 
   return bgTransitions.map(
@@ -41,4 +49,10 @@ function Animator({ children, location, theme }) {
   );
 }
 
-export default withTheme(Animator);
+AnimatedWrapper.propTypes = {
+  children: node.isRequired,
+  location: location.isRequired,
+  theme: theme.isRequired
+};
+
+export default withTheme(AnimatedWrapper);
