@@ -3,27 +3,31 @@ import styled, { withTheme } from 'styled-components';
 import { animated, useTransition, config } from 'react-spring';
 import { colorLightTeal } from '../../styles/designTokens';
 import extractRoleFromPath from '../../utils/extractRoleFromPath';
+import generateColors from '../../utils/generateColors';
 
 const Wrapper = styled(animated.div)`
+  /* TODO */
+  /* We need positon: absolute in that wrapper for proper container positionin during animation */
   min-height: 100%;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  background-color: ${props => props.theme.primaryColor};
 `;
 
 function Animator({ children, location, theme }) {
   const { pathname } = location;
-
-  const [savedRoute, setRoute] = useState(pathname);
-  useEffect(() => setRoute(pathname), [savedRoute, pathname]);
-
+  const { primaryColor } = theme;
   const currentRole = extractRoleFromPath(pathname);
-  const hasRouteChanged = () => savedRoute !== pathname;
+
+  const [previousRole, setPreviousRole] = useState(currentRole);
+  useEffect(() => setPreviousRole(currentRole), [previousRole, currentRole]);
+
+  const didRouteChanged = previousRole !== currentRole;
+  const { primaryColor: previousPrimaryColor } = generateColors(previousRole);
 
   const bgTransitions = useTransition(pathname, currentRole, {
-    from: { backgroundColor: hasRouteChanged() ? colorLightTeal : theme.primaryColor },
-    enter: { backgroundColor: theme.primaryColor },
-    leave: { backgroundColor: colorLightTeal },
+    from: { backgroundColor: didRouteChanged ? previousPrimaryColor : primaryColor },
+    enter: { backgroundColor: primaryColor },
+    leave: { backgroundColor: primaryColor },
     config: config.wobbly
   });
 
