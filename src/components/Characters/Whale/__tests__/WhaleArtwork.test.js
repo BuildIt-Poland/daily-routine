@@ -11,7 +11,7 @@ describe('COMPONENT - Characters Whale', () => {
   });
 
   it("renders sad robot when 'confess' pose is provided", () => {
-    const component = create(<WhaleArtwork pose="sad" />);
+    const component = create(<WhaleArtwork pose="confess" />);
 
     expect(component.toJSON()).toMatchSnapshot();
   });

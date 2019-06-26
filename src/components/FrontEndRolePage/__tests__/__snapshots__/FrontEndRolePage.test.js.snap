@@ -14,7 +14,7 @@ Array [
     className="c0"
   >
     <Fox
-      mood="confused"
+      pose="default"
     />
     <QuoteBubble
       noCopyToClipboard={true}

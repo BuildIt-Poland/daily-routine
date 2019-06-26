@@ -14,7 +14,7 @@ Array [
     className="c0"
   >
     <Robot
-      mood="confused"
+      pose="default"
     />
     <QuoteBubble
       noCopyToClipboard={true}
@@ -41,7 +41,7 @@ Array [
     className="c0"
   >
     <Robot
-      mood="confident"
+      pose="brag"
     />
     <QuoteBubble
       quote="Yesterday I was implementing PUT method for missing RESTful API endpoint."
@@ -70,7 +70,7 @@ Array [
       quote="Yesterday I was implementing PUT method for missing RESTful API endpoint."
     />
     <Robot
-      mood="sad"
+      pose="confess"
     />
     <ActionButtons
       role="backend"
