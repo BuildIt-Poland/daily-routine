@@ -1,19 +1,19 @@
 import React from 'react';
 
-import { CONFIDENT } from '../../constants/characterMoods';
+import { SAD } from '../../constants/characterMoods';
 import { Robot } from '../Characters';
 import QuoteBubble from '../QuoteBubble';
 
 // TODO Replace with auto-generated message
 const QUOTE = 'Yesterday I was implementing PUT method for missing RESTful API endpoint.';
 
-function Brag() {
+function BackEndConfess() {
   return (
     <>
-      <Robot mood={CONFIDENT} />
       <QuoteBubble quote={QUOTE} />
+      <Robot mood={SAD} />
     </>
   );
 }
 
-export default Brag;
+export default BackEndConfess;

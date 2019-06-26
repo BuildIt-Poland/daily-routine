@@ -5,9 +5,9 @@ import { BACK_END_ROLE, BRAG_ROLE_ACTION, CONFESS_ROLE_ACTION } from '../../cons
 import ActionButtons from '../ActionButtons';
 import RoleBar from '../RoleBar';
 import Section from '../Section';
-import Confess from './Confess';
-import Brag from './Brag';
-import Default from './Default';
+import Confess from './BackEndConfess';
+import Brag from './BackEndBrag';
+import Default from './BackEndDefault';
 
 function BackEndRolePage() {
   return (

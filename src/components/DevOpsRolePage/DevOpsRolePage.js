@@ -5,9 +5,9 @@ import { DEV_OPS_ROLE, BRAG_ROLE_ACTION, CONFESS_ROLE_ACTION } from '../../const
 import ActionButtons from '../ActionButtons';
 import RoleBar from '../RoleBar';
 import Section from '../Section';
-import Default from './Default';
-import Brag from './Brag';
-import Confess from './Confess';
+import Default from './DevOpsDefault';
+import Brag from './DevOpsBrag';
+import Confess from './DevOpsConfess';
 
 function DevOpsRolePage() {
   return (

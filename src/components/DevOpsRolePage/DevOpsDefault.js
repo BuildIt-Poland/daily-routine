@@ -5,7 +5,7 @@ import { CONFUSED } from '../../constants/characterMoods';
 import { Whale } from '../Characters';
 import QuoteBubble from '../QuoteBubble';
 
-function Default() {
+function DevOpsDefault() {
   return (
     <>
       <Whale mood={CONFUSED} />
@@ -14,4 +14,4 @@ function Default() {
   );
 }
 
-export default Default;
+export default DevOpsDefault;
