@@ -4,4 +4,5 @@ const Wrapper = styled.label`
   position: relative;
   display: block;
 `;
+
 export default Wrapper;
