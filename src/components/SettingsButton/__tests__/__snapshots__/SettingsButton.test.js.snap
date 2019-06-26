@@ -1,0 +1,100 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`COMPONENT - SettingsButton renders correctly 1`] = `
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 4rem;
+  width: 100%;
+  cursor: pointer;
+  border: 2px solid;
+  border-radius: 0.6rem;
+}
+
+.c4 {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  color: #ffffff;
+}
+
+.c5 {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  background-color: initial;
+}
+
+.c0 {
+  position: relative;
+  display: block;
+}
+
+.c1 {
+  font-weight: 700;
+  margin: 0 0 1rem;
+}
+
+.c2 {
+  position: absolute;
+  visibility: hidden;
+}
+
+<label
+  className="c0"
+>
+  <p
+    className="c1"
+  >
+    Gender
+  </p>
+  <input
+    checked="false"
+    className="c2"
+    onChange={[MockFunction]}
+    type="checkbox"
+  />
+  <span
+    className="c3"
+  >
+    <span
+      checked="false"
+      className="c4"
+    >
+      Male
+    </span>
+    <span
+      checked="false"
+      className="c5"
+    >
+      Female
+    </span>
+  </span>
+</label>
+`;

@@ -1,34 +1,28 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
 
-import { MALE, FEMALE } from '../../constants/genders';
-import { fontWeightBold } from '../../styles/designTokens';
-import RadioOption from './RadioOption';
-import RadioGroup from './RadioGroup';
-import MaleRadioLabel from './MaleRadioLabel';
-import FemaleRadioLabel from './FemaleRadioLabel';
+import Gender from './Gender';
+import Male from './Male';
+import Female from './Female';
+import Wrapper from './Wrapper';
+import Text from './Text';
+import Input from './Input';
 
-const Label = styled.label`
-  font-weight: ${fontWeightBold};
-`;
-
-function SettingsButton({ gender, onChange }) {
+function SettingsButton({ checked, onChange }) {
   return (
-    <div>
-      <Label>Gender</Label>
-      <RadioGroup>
-        <RadioOption id="male-option" type="radio" value={MALE} checked={gender === MALE} onChange={onChange} />
-        <MaleRadioLabel htmlFor="male-option">Male</MaleRadioLabel>
-        <RadioOption id="female-option" type="radio" value={FEMALE} checked={gender === FEMALE} onChange={onChange} />
-        <FemaleRadioLabel htmlFor="female-option"> Female</FemaleRadioLabel>
-      </RadioGroup>
-    </div>
+    <Wrapper>
+      <Text>Gender</Text>
+      <Input type="checkbox" checked={checked} onChange={onChange} />
+      <Gender>
+        <Male checked={checked}>Male</Male>
+        <Female checked={checked}>Female</Female>
+      </Gender>
+    </Wrapper>
   );
 }
 
 SettingsButton.prototype = {
-  gender: PropTypes.string.isRequired,
+  checked: PropTypes.bool.isRequired,
   onChange: PropTypes.func.isRequired
 };
 
