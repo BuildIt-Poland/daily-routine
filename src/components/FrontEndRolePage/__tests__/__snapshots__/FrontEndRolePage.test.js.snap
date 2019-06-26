@@ -14,10 +14,11 @@ Array [
     className="c0"
   >
     <Fox
-      mood="confused"
+      pose="default"
     />
     <QuoteBubble
-      quote="Yesterday I was implementing PUT method for missing RESTful API endpoint."
+      noCopyToClipboard={true}
+      variant="thought"
     />
     <ActionButtons
       role="frontend"
