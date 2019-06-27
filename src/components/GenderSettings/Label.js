@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { borderWidthThick, colorWhite, borderRadius } from '../../styles/designTokens';
 
 const Label = styled.label`
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,6 +13,7 @@ const Label = styled.label`
   color: ${({ theme, checked }) => (checked ? colorWhite : theme.secondaryColor)};
   border: ${borderWidthThick} solid ${({ theme }) => theme.secondaryColor};
   border-left: none;
+
   :first-child {
     border-radius: ${borderRadius} 0 0 ${borderRadius};
     border-left: ${borderWidthThick} solid ${({ theme }) => theme.secondaryColor};

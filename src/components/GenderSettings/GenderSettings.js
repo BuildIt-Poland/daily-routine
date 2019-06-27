@@ -5,7 +5,7 @@ import RadioButton from './RadioButton';
 import Wrapper from './Wrapper';
 import Description from './Description';
 
-function GenderButton() {
+function GenderSettings() {
   const [gender, setGender] = useState(MALE);
 
   const onGenderChange = event => setGender(event.target.value);
@@ -25,4 +25,4 @@ function GenderButton() {
   );
 }
 
-export default GenderButton;
+export default GenderSettings;

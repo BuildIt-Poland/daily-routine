@@ -6,17 +6,19 @@ import GenderSettings from '../GenderSettings';
 describe('COMPONENT - GenderSettings', () => {
   it('renders GenderSettings correctly with checked male', () => {
     const { container } = render(<GenderSettings />);
-    const radioButton = container.querySelectorAll('input')[0];
+    const label = container.querySelectorAll('label')[0];
+    const radioButton = label.querySelector('input');
 
     fireEvent.change(radioButton, { target: { value: 'male' } });
-    expect(radioButton.value).toBe('male');
+    expect(label).toHaveTextContent('Male');
   });
 
   it('renders GenderSettings correctly with checked female', () => {
     const { container } = render(<GenderSettings />);
-    const radioButton = container.querySelectorAll('input')[1];
+    const label = container.querySelectorAll('label')[1];
+    const radioButton = label.querySelector('input');
 
     fireEvent.change(radioButton, { target: { value: 'female' } });
-    expect(radioButton.value).toBe('female');
+    expect(label).toHaveTextContent('Female');
   });
 });
