@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
+import GenderContext from '../../context/GenderContext';
 import { CONFESS } from '../../constants/roleActions';
 import { Whale } from '../Characters';
 import QuoteBubble from '../QuoteBubble';
@@ -8,9 +9,11 @@ import QuoteBubble from '../QuoteBubble';
 const QUOTE = 'Yesterday I was implementing PUT method for missing RESTful API endpoint.';
 
 function DevOpsConfess() {
+  const { gender } = useContext(GenderContext);
+
   return (
     <>
-      <Whale pose={CONFESS} />
+      <Whale pose={CONFESS} gender={gender} />
       <QuoteBubble quote={QUOTE} />
     </>
   );

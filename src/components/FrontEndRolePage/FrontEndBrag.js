@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
+import GenderContext from '../../context/GenderContext';
 import { BRAG } from '../../constants/roleActions';
 import { Fox } from '../Characters';
 import QuoteBubble from '../QuoteBubble';
@@ -8,9 +9,11 @@ import QuoteBubble from '../QuoteBubble';
 const QUOTE = 'Yesterday I was implementing PUT method for missing RESTful API endpoint.';
 
 function FrontEndBrag() {
+  const { gender } = useContext(GenderContext);
+
   return (
     <>
-      <Fox pose={BRAG} />
+      <Fox pose={BRAG} gender={gender} />
       <QuoteBubble quote={QUOTE} />
     </>
   );

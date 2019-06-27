@@ -14,6 +14,7 @@ Array [
     className="c0"
   >
     <Whale
+      gender="male"
       pose="default"
     />
     <QuoteBubble
@@ -41,6 +42,7 @@ Array [
     className="c0"
   >
     <Whale
+      gender="male"
       pose="brag"
     />
     <QuoteBubble
@@ -67,6 +69,7 @@ Array [
     className="c0"
   >
     <Whale
+      gender="male"
       pose="confess"
     />
     <QuoteBubble
