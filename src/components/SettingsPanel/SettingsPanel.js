@@ -3,8 +3,10 @@ import PropTypes from 'prop-types';
 
 import SidePanel from '../SidePanel';
 import Subheadline from '../Subheadline';
+import GenderSettings from '../GenderSettings';
 import Header from './Header';
 import CloseButton from './CloseButton';
+import Form from './Form';
 
 function SettingsPanel({ isVisible, onClose }) {
   return (
@@ -15,7 +17,9 @@ function SettingsPanel({ isVisible, onClose }) {
         </Subheadline>
         <CloseButton onClick={onClose} />
       </Header>
-      {/* TODO: Settings content goes here */}
+      <Form>
+        <GenderSettings />
+      </Form>
     </SidePanel>
   );
 }
