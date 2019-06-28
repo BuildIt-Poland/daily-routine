@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 
-import { BACK_END_ROLE } from '../../constants/roles';
+import { BACK_END_ROLE, BACK_END_ROLE_LABEL } from '../../constants/roles';
 import { BRAG, CONFESS } from '../../constants/roleActions';
 import ActionButtons from '../ActionButtons';
 import RoleBar from '../RoleBar';
@@ -13,7 +13,7 @@ import Default from './BackEndDefault';
 function BackEndRolePage() {
   return (
     <>
-      <RoleBar label="Back End Developer" />
+      <RoleBar label={BACK_END_ROLE_LABEL} />
       <Section>
         <Route exact path={`/${BACK_END_ROLE}`} component={Default} />
         <Route exact path={`/${BACK_END_ROLE}/${BRAG}`} component={Brag} />
