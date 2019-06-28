@@ -18,7 +18,7 @@ function SettingsPanel({ isVisible, onClose }) {
         <CloseButton onClick={onClose} />
       </Header>
       <Form>
-        <GenderSettings onClose={onClose} />
+        <GenderSettings />
       </Form>
     </SidePanel>
   );

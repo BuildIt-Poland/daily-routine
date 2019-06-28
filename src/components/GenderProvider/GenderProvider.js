@@ -1,17 +1,19 @@
 import React, { useState } from 'react';
 
 import GenderContext from '../../context/GenderContext';
-import { MALE } from '../../constants/genders';
+import { GENDER } from '../../constants/genders';
 
 const GenderProvider = ({ children }) => {
-  const onGenderChange = ({ target }) =>
+  const onGenderChange = ({ target }) => {
+    localStorage.setItem(GENDER, target.value);
     setGender(prevState => ({
       ...prevState,
-      gender: target.value
+      gender: localStorage.getItem(GENDER)
     }));
+  };
 
   const genderState = {
-    gender: MALE,
+    gender: localStorage.getItem(GENDER),
     onGenderChange
   };
 
