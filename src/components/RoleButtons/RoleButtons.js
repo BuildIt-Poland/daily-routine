@@ -10,9 +10,15 @@ import DevOpsButton from './DevOpsButton';
 function RoleButtons() {
   return (
     <nav>
-      <FrontEndButton to={`/${FRONT_END_ROLE}`}>Front End Engineer</FrontEndButton>
-      <BackEndButton to={`/${BACK_END_ROLE}`}>Back End Developer</BackEndButton>
-      <DevOpsButton to={`/${DEV_OPS_ROLE}`}>Dev Ops</DevOpsButton>
+      <FrontEndButton to={`/${FRONT_END_ROLE}`} data-testid={`${FRONT_END_ROLE}-button`}>
+        Front End Engineer
+      </FrontEndButton>
+      <BackEndButton to={`/${BACK_END_ROLE}`} data-testid={`${BACK_END_ROLE}-button`}>
+        Back End Developer
+      </BackEndButton>
+      <DevOpsButton to={`/${DEV_OPS_ROLE}`} data-testid={`${DEV_OPS_ROLE}-button`}>
+        Dev Ops
+      </DevOpsButton>
     </nav>
   );
 }

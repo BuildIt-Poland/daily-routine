@@ -31,7 +31,7 @@ const Tagline = styled.p`
 
 function Logo() {
   return (
-    <Link to="/">
+    <Link to="/" data-testid="logo">
       <LogoWrapper>
         <LogoIcon />
       </LogoWrapper>
