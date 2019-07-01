@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { borderWidthThick, colorWhite, borderRadius } from '../../styles/designTokens';
 
 const Label = styled.label`
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
