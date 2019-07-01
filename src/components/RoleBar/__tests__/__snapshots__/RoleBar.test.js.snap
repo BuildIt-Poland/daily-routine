@@ -55,7 +55,7 @@ exports[`COMPONENT - RoleBar renders correctly 1`] = `
   >
     I am 
     <strong>
-      Frond End Developer
+      Front End Engineer
     </strong>
   </h2>
   <button

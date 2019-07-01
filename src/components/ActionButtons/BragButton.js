@@ -13,9 +13,9 @@ const StyledButton = styled(Button)`
   border-bottom-color: ${colorDarkGreen};
 `;
 
-function BragButton({ role }) {
+function BragButton({ role, ...props }) {
   return (
-    <StyledButton as={Link} to={`/${role}/${BRAG_ROLE_ACTION}`}>
+    <StyledButton as={Link} to={`/${role}/${BRAG_ROLE_ACTION}`} {...props}>
       Brag about my efforts
       <LightbulbIcon />
     </StyledButton>

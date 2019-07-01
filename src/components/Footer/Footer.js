@@ -8,14 +8,16 @@ import DesktopOnly from './DesktopOnly';
 function Footer() {
   return (
     <Wrapper>
-      <Link href="https://buildit.wiprodigital.com/">
+      <Link href="https://buildit.wiprodigital.com/" data-testid="buildit-home-page-link">
         Crafted with <Heart /> by <BuilditLogo />
       </Link>
-      <Link href="https://github.com/BuildIt-Poland/daily-routine">
+      <Link href="https://github.com/BuildIt-Poland/daily-routine" data-testid="github-link">
         <GithubLogo />
         <DesktopOnly>Contribute</DesktopOnly>
       </Link>
-      <Link href="https://buildit.wiprodigital.com/careers/">We are hiring!</Link>
+      <Link href="https://buildit.wiprodigital.com/careers/" data-testid="buildit-career-link">
+        We are hiring!
+      </Link>
     </Wrapper>
   );
 }

@@ -12,7 +12,6 @@
 /build
 
 # cypress
-/cypress/support
 /cypress/screenshots
 /cypress/plugins
 /cypress/fixtures

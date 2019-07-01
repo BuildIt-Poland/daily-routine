@@ -13,9 +13,9 @@ const StyledButton = styled(Button)`
   border-bottom-color: ${colorDarkRed};
 `;
 
-function ConfessButton({ role }) {
+function ConfessButton({ role, ...props }) {
   return (
-    <StyledButton as={Link} to={`/${role}/${CONFESS_ROLE_ACTION}`}>
+    <StyledButton as={Link} to={`/${role}/${CONFESS_ROLE_ACTION}`} {...props}>
       Confess my mistake
       <SaltGrinderIcon />
     </StyledButton>

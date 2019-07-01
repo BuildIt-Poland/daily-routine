@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 
-import { DEV_OPS_ROLE } from '../../constants/roles';
+import { DEV_OPS_ROLE, DEV_OPS_ROLE_LABEL } from '../../constants/roles';
 import { BRAG, CONFESS } from '../../constants/roleActions';
 import ActionButtons from '../ActionButtons';
 import RoleBar from '../RoleBar';
@@ -13,7 +13,7 @@ import Confess from './DevOpsConfess';
 function DevOpsRolePage() {
   return (
     <>
-      <RoleBar label="Dev Ops" />
+      <RoleBar label={DEV_OPS_ROLE_LABEL} />
       <Section>
         <Route exact path={`/${DEV_OPS_ROLE}`} component={Default} />
         <Route exact path={`/${DEV_OPS_ROLE}/${BRAG}`} component={Brag} />

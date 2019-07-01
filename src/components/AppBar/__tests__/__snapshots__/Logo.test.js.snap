@@ -34,6 +34,7 @@ exports[`COMPONENT - AppBar Logo renders correctly 1`] = `
 
 <Link
   className="c0"
+  data-testid="logo"
   to="/"
 >
   <div
