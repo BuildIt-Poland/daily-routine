@@ -14,7 +14,7 @@ Array [
     className="c0"
   >
     <Robot
-      gender={null}
+      gender="male"
       pose="default"
     />
     <QuoteBubble
@@ -42,7 +42,7 @@ Array [
     className="c0"
   >
     <Robot
-      gender={null}
+      gender="male"
       pose="brag"
     />
     <QuoteBubble
@@ -69,7 +69,7 @@ Array [
     className="c0"
   >
     <Robot
-      gender={null}
+      gender="male"
       pose="confess"
     />
     <QuoteBubble

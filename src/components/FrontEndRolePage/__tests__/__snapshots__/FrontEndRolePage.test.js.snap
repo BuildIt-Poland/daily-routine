@@ -14,7 +14,7 @@ Array [
     className="c0"
   >
     <Fox
-      gender={null}
+      gender="male"
       pose="default"
     />
     <QuoteBubble
