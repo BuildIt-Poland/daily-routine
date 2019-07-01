@@ -1,9 +1,9 @@
 import { createContext } from 'react';
 
-import { GENDER } from '../constants/genders';
+import { MALE } from '../constants/genders';
 
 const GenderContext = createContext({
-  gender: localStorage.getItem(GENDER),
+  gender: MALE,
   onGenderChange: () => {}
 });
 
