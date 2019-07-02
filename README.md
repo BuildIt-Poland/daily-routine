@@ -45,3 +45,4 @@ import PropTypes from 'prop-types';
 import Headline from '../../Headline';
 import { SugarCat } from './Characters';
 ```
+This is just a test.
