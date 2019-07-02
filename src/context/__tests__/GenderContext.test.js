@@ -17,7 +17,7 @@ afterEach(cleanup);
 
 describe('COMPONENT - GenderContext', () => {
   it('renders GenderProvider corrently with gender `male`', () => {
-    const { getByText } = render(
+    const { container } = render(
       <GenderProvider>
         <GenderContext.Consumer>
           {({ gender, handleGenderChange }) => renderGenderContextConsumer(gender, handleGenderChange(MALE))}
@@ -25,11 +25,11 @@ describe('COMPONENT - GenderContext', () => {
       </GenderProvider>
     );
 
-    expect(getByText(MALE)).toHaveTextContent(MALE);
+    expect(container.querySelector('span')).toHaveTextContent(MALE);
   });
 
   it('renders GenderProvider corrently with gender `female`', () => {
-    const { getByText, container } = render(
+    const { container } = render(
       <GenderProvider>
         <GenderContext.Consumer>
           {({ gender, handleGenderChange }) => renderGenderContextConsumer(gender, handleGenderChange(FEMALE))}
@@ -39,6 +39,6 @@ describe('COMPONENT - GenderContext', () => {
 
     fireEvent.click(container.querySelector('button'));
 
-    expect(getByText(FEMALE)).toHaveTextContent(FEMALE);
+    expect(container.querySelector('span')).toHaveTextContent(FEMALE);
   });
 });

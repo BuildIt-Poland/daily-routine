@@ -1,4 +1,5 @@
 import React, { useState, createContext } from 'react';
+import PropTypes from 'prop-types';
 
 import { MALE } from '../constants/genders';
 
@@ -12,5 +13,9 @@ function GenderProvider({ children }) {
 
   return <Provider value={{ gender, handleGenderChange }}>{children}</Provider>;
 }
+
+GenderProvider.propTypes = {
+  children: PropTypes.node
+};
 
 export { GenderContext, GenderProvider };
