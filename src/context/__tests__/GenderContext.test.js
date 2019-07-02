@@ -1,10 +1,10 @@
 import React from 'react';
-import { render, fireEvent } from '@testing-library/react';
+import { render, fireEvent, cleanup } from '@testing-library/react';
 
 import { MALE, FEMALE } from '../../constants/genders';
 import { GenderProvider, GenderContext } from '../GenderContext';
 
-function genderContextConsumer(gender, handleGenderChange) {
+function renderGenderContextConsumer(gender, handleGenderChange) {
   return (
     <>
       <span>{gender}</span>
@@ -13,12 +13,14 @@ function genderContextConsumer(gender, handleGenderChange) {
   );
 }
 
+afterEach(cleanup);
+
 describe('COMPONENT - GenderContext', () => {
   it('renders GenderProvider corrently with gender `male`', () => {
     const { getByText } = render(
       <GenderProvider>
         <GenderContext.Consumer>
-          {({ gender, handleGenderChange }) => genderContextConsumer(gender, handleGenderChange(MALE))}
+          {({ gender, handleGenderChange }) => renderGenderContextConsumer(gender, handleGenderChange(MALE))}
         </GenderContext.Consumer>
       </GenderProvider>
     );
@@ -30,7 +32,7 @@ describe('COMPONENT - GenderContext', () => {
     const { getByText, container } = render(
       <GenderProvider>
         <GenderContext.Consumer>
-          {({ gender, handleGenderChange }) => genderContextConsumer(gender, handleGenderChange(FEMALE))}
+          {({ gender, handleGenderChange }) => renderGenderContextConsumer(gender, handleGenderChange(FEMALE))}
         </GenderContext.Consumer>
       </GenderProvider>
     );
