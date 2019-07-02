@@ -1,13 +1,15 @@
 import React, { useContext } from 'react';
 
-import GenderContext from '../../context/GenderContext';
+import { GenderContext } from '../../context/GenderContext';
 import { MALE, FEMALE } from '../../constants/genders';
 import RadioButton from './RadioButton';
 import Wrapper from './Wrapper';
 import Description from './Description';
 
 function GenderSettings() {
-  const { gender, onGenderChange } = useContext(GenderContext);
+  const { gender, handleGenderChange } = useContext(GenderContext);
+
+  const onGenderChange = event => handleGenderChange(event.target.value);
 
   return (
     <>

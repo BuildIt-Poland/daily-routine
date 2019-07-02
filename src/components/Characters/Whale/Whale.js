@@ -1,14 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
 import { DEFAULT } from '../../../constants/roleActions';
-import { FEMALE, MALE } from '../../../constants/genders';
-import { gender, pose } from '../../../types';
+import { FEMALE } from '../../../constants/genders';
+import { pose } from '../../../types';
+import { GenderContext } from '../../../context/GenderContext';
 import Wrapper from './Wrapper';
 import WhaleArtwork from './WhaleArtwork';
 import ConfusionMarks from './ConfusionMarks';
 import GenderFlower from './GenderFlower';
 
-function Whale({ gender = MALE, pose = DEFAULT }) {
+function Whale({ pose = DEFAULT }) {
+  const { gender } = useContext(GenderContext);
+
   return (
     <Wrapper>
       <WhaleArtwork pose={pose} />
@@ -19,7 +22,6 @@ function Whale({ gender = MALE, pose = DEFAULT }) {
 }
 
 Whale.propTypes = {
-  gender,
   pose
 };
 
