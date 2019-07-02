@@ -66,11 +66,11 @@ Array [
 <section
     className="c0"
   >
-    <QuoteBubble
-      quote="Yesterday I was implementing PUT method for missing RESTful API endpoint."
-    />
     <Robot
       pose="confess"
+    />
+    <QuoteBubble
+      quote="Yesterday I was implementing PUT method for missing RESTful API endpoint."
     />
     <ActionButtons
       role="backend"
