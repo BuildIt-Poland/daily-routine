@@ -1,10 +1,10 @@
 import React from 'react';
 import { create } from 'react-test-renderer';
 
-import Robot from '../Robot';
 import { FEMALE, MALE } from '../../../../constants/genders';
 import { DEFAULT } from '../../../../constants/roleActions';
 import { GenderContext } from '../../../../context/GenderContext';
+import Robot from '../Robot';
 
 jest.mock('../GenderFlower', () => 'GenderFlower');
 jest.mock('../ConfusionMarks', () => 'ConfusionMarks');
