@@ -1,8 +1,8 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
 
-import { GenderProvider, GenderContext } from '../GenderContext';
 import { MALE, FEMALE } from '../../constants/genders';
+import { GenderProvider, GenderContext } from '../GenderContext';
 
 function genderContextConsumer(gender, handleGenderChange) {
   return (
