@@ -2,7 +2,7 @@ import React, { useState, createContext } from 'react';
 
 import { MALE } from '../constants/genders';
 
-const GenderContext = createContext(MALE);
+const GenderContext = createContext();
 const { Provider } = GenderContext;
 
 function GenderProvider({ children }) {
