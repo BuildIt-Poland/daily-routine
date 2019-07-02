@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 
 import { DEFAULT } from '../../../constants/roleActions';
 import { FEMALE } from '../../../constants/genders';
-import { gender } from '../../../types';
+import { pose } from '../../../types';
 import { GenderContext } from '../../../context/GenderContext';
 import Wrapper from './Wrapper';
 import FoxArtwork from './FoxArtwork';
@@ -22,7 +22,7 @@ function Fox({ pose = DEFAULT }) {
 }
 
 Fox.propTypes = {
-  gender
+  pose
 };
 
 export default Fox;
