@@ -16,20 +16,22 @@ function ButtonBase({ Icon, onClick = () => {}, children, ...props }) {
     onRest: () => toggleIconAnmiation(false)
   });
 
-  const scaleAndRotateInterpolation = !shouldPlayAnimation
-    ? ''
-    : interpolate(
-        [
-          x.interpolate([0, 0.3, 0.5, 0.8, 1], [1, 0.8, 1, 1.2, 1]),
-          x.interpolate([0, 0.3, 0.5, 0.8, 1], [0, 15, 0, -7, 0])
-        ],
-        (scale, rotation) => `scale(${scale}) rotate(${rotation}deg)`
-      );
+  const iconShakingAnimation = {
+    transform: !shouldPlayAnimation
+      ? ''
+      : interpolate(
+          [
+            x.interpolate([0, 0.3, 0.5, 0.8, 1], [1, 0.8, 1, 1.2, 1]),
+            x.interpolate([0, 0.3, 0.5, 0.8, 1], [0, 15, 0, -7, 0])
+          ],
+          (scale, rotation) => `scale(${scale}) rotate(${rotation}deg)`
+        )
+  };
 
   return (
     <Button {...props} onClick={handleClick}>
       {children}
-      <Icon style={{ transform: scaleAndRotateInterpolation }} />
+      <Icon style={iconShakingAnimation} />
     </Button>
   );
 }

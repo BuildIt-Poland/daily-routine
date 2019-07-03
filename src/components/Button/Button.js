@@ -24,9 +24,9 @@ function Button({ to, onClick = () => {}, children, ...props }) {
   return (
     <StyledButton
       {...mappedProps}
+      style={animationStyles}
       onMouseDown={() => setClicked(true)}
       onMouseUp={() => setClicked(false)}
-      style={animationStyles}
     >
       {children}
     </StyledButton>
