@@ -1,36 +1,42 @@
-import styled from 'styled-components';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import { useSpring } from 'react-spring';
 
-import {
-  colorWhite,
-  colorGreen,
-  colorDarkGreen,
-  fontLarge,
-  fontWeightBold,
-  borderRadius,
-  spacingMedium
-} from '../../styles/designTokens';
+import StyledButton from './StyledButton';
 
-const Button = styled.button`
-  position: relative;
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  background-color: ${colorGreen};
-  color: ${colorWhite};
-  padding: 0 ${spacingMedium};
-  margin: ${spacingMedium} 0;
-  border: 0;
-  border-bottom: 0.3rem solid ${colorDarkGreen};
-  border-radius: ${borderRadius};
-  font-size: ${fontLarge};
-  font-weight: ${fontWeightBold};
-  text-align: left;
-  width: 100%;
-  height: 5rem;
+function Button({ to, onClick = () => {}, children, ...props }) {
+  const mappedProps = {
+    ...props,
+    onClick,
+    ...(to ? { as: Link, to } : { onClick })
+  };
 
-  &:not(:disabled) {
-    cursor: pointer;
-  }
-`;
+  const [isClicked, setIsClicked] = useState(false);
+  const animationStyles = useSpring({
+    borderBottomWidth: isClicked ? 0 : 3,
+    config: {
+      tension: 500,
+      friction: 8
+    }
+  });
+
+  return (
+    <StyledButton
+      {...mappedProps}
+      style={animationStyles}
+      onMouseDown={() => setIsClicked(true)}
+      onMouseUp={() => setIsClicked(false)}
+    >
+      {children}
+    </StyledButton>
+  );
+}
+
+Button.propTypes = {
+  children: PropTypes.node,
+  to: PropTypes.string,
+  onClick: PropTypes.func
+};
 
 export default Button;

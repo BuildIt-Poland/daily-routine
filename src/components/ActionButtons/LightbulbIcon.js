@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { animated } from 'react-spring';
 
 import { Lightbulb } from '../Icons';
 
@@ -9,12 +10,12 @@ const Wrapper = styled.span`
   bottom: -1rem;
 `;
 
-function LightbulbIcon() {
+function LightbulbIcon(props) {
   return (
-    <Wrapper>
+    <Wrapper {...props}>
       <Lightbulb />
     </Wrapper>
   );
 }
 
-export default LightbulbIcon;
+export default animated(LightbulbIcon);
