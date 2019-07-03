@@ -4,11 +4,12 @@ import { Link } from 'react-router-dom';
 
 import Button from '../Button';
 import Icon from './Icon';
+import Text from './Text';
 
 function ButtonBase({ children, ...props }) {
   return (
     <Button as={Link} {...props}>
-      {children}
+      <Text>{children}</Text>
       {<Icon />}
     </Button>
   );

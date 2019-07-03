@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 
+import media from '../../styles/media';
 import {
   colorWhite,
   colorGreen,
@@ -13,6 +14,7 @@ import {
 const Button = styled.button`
   position: relative;
   display: flex;
+  line-height: 1;
   align-items: center;
   text-decoration: none;
   background-color: ${colorGreen};
@@ -26,11 +28,15 @@ const Button = styled.button`
   font-weight: ${fontWeightBold};
   text-align: left;
   width: 100%;
-  height: 5rem;
+  height: 7rem;
 
   &:not(:disabled) {
     cursor: pointer;
   }
+
+  ${media.phone`
+    height: 5rem;
+  `};
 `;
 
 export default Button;
