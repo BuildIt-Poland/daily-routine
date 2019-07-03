@@ -1,36 +1,23 @@
-import styled from 'styled-components';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { func, node, string } from 'prop-types';
 
-import {
-  colorWhite,
-  colorGreen,
-  colorDarkGreen,
-  fontLarge,
-  fontWeightBold,
-  borderRadius,
-  spacingMedium
-} from '../../styles/designTokens';
+import StyledButton from './StyledButton';
 
-const Button = styled.button`
-  position: relative;
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  background-color: ${colorGreen};
-  color: ${colorWhite};
-  padding: 0 ${spacingMedium};
-  margin: ${spacingMedium} 0;
-  border: 0;
-  border-bottom: 0.3rem solid ${colorDarkGreen};
-  border-radius: ${borderRadius};
-  font-size: ${fontLarge};
-  font-weight: ${fontWeightBold};
-  text-align: left;
-  width: 100%;
-  height: 5rem;
+function Button({ to, onClick = () => {}, children, ...props }) {
+  const mappedProps = {
+    ...props,
+    onClick,
+    ...(to ? { as: Link, to } : { onClick })
+  };
 
-  &:not(:disabled) {
-    cursor: pointer;
-  }
-`;
+  return <StyledButton {...mappedProps}>{children}</StyledButton>;
+}
+
+Button.propTypes = {
+  children: node,
+  to: string,
+  onClick: func
+};
 
 export default Button;

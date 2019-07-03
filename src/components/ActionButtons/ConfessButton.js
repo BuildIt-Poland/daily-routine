@@ -1,23 +1,21 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 
 import { role } from '../../types';
 import { CONFESS_ROLE_ACTION } from '../../constants/roles';
 import { colorRed, colorDarkRed } from '../../styles/designTokens';
-import Button from '../Button';
 import SaltGrinderIcon from './SaltGrinderIcon';
+import ButtonBase from './ButtonBase';
 
-const StyledButton = styled(Button)`
+const StyledButton = styled(ButtonBase)`
   background-color: ${colorRed};
   border-bottom-color: ${colorDarkRed};
 `;
 
 function ConfessButton({ role, ...props }) {
   return (
-    <StyledButton as={Link} to={`/${role}/${CONFESS_ROLE_ACTION}`} {...props}>
+    <StyledButton to={`/${role}/${CONFESS_ROLE_ACTION}`} Icon={SaltGrinderIcon} {...props}>
       Confess my mistake
-      <SaltGrinderIcon />
     </StyledButton>
   );
 }

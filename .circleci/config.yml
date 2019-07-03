@@ -34,7 +34,7 @@ jobs:
           name: Perform Test Application Build
           command: 'npm run build'
       - deploy:
-          name: Deploy DailyRoutine to GitHub Pages
+          name: Deploy DailyRoutine to production
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
               npm run deploy
