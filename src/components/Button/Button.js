@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { func, node, string } from 'prop-types';
+import PropTypes from 'prop-types';
 import { useSpring } from 'react-spring';
 
 import StyledButton from './StyledButton';
@@ -34,9 +34,9 @@ function Button({ to, onClick = () => {}, children, ...props }) {
 }
 
 Button.propTypes = {
-  children: node,
-  to: string,
-  onClick: func
+  children: PropTypes.node,
+  to: PropTypes.string,
+  onClick: PropTypes.func
 };
 
 export default Button;
