@@ -14,7 +14,7 @@ const StyledButton = styled(ButtonBase)`
 
 function ConfessButton({ role, ...props }) {
   return (
-    <StyledButton to={`/${role}/${CONFESS_ROLE_ACTION}`} Icon={SaltGrinderIcon} {...props}>
+    <StyledButton to={`/${role}/${CONFESS_ROLE_ACTION}`} icon={SaltGrinderIcon} {...props}>
       Confess my mistake
     </StyledButton>
   );

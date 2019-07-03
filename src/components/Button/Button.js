@@ -12,7 +12,7 @@ function Button({ to, onClick = () => {}, children, ...props }) {
     ...(to ? { as: Link, to } : { onClick })
   };
 
-  const [isClicked, setClicked] = useState(false);
+  const [isClicked, setIsClicked] = useState(false);
   const animationStyles = useSpring({
     borderBottomWidth: isClicked ? 0 : 3,
     config: {
@@ -25,8 +25,8 @@ function Button({ to, onClick = () => {}, children, ...props }) {
     <StyledButton
       {...mappedProps}
       style={animationStyles}
-      onMouseDown={() => setClicked(true)}
-      onMouseUp={() => setClicked(false)}
+      onMouseDown={() => setIsClicked(true)}
+      onMouseUp={() => setIsClicked(false)}
     >
       {children}
     </StyledButton>

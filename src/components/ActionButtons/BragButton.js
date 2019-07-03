@@ -14,7 +14,7 @@ const StyledButton = styled(ButtonBase)`
 
 function BragButton({ role, ...props }) {
   return (
-    <StyledButton to={`/${role}/${BRAG_ROLE_ACTION}`} Icon={LightbulbIcon} {...props}>
+    <StyledButton to={`/${role}/${BRAG_ROLE_ACTION}`} icon={LightbulbIcon} {...props}>
       Brag about my efforts
     </StyledButton>
   );

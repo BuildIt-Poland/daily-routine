@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { func, oneOfType, object, node } from 'prop-types';
+import PropTypes from 'prop-types';
 import { useSpring, interpolate } from 'react-spring';
 
 import Button from '../Button';
 
-function ButtonBase({ Icon, onClick = () => {}, children, ...props }) {
+function ButtonBase({ icon: Icon, onClick = () => {}, children, ...props }) {
   const [shouldPlayAnimation, toggleIconAnmiation] = useState(false);
-  const handleClick = e => {
+  const handleOnClick = e => {
     toggleIconAnmiation(true);
     onClick(e);
   };
@@ -17,19 +17,19 @@ function ButtonBase({ Icon, onClick = () => {}, children, ...props }) {
   });
 
   const iconShakingAnimation = {
-    transform: !shouldPlayAnimation
-      ? ''
-      : interpolate(
-          [
-            x.interpolate([0, 0.3, 0.5, 0.8, 1], [1, 0.8, 1, 1.2, 1]),
-            x.interpolate([0, 0.3, 0.5, 0.8, 1], [0, 15, 0, -7, 0])
-          ],
-          (scale, rotation) => `scale(${scale}) rotate(${rotation}deg)`
-        )
+    transform:
+      shouldPlayAnimation &&
+      interpolate(
+        [
+          x.interpolate([0, 0.3, 0.5, 0.8, 1], [1, 0.8, 1, 1.2, 1]),
+          x.interpolate([0, 0.3, 0.5, 0.8, 1], [0, 15, 0, -7, 0])
+        ],
+        (scale, rotation) => `scale(${scale}) rotate(${rotation}deg)`
+      )
   };
 
   return (
-    <Button {...props} onClick={handleClick}>
+    <Button {...props} onClick={handleOnClick}>
       {children}
       <Icon style={iconShakingAnimation} />
     </Button>
@@ -38,9 +38,9 @@ function ButtonBase({ Icon, onClick = () => {}, children, ...props }) {
 
 ButtonBase.propTypes = {
   // Support for `animated` react-spring object type
-  Icon: oneOfType([func, object]),
-  children: node,
-  onClick: func
+  Icon: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
+  children: PropTypes.node,
+  onClick: PropTypes.func
 };
 
 export default ButtonBase;
