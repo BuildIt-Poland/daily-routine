@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { animated } from 'react-spring';
 
 import {
   colorWhite,
@@ -33,4 +34,4 @@ const StyledButton = styled.button`
   }
 `;
 
-export default StyledButton;
+export default animated(StyledButton);

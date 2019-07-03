@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { func, node, string } from 'prop-types';
+import { useSpring } from 'react-spring';
 
 import StyledButton from './StyledButton';
 
@@ -11,7 +12,25 @@ function Button({ to, onClick = () => {}, children, ...props }) {
     ...(to ? { as: Link, to } : { onClick })
   };
 
-  return <StyledButton {...mappedProps}>{children}</StyledButton>;
+  const [isClicked, setClicked] = useState(false);
+  const animationStyles = useSpring({
+    borderBottomWidth: isClicked ? 0 : 3,
+    config: {
+      tension: 500,
+      friction: 8
+    }
+  });
+
+  return (
+    <StyledButton
+      {...mappedProps}
+      onMouseDown={() => setClicked(true)}
+      onMouseUp={() => setClicked(false)}
+      style={animationStyles}
+    >
+      {children}
+    </StyledButton>
+  );
 }
 
 Button.propTypes = {

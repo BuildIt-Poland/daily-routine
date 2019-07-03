@@ -44,6 +44,14 @@ exports[`COMPONENT - RoleButtons BackEndButton renders correctly 1`] = `
 
 <Link
   className="c0 c1"
+  onClick={[Function]}
+  onMouseDown={[Function]}
+  onMouseUp={[Function]}
+  style={
+    Object {
+      "borderBottomWidth": 3,
+    }
+  }
   to="/backend"
 >
   Back End

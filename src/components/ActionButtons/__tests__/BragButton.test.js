@@ -7,7 +7,7 @@ import BragButton from '../BragButton';
 jest.mock('react-router-dom', () => ({
   Link: 'Link'
 }));
-jest.mock('../LightbulbIcon', () => 'LightbulbIcon');
+jest.mock('../LightbulbIcon', () => () => 'LightbulbIcon');
 
 describe('COMPONENT - RoleButton BragButton', () => {
   it('renders correctly', () => {

@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-import { func, object, node } from 'prop-types';
+import { func, oneOfType, object, node } from 'prop-types';
 import { useSpring, interpolate } from 'react-spring';
 
 import Button from '../Button';
-import SaltGrinderIcon from './SaltGrinderIcon';
 
-function ButtonBase({ Icon = SaltGrinderIcon, onClick = () => {}, children, ...props }) {
+function ButtonBase({ Icon, onClick = () => {}, children, ...props }) {
   const [shouldPlayAnimation, toggleIconAnmiation] = useState(false);
   const handleClick = e => {
     toggleIconAnmiation(true);
@@ -36,7 +35,8 @@ function ButtonBase({ Icon = SaltGrinderIcon, onClick = () => {}, children, ...p
 }
 
 ButtonBase.propTypes = {
-  Icon: object,
+  // Support for `animated` react-spring object type
+  Icon: oneOfType([func, object]),
   children: node,
   onClick: func
 };
