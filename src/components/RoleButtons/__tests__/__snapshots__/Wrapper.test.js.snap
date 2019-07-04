@@ -1,8 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`COMPONENT - Footer Wrapper renders correctly 1`] = `
+exports[`COMPONENT - RoleButtons Wrapper renders correctly 1`] = `
 .c0 {
+  position: relative;
+  padding: 0;
+  padding-top: 2rem;
   background: #ffffff;
+  margin-top: 3rem;
 }
 
 @media (max-width:26.25em) {
@@ -11,7 +15,7 @@ exports[`COMPONENT - Footer Wrapper renders correctly 1`] = `
   }
 }
 
-<footer
+<section
   className="c0"
 />
 `;

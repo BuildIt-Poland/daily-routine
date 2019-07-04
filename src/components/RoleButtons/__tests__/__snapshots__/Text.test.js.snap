@@ -1,17 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`COMPONENT - Footer Wrapper renders correctly 1`] = `
+exports[`COMPONENT - RoleButtons Text renders correctly 1`] = `
 .c0 {
-  background: #ffffff;
+  max-width: 14rem;
 }
 
 @media (max-width:26.25em) {
   .c0 {
-    background: inherit;
+    max-width: inherit;
   }
 }
 
-<footer
+<span
   className="c0"
 />
 `;

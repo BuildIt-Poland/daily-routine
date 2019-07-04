@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`COMPONENT - Page Wrapper renders correctly 1`] = `
+.c0 {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  height: 100%;
+}
+
+<article
+  className="c0"
+/>
+`;

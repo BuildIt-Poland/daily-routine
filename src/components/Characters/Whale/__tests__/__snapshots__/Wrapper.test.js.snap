@@ -2,7 +2,7 @@
 
 exports[`COMPONENT - Characters Whale Wrapper renders correctly 1`] = `
 .c0 {
-  margin: 6rem 0 3rem 0;
+  padding: 8rem 0 3rem 0;
   position: relative;
 }
 

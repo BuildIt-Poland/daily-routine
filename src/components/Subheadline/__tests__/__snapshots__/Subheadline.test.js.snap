@@ -5,6 +5,13 @@ exports[`COMPONENT - Subheadline renders correctly 1`] = `
   font-size: 1.8rem;
   margin: 1rem 0;
   font-weight: 400;
+  text-align: center;
+}
+
+@media (max-width:26.25em) {
+  .c0 {
+    text-align: left;
+  }
 }
 
 <h2

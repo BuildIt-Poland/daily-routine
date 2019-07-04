@@ -7,6 +7,7 @@ exports[`COMPONENT - RoleButtons BackEndButton renders correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  line-height: 1;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -24,17 +25,21 @@ exports[`COMPONENT - RoleButtons BackEndButton renders correctly 1`] = `
   font-weight: 700;
   text-align: left;
   width: 100%;
-  height: 5rem;
+  height: 7rem;
 }
 
 .c1:not(:disabled) {
   cursor: pointer;
 }
 
-.c2 {
+.c3 {
   position: absolute;
   right: 1.4rem;
-  bottom: 1.4rem;
+  bottom: 2.4rem;
+}
+
+.c2 {
+  max-width: 14rem;
 }
 
 .c0 {
@@ -42,13 +47,35 @@ exports[`COMPONENT - RoleButtons BackEndButton renders correctly 1`] = `
   border-bottom-color: #6926a6;
 }
 
+@media (max-width:26.25em) {
+  .c1 {
+    height: 5rem;
+  }
+}
+
+@media (max-width:26.25em) {
+  .c3 {
+    bottom: 1.4rem;
+  }
+}
+
+@media (max-width:26.25em) {
+  .c2 {
+    max-width: inherit;
+  }
+}
+
 <Link
   className="c0 c1"
   to="/backend"
 >
-  Back End
   <span
     className="c2"
+  >
+    Back End
+  </span>
+  <span
+    className="c3"
   >
     <LongArrow />
   </span>
