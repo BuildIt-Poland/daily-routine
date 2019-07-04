@@ -28,13 +28,13 @@ describe('SettingsPanel', () => {
       cy.getByTestId('gear-button').click();
     });
 
-    it('should add flower when click female', () => {
+    it('should show flower when female gender is selected', () => {
       cy.getByTestId('female-button').click();
 
       cy.getByTestId('gender-flower-icon').should('exist');
     });
 
-    it('should remove flower when click male', () => {
+    it('should hide flower when male gender is selected', () => {
       cy.getByTestId('male-button').click();
 
       cy.getByTestId('gender-flower-icon').should('not.exist');
