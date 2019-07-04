@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`COMPONENT - Content narrow content renders correctly 1`] = `
+.c0 {
+  max-width: 48rem;
+  padding: 0 2rem;
+  margin: 0 auto;
+  position: relative;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`COMPONENT - Content renders correctly 1`] = `
+.c0 {
+  max-width: 96rem;
+  padding: 0 2rem;
+  margin: 0 auto;
+  position: relative;
+}
+
+<div
+  className="c0"
+/>
+`;

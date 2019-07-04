@@ -5,24 +5,25 @@ Array [
   <RoleBar
     label="Front End Engineer"
   />,
-  .c0 {
-  position: relative;
-  padding: 2rem;
-}
-
-<section
-    className="c0"
+  <Page
+    title="Front End Engineer"
   >
-    <Fox
-      pose="default"
-    />
-    <QuoteBubble
-      noCopyToClipboard={true}
-      variant="thought"
-    />
+    <Section>
+      <Content
+        narrow={true}
+      >
+        <Fox
+          pose="default"
+        />
+        <QuoteBubble
+          noCopyToClipboard={true}
+          variant="thought"
+        />
+      </Content>
+    </Section>
     <ActionButtons
       role="frontend"
     />
-  </section>,
+  </Page>,
 ]
 `;

@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { animated } from 'react-spring';
 
+import media from '../../styles/media';
 import {
   colorWhite,
   colorGreen,
@@ -27,7 +28,11 @@ const StyledButton = styled.button`
   font-weight: ${fontWeightBold};
   text-align: left;
   width: 100%;
-  height: 5rem;
+  height: 7rem;
+
+  ${media.phone`
+    height: 5rem;
+  `};
 
   &:not(:disabled) {
     cursor: pointer;

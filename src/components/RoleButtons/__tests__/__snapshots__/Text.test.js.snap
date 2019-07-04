@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`COMPONENT - RoleButtons Text renders correctly 1`] = `
+.c0 {
+  max-width: 14rem;
+}
+
+@media (max-width:26.25em) {
+  .c0 {
+    max-width: inherit;
+  }
+}
+
+<span
+  className="c0"
+/>
+`;

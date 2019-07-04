@@ -3,11 +3,12 @@ import PropTypes from 'prop-types';
 
 import Button from '../Button';
 import ArrowIcon from './ArrowIcon';
+import Text from './Text';
 
 function ButtonBase({ children, ...props }) {
   return (
     <Button {...props}>
-      {children}
+      <Text>{children}</Text>
       {<ArrowIcon />}
     </Button>
   );

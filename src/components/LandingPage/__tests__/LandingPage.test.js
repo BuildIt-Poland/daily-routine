@@ -1,20 +1,21 @@
 import React from 'react';
-import { create } from 'react-test-renderer';
+import { render, cleanup } from '@testing-library/react';
+import { MemoryRouter } from 'react-router-dom';
 
 import LandingPage from '../LandingPage';
 
-jest.mock('../../RoleButtons', () => 'RoleButtons');
-jest.mock('react-router-dom', () => ({
-  Link: 'Link'
-}));
-jest.mock('../../Characters', () => ({
-  SugarCat: 'SugarCat'
-}));
+afterEach(cleanup);
 
 describe('COMPONENT - LandingPage', () => {
-  it('renders correctly', () => {
-    const component = create(<LandingPage />);
+  it('renders correct elements', () => {
+    const { container } = render(
+      <MemoryRouter initialEntries={['/']} initialIndex={1}>
+        <LandingPage />
+      </MemoryRouter>
+    );
 
-    expect(component.toJSON()).toMatchSnapshot();
+    expect(container.querySelector('h1')).toHaveTextContent("Don't know what to say?");
+    expect(container.querySelector('svg title')).toHaveTextContent('Sugar cat');
+    expect(container.querySelector('nav')).toBeDefined();
   });
 });

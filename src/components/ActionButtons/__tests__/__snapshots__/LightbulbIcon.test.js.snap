@@ -4,7 +4,13 @@ exports[`COMPONENT - ActionButtons LightbulbIcon renders correctly 1`] = `
 .c0 {
   position: absolute;
   right: 0;
-  bottom: -1rem;
+  bottom: 0;
+}
+
+@media (max-width:26.25em) {
+  .c0 {
+    bottom: -1rem;
+  }
 }
 
 <span

@@ -24,17 +24,39 @@ exports[`COMPONENT - RoleButtons ButtonBase renders correctly 1`] = `
   font-weight: 700;
   text-align: left;
   width: 100%;
-  height: 5rem;
+  height: 7rem;
 }
 
 .c0:not(:disabled) {
   cursor: pointer;
 }
 
-.c1 {
+.c2 {
   position: absolute;
   right: 1.4rem;
-  bottom: 1.4rem;
+  bottom: 2.4rem;
+}
+
+.c1 {
+  max-width: 14rem;
+}
+
+@media (max-width:26.25em) {
+  .c0 {
+    height: 5rem;
+  }
+}
+
+@media (max-width:26.25em) {
+  .c2 {
+    bottom: 1.4rem;
+  }
+}
+
+@media (max-width:26.25em) {
+  .c1 {
+    max-width: inherit;
+  }
 }
 
 <Link
@@ -49,9 +71,13 @@ exports[`COMPONENT - RoleButtons ButtonBase renders correctly 1`] = `
   }
   to="/taylorswift"
 >
-  Taylor Swift
   <span
     className="c1"
+  >
+    Taylor Swift
+  </span>
+  <span
+    className="c2"
   >
     <LongArrow />
   </span>

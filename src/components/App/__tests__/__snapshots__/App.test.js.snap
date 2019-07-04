@@ -2,20 +2,39 @@
 
 exports[`COMPONENT - App renders correctly default route 1`] = `
 .c1 {
-  position: relative;
-  padding: 2rem;
+  display: grid;
+  grid-template-rows: minmax(42rem,max-content) 1fr;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  height: 100%;
 }
 
 .c2 {
+  position: relative;
+  padding: 0;
+  padding-top: 2rem;
+}
+
+.c4 {
   font-size: 2.4rem;
   margin: 0;
   margin-bottom: 1rem;
+  text-align: center;
 }
 
-.c3 {
+.c5 {
   font-size: 1.8rem;
   margin: 1rem 0;
   font-weight: 400;
+  text-align: center;
+}
+
+.c3 {
+  max-width: 96rem;
+  padding: 0 2rem;
+  margin: 0 auto;
+  position: relative;
 }
 
 .c0 {
@@ -24,6 +43,18 @@ exports[`COMPONENT - App renders correctly default route 1`] = `
   min-height: 100%;
   display: grid;
   grid-template-rows: auto 1fr auto;
+}
+
+@media (max-width:26.25em) {
+  .c4 {
+    text-align: left;
+  }
+}
+
+@media (max-width:26.25em) {
+  .c5 {
+    text-align: left;
+  }
 }
 
 <div
@@ -36,32 +67,29 @@ exports[`COMPONENT - App renders correctly default route 1`] = `
 >
   <AppBar />
   <main>
-    <article>
+    <article
+      className="c1"
+    >
       <section
-        className="c1"
+        className="c2"
       >
-        <h1
-          className="c2"
-        >
-          Don't know what to say?
-        </h1>
-        <h2
+        <div
           className="c3"
         >
-          Worry not! Find your perfect scenario for incoming daily.
-        </h2>
-        <SugarCat />
+          <h1
+            className="c4"
+          >
+            Don't know what to say?
+          </h1>
+          <h2
+            className="c5"
+          >
+            Worry not! Find your perfect scenario for incoming daily.
+          </h2>
+          <SugarCat />
+        </div>
       </section>
-      <section
-        className="c1"
-      >
-        <h1
-          className="c2"
-        >
-          Pick your role!
-        </h1>
-        <RoleButtons />
-      </section>
+      <RoleButtons />
     </article>
   </main>
   <Footer />

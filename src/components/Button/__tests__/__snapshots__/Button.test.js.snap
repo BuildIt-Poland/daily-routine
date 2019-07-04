@@ -24,11 +24,17 @@ exports[`COMPONENT - Button renders correctly 1`] = `
   font-weight: 700;
   text-align: left;
   width: 100%;
-  height: 5rem;
+  height: 7rem;
 }
 
 .c0:not(:disabled) {
   cursor: pointer;
+}
+
+@media (max-width:26.25em) {
+  .c0 {
+    height: 5rem;
+  }
 }
 
 <button

@@ -5,6 +5,13 @@ exports[`COMPONENT - Headline renders correctly 1`] = `
   font-size: 2.4rem;
   margin: 0;
   margin-bottom: 1rem;
+  text-align: center;
+}
+
+@media (max-width:26.25em) {
+  .c0 {
+    text-align: left;
+  }
 }
 
 <h1

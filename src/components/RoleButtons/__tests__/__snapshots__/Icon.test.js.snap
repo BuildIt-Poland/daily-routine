@@ -4,7 +4,13 @@ exports[`COMPONENT - RoleButtons ArrowIcon renders correctly 1`] = `
 .c0 {
   position: absolute;
   right: 1.4rem;
-  bottom: 1.4rem;
+  bottom: 2.4rem;
+}
+
+@media (max-width:26.25em) {
+  .c0 {
+    bottom: 1.4rem;
+  }
 }
 
 <span
