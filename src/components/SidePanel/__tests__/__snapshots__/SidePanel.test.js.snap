@@ -32,11 +32,7 @@ Array [
 
 <section
     className="c0"
-    style={
-      Object {
-        "transform": "translateX(26rem)",
-      }
-    }
+    data-testid="side-panel"
   >
     Taylor Swift
   </section>,
