@@ -28,7 +28,6 @@ describe('SettingsPanel', () => {
 
     beforeEach(() => {
       cy.getByTestId('gear-button').click();
-
     });
 
     it('should add flower when click female', () => {
