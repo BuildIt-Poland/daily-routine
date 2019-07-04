@@ -5,25 +5,24 @@ Array [
   <RoleBar
     label="Back End Developer"
   />,
-  .c0 {
-  position: relative;
-  padding: 2rem;
-}
-
-<section
-    className="c0"
-  >
-    <Robot
-      pose="default"
-    />
-    <QuoteBubble
-      noCopyToClipboard={true}
-      variant="thought"
-    />
+  <Page>
+    <Section>
+      <Content
+        narrow={true}
+      >
+        <Robot
+          pose="default"
+        />
+        <QuoteBubble
+          noCopyToClipboard={true}
+          variant="thought"
+        />
+      </Content>
+    </Section>
     <ActionButtons
       role="backend"
     />
-  </section>,
+  </Page>,
 ]
 `;
 
@@ -32,24 +31,23 @@ Array [
   <RoleBar
     label="Back End Developer"
   />,
-  .c0 {
-  position: relative;
-  padding: 2rem;
-}
-
-<section
-    className="c0"
-  >
-    <Robot
-      pose="brag"
-    />
-    <QuoteBubble
-      quote="Yesterday I was implementing PUT method for missing RESTful API endpoint."
-    />
+  <Page>
+    <Section>
+      <Content
+        narrow={true}
+      >
+        <Robot
+          pose="brag"
+        />
+        <QuoteBubble
+          quote="Yesterday I was implementing PUT method for missing RESTful API endpoint."
+        />
+      </Content>
+    </Section>
     <ActionButtons
       role="backend"
     />
-  </section>,
+  </Page>,
 ]
 `;
 
@@ -58,23 +56,22 @@ Array [
   <RoleBar
     label="Back End Developer"
   />,
-  .c0 {
-  position: relative;
-  padding: 2rem;
-}
-
-<section
-    className="c0"
-  >
-    <QuoteBubble
-      quote="Yesterday I was implementing PUT method for missing RESTful API endpoint."
-    />
-    <Robot
-      pose="confess"
-    />
+  <Page>
+    <Section>
+      <Content
+        narrow={true}
+      >
+        <QuoteBubble
+          quote="Yesterday I was implementing PUT method for missing RESTful API endpoint."
+        />
+        <Robot
+          pose="confess"
+        />
+      </Content>
+    </Section>
     <ActionButtons
       role="backend"
     />
-  </section>,
+  </Page>,
 ]
 `;

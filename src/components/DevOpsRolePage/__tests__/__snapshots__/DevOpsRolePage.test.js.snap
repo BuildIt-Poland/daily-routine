@@ -5,25 +5,24 @@ Array [
   <RoleBar
     label="Dev Ops"
   />,
-  .c0 {
-  position: relative;
-  padding: 2rem;
-}
-
-<section
-    className="c0"
-  >
-    <Whale
-      pose="default"
-    />
-    <QuoteBubble
-      noCopyToClipboard={true}
-      variant="thought"
-    />
+  <Page>
+    <Section>
+      <Content
+        narrow={true}
+      >
+        <Whale
+          pose="default"
+        />
+        <QuoteBubble
+          noCopyToClipboard={true}
+          variant="thought"
+        />
+      </Content>
+    </Section>
     <ActionButtons
       role="devops"
     />
-  </section>,
+  </Page>,
 ]
 `;
 
@@ -32,24 +31,23 @@ Array [
   <RoleBar
     label="Dev Ops"
   />,
-  .c0 {
-  position: relative;
-  padding: 2rem;
-}
-
-<section
-    className="c0"
-  >
-    <Whale
-      pose="brag"
-    />
-    <QuoteBubble
-      quote="Yesterday I was implementing PUT method for missing RESTful API endpoint."
-    />
+  <Page>
+    <Section>
+      <Content
+        narrow={true}
+      >
+        <Whale
+          pose="brag"
+        />
+        <QuoteBubble
+          quote="Yesterday I was implementing PUT method for missing RESTful API endpoint."
+        />
+      </Content>
+    </Section>
     <ActionButtons
       role="devops"
     />
-  </section>,
+  </Page>,
 ]
 `;
 
@@ -58,23 +56,22 @@ Array [
   <RoleBar
     label="Dev Ops"
   />,
-  .c0 {
-  position: relative;
-  padding: 2rem;
-}
-
-<section
-    className="c0"
-  >
-    <Whale
-      pose="confess"
-    />
-    <QuoteBubble
-      quote="Yesterday I was implementing PUT method for missing RESTful API endpoint."
-    />
+  <Page>
+    <Section>
+      <Content
+        narrow={true}
+      >
+        <Whale
+          pose="confess"
+        />
+        <QuoteBubble
+          quote="Yesterday I was implementing PUT method for missing RESTful API endpoint."
+        />
+      </Content>
+    </Section>
     <ActionButtons
       role="devops"
     />
-  </section>,
+  </Page>,
 ]
 `;
