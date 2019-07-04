@@ -40,5 +40,13 @@ exports[`COMPONENT - Button renders correctly 1`] = `
 
 <button
   className="c0"
+  onClick={[Function]}
+  onMouseDown={[Function]}
+  onMouseUp={[Function]}
+  style={
+    Object {
+      "borderBottomWidth": 3,
+    }
+  }
 />
 `;

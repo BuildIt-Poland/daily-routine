@@ -63,6 +63,7 @@ Array [
   <Page
     title="Back End Developer"
   >
+<<<<<<< HEAD
     <Section>
       <Content
         narrow={true}
@@ -75,6 +76,14 @@ Array [
         />
       </Content>
     </Section>
+=======
+    <Robot
+      pose="confess"
+    />
+    <QuoteBubble
+      quote="Yesterday I was implementing PUT method for missing RESTful API endpoint."
+    />
+>>>>>>> master
     <ActionButtons
       role="backend"
     />

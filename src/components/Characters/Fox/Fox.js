@@ -1,14 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
 import { DEFAULT } from '../../../constants/roleActions';
-import { FEMALE, MALE } from '../../../constants/genders';
-import { gender, pose } from '../../../types';
+import { FEMALE } from '../../../constants/genders';
+import { pose } from '../../../types';
+import { GenderContext } from '../../../context/GenderContext';
 import Wrapper from './Wrapper';
 import FoxArtwork from './FoxArtwork';
 import ConfusionMarks from './ConfusionMarks';
 import GenderFlower from './GenderFlower';
 
-function Fox({ gender = MALE, pose = DEFAULT }) {
+function Fox({ pose = DEFAULT }) {
+  const { gender } = useContext(GenderContext);
+
   return (
     <Wrapper>
       <FoxArtwork pose={pose} />
@@ -19,7 +22,6 @@ function Fox({ gender = MALE, pose = DEFAULT }) {
 }
 
 Fox.propTypes = {
-  gender,
   pose
 };
 

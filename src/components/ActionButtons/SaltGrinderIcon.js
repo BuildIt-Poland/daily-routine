@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { animated } from 'react-spring';
 
 import media from '../../styles/media';
 import { SaltGrinder } from '../Icons';
@@ -14,12 +15,12 @@ const Wrapper = styled.span`
   `};
 `;
 
-function SaltGrinderIcon() {
+function SaltGrinderIcon(props) {
   return (
-    <Wrapper>
+    <Wrapper {...props}>
       <SaltGrinder />
     </Wrapper>
   );
 }
 
-export default SaltGrinderIcon;
+export default animated(SaltGrinderIcon);

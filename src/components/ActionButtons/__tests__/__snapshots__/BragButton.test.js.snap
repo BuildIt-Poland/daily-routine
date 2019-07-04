@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`COMPONENT - RoleButton BragButton renders correctly 1`] = `
-.c0 {
+.c1 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -25,26 +25,44 @@ exports[`COMPONENT - RoleButton BragButton renders correctly 1`] = `
   font-weight: 700;
   text-align: left;
   width: 100%;
+<<<<<<< HEAD
   height: 7rem;
   background-color: #21c230;
   border-bottom-color: #138a1e;
+=======
+  height: 5rem;
+>>>>>>> master
 }
 
-.c0:not(:disabled) {
+.c1:not(:disabled) {
   cursor: pointer;
 }
 
+<<<<<<< HEAD
 @media (max-width:26.25em) {
   .c0 {
     height: 5rem;
   }
+=======
+.c0 {
+  background-color: #21c230;
+  border-bottom-color: #138a1e;
+>>>>>>> master
 }
 
 <Link
-  className="c0"
+  className="c0 c1"
+  onClick={[Function]}
+  onMouseDown={[Function]}
+  onMouseUp={[Function]}
+  style={
+    Object {
+      "borderBottomWidth": 3,
+    }
+  }
   to="/frontend/brag"
 >
   Brag about my efforts
-  <LightbulbIcon />
+  LightbulbIcon
 </Link>
 `;
