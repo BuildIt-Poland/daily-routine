@@ -14,9 +14,9 @@ function WhaleShadowArtwork(props) {
 }
 
 const shadowAnimation = keyframes`
-  0% { transform: scalex(1) translatey(260px); }
-	50% { transform: scalex(1.15) translatey(260px); }
-	100% { transform: scalex(1) translatey(260px); }
+  0% { transform: scalex(0.8) translatey(260px); }
+	50% { transform: scalex(1) translatey(260px); }
+	100% { transform: scalex(0.8) translatey(260px); }
 `;
 
 const AnimatedWhaleShadow = styled(WhaleShadowArtwork)`
