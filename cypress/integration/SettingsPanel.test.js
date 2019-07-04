@@ -1,7 +1,6 @@
 /* global cy*/
 
 describe('SettingsPanel', () => {
-
   beforeEach(() => {
     cy.visit('/frontend');
   });
@@ -25,7 +24,6 @@ describe('SettingsPanel', () => {
   });
 
   describe('GenderSettings', () => {
-
     beforeEach(() => {
       cy.getByTestId('gear-button').click();
     });
