@@ -6,9 +6,10 @@ import Button from '../Button';
 
 function ButtonBase({ icon: Icon, onClick = () => {}, children, ...props }) {
   const [shouldPlayAnimation, toggleIconAnmiation] = useState(false);
-  const handleOnClick = e => {
+
+  const handleOnClick = event => {
     toggleIconAnmiation(true);
-    onClick(e);
+    onClick(event);
   };
 
   const { x } = useSpring({

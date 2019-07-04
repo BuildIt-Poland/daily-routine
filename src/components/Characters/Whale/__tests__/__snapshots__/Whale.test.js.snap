@@ -1,67 +1,107 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`COMPONENT - Characters Robot renders confusion marks and flower if female whale is in default pose 1`] = `
+<<<<<<< HEAD
 .c0 {
   padding: 8rem 0 3rem 0;
+=======
+Array [
+  <AnimatedWhaleShadow />,
+  .c0 {
+  margin: 6rem 0 3rem 0;
+>>>>>>> master
   position: relative;
+  -webkit-animation: cjxxUS 5s ease-in-out infinite;
+  animation: cjxxUS 5s ease-in-out infinite;
 }
 
 <div
-  className="c0"
->
-  <WhaleArtwork
-    pose="default"
-  />
-  <ConfusionMarks />
-  <GenderFlower />
-</div>
+    className="c0"
+  >
+    <WhaleArtwork
+      pose="default"
+    />
+    <ConfusionMarks />
+    <GenderFlower />
+  </div>,
+]
 `;
 
 exports[`COMPONENT - Characters Robot renders confusion marks if whale is in default pose 1`] = `
+<<<<<<< HEAD
 .c0 {
   padding: 8rem 0 3rem 0;
+=======
+Array [
+  <AnimatedWhaleShadow />,
+  .c0 {
+  margin: 6rem 0 3rem 0;
+>>>>>>> master
   position: relative;
+  -webkit-animation: cjxxUS 5s ease-in-out infinite;
+  animation: cjxxUS 5s ease-in-out infinite;
 }
 
 <div
-  className="c0"
->
-  <WhaleArtwork
-    pose="default"
-  />
-  <ConfusionMarks />
-</div>
+    className="c0"
+  >
+    <WhaleArtwork
+      pose="default"
+    />
+    <ConfusionMarks />
+  </div>,
+]
 `;
 
 exports[`COMPONENT - Characters Robot renders correctly with default props 1`] = `
+<<<<<<< HEAD
 .c0 {
   padding: 8rem 0 3rem 0;
+=======
+Array [
+  <AnimatedWhaleShadow />,
+  .c0 {
+  margin: 6rem 0 3rem 0;
+>>>>>>> master
   position: relative;
+  -webkit-animation: cjxxUS 5s ease-in-out infinite;
+  animation: cjxxUS 5s ease-in-out infinite;
 }
 
 <div
-  className="c0"
->
-  <WhaleArtwork
-    pose="default"
-  />
-  <ConfusionMarks />
-</div>
+    className="c0"
+  >
+    <WhaleArtwork
+      pose="default"
+    />
+    <ConfusionMarks />
+  </div>,
+]
 `;
 
 exports[`COMPONENT - Characters Robot renders flower if female gender is passed 1`] = `
+<<<<<<< HEAD
 .c0 {
   padding: 8rem 0 3rem 0;
+=======
+Array [
+  <AnimatedWhaleShadow />,
+  .c0 {
+  margin: 6rem 0 3rem 0;
+>>>>>>> master
   position: relative;
+  -webkit-animation: cjxxUS 5s ease-in-out infinite;
+  animation: cjxxUS 5s ease-in-out infinite;
 }
 
 <div
-  className="c0"
->
-  <WhaleArtwork
-    pose="default"
-  />
-  <ConfusionMarks />
-  <GenderFlower />
-</div>
+    className="c0"
+  >
+    <WhaleArtwork
+      pose="default"
+    />
+    <ConfusionMarks />
+    <GenderFlower />
+  </div>,
+]
 `;
