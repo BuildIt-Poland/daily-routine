@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 import Input from './Input';
 import Label from './Label';
 
-function RadioButton({ children, value, checked, onChange }) {
+function RadioButton({ children, value, checked, onChange, ...props }) {
   return (
-    <Label checked={checked}>
+    <Label {...props} checked={checked}>
       <Input name="gender" type="radio" value={value} checked={checked} onChange={onChange} />
       {children}
     </Label>
