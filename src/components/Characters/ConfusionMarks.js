@@ -10,7 +10,7 @@ const Wrapper = styled(animated.span)`
   transform-origin: 50% 200%;
 `;
 
-function ConfusionMarks({ className }) {
+function ConfusionMarks(props) {
   const animationStyles = useSpring({
     to: { opacity: 1, transform: 'scale(1)' },
     from: { opacity: 0, transform: 'scale(0)' },
@@ -19,7 +19,7 @@ function ConfusionMarks({ className }) {
   });
 
   return (
-    <Wrapper style={animationStyles} className={className}>
+    <Wrapper style={animationStyles} {...props}>
       <svg xmlns="http://www.w3.org/2000/svg" width="29" height="27" viewBox="0 0 29 27">
         <path
           fill="#222"
