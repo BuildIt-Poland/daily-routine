@@ -16,7 +16,7 @@ function Robot({ pose = DEFAULT }) {
     <Wrapper>
       <RobotArtwork pose={pose} />
       {pose === DEFAULT && <ConfusionMarks />}
-      {gender === FEMALE && <GenderFlower />}
+      {<GenderFlower isVisible={gender === FEMALE} />}
     </Wrapper>
   );
 }

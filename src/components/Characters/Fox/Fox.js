@@ -16,7 +16,7 @@ function Fox({ pose = DEFAULT }) {
     <Wrapper>
       <FoxArtwork pose={pose} />
       {pose === DEFAULT && <ConfusionMarks />}
-      {gender === FEMALE && <GenderFlower />}
+      {<GenderFlower isVisible={gender === FEMALE} />}
     </Wrapper>
   );
 }
