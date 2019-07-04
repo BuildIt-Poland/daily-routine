@@ -3,7 +3,7 @@
 exports[`COMPONENT - Page Wrapper renders correctly 1`] = `
 .c0 {
   display: grid;
-  grid-template-rows: auto 1fr;
+  grid-template-rows: minmax(42rem,max-content) 1fr;
   -webkit-align-content: stretch;
   -ms-flex-line-pack: stretch;
   align-content: stretch;

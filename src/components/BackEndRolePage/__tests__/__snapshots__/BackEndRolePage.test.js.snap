@@ -5,7 +5,9 @@ Array [
   <RoleBar
     label="Back End Developer"
   />,
-  <Page>
+  <Page
+    title="Back End Developer"
+  >
     <Section>
       <Content
         narrow={true}
@@ -31,7 +33,9 @@ Array [
   <RoleBar
     label="Back End Developer"
   />,
-  <Page>
+  <Page
+    title="Back End Developer"
+  >
     <Section>
       <Content
         narrow={true}
@@ -56,7 +60,9 @@ Array [
   <RoleBar
     label="Back End Developer"
   />,
-  <Page>
+  <Page
+    title="Back End Developer"
+  >
     <Section>
       <Content
         narrow={true}

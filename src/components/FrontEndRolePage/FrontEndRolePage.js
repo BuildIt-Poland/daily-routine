@@ -16,7 +16,7 @@ function FrontEndRolePage() {
   return (
     <>
       <RoleBar label={FRONT_END_ROLE_LABEL} />
-      <Page>
+      <Page title={FRONT_END_ROLE_LABEL}>
         <Section>
           <Content narrow>
             <Route exact path={`/${FRONT_END_ROLE}`} component={Default} />

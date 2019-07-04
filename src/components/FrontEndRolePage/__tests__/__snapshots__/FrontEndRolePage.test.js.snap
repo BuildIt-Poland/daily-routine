@@ -5,7 +5,9 @@ Array [
   <RoleBar
     label="Front End Engineer"
   />,
-  <Page>
+  <Page
+    title="Front End Engineer"
+  >
     <Section>
       <Content
         narrow={true}

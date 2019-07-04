@@ -16,7 +16,7 @@ function BackEndRolePage() {
   return (
     <>
       <RoleBar label={BACK_END_ROLE_LABEL} />
-      <Page>
+      <Page title={BACK_END_ROLE_LABEL}>
         <Section>
           <Content narrow>
             <Route exact path={`/${BACK_END_ROLE}`} component={Default} />
