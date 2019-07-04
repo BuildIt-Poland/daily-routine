@@ -34,9 +34,9 @@ function Panel({ isVisible, children }) {
   });
 
   return transitions.map(
-    ({ item, key }) =>
+    ({ item, props, key }) =>
       item && (
-        <Wrapper data-testid="side-panel" key={key}>
+        <Wrapper data-testid="side-panel" key={key} style={props}>
           {children}
         </Wrapper>
       )
