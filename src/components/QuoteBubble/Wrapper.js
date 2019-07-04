@@ -3,7 +3,7 @@ import { spacingMedium } from '../../styles/designTokens';
 
 const Wrapper = styled.section`
   position: absolute;
-  top: ${spacingMedium};
+  top: 0;
   right: ${spacingMedium};
 `;
 
