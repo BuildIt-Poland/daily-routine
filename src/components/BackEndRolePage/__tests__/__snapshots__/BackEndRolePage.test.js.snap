@@ -5,25 +5,26 @@ Array [
   <RoleBar
     label="Back End Developer"
   />,
-  .c0 {
-  position: relative;
-  padding: 2rem;
-}
-
-<section
-    className="c0"
+  <Page
+    title="Back End Developer"
   >
-    <Robot
-      pose="default"
-    />
-    <QuoteBubble
-      noCopyToClipboard={true}
-      variant="thought"
-    />
+    <Section>
+      <Content
+        narrow={true}
+      >
+        <Robot
+          pose="default"
+        />
+        <QuoteBubble
+          noCopyToClipboard={true}
+          variant="thought"
+        />
+      </Content>
+    </Section>
     <ActionButtons
       role="backend"
     />
-  </section>,
+  </Page>,
 ]
 `;
 
@@ -32,24 +33,25 @@ Array [
   <RoleBar
     label="Back End Developer"
   />,
-  .c0 {
-  position: relative;
-  padding: 2rem;
-}
-
-<section
-    className="c0"
+  <Page
+    title="Back End Developer"
   >
-    <Robot
-      pose="brag"
-    />
-    <QuoteBubble
-      quote="Yesterday I was implementing PUT method for missing RESTful API endpoint."
-    />
+    <Section>
+      <Content
+        narrow={true}
+      >
+        <Robot
+          pose="brag"
+        />
+        <QuoteBubble
+          quote="Yesterday I was implementing PUT method for missing RESTful API endpoint."
+        />
+      </Content>
+    </Section>
     <ActionButtons
       role="backend"
     />
-  </section>,
+  </Page>,
 ]
 `;
 
@@ -58,23 +60,24 @@ Array [
   <RoleBar
     label="Back End Developer"
   />,
-  .c0 {
-  position: relative;
-  padding: 2rem;
-}
-
-<section
-    className="c0"
+  <Page
+    title="Back End Developer"
   >
-    <Robot
-      pose="confess"
-    />
-    <QuoteBubble
-      quote="Yesterday I was implementing PUT method for missing RESTful API endpoint."
-    />
+    <Section>
+      <Content
+        narrow={true}
+      >
+        <Robot
+          pose="confess"
+        />
+        <QuoteBubble
+          quote="Yesterday I was implementing PUT method for missing RESTful API endpoint."
+        />
+      </Content>
+    </Section>
     <ActionButtons
       role="backend"
     />
-  </section>,
+  </Page>,
 ]
 `;

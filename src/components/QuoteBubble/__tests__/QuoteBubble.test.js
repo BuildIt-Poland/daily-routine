@@ -9,6 +9,8 @@ jest.mock('../../Icons', () => ({
 }));
 
 jest.mock('../CopyButton', () => 'CopyButton');
+jest.mock('../Quote', () => 'Quote');
+jest.mock('../Wrapper', () => 'Wrapper');
 
 describe('COMPONENT - QuoteBubble', () => {
   it('renders correct defaults when no props are provieded', () => {

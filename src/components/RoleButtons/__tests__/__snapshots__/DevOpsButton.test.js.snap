@@ -24,22 +24,44 @@ exports[`COMPONENT - RoleButtons DevOpsButton renders correctly 1`] = `
   font-weight: 700;
   text-align: left;
   width: 100%;
-  height: 5rem;
+  height: 7rem;
 }
 
 .c1:not(:disabled) {
   cursor: pointer;
 }
 
-.c2 {
+.c3 {
   position: absolute;
   right: 1.4rem;
-  bottom: 1.4rem;
+  bottom: 2.4rem;
+}
+
+.c2 {
+  max-width: 14rem;
 }
 
 .c0 {
   background-color: #2784e6;
   border-bottom-color: #1558a1;
+}
+
+@media (max-width:26.25em) {
+  .c1 {
+    height: 5rem;
+  }
+}
+
+@media (max-width:26.25em) {
+  .c3 {
+    bottom: 1.4rem;
+  }
+}
+
+@media (max-width:26.25em) {
+  .c2 {
+    max-width: inherit;
+  }
 }
 
 <Link
@@ -54,9 +76,13 @@ exports[`COMPONENT - RoleButtons DevOpsButton renders correctly 1`] = `
   }
   to="/devops"
 >
-  Dev Ops
   <span
     className="c2"
+  >
+    Dev Ops
+  </span>
+  <span
+    className="c3"
   >
     <LongArrow />
   </span>

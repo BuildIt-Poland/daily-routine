@@ -2,7 +2,7 @@
 
 exports[`COMPONENT - Characters Fox Wrapper renders correctly 1`] = `
 .c0 {
-  margin: 14rem 0 3rem 0;
+  padding: 16rem 0 3rem 0;
   position: relative;
 }
 

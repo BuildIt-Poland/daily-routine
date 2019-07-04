@@ -10,6 +10,9 @@ jest.mock('../../Characters', () => ({
 jest.mock('../../ActionButtons', () => 'ActionButtons');
 jest.mock('../../RoleBar', () => 'RoleBar');
 jest.mock('../../QuoteBubble', () => 'QuoteBubble');
+jest.mock('../../Page', () => 'Page');
+jest.mock('../../Content', () => 'Content');
+jest.mock('../../Section', () => 'Section');
 
 describe('COMPONENT - BackEndRolePage', () => {
   it('renders correctly for /backend path', () => {

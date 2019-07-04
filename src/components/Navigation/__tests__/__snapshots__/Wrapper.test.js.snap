@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`COMPONENT - navigation Wrapper renders correctly 1`] = `
+.c0 {
+  display: grid;
+  grid-template-columns: repeat(,calc(33.33% - 1.4rem));
+  grid-gap: 2rem;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+@media (max-width:26.25em) {
+  .c0 {
+    display: block;
+  }
+}
+
+<nav
+  className="c0"
+/>
+`;
