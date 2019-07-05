@@ -15,10 +15,8 @@ exports[`COMPONENT - Characters SugarCat renders correctly 1`] = `
 }
 
 .c1 {
-  -webkit-animation: hhyNlO 2.5s ease-in-out infinite;
-  animation: hhyNlO 2.5s ease-in-out infinite;
-  -webkit-animation-delay: -0.3s;
-  animation-delay: -0.3s;
+  -webkit-animation: hhyNlO 2.5s ease-in-out -0.3s infinite;
+  animation: hhyNlO 2.5s ease-in-out -0.3s infinite;
 }
 
 .c2 {
