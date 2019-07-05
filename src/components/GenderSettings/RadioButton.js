@@ -13,8 +13,9 @@ function RadioButton({ children, value, checked, onChange, ...props }) {
   );
 }
 
-RadioButton.prototype = {
+RadioButton.propTypes = {
   value: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
   checked: PropTypes.bool.isRequired,
   onChange: PropTypes.func.isRequired
 };
