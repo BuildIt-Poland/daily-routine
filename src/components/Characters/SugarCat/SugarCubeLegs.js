@@ -20,6 +20,7 @@ const SugarCubeLeftLeg = styled(SugarCubeLeftLegArtwork)`
   animation: ${RightLegWaveAnimation} 2.5s ease-in-out infinite;
   animation-delay: -0.3s;
 `;
+
 const SugarCubeRightLeg = styled(SugarCubeRightLegArtwork)`
   animation: ${LeftLegWaveAnimation} 2.5s ease-in-out infinite;
 `;
