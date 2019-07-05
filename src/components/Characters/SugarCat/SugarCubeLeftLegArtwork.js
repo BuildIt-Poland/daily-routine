@@ -1,6 +1,6 @@
 import React from 'react';
 
-function SugarCubeLeftLegSVG(props) {
+function SugarCubeLeftLegArtwork(props) {
   return (
     <svg {...props} xmlns="http://www.w3.org/2000/svg" width="12" height="22" viewBox="0 0 12 22">
       <path
@@ -11,4 +11,4 @@ function SugarCubeLeftLegSVG(props) {
   );
 }
 
-export default SugarCubeLeftLegSVG;
+export default SugarCubeLeftLegArtwork;
