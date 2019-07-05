@@ -39,7 +39,7 @@ function ButtonBase({ icon: Icon, onClick = () => {}, children, ...props }) {
 
 ButtonBase.propTypes = {
   // Support for `animated` react-spring object type
-  Icon: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
+  icon: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
   children: PropTypes.node,
   onClick: PropTypes.func
 };

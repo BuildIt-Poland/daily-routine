@@ -15,10 +15,10 @@ function GenderSettings() {
     <>
       <Description>Gender</Description>
       <Wrapper>
-        <RadioButton value={MALE} checked={gender === MALE} onChange={onGenderChange}>
+        <RadioButton data-testid="male-button" value={MALE} checked={gender === MALE} onChange={onGenderChange}>
           Male
         </RadioButton>
-        <RadioButton value={FEMALE} checked={gender === FEMALE} onChange={onGenderChange}>
+        <RadioButton data-testid="female-button" value={FEMALE} checked={gender === FEMALE} onChange={onGenderChange}>
           Female
         </RadioButton>
       </Wrapper>

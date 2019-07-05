@@ -8,6 +8,7 @@ exports[`COMPONENT - Characters GenderFlower renders correctly 1`] = `
 
 <svg
   className="c0"
+  data-testid="gender-flower-icon"
   height="44"
   viewBox="0 0 45 44"
   width="45"
