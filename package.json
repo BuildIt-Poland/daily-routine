@@ -70,7 +70,8 @@
             "index"
           ]
         }
-      ]
+      ],
+      "react/prop-types": 2
     }
   },
   "browserslist": {

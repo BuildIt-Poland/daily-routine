@@ -12,7 +12,7 @@ import FrontEndRolePage from '../FrontEndRolePage';
 import BackEndRolePage from '../BackEndRolePage';
 import DevOpsRolePage from '../DevOpsRolePage';
 import Wrapper from './AnimatedWrapper';
-
+import { location } from './../../types/';
 const ROOT_PATH = '/';
 
 function App({ location }) {
@@ -33,5 +33,9 @@ function App({ location }) {
     </GenderProvider>
   );
 }
+
+App.propTypes = {
+  location
+};
 
 export default withRouter(App);
