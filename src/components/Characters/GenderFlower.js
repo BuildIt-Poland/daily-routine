@@ -15,9 +15,9 @@ const Wrapper = styled(animated.span)`
 function GenderFlower({ isVisible, className }) {
   const transitions = useTransition(isVisible, null, {
     from: { opacity: 0, transform: 'scale(0) rotate(0deg)' },
-    enter: { opacity: 1, transform: 'scale(1) rotate(90deg)' },
+    enter: { opacity: 1, transform: 'scale(1) rotate(180deg)' },
     leave: { opacity: 1, transform: 'scale(0) rotate(0deg)' },
-    config: config.wobbly
+    config: { mass: 2, tension: 100, friction: 12 }
   });
 
   return transitions.map(({ item, key, props }) => {
