@@ -2,9 +2,7 @@
 
 exports[`COMPONENT - Icons SaltGrinder renders correctly 1`] = `
 <svg
-  height="64"
   viewBox="0 0 66 64"
-  width="66"
   xmlns="http://www.w3.org/2000/svg"
 >
   <path

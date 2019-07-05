@@ -31,14 +31,14 @@ exports[`COMPONENT - RoleButtons ButtonBase renders correctly 1`] = `
   cursor: pointer;
 }
 
+.c1 {
+  max-width: 14rem;
+}
+
 .c2 {
   position: absolute;
   right: 1.4rem;
   bottom: 2.4rem;
-}
-
-.c1 {
-  max-width: 14rem;
 }
 
 @media (max-width:26.25em) {
@@ -48,22 +48,22 @@ exports[`COMPONENT - RoleButtons ButtonBase renders correctly 1`] = `
 }
 
 @media (max-width:26.25em) {
-  .c2 {
-    bottom: 1.4rem;
+  .c1 {
+    max-width: inherit;
   }
 }
 
 @media (max-width:26.25em) {
-  .c1 {
-    max-width: inherit;
+  .c2 {
+    bottom: 1.4rem;
   }
 }
 
 <Link
   className="c0"
   onClick={[Function]}
-  onMouseDown={[Function]}
-  onMouseUp={[Function]}
+  onPointerDown={[Function]}
+  onPointerUp={[Function]}
   style={
     Object {
       "borderBottomWidth": 3,
@@ -75,11 +75,11 @@ exports[`COMPONENT - RoleButtons ButtonBase renders correctly 1`] = `
     className="c1"
   >
     Taylor Swift
-  </span>
-  <span
-    className="c2"
-  >
-    <LongArrow />
+    <span
+      className="c2"
+    >
+      <LongArrow />
+    </span>
   </span>
 </Link>
 `;

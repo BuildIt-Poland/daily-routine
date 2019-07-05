@@ -1,40 +1,44 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`COMPONENT - App renders correctly default route 1`] = `
-.c1 {
-  display: grid;
-  grid-template-rows: minmax(42rem,max-content) 1fr;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-  height: 100%;
-}
-
-.c2 {
+.c3 {
   position: relative;
   padding: 0;
   padding-top: 2rem;
 }
 
-.c4 {
+.c5 {
   font-size: 2.4rem;
   margin: 0;
   margin-bottom: 1rem;
   text-align: center;
 }
 
-.c5 {
+.c6 {
   font-size: 1.8rem;
   margin: 1rem 0;
   font-weight: 400;
   text-align: center;
 }
 
-.c3 {
+.c4 {
   max-width: 96rem;
   padding: 0 2rem;
   margin: 0 auto;
   position: relative;
+}
+
+.c2 {
+  display: grid;
+  grid-template-rows: auto minmax(41rem,max-content) 1fr;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  height: 100%;
+}
+
+.c1 {
+  grid-template-rows: minmax(46rem,max-content) 1fr;
 }
 
 .c0 {
@@ -46,13 +50,13 @@ exports[`COMPONENT - App renders correctly default route 1`] = `
 }
 
 @media (max-width:26.25em) {
-  .c4 {
+  .c5 {
     text-align: left;
   }
 }
 
 @media (max-width:26.25em) {
-  .c5 {
+  .c6 {
     text-align: left;
   }
 }
@@ -68,21 +72,21 @@ exports[`COMPONENT - App renders correctly default route 1`] = `
   <AppBar />
   <main>
     <article
-      className="c1"
+      className="c1 c2"
     >
       <section
-        className="c2"
+        className="c3"
       >
         <div
-          className="c3"
+          className="c4"
         >
           <h1
-            className="c4"
+            className="c5"
           >
             Don't know what to say?
           </h1>
           <h2
-            className="c5"
+            className="c6"
           >
             Worry not! Find your perfect scenario for incoming daily.
           </h2>
