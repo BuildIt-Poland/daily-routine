@@ -14,15 +14,15 @@ function WhaleShadowArtwork(props) {
 }
 
 const shadowAnimation = keyframes`
-  0% { transform: scalex(0.8) translatey(260px); }
-	50% { transform: scalex(1) translatey(260px); }
-	100% { transform: scalex(0.8) translatey(260px); }
+  0% { transform: scalex(0.8) translateY(280px); }
+	50% { transform: scalex(1) translateY(280px); }
+	100% { transform: scalex(0.8) translateY(280px); }
 `;
 
 const AnimatedWhaleShadow = styled(WhaleShadowArtwork)`
   animation: ${shadowAnimation} 5s ease-in-out infinite;
   position: absolute;
-  transform: translatey(260px);
+  transform: translateY(280px);
 `;
 
 export default AnimatedWhaleShadow;
