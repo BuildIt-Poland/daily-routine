@@ -2,7 +2,7 @@
 
 exports[`COMPONENT - Characters Whale GenderFlower renders correctly 1`] = `
 .c0 {
-  top: 13.4rem;
+  top: 5.6rem;
   left: 8rem;
 }
 

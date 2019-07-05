@@ -13,7 +13,9 @@ exports[`COMPONENT - Characters Robot renders confusion marks and flower if fema
     pose="default"
   />
   <ConfusionMarks />
-  <GenderFlower />
+  <GenderFlower
+    isVisible={true}
+  />
 </div>
 `;
 
@@ -30,6 +32,9 @@ exports[`COMPONENT - Characters Robot renders confusion marks if robot is in def
     pose="default"
   />
   <ConfusionMarks />
+  <GenderFlower
+    isVisible={false}
+  />
 </div>
 `;
 
@@ -46,6 +51,9 @@ exports[`COMPONENT - Characters Robot renders correctly with default props 1`] =
     pose="default"
   />
   <ConfusionMarks />
+  <GenderFlower
+    isVisible={false}
+  />
 </div>
 `;
 
@@ -62,6 +70,8 @@ exports[`COMPONENT - Characters Robot renders flower if female gender is passed 
     pose="default"
   />
   <ConfusionMarks />
-  <GenderFlower />
+  <GenderFlower
+    isVisible={true}
+  />
 </div>
 `;
