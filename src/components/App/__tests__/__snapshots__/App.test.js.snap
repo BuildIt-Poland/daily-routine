@@ -61,6 +61,18 @@ exports[`COMPONENT - App renders correctly default route 1`] = `
   }
 }
 
+@media (max-width:26.25em) {
+  .c2 {
+    grid-template-rows: auto 1fr auto;
+  }
+}
+
+@media (max-width:26.25em) {
+  .c1 {
+    grid-template-rows: 1fr auto;
+  }
+}
+
 <div
   className="c0"
   style={
