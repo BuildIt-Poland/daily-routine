@@ -2,16 +2,9 @@
 
 exports[`COMPONENT - Characters SugarCat Wrapper renders correctly 1`] = `
 .c0 {
-  margin: 0;
-  margin-top: 4rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  position: relative;
+  margin: 4rem auto 0 auto;
+  width: 28rem;
 }
 
 <div

@@ -2,26 +2,25 @@
 
 exports[`COMPONENT - Characters SugarCat renders correctly 1`] = `
 .c0 {
-  margin: 0;
-  margin-top: 4rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  position: relative;
+  margin: 4rem auto 0 auto;
+  width: 28rem;
 }
 
 .c1 {
-  -webkit-animation: hhyNlO 2.5s ease-in-out -0.3s infinite;
-  animation: hhyNlO 2.5s ease-in-out -0.3s infinite;
+  position: absolute;
+  bottom: 0.1rem;
+  left: 23rem;
+  -webkit-animation: kRJNIP 2.5s ease-in-out -0.3s infinite;
+  animation: kRJNIP 2.5s ease-in-out -0.3s infinite;
 }
 
 .c2 {
-  -webkit-animation: hhyQwe 2.5s ease-in-out infinite;
-  animation: hhyQwe 2.5s ease-in-out infinite;
+  position: absolute;
+  bottom: 0;
+  left: 23.8rem;
+  -webkit-animation: cpXlhx 2.5s ease-in-out infinite;
+  animation: cpXlhx 2.5s ease-in-out infinite;
 }
 
 <div
