@@ -17,8 +17,7 @@ const leftLegWaveAnimation = keyframes`
 `;
 
 const SugarCubeLeftLeg = styled(SugarCubeLeftLegArtwork)`
-  animation: ${rightLegWaveAnimation} 2.5s ease-in-out infinite;
-  animation-delay: -0.3s;
+  animation: ${rightLegWaveAnimation} 2.5s ease-in-out -0.3s infinite;
 `;
 
 const SugarCubeRightLeg = styled(SugarCubeRightLegArtwork)`
