@@ -15,7 +15,7 @@ function SidePanel({ isVisible, children }) {
   );
 }
 
-SidePanel.prototype = {
+SidePanel.propTypes = {
   isVisible: PropTypes.bool,
   children: PropTypes.node
 };
