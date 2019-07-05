@@ -6,12 +6,15 @@ import media from '../../styles/media';
 import { SaltGrinder } from '../Icons';
 
 const Wrapper = styled.span`
+  width: 8.8rem;
   position: absolute;
-  right: 0.4rem;
-  bottom: 0.1rem;
+  top: -0.9rem;
+  right: -0.6rem;
 
   ${media.phone`
-    bottom: -0.9rem;
+    width: 6.6rem;
+    top: -0.9rem;
+    right: 0.4rem;
   `};
 `;
 

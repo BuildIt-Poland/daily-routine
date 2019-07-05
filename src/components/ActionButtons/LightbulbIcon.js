@@ -6,12 +6,15 @@ import media from '../../styles/media';
 import { Lightbulb } from '../Icons';
 
 const Wrapper = styled.span`
+  width: 8.8rem;
   position: absolute;
-  right: 0;
-  bottom: 0;
+  top: -1rem;
+  right: -0.8rem;
 
   ${media.phone`
-    bottom: -1rem;
+    width: 6.6rem;
+    top: -1rem;
+    right: 0;
   `};
 `;
 

@@ -3,7 +3,7 @@ import { create } from 'react-test-renderer';
 
 import Text from '../Text';
 
-describe('COMPONENT - RoleButtons Text', () => {
+describe('COMPONENT - Button Text', () => {
   it('renders correctly', () => {
     const component = create(<Text />);
 

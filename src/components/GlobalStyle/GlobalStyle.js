@@ -31,6 +31,8 @@ const GlobalStyle = createGlobalStyle`
 
   svg {
     display: block;
+    max-width: 100%;
+    height: auto;
   }
 
   strong {
