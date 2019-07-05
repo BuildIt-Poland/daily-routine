@@ -19,7 +19,7 @@ function Whale({ pose = DEFAULT }) {
       <FloatingAnimationWrapper>
         <WhaleArtwork pose={pose} />
         {pose === DEFAULT && <ConfusionMarks />}
-        {<GenderFlower isVisible={gender === FEMALE} />}
+        <GenderFlower isVisible={gender === FEMALE} />
       </FloatingAnimationWrapper>
     </>
   );
