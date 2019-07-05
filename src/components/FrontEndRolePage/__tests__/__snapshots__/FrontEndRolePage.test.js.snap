@@ -1,29 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`COMPONENT - FrontEndRolePage renders correctly 1`] = `
-Array [
+<Page
+  title="Front End Engineer"
+>
   <RoleBar
     label="Front End Engineer"
-  />,
-  <Page
-    title="Front End Engineer"
-  >
-    <Section>
-      <Content
-        narrow={true}
-      >
-        <Fox
-          pose="default"
-        />
-        <QuoteBubble
-          noCopyToClipboard={true}
-          variant="thought"
-        />
-      </Content>
-    </Section>
-    <ActionButtons
-      role="frontend"
-    />
-  </Page>,
-]
+  />
+  <Section>
+    <Content
+      narrow={true}
+    >
+      <Fox
+        pose="default"
+      />
+      <QuoteBubble
+        noCopyToClipboard={true}
+        variant="thought"
+      />
+    </Content>
+  </Section>
+  <ActionButtons
+    role="frontend"
+  />
+</Page>
 `;

@@ -1,83 +1,77 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`COMPONENT - DevOpsRolePage renders correctly for /devops path 1`] = `
-Array [
+<Page
+  title="Dev Ops"
+>
   <RoleBar
     label="Dev Ops"
-  />,
-  <Page
-    title="Dev Ops"
-  >
-    <Section>
-      <Content
-        narrow={true}
-      >
-        <Whale
-          pose="default"
-        />
-        <QuoteBubble
-          noCopyToClipboard={true}
-          variant="thought"
-        />
-      </Content>
-    </Section>
-    <ActionButtons
-      role="devops"
-    />
-  </Page>,
-]
+  />
+  <Section>
+    <Content
+      narrow={true}
+    >
+      <Whale
+        pose="default"
+      />
+      <QuoteBubble
+        noCopyToClipboard={true}
+        variant="thought"
+      />
+    </Content>
+  </Section>
+  <ActionButtons
+    role="devops"
+  />
+</Page>
 `;
 
 exports[`COMPONENT - DevOpsRolePage renders correctly for /devops/brag path 1`] = `
-Array [
+<Page
+  title="Dev Ops"
+>
   <RoleBar
     label="Dev Ops"
-  />,
-  <Page
-    title="Dev Ops"
-  >
-    <Section>
-      <Content
-        narrow={true}
-      >
-        <Whale
-          pose="brag"
-        />
-        <QuoteBubble
-          quote="Yesterday I was implementing PUT method for missing RESTful API endpoint."
-        />
-      </Content>
-    </Section>
-    <ActionButtons
-      role="devops"
-    />
-  </Page>,
-]
+  />
+  <Section>
+    <Content
+      narrow={true}
+    >
+      <Whale
+        pose="brag"
+      />
+      <QuoteBubble
+        quote="Yesterday I was implementing PUT method for missing RESTful API endpoint."
+      />
+    </Content>
+  </Section>
+  <ActionButtons
+    role="devops"
+  />
+</Page>
 `;
 
 exports[`COMPONENT - DevOpsRolePage renders correctly for /devops/confess path 1`] = `
-Array [
+<Page
+  title="Dev Ops"
+>
   <RoleBar
     label="Dev Ops"
-  />,
-  <Page
-    title="Dev Ops"
-  >
-    <Section>
-      <Content
-        narrow={true}
-      >
-        <Whale
-          pose="confess"
-        />
-        <QuoteBubble
-          quote="Yesterday I was implementing PUT method for missing RESTful API endpoint."
-        />
-      </Content>
-    </Section>
-    <ActionButtons
-      role="devops"
-    />
-  </Page>,
-]
+  />
+  <Section>
+    <Content
+      narrow={true}
+    >
+      <Whale
+        pose="confess"
+      />
+      <QuoteBubble
+        quote="Yesterday I was implementing PUT method for missing RESTful API endpoint."
+      />
+    </Content>
+  </Section>
+  <ActionButtons
+    role="devops"
+  />
+</Page>
 `;

@@ -31,14 +31,14 @@ exports[`COMPONENT - RoleButtons DevOpsButton renders correctly 1`] = `
   cursor: pointer;
 }
 
+.c2 {
+  max-width: 14rem;
+}
+
 .c3 {
   position: absolute;
   right: 1.4rem;
   bottom: 2.4rem;
-}
-
-.c2 {
-  max-width: 14rem;
 }
 
 .c0 {
@@ -53,22 +53,22 @@ exports[`COMPONENT - RoleButtons DevOpsButton renders correctly 1`] = `
 }
 
 @media (max-width:26.25em) {
-  .c3 {
-    bottom: 1.4rem;
+  .c2 {
+    max-width: inherit;
   }
 }
 
 @media (max-width:26.25em) {
-  .c2 {
-    max-width: inherit;
+  .c3 {
+    bottom: 1.4rem;
   }
 }
 
 <Link
   className="c0 c1"
   onClick={[Function]}
-  onMouseDown={[Function]}
-  onMouseUp={[Function]}
+  onPointerDown={[Function]}
+  onPointerUp={[Function]}
   style={
     Object {
       "borderBottomWidth": 3,
@@ -80,11 +80,11 @@ exports[`COMPONENT - RoleButtons DevOpsButton renders correctly 1`] = `
     className="c2"
   >
     Dev Ops
-  </span>
-  <span
-    className="c3"
-  >
-    <LongArrow />
+    <span
+      className="c3"
+    >
+      <LongArrow />
+    </span>
   </span>
 </Link>
 `;

@@ -1,83 +1,77 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`COMPONENT - BackEndRolePage renders correctly for /backend path 1`] = `
-Array [
+<Page
+  title="Back End Developer"
+>
   <RoleBar
     label="Back End Developer"
-  />,
-  <Page
-    title="Back End Developer"
-  >
-    <Section>
-      <Content
-        narrow={true}
-      >
-        <Robot
-          pose="default"
-        />
-        <QuoteBubble
-          noCopyToClipboard={true}
-          variant="thought"
-        />
-      </Content>
-    </Section>
-    <ActionButtons
-      role="backend"
-    />
-  </Page>,
-]
+  />
+  <Section>
+    <Content
+      narrow={true}
+    >
+      <Robot
+        pose="default"
+      />
+      <QuoteBubble
+        noCopyToClipboard={true}
+        variant="thought"
+      />
+    </Content>
+  </Section>
+  <ActionButtons
+    role="backend"
+  />
+</Page>
 `;
 
 exports[`COMPONENT - BackEndRolePage renders correctly for /backend/brag path 1`] = `
-Array [
+<Page
+  title="Back End Developer"
+>
   <RoleBar
     label="Back End Developer"
-  />,
-  <Page
-    title="Back End Developer"
-  >
-    <Section>
-      <Content
-        narrow={true}
-      >
-        <Robot
-          pose="brag"
-        />
-        <QuoteBubble
-          quote="Yesterday I was implementing PUT method for missing RESTful API endpoint."
-        />
-      </Content>
-    </Section>
-    <ActionButtons
-      role="backend"
-    />
-  </Page>,
-]
+  />
+  <Section>
+    <Content
+      narrow={true}
+    >
+      <Robot
+        pose="brag"
+      />
+      <QuoteBubble
+        quote="Yesterday I was implementing PUT method for missing RESTful API endpoint."
+      />
+    </Content>
+  </Section>
+  <ActionButtons
+    role="backend"
+  />
+</Page>
 `;
 
 exports[`COMPONENT - BackEndRolePage renders correctly for /backend/confess path 1`] = `
-Array [
+<Page
+  title="Back End Developer"
+>
   <RoleBar
     label="Back End Developer"
-  />,
-  <Page
-    title="Back End Developer"
-  >
-    <Section>
-      <Content
-        narrow={true}
-      >
-        <Robot
-          pose="confess"
-        />
-        <QuoteBubble
-          quote="Yesterday I was implementing PUT method for missing RESTful API endpoint."
-        />
-      </Content>
-    </Section>
-    <ActionButtons
-      role="backend"
-    />
-  </Page>,
-]
+  />
+  <Section>
+    <Content
+      narrow={true}
+    >
+      <Robot
+        pose="confess"
+      />
+      <QuoteBubble
+        quote="Yesterday I was implementing PUT method for missing RESTful API endpoint."
+      />
+    </Content>
+  </Section>
+  <ActionButtons
+    role="backend"
+  />
+</Page>
 `;

@@ -31,21 +31,35 @@ exports[`COMPONENT - Button renders correctly 1`] = `
   cursor: pointer;
 }
 
+.c1 {
+  max-width: 14rem;
+}
+
 @media (max-width:26.25em) {
   .c0 {
     height: 5rem;
   }
 }
 
+@media (max-width:26.25em) {
+  .c1 {
+    max-width: inherit;
+  }
+}
+
 <button
   className="c0"
   onClick={[Function]}
-  onMouseDown={[Function]}
-  onMouseUp={[Function]}
+  onPointerDown={[Function]}
+  onPointerUp={[Function]}
   style={
     Object {
       "borderBottomWidth": 3,
     }
   }
-/>
+>
+  <span
+    className="c1"
+  />
+</button>
 `;

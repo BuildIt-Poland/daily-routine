@@ -31,6 +31,10 @@ exports[`COMPONENT - RoleButton BragButton renders correctly 1`] = `
   cursor: pointer;
 }
 
+.c2 {
+  max-width: 14rem;
+}
+
 .c0 {
   background-color: #21c230;
   border-bottom-color: #138a1e;
@@ -42,11 +46,17 @@ exports[`COMPONENT - RoleButton BragButton renders correctly 1`] = `
   }
 }
 
+@media (max-width:26.25em) {
+  .c2 {
+    max-width: inherit;
+  }
+}
+
 <Link
   className="c0 c1"
   onClick={[Function]}
-  onMouseDown={[Function]}
-  onMouseUp={[Function]}
+  onPointerDown={[Function]}
+  onPointerUp={[Function]}
   style={
     Object {
       "borderBottomWidth": 3,
@@ -54,7 +64,11 @@ exports[`COMPONENT - RoleButton BragButton renders correctly 1`] = `
   }
   to="/frontend/brag"
 >
-  Brag about my efforts
-  LightbulbIcon
+  <span
+    className="c2"
+  >
+    Brag about my efforts
+    LightbulbIcon
+  </span>
 </Link>
 `;

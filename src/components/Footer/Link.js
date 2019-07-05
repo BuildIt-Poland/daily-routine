@@ -5,7 +5,7 @@ import { colorBlack, fontMedium } from '../../styles/designTokens';
 const Link = styled.a.attrs({
   target: '_blank'
 })`
-  height: 100%;
+  height: 3.6rem;
   min-width: 6rem;
   font-size: ${fontMedium};
   color: ${colorBlack};

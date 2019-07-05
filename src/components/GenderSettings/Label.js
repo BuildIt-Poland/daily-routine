@@ -23,6 +23,8 @@ const Label = styled.label`
   :last-child {
     border-radius: 0 ${borderRadius} ${borderRadius} 0;
   }
+
+  transition: 150ms linear;
 `;
 
 export default Label;

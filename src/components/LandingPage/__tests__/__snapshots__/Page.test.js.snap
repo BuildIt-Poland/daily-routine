@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`COMPONENT - Page Wrapper renders correctly 1`] = `
-.c0 {
+exports[`COMPONENT - LandingPage Page renders correctly 1`] = `
+.c1 {
   display: grid;
   grid-template-rows: auto minmax(41rem,max-content) 1fr;
   -webkit-align-content: stretch;
@@ -10,13 +10,25 @@ exports[`COMPONENT - Page Wrapper renders correctly 1`] = `
   height: 100%;
 }
 
+.c0 {
+  grid-template-rows: minmax(46rem,max-content) 1fr;
+}
+
 @media (max-width:26.25em) {
-  .c0 {
+  .c1 {
     grid-template-rows: auto 1fr auto;
   }
 }
 
+@media (max-width:26.25em) {
+  .c0 {
+    grid-template-rows: 1fr auto;
+  }
+}
+
 <article
-  className="c0"
-/>
+  className="c0 c1"
+>
+  Taylor Swift
+</article>
 `;

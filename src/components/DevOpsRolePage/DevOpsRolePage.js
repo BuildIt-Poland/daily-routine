@@ -15,8 +15,8 @@ import Confess from './DevOpsConfess';
 function DevOpsRolePage() {
   return (
     <>
-      <RoleBar label={DEV_OPS_ROLE_LABEL} />
       <Page title={DEV_OPS_ROLE_LABEL}>
+        <RoleBar label={DEV_OPS_ROLE_LABEL} />
         <Section>
           <Content narrow>
             <Route exact path={`/${DEV_OPS_ROLE}`} component={Default} />

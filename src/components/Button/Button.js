@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { useSpring } from 'react-spring';
 
 import StyledButton from './StyledButton';
+import Text from './Text';
 
 function Button({ to, onClick = () => {}, children, ...props }) {
   const mappedProps = {
@@ -16,8 +17,9 @@ function Button({ to, onClick = () => {}, children, ...props }) {
   const animationStyles = useSpring({
     borderBottomWidth: isClicked ? 0 : 3,
     config: {
-      tension: 500,
-      friction: 8
+      mass: 0.4,
+      tension: 400,
+      friction: 18
     }
   });
 
@@ -25,10 +27,10 @@ function Button({ to, onClick = () => {}, children, ...props }) {
     <StyledButton
       {...mappedProps}
       style={animationStyles}
-      onMouseDown={() => setIsClicked(true)}
-      onMouseUp={() => setIsClicked(false)}
+      onPointerDown={() => setIsClicked(true)}
+      onPointerUp={() => setIsClicked(false)}
     >
-      {children}
+      <Text>{children}</Text>
     </StyledButton>
   );
 }

@@ -3,6 +3,7 @@ import { ThemeProvider } from 'styled-components';
 import { Route, withRouter } from 'react-router-dom';
 
 import { FRONT_END_ROLE, BACK_END_ROLE, DEV_OPS_ROLE } from '../../constants/roles';
+import { location } from '../../types';
 import { GenderProvider } from '../../context/GenderContext';
 import generateTheme from '../../utils/generateTheme';
 import AppBar from '../AppBar';
@@ -11,15 +12,15 @@ import LandingPage from '../LandingPage';
 import FrontEndRolePage from '../FrontEndRolePage';
 import BackEndRolePage from '../BackEndRolePage';
 import DevOpsRolePage from '../DevOpsRolePage';
-import Wrapper from './AnimatedWrapper';
-import { location } from './../../types/';
+import AnimatedWrapper from './AnimatedWrapper';
+
 const ROOT_PATH = '/';
 
 function App({ location }) {
   return (
     <GenderProvider>
       <ThemeProvider theme={generateTheme(location.pathname)}>
-        <Wrapper location={location}>
+        <AnimatedWrapper location={location}>
           <AppBar />
           <main>
             <Route exact path={ROOT_PATH} component={LandingPage} />
@@ -28,7 +29,7 @@ function App({ location }) {
             <Route path={`/${DEV_OPS_ROLE}`} component={DevOpsRolePage} />
           </main>
           <Footer />
-        </Wrapper>
+        </AnimatedWrapper>
       </ThemeProvider>
     </GenderProvider>
   );
