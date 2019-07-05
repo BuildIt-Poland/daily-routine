@@ -12,7 +12,7 @@ import LandingPage from '../LandingPage';
 import FrontEndRolePage from '../FrontEndRolePage';
 import BackEndRolePage from '../BackEndRolePage';
 import DevOpsRolePage from '../DevOpsRolePage';
-import Wrapper from './AnimatedWrapper';
+import AnimatedWrapper from './AnimatedWrapper';
 
 const ROOT_PATH = '/';
 
@@ -20,7 +20,7 @@ function App({ location }) {
   return (
     <GenderProvider>
       <ThemeProvider theme={generateTheme(location.pathname)}>
-        <Wrapper location={location}>
+        <AnimatedWrapper location={location}>
           <AppBar />
           <main>
             <Route exact path={ROOT_PATH} component={LandingPage} />
@@ -29,7 +29,7 @@ function App({ location }) {
             <Route path={`/${DEV_OPS_ROLE}`} component={DevOpsRolePage} />
           </main>
           <Footer />
-        </Wrapper>
+        </AnimatedWrapper>
       </ThemeProvider>
     </GenderProvider>
   );

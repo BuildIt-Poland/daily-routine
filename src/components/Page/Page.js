@@ -7,12 +7,12 @@ import Wrapper from './Wrapper';
 
 const DEFAULT_TITLE = 'Daily Routine';
 
-function Page({ title, children }) {
+function Page({ title, children, ...props }) {
   useEffect(() => {
     document.title = title ? `${DEFAULT_TITLE} | ${title}` : DEFAULT_TITLE;
   }, [title]);
 
-  return <Wrapper>{children}</Wrapper>;
+  return <Wrapper {...props}>{children}</Wrapper>;
 }
 
 Page.propTypes = {
