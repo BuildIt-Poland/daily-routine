@@ -17,7 +17,9 @@ Array [
       pose="default"
     />
     <ConfusionMarks />
-    <GenderFlower />
+    <GenderFlower
+      isVisible={true}
+    />
   </div>,
 ]
 `;
@@ -39,6 +41,9 @@ Array [
       pose="default"
     />
     <ConfusionMarks />
+    <GenderFlower
+      isVisible={false}
+    />
   </div>,
 ]
 `;
@@ -60,6 +65,9 @@ Array [
       pose="default"
     />
     <ConfusionMarks />
+    <GenderFlower
+      isVisible={false}
+    />
   </div>,
 ]
 `;
@@ -81,7 +89,9 @@ Array [
       pose="default"
     />
     <ConfusionMarks />
-    <GenderFlower />
+    <GenderFlower
+      isVisible={true}
+    />
   </div>,
 ]
 `;
