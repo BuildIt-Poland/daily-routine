@@ -15,7 +15,7 @@ const Wrapper = styled(animated.div)`
   z-index: ${zIndexModalOverlay};
 `;
 
-function Overlay({ isVisible }) {
+function Overlay({ isVisible, onClick }) {
   const transitions = useTransition(isVisible, null, {
     from: { opacity: 0 },
     enter: { opacity: 0.6 },
@@ -27,11 +27,12 @@ function Overlay({ isVisible }) {
     }
   });
 
-  return transitions.map(({ item, props, key }) => item && <Wrapper key={key} style={props} />);
+  return transitions.map(({ item, props, key }) => item && <Wrapper key={key} style={props} onClick={onClick} />);
 }
 
 Overlay.prototype = {
-  isVisible: PropTypes.bool
+  isVisible: PropTypes.bool,
+  onClick: PropTypes.func
 };
 
 export default Overlay;

@@ -10,7 +10,7 @@ import Form from './Form';
 
 function SettingsPanel({ isVisible, onClose }) {
   return (
-    <SidePanel isVisible={isVisible}>
+    <SidePanel isVisible={isVisible} onOverlayClick={onClose}>
       <Header>
         <Subheadline>
           My role <strong>settings</strong>
