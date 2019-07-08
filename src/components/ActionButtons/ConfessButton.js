@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
 import { role } from '../../types';
@@ -13,9 +13,13 @@ const StyledButton = styled(ButtonBase)`
 `;
 
 function ConfessButton({ role, ...props }) {
+  const [text, setText] = useState('Confess my mistake');
+
+  const changeText = () => setText('Confess again');
+
   return (
-    <StyledButton to={`/${role}/${CONFESS_ROLE_ACTION}`} icon={SaltGrinderIcon} {...props}>
-      Confess my mistake
+    <StyledButton to={`/${role}/${CONFESS_ROLE_ACTION}`} icon={SaltGrinderIcon} {...props} onClick={changeText}>
+      {text}
     </StyledButton>
   );
 }

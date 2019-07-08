@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
 import { role } from '../../types';
@@ -13,9 +13,13 @@ const StyledButton = styled(ButtonBase)`
 `;
 
 function BragButton({ role, ...props }) {
+  const [text, setText] = useState('Brag about my efforts');
+
+  const changeText = () => setText('Brag more');
+
   return (
-    <StyledButton to={`/${role}/${BRAG_ROLE_ACTION}`} icon={LightbulbIcon} {...props}>
-      Brag about my efforts
+    <StyledButton to={`/${role}/${BRAG_ROLE_ACTION}`} icon={LightbulbIcon} {...props} onClick={changeText}>
+      {text}
     </StyledButton>
   );
 }
