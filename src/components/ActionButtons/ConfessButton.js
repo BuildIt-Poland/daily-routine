@@ -12,10 +12,14 @@ const StyledButton = styled(ButtonBase)`
   border-bottom-color: ${colorDarkRed};
 `;
 
-function ConfessButton({ role, ...props }) {
-  const [text, setText] = useState('Confess my mistake');
+const TEXT = 'Confess my mistake';
 
-  const changeText = () => setText('Confess again');
+const TEXT_AFTER_CLICK = 'Confess again';
+
+function ConfessButton({ role, ...props }) {
+  const [text, setText] = useState(TEXT);
+
+  const changeText = () => setText(TEXT_AFTER_CLICK);
 
   return (
     <StyledButton to={`/${role}/${CONFESS_ROLE_ACTION}`} icon={SaltGrinderIcon} {...props} onClick={changeText}>

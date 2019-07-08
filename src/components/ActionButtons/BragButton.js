@@ -12,10 +12,14 @@ const StyledButton = styled(ButtonBase)`
   border-bottom-color: ${colorDarkGreen};
 `;
 
-function BragButton({ role, ...props }) {
-  const [text, setText] = useState('Brag about my efforts');
+const TEXT = 'Brag about my efforts';
 
-  const changeText = () => setText('Brag more');
+const TEXT_AFTER_CLICK = 'Brag more';
+
+function BragButton({ role, ...props }) {
+  const [text, setText] = useState(TEXT);
+
+  const changeText = () => setText(TEXT_AFTER_CLICK);
 
   return (
     <StyledButton to={`/${role}/${BRAG_ROLE_ACTION}`} icon={LightbulbIcon} {...props} onClick={changeText}>
