@@ -8,12 +8,14 @@ import GearButton from './GearButton';
 function SettingsTrigger() {
   const [isVisible, setIsVisible] = useState(false);
 
-  const togglSettingsPanel = () => setIsVisible(!isVisible);
+  const openSettingsPanel = () => setIsVisible(true);
+
+  const closeSettingsPanel = () => setIsVisible(false);
 
   return (
     <>
-      <GearButton onClick={togglSettingsPanel} />
-      <SettingsPanel isVisible={isVisible} onClose={togglSettingsPanel} />
+      <GearButton onClick={openSettingsPanel} />
+      <SettingsPanel isVisible={isVisible} onClose={closeSettingsPanel} />
     </>
   );
 }
