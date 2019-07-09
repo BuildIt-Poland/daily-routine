@@ -10,8 +10,8 @@ const QUOTE = 'Yesterday I was implementing PUT method for missing RESTful API e
 function FrontEndConfess() {
   return (
     <>
-      <Fox pose={CONFESS} />
       <QuoteBubble quote={QUOTE} />
+      <Fox pose={CONFESS} />
     </>
   );
 }

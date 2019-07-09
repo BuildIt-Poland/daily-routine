@@ -7,7 +7,7 @@ import Page from '../Page';
 import RoleBar from '../RoleBar';
 import ActionButtons from '../ActionButtons';
 import Section from '../Section';
-import Content from '../Content';
+import RoleContent from '../RoleContent';
 import Default from './FrontEndDefault';
 import Brag from './FrontEndBrag';
 import Confess from './FrontEndConfess';
@@ -18,11 +18,11 @@ function FrontEndRolePage() {
       <Page title={FRONT_END_ROLE_LABEL}>
         <RoleBar label={FRONT_END_ROLE_LABEL} />
         <Section>
-          <Content narrow>
+          <RoleContent>
             <Route exact path={`/${FRONT_END_ROLE}`} component={Default} />
             <Route exact path={`/${FRONT_END_ROLE}/${BRAG}`} component={Brag} />
             <Route exact path={`/${FRONT_END_ROLE}/${CONFESS}`} component={Confess} />
-          </Content>
+          </RoleContent>
         </Section>
         <ActionButtons role={FRONT_END_ROLE} />
       </Page>
