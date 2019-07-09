@@ -18,7 +18,7 @@ describe('COMPONENT - RoleButton ConfessButton', () => {
     const confessButton = container.querySelector('a');
 
     expect(confessButton).toHaveTextContent('Confess my mistake');
-    expect(confessButton.contains(confessButton.querySelector('svg'))).toBe(true);
+    expect(confessButton.contains(confessButton.querySelector('svg'))).toBeDefined();
   });
 
   it('after a click text should change to `Confess again`', () => {
