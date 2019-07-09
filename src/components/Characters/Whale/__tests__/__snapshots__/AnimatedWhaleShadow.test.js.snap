@@ -6,6 +6,8 @@ exports[`COMPONENT - Characters Whale AnimatedWhaleShadow renders correctly 1`] 
   animation: hRugcT 5s ease-in-out infinite;
   position: absolute;
   top: 22rem;
+  left: 0;
+  z-index: -1;
 }
 
 <svg

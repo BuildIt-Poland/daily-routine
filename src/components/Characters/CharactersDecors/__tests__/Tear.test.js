@@ -1,11 +1,11 @@
 import React from 'react';
 import { create } from 'react-test-renderer';
 
-import GenderFlower from '../../CharactersDecors/GenderFlower';
+import Tear from '../Tear';
 
-describe('COMPONENT - Characters GenderFlower', () => {
+describe('COMPONENT - Characters Tear', () => {
   it('renders correctly', () => {
-    const component = create(<GenderFlower />);
+    const component = create(<Tear />);
 
     expect(component.toJSON()).toMatchSnapshot();
   });

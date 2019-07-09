@@ -1,7 +1,7 @@
 import React from 'react';
 import { create } from 'react-test-renderer';
 
-import ConfusionMarks from '../../CharactersDecors/ConfusionMarks';
+import ConfusionMarks from '../ConfusionMarks';
 
 describe('COMPONENT - Characters ConfusionMarks', () => {
   it('renders correctly', () => {

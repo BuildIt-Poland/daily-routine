@@ -23,6 +23,8 @@ const AnimatedWhaleShadow = styled(WhaleShadowArtwork)`
   animation: ${shadowAnimation} 5s ease-in-out infinite;
   position: absolute;
   top: 22rem;
+  left: 0;
+  z-index: -1;
 `;
 
 export default AnimatedWhaleShadow;
