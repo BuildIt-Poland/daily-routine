@@ -11,7 +11,7 @@ Please include a summary of the change and which issue is fixed. Please also inc
 -----------------------------------------------------
 
 PR template for role quotes:
-[Role Quote - #ROLE] #QUOTE_ID
+[DevOps/BackEnd/FrontEnd] #QUOTE_ID
 
 # Quote
 ```
