@@ -12,17 +12,16 @@ const StyledButton = styled(ButtonBase)`
   border-bottom-color: ${colorDarkGreen};
 `;
 
-const TEXT = 'Brag about my efforts';
-
-const TEXT_AFTER_CLICK = 'Brag more';
+const BUTTON_LABEL = 'Brag about my efforts';
+const UPDATED_BUTTON_LABEL = 'Brag more';
 
 function BragButton({ role, ...props }) {
-  const [text, setText] = useState(TEXT);
+  const [text, setText] = useState(BUTTON_LABEL);
 
-  const changeText = () => setText(TEXT_AFTER_CLICK);
+  const updateButtonLabel = () => setText(UPDATED_BUTTON_LABEL);
 
   return (
-    <StyledButton to={`/${role}/${BRAG_ROLE_ACTION}`} icon={LightbulbIcon} {...props} onClick={changeText}>
+    <StyledButton to={`/${role}/${BRAG_ROLE_ACTION}`} icon={LightbulbIcon} {...props} onClick={updateButtonLabel}>
       {text}
     </StyledButton>
   );
