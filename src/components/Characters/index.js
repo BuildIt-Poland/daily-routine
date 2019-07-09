@@ -5,5 +5,6 @@ export { default as Whale } from './Whale';
 export { default as Fox } from './Fox';
 
 // Decors
-export { default as GenderFlower } from './GenderFlower';
-export { default as ConfusionMarks } from './ConfusionMarks';
+export { default as GenderFlower } from './CharactersDecors/GenderFlower';
+export { default as ConfusionMarks } from './CharactersDecors/ConfusionMarks';
+export { default as Tear } from './CharactersDecors/Tear';

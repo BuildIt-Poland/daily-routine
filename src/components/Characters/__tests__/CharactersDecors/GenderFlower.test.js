@@ -1,7 +1,7 @@
 import React from 'react';
 import { create } from 'react-test-renderer';
 
-import GenderFlower from '../GenderFlower';
+import GenderFlower from '../../CharactersDecors/GenderFlower';
 
 describe('COMPONENT - Characters GenderFlower', () => {
   it('renders correctly', () => {
