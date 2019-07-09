@@ -16,7 +16,7 @@ describe('HOOK - useLocalStorage', () => {
   it('should change localStorage value from `TEST_VALUE` to `TEST_NEW_VALUE` for the key `TEST_KEY`', () => {
     const { result } = renderHook(() => useLocalStorage(TEST_LOCAL_STORAGE_KEY, TEST_LOCAL_STORAGE_VALUE));
 
-    const [_, setValue] = result.current;
+    const [, setValue] = result.current;
 
     act(() => setValue(TEST_LOCAL_STORAGE_NEW_VALUE));
 
