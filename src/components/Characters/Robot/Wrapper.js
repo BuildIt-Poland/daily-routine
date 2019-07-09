@@ -1,15 +1,9 @@
 import styled from 'styled-components';
 
-import media from '../../../styles/media';
-import { spacingLarge } from '../../../styles/designTokens';
+import CharacterWrapper from '../CharacterWrapper';
 
-const Wrapper = styled.div`
-  padding: 0.4rem 0 ${spacingLarge} 0;
-  position: relative;
-
-  ${media.phone`
-    padding-bottom: 0;
-  `};
+const Wrapper = styled(CharacterWrapper)`
+  padding-top: 0.4rem;
 `;
 
 export default Wrapper;
