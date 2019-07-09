@@ -2,8 +2,14 @@
 
 exports[`COMPONENT - Characters Robot Wrapper renders correctly 1`] = `
 .c0 {
-  padding: 9.6rem 0 3rem 0;
+  padding: 0.4rem 0 3rem 0;
   position: relative;
+}
+
+@media (max-width:26.25em) {
+  .c0 {
+    padding-bottom: 0;
+  }
 }
 
 <div

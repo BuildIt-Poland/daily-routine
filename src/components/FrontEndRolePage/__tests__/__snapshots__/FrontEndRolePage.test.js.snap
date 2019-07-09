@@ -8,17 +8,15 @@ exports[`COMPONENT - FrontEndRolePage renders correctly 1`] = `
     label="Front End Engineer"
   />
   <Section>
-    <Content
-      narrow={true}
-    >
-      <Fox
-        pose="default"
-      />
+    <RoleContent>
       <QuoteBubble
         noCopyToClipboard={true}
         variant="thought"
       />
-    </Content>
+      <Fox
+        pose="default"
+      />
+    </RoleContent>
   </Section>
   <ActionButtons
     role="frontend"

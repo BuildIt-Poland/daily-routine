@@ -2,12 +2,10 @@
 
 exports[`COMPONENT - Characters Whale AnimatedWhaleShadow renders correctly 1`] = `
 .c0 {
-  -webkit-animation: llvVXa 5s ease-in-out infinite;
-  animation: llvVXa 5s ease-in-out infinite;
+  -webkit-animation: hRugcT 5s ease-in-out infinite;
+  animation: hRugcT 5s ease-in-out infinite;
   position: absolute;
-  -webkit-transform: translateY(280px);
-  -ms-transform: translateY(280px);
-  transform: translateY(280px);
+  top: 22rem;
 }
 
 <svg

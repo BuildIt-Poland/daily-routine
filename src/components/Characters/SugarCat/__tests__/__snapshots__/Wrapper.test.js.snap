@@ -5,6 +5,7 @@ exports[`COMPONENT - Characters SugarCat Wrapper renders correctly 1`] = `
   position: relative;
   margin: 4rem auto 0 auto;
   width: 28rem;
+  padding-bottom: 2rem;
 }
 
 <div

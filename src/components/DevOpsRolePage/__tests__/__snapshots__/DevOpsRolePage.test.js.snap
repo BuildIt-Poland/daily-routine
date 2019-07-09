@@ -8,17 +8,15 @@ exports[`COMPONENT - DevOpsRolePage renders correctly for /devops path 1`] = `
     label="Dev Ops"
   />
   <Section>
-    <Content
-      narrow={true}
-    >
-      <Whale
-        pose="default"
-      />
+    <RoleContent>
       <QuoteBubble
         noCopyToClipboard={true}
         variant="thought"
       />
-    </Content>
+      <Whale
+        pose="default"
+      />
+    </RoleContent>
   </Section>
   <ActionButtons
     role="devops"
@@ -34,16 +32,14 @@ exports[`COMPONENT - DevOpsRolePage renders correctly for /devops/brag path 1`] 
     label="Dev Ops"
   />
   <Section>
-    <Content
-      narrow={true}
-    >
+    <RoleContent>
+      <QuoteBubble
+        quote="Yesterday I was implementing PUT method for missing RESTful API endpoint with complex database transations. Also added experimental fundamental interface. I think we are missing some good ol' lorem ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit..."
+      />
       <Whale
         pose="brag"
       />
-      <QuoteBubble
-        quote="Yesterday I was implementing PUT method for missing RESTful API endpoint."
-      />
-    </Content>
+    </RoleContent>
   </Section>
   <ActionButtons
     role="devops"
@@ -59,16 +55,14 @@ exports[`COMPONENT - DevOpsRolePage renders correctly for /devops/confess path 1
     label="Dev Ops"
   />
   <Section>
-    <Content
-      narrow={true}
-    >
-      <Whale
-        pose="confess"
-      />
+    <RoleContent>
       <QuoteBubble
         quote="Yesterday I was implementing PUT method for missing RESTful API endpoint."
       />
-    </Content>
+      <Whale
+        pose="confess"
+      />
+    </RoleContent>
   </Section>
   <ActionButtons
     role="devops"

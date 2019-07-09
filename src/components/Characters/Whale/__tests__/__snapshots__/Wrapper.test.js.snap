@@ -2,10 +2,16 @@
 
 exports[`COMPONENT - Characters Whale FloatingAnimationWrapper renders correctly 1`] = `
 .c0 {
-  padding: 7.8rem 0 3rem 0;
+  padding: 0 0 3rem 0;
   position: relative;
   -webkit-animation: jlnLhl 5s ease-in-out infinite;
   animation: jlnLhl 5s ease-in-out infinite;
+}
+
+@media (max-width:26.25em) {
+  .c0 {
+    padding-bottom: 0;
+  }
 }
 
 <div

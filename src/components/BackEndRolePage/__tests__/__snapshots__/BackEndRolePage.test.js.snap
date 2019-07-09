@@ -8,17 +8,15 @@ exports[`COMPONENT - BackEndRolePage renders correctly for /backend path 1`] = `
     label="Back End Developer"
   />
   <Section>
-    <Content
-      narrow={true}
-    >
-      <Robot
-        pose="default"
-      />
+    <RoleContent>
       <QuoteBubble
         noCopyToClipboard={true}
         variant="thought"
       />
-    </Content>
+      <Robot
+        pose="default"
+      />
+    </RoleContent>
   </Section>
   <ActionButtons
     role="backend"
@@ -34,16 +32,14 @@ exports[`COMPONENT - BackEndRolePage renders correctly for /backend/brag path 1`
     label="Back End Developer"
   />
   <Section>
-    <Content
-      narrow={true}
-    >
+    <RoleContent>
+      <QuoteBubble
+        quote="Yesterday I was implementing PUT method for missing RESTful API endpoint with complex database transations. Also added experimental fundamental interface. I think we are missing some good ol' lorem ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit..."
+      />
       <Robot
         pose="brag"
       />
-      <QuoteBubble
-        quote="Yesterday I was implementing PUT method for missing RESTful API endpoint."
-      />
-    </Content>
+    </RoleContent>
   </Section>
   <ActionButtons
     role="backend"
@@ -59,16 +55,14 @@ exports[`COMPONENT - BackEndRolePage renders correctly for /backend/confess path
     label="Back End Developer"
   />
   <Section>
-    <Content
-      narrow={true}
-    >
-      <Robot
-        pose="confess"
-      />
+    <RoleContent>
       <QuoteBubble
         quote="Yesterday I was implementing PUT method for missing RESTful API endpoint."
       />
-    </Content>
+      <Robot
+        pose="confess"
+      />
+    </RoleContent>
   </Section>
   <ActionButtons
     role="backend"

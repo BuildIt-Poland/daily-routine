@@ -1,97 +1,113 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`COMPONENT - Characters Robot renders confusion marks and flower if female whale is in default pose 1`] = `
-Array [
-  <AnimatedWhaleShadow />,
-  .c0 {
-  padding: 7.8rem 0 3rem 0;
+.c0 {
+  padding: 0 0 3rem 0;
   position: relative;
   -webkit-animation: jlnLhl 5s ease-in-out infinite;
   animation: jlnLhl 5s ease-in-out infinite;
 }
 
+@media (max-width:26.25em) {
+  .c0 {
+    padding-bottom: 0;
+  }
+}
+
 <div
-    className="c0"
-  >
-    <WhaleArtwork
-      pose="default"
-    />
-    <ConfusionMarks />
-    <GenderFlower
-      isVisible={true}
-    />
-  </div>,
-]
+  className="c0"
+>
+  <AnimatedWhaleShadow />
+  <WhaleArtwork
+    pose="default"
+  />
+  <ConfusionMarks />
+  <GenderFlower
+    isVisible={true}
+  />
+</div>
 `;
 
 exports[`COMPONENT - Characters Robot renders confusion marks if whale is in default pose 1`] = `
-Array [
-  <AnimatedWhaleShadow />,
-  .c0 {
-  padding: 7.8rem 0 3rem 0;
+.c0 {
+  padding: 0 0 3rem 0;
   position: relative;
   -webkit-animation: jlnLhl 5s ease-in-out infinite;
   animation: jlnLhl 5s ease-in-out infinite;
 }
 
+@media (max-width:26.25em) {
+  .c0 {
+    padding-bottom: 0;
+  }
+}
+
 <div
-    className="c0"
-  >
-    <WhaleArtwork
-      pose="default"
-    />
-    <ConfusionMarks />
-    <GenderFlower
-      isVisible={false}
-    />
-  </div>,
-]
+  className="c0"
+>
+  <AnimatedWhaleShadow />
+  <WhaleArtwork
+    pose="default"
+  />
+  <ConfusionMarks />
+  <GenderFlower
+    isVisible={false}
+  />
+</div>
 `;
 
 exports[`COMPONENT - Characters Robot renders correctly with default props 1`] = `
-Array [
-  <AnimatedWhaleShadow />,
-  .c0 {
-  padding: 7.8rem 0 3rem 0;
+.c0 {
+  padding: 0 0 3rem 0;
   position: relative;
   -webkit-animation: jlnLhl 5s ease-in-out infinite;
   animation: jlnLhl 5s ease-in-out infinite;
 }
 
+@media (max-width:26.25em) {
+  .c0 {
+    padding-bottom: 0;
+  }
+}
+
 <div
-    className="c0"
-  >
-    <WhaleArtwork
-      pose="default"
-    />
-    <ConfusionMarks />
-    <GenderFlower
-      isVisible={false}
-    />
-  </div>,
-]
+  className="c0"
+>
+  <AnimatedWhaleShadow />
+  <WhaleArtwork
+    pose="default"
+  />
+  <ConfusionMarks />
+  <GenderFlower
+    isVisible={false}
+  />
+</div>
 `;
 
 exports[`COMPONENT - Characters Robot renders flower if female gender is passed 1`] = `
-Array [
-  <AnimatedWhaleShadow />,
-  .c0 {
-  padding: 7.8rem 0 3rem 0;
+.c0 {
+  padding: 0 0 3rem 0;
   position: relative;
   -webkit-animation: jlnLhl 5s ease-in-out infinite;
   animation: jlnLhl 5s ease-in-out infinite;
 }
 
+@media (max-width:26.25em) {
+  .c0 {
+    padding-bottom: 0;
+  }
+}
+
 <div
-    className="c0"
-  >
-    <WhaleArtwork
-      pose="default"
-    />
-    <ConfusionMarks />
-    <GenderFlower
-      isVisible={true}
-    />
-  </div>,
-]
+  className="c0"
+>
+  <AnimatedWhaleShadow />
+  <WhaleArtwork
+    pose="default"
+  />
+  <ConfusionMarks />
+  <GenderFlower
+    isVisible={true}
+  />
+</div>
 `;

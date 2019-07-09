@@ -11,7 +11,7 @@ jest.mock('../../ActionButtons', () => 'ActionButtons');
 jest.mock('../../RoleBar', () => 'RoleBar');
 jest.mock('../../QuoteBubble', () => 'QuoteBubble');
 jest.mock('../../Page', () => 'Page');
-jest.mock('../../Content', () => 'Content');
+jest.mock('../../RoleContent', () => 'RoleContent');
 jest.mock('../../Section', () => 'Section');
 
 describe('COMPONENT - DevOpsRolePage', () => {
