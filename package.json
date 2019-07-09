@@ -56,6 +56,13 @@
       "import"
     ],
     "rules": {
+      "no-unused-vars": [
+        "error",
+        {
+          "varsIgnorePattern": "_",
+          "argsIgnorePattern": "_"
+        }
+      ],
       "no-console": [
         "error"
       ],
