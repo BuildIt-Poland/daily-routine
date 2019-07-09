@@ -3,7 +3,7 @@ import { create } from 'react-test-renderer';
 
 import ConfusionMarks from '../ConfusionMarks';
 
-jest.mock('../../ConfusionMarks', () => 'ConfusionMarks');
+jest.mock('../../CharactersDecors/ConfusionMarks', () => 'ConfusionMarks');
 
 describe('COMPONENT - Characters Robot GenderFlower', () => {
   it('renders correctly', () => {
