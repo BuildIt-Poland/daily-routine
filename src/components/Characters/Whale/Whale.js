@@ -15,8 +15,8 @@ function Whale({ pose = DEFAULT }) {
 
   return (
     <>
-      <AnimatedWhaleShadow />
       <FloatingAnimationWrapper>
+        <AnimatedWhaleShadow />
         <WhaleArtwork pose={pose} />
         {pose === DEFAULT && <ConfusionMarks />}
         <GenderFlower isVisible={gender === FEMALE} />

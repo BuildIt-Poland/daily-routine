@@ -21,8 +21,8 @@ function QuoteBubble({ quote = DEFAULT_QUOTE, variant = SPEECH, noCopyToClipboar
 
   return (
     <Wrapper>
-      <Quote>{quote}</Quote>
       {!noCopyToClipboard && <CopyButton onCopy={onCopy} />}
+      <Quote>{quote}</Quote>
       <BubbleTail variant={variant} />
     </Wrapper>
   );

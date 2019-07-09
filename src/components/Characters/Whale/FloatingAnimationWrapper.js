@@ -1,5 +1,6 @@
 import styled, { keyframes } from 'styled-components';
 
+import media from '../../../styles/media';
 import { spacingLarge } from '../../../styles/designTokens';
 
 const floatingAnimation = keyframes`
@@ -9,9 +10,13 @@ const floatingAnimation = keyframes`
 `;
 
 const FloatingAnimationWrapper = styled.div`
-  padding: 7.8rem 0 ${spacingLarge} 0;
+  padding: 0 0 ${spacingLarge} 0;
   position: relative;
   animation: ${floatingAnimation} 5s ease-in-out infinite;
+
+  ${media.phone`
+    padding-bottom: 0;
+  `};
 `;
 
 export default FloatingAnimationWrapper;

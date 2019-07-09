@@ -13,6 +13,3 @@ export { default as BuilditLogo } from './BuilditLogo';
 export { default as LongArrow } from './LongArrow';
 export { default as Lightbulb } from './Lightbulb';
 export { default as SaltGrinder } from './SaltGrinder';
-
-// Speech bubble
-export { default as SpeechBubble } from './SpeechBubble';

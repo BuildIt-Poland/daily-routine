@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import GenderFlowerBase from '../GenderFlower';
 
 const GenderFlower = styled(GenderFlowerBase)`
-  top: 13.6rem;
+  top: 5.6rem;
   left: 8rem;
 `;
 

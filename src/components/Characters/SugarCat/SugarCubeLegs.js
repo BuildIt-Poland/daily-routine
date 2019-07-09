@@ -18,14 +18,14 @@ const rightLegWaveAnimation = keyframes`
 
 const SugarCubeLeftLeg = styled(SugarCubeLeftLegArtwork)`
   position: absolute;
-  bottom: 0.1rem;
+  bottom: 2.1rem;
   left: 23rem;
   animation: ${rightLegWaveAnimation} 2.5s ease-in-out -0.3s infinite;
 `;
 
 const SugarCubeRightLeg = styled(SugarCubeRightLegArtwork)`
   position: absolute;
-  bottom: 0;
+  bottom: 2rem;
   left: 23.8rem;
   animation: ${leftLegWaveAnimation} 2.5s ease-in-out infinite;
 `;
