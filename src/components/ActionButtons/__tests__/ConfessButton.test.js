@@ -8,27 +8,20 @@ import ConfessButton from '../ConfessButton';
 afterEach(cleanup);
 
 describe('COMPONENT - RoleButton ConfessButton', () => {
-  it('should contain text `Confess my mistake`', () => {
+  it('should contain proper elements', () => {
     const { container } = render(
       <MemoryRouter initialEntries={['/']}>
         <ConfessButton role={FRONT_END_ROLE} />
       </MemoryRouter>
     );
 
-    expect(container.querySelector('a')).toHaveTextContent('Confess my mistake');
+    const confessButton = container.querySelector('a');
+
+    expect(confessButton).toHaveTextContent('Confess my mistake');
+    expect(confessButton.contains(confessButton.querySelector('svg'))).toBe(true);
   });
 
-  it('should contain `svg` element', () => {
-    const { container } = render(
-      <MemoryRouter initialEntries={['/']}>
-        <ConfessButton role={FRONT_END_ROLE} />
-      </MemoryRouter>
-    );
-
-    expect(container.contains(container.querySelector('svg'))).toBe(true);
-  });
-
-  it('after once click should change text to `Confess again`', () => {
+  it('after a click text should change to `Confess again`', () => {
     const { container } = render(
       <MemoryRouter initialEntries={['/']}>
         <ConfessButton role={FRONT_END_ROLE} />

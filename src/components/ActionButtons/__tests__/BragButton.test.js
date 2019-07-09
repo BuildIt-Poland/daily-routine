@@ -8,28 +8,20 @@ import BragButton from '../BragButton';
 afterEach(cleanup);
 
 describe('COMPONENT - RoleButton BragButton', () => {
-  it('should contain text `Brag about my efforts`', () => {
-    const { container } = render(
-      <MemoryRouter initialEntries={['/']}>
-        <BragButton role={FRONT_END_ROLE} />
-        tl goo
-      </MemoryRouter>
-    );
-
-    expect(container.querySelector('a')).toHaveTextContent('Brag about my efforts');
-  });
-
-  it('should contain `svg` element', () => {
+  it('should contain proper elements', () => {
     const { container } = render(
       <MemoryRouter initialEntries={['/']}>
         <BragButton role={FRONT_END_ROLE} />
       </MemoryRouter>
     );
 
-    expect(container.contains(container.querySelector('svg'))).toBe(true);
+    const bragButton = container.querySelector('a');
+
+    expect(bragButton).toHaveTextContent('Brag about my efforts');
+    expect(bragButton.contains(bragButton.querySelector('svg'))).toBe(true);
   });
 
-  it('after once click should change text to `Brag more`', () => {
+  it('after a click text should change to `Brag more`', () => {
     const { container } = render(
       <MemoryRouter initialEntries={['/']}>
         <BragButton role={FRONT_END_ROLE} />
