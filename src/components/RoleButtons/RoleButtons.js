@@ -1,4 +1,4 @@
-// Set of links to vsrious roles
+// Set of links to various roles
 
 import React from 'react';
 
