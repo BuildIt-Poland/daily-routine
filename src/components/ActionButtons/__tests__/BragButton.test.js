@@ -36,10 +36,10 @@ describe('COMPONENT - RoleButton BragButton', () => {
       </MemoryRouter>
     );
 
-    const confessButton = container.querySelector('a');
+    const bragButton = container.querySelector('a');
 
-    fireEvent.click(confessButton);
+    fireEvent.click(bragButton);
 
-    expect(confessButton).toHaveTextContent('Brag more');
+    expect(bragButton).toHaveTextContent('Brag more');
   });
 });
