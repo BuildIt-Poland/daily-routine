@@ -22,4 +22,4 @@ Please include full role quote
 
 - Every contributor can vote with :thumbsup: or :thumbsdown: for role quotes
 - Quote pull request needs to have at lest 51% of :thumbsup: votes to be merged
-- GitHub approve is responsible only for code correctness :white_check_mark:
+- Pull Request will be approved after successful voting :white_check_mark:
