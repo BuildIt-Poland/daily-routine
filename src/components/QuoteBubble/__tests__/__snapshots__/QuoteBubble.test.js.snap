@@ -20,7 +20,7 @@ exports[`COMPONENT - QuoteBubble renders correct defaults when no props are prov
     variant="speech"
   />
   <CopyButton
-    onCopy={[Function]}
+    valueToCopy="Daily in 5 minutes and I'm still not sure what to say..."
   />
 </Wrapper>
 `;
@@ -45,7 +45,7 @@ exports[`COMPONENT - QuoteBubble renders custom quote 1`] = `
     variant="speech"
   />
   <CopyButton
-    onCopy={[Function]}
+    valueToCopy="Hello! I'm Taylor Swift!"
   />
 </Wrapper>
 `;

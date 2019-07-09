@@ -10,20 +10,12 @@ import Quote from './Quote';
 
 const DEFAULT_QUOTE = "Daily in 5 minutes and I'm still not sure what to say...";
 
-function copyTextFromBubble(text) {
-  navigator.clipboard.writeText(text);
-}
-
 function QuoteBubble({ quote = DEFAULT_QUOTE, variant = SPEECH, noCopyToClipboard = false }) {
-  const onCopy = () => {
-    copyTextFromBubble(quote);
-  };
-
   return (
     <Wrapper>
       <Quote>{quote}</Quote>
       <SpeechBubble variant={variant} />
-      {!noCopyToClipboard && <CopyButton onCopy={onCopy} />}
+      {!noCopyToClipboard && <CopyButton valueToCopy={quote} />}
     </Wrapper>
   );
 }
