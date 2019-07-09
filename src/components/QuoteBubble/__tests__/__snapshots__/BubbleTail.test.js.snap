@@ -9,7 +9,7 @@ exports[`COMPONENT - QuoteBubble BubbleTail renders correctly when 'speech' vari
 
 @media (max-width:26.25em) {
   .c0 {
-    left: 33.33%;
+    left: 50%;
   }
 }
 
@@ -36,7 +36,7 @@ exports[`COMPONENT - QuoteBubble BubbleTail renders correctly when 'thought' var
 
 @media (max-width:26.25em) {
   .c0 {
-    left: 33.33%;
+    left: 50%;
   }
 }
 
