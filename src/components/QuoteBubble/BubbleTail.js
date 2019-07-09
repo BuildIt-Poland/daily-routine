@@ -30,7 +30,7 @@ const BubbleTail = styled(BubbleTailArtwork)`
   left: 10%;
 
   ${media.phone`
-    left: 33.33%;
+    left: 50%;
   `}
 `;
 
