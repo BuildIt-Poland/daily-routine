@@ -2,8 +2,10 @@
 
 exports[`COMPONENT - Characters Fox Wrapper renders correctly 1`] = `
 .c0 {
-  padding: 3rem 0 3rem 0;
+  padding: 0;
+  padding-bottom: 3rem;
   position: relative;
+  padding-top: 3rem;
 }
 
 @media (max-width:26.25em) {

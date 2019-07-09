@@ -5,7 +5,7 @@ exports[`COMPONENT - Characters SugarCat renders correctly 1`] = `
   position: relative;
   margin: 4rem auto 0 auto;
   width: 28rem;
-  padding-bottom: 2rem;
+  padding: 2rem 0;
 }
 
 .c1 {
@@ -22,6 +22,12 @@ exports[`COMPONENT - Characters SugarCat renders correctly 1`] = `
   left: 23.8rem;
   -webkit-animation: cpXlhx 2.5s ease-in-out infinite;
   animation: cpXlhx 2.5s ease-in-out infinite;
+}
+
+@media (max-width:26.25em) {
+  .c0 {
+    padding-top: 0;
+  }
 }
 
 <div

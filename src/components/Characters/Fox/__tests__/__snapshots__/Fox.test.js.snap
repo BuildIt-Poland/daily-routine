@@ -2,8 +2,10 @@
 
 exports[`COMPONENT - Characters Robot renders confusion marks and flower if female fox is in default pose 1`] = `
 .c0 {
-  padding: 3rem 0 3rem 0;
+  padding: 0;
+  padding-bottom: 3rem;
   position: relative;
+  padding-top: 3rem;
 }
 
 @media (max-width:26.25em) {
@@ -27,8 +29,10 @@ exports[`COMPONENT - Characters Robot renders confusion marks and flower if fema
 
 exports[`COMPONENT - Characters Robot renders confusion marks if fox is in default pose 1`] = `
 .c0 {
-  padding: 3rem 0 3rem 0;
+  padding: 0;
+  padding-bottom: 3rem;
   position: relative;
+  padding-top: 3rem;
 }
 
 @media (max-width:26.25em) {
@@ -52,8 +56,10 @@ exports[`COMPONENT - Characters Robot renders confusion marks if fox is in defau
 
 exports[`COMPONENT - Characters Robot renders correctly with default props 1`] = `
 .c0 {
-  padding: 3rem 0 3rem 0;
+  padding: 0;
+  padding-bottom: 3rem;
   position: relative;
+  padding-top: 3rem;
 }
 
 @media (max-width:26.25em) {
@@ -77,8 +83,10 @@ exports[`COMPONENT - Characters Robot renders correctly with default props 1`] =
 
 exports[`COMPONENT - Characters Robot renders flower if female gender is passed 1`] = `
 .c0 {
-  padding: 3rem 0 3rem 0;
+  padding: 0;
+  padding-bottom: 3rem;
   position: relative;
+  padding-top: 3rem;
 }
 
 @media (max-width:26.25em) {

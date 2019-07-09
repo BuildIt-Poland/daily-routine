@@ -1,11 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`COMPONENT - Characters Robot Wrapper renders correctly 1`] = `
+exports[`COMPONENT - Characters CharacterWrapper renders correctly 1`] = `
 .c0 {
   padding: 0;
   padding-bottom: 3rem;
   position: relative;
-  padding-top: 0.4rem;
 }
 
 @media (max-width:26.25em) {
