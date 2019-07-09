@@ -18,7 +18,7 @@ describe('COMPONENT - RoleButton BragButton', () => {
     const bragButton = container.querySelector('a');
 
     expect(bragButton).toHaveTextContent('Brag about my efforts');
-    expect(bragButton.contains(bragButton.querySelector('svg'))).toBe(true);
+    expect(bragButton.contains(bragButton.querySelector('svg'))).toBeDefined();
   });
 
   it('after a click text should change to `Brag more`', () => {
