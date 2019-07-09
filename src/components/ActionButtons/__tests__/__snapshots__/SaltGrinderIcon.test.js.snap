@@ -4,14 +4,14 @@ exports[`COMPONENT - ActionButtons SaltGrinderIcon renders correctly 1`] = `
 .c0 {
   width: 8.8rem;
   position: absolute;
-  top: -0.9rem;
+  bottom: -0.9rem;
   right: -0.6rem;
 }
 
 @media (max-width:26.25em) {
   .c0 {
     width: 6.6rem;
-    top: -0.9rem;
+    bottom: -0.9rem;
     right: 0.4rem;
   }
 }
