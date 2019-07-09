@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 import { CopyCards } from '../Icons';
 import HitboxBase from '../Hitbox';
@@ -11,16 +12,18 @@ const Hitbox = styled(HitboxBase)`
   right: 0;
 `;
 
-function CopyButton({ onCopy }) {
+function CopyButton({ valueToCopy }) {
   return (
-    <Hitbox onClick={onCopy}>
-      <CopyCards />
-    </Hitbox>
+    <CopyToClipboard text={valueToCopy}>
+      <Hitbox>
+        <CopyCards />
+      </Hitbox>
+    </CopyToClipboard>
   );
 }
 
 CopyButton.propTypes = {
-  onCopy: PropTypes.func.isRequired
+  valueToCopy: PropTypes.string.isRequired
 };
 
 export default CopyButton;

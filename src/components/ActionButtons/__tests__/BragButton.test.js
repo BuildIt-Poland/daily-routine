@@ -1,18 +1,37 @@
 import React from 'react';
-import { create } from 'react-test-renderer';
+import { MemoryRouter } from 'react-router-dom';
+import { render, fireEvent, cleanup } from '@testing-library/react';
 
 import { FRONT_END_ROLE } from '../../../constants/roles';
 import BragButton from '../BragButton';
 
-jest.mock('react-router-dom', () => ({
-  Link: 'Link'
-}));
-jest.mock('../LightbulbIcon', () => () => 'LightbulbIcon');
+afterEach(cleanup);
 
 describe('COMPONENT - RoleButton BragButton', () => {
-  it('renders correctly', () => {
-    const component = create(<BragButton role={FRONT_END_ROLE} />);
+  it('should contain proper elements', () => {
+    const { container } = render(
+      <MemoryRouter initialEntries={['/']}>
+        <BragButton role={FRONT_END_ROLE} />
+      </MemoryRouter>
+    );
 
-    expect(component.toJSON()).toMatchSnapshot();
+    const bragButton = container.querySelector('a');
+
+    expect(bragButton).toHaveTextContent('Brag about my efforts');
+    expect(bragButton.contains(bragButton.querySelector('svg'))).toBe(true);
+  });
+
+  it('after a click text should change to `Brag more`', () => {
+    const { container } = render(
+      <MemoryRouter initialEntries={['/']}>
+        <BragButton role={FRONT_END_ROLE} />
+      </MemoryRouter>
+    );
+
+    const bragButton = container.querySelector('a');
+
+    fireEvent.click(bragButton);
+
+    expect(bragButton).toHaveTextContent('Brag more');
   });
 });

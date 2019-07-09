@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import GenderFlowerBase from '../GenderFlower';
+import GenderFlowerBase from '../CharactersDecors/GenderFlower';
 
 const GenderFlower = styled(GenderFlowerBase)`
   top: -1rem;

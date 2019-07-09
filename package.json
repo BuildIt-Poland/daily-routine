@@ -18,7 +18,9 @@
     "deploy": "node ./deploy.js"
   },
   "dependencies": {
+    "lodash.sample": "4.2.1",
     "react": "16.8.6",
+    "react-copy-to-clipboard": "5.0.1",
     "react-dom": "16.8.6",
     "react-router-dom": "5.0.1",
     "react-scripts": "3.0.1",
@@ -55,6 +57,13 @@
       "import"
     ],
     "rules": {
+      "no-unused-vars": [
+        "error",
+        {
+          "varsIgnorePattern": "_",
+          "argsIgnorePattern": "_"
+        }
+      ],
       "no-console": [
         "error"
       ],

@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`COMPONENT - Characters Tear renders correctly 1`] = `
+.c0 {
+  position: absolute;
+  z-index: 10;
+  -webkit-transform-origin: top;
+  -ms-transform-origin: top;
+  transform-origin: top;
+}
+
+<span
+  className="c0"
+  style={
+    Object {
+      "opacity": 0,
+      "transform": "scale(0)",
+    }
+  }
+>
+  <svg
+    height="11"
+    viewBox="0 0 6 11"
+    width="6"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M2.984.17c-1.799 3.452-4.811 10.66-.049 10.66 4.9 0 1.971-7.208.049-10.66z"
+      fill="#fff"
+    />
+  </svg>
+</span>
+`;
