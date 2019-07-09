@@ -1,10 +1,9 @@
 import React from 'react';
-
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-
 import { animated, useTransition } from 'react-spring';
-import { zIndexArtworkMainDecor } from '../../styles/designTokens';
+
+import { zIndexArtworkMainDecor } from './../../../styles/designTokens';
 
 const Wrapper = styled(animated.span)`
   position: absolute;

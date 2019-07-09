@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { useSpring, animated } from 'react-spring';
 
-import { zIndexArtworkSecondaryDecor } from '../../styles/designTokens';
+import { zIndexArtworkSecondaryDecor } from '../../../styles/designTokens';
 
 const Wrapper = styled(animated.span)`
   position: absolute;

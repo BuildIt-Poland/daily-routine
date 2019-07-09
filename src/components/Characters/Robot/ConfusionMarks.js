@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import ConfusionMarksBase from '../ConfusionMarks';
+import ConfusionMarksBase from '../CharactersDecors/ConfusionMarks';
 
 const ConfusionMarks = styled(ConfusionMarksBase)`
   top: 4.8rem;
