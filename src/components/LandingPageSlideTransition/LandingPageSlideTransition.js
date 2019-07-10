@@ -60,6 +60,6 @@ HomePageAnimation.propTypes = {
 };
 
 export default function LandingPageSlideTransition() {
-  const { isAnimated, stopAnimation } = useContext(LandingPageAnimationContext);
-  return isAnimated && <HomePageAnimation onFinished={stopAnimation} />;
+  const { isAnimating, stopAnimation } = useContext(LandingPageAnimationContext);
+  return isAnimating && <HomePageAnimation onFinished={stopAnimation} />;
 }

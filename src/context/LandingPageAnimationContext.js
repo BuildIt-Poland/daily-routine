@@ -14,29 +14,17 @@ function LandingPageAnimationProvider({ children, history }) {
   }
 
   function animateAndRedirect(redirectUrl) {
-    toggleAnimation(state => ({
-      ...state,
-      isAnimated: true
-    }));
+    setIsAnimating(true);
     redirectWithDelay(redirectUrl);
   }
 
   function stopAnimation() {
-    toggleAnimation(state => ({
-      ...state,
-      isAnimated: false
-    }));
+    setIsAnimating(false);
   }
 
-  const initialState = {
-    isAnimated: false,
-    animateAndRedirect,
-    stopAnimation
-  };
+  const [isAnimating, setIsAnimating] = useState(false);
 
-  const [animation, toggleAnimation] = useState(initialState);
-
-  return <Provider value={animation}>{children}</Provider>;
+  return <Provider value={{ isAnimating, animateAndRedirect, stopAnimation }}>{children}</Provider>;
 }
 
 LandingPageAnimationProvider.propTypes = {
