@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { animated, useSpring } from 'react-spring';
 import { colorDarkBlue, colorWhite, zIndexModalOverlay } from '../../styles/designTokens';
 import { LandingPageAnimationContext } from '../../context/LandingPageAnimationContext';
+
 function HomePageAnimation({ onFinished }) {
   const windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
 
@@ -16,40 +17,40 @@ function HomePageAnimation({ onFinished }) {
     display: 'block'
   };
 
-  const slideAnimationStyles = {
-    firstLayer: useSpring({
-      from: { ...baseStyles, background: colorWhite },
-      to: async next => {
-        await next({ ...baseStyles, top: windowHeight });
-      },
-      config: { mass: 1, tension: 200, friction: 1, duration: 900 },
-      delay: 0
-    }),
-    secondLayer: useSpring({
-      from: { ...baseStyles, background: colorDarkBlue, top: -windowHeight / 2, height: windowHeight / 3 },
-      to: async next => {
-        await next({ ...baseStyles, top: windowHeight });
-      },
-      config: { mass: 1, tension: 80, friction: 10, duration: 700 },
-      delay: 1000,
-      // onFinished needs to be called on the last animated element (secondLayer finishes last)
-      onRest: onFinished
-    }),
-    thirdLayer: useSpring({
-      from: { ...baseStyles, background: colorWhite, top: -windowHeight / 4, height: windowHeight / 4 },
-      to: async next => {
-        await next({ ...baseStyles, top: windowHeight });
-      },
-      config: { mass: 1, tension: 120, friction: 40, duration: 800 },
-      delay: 800
-    })
-  };
+  const firstLayerAnimationStyles = useSpring({
+    from: { ...baseStyles, background: colorWhite },
+    to: async next => {
+      await next({ ...baseStyles, top: windowHeight });
+    },
+    config: { mass: 1, tension: 200, friction: 1, duration: 900 },
+    delay: 0
+  });
+
+  const secondLayerAnimationStyles = useSpring({
+    from: { ...baseStyles, background: colorDarkBlue, top: -windowHeight / 2, height: windowHeight / 3 },
+    to: async next => {
+      await next({ ...baseStyles, top: windowHeight });
+    },
+    config: { mass: 1, tension: 80, friction: 10, duration: 700 },
+    delay: 1000,
+    // onFinished needs to be called on the last animated element (secondLayer finishes last)
+    onRest: onFinished
+  });
+
+  const thirdLayerAnimationStyles = useSpring({
+    from: { ...baseStyles, background: colorWhite, top: -windowHeight / 4, height: windowHeight / 4 },
+    to: async next => {
+      await next({ ...baseStyles, top: windowHeight });
+    },
+    config: { mass: 1, tension: 120, friction: 40, duration: 800 },
+    delay: 800
+  });
 
   return (
     <>
-      <animated.div style={slideAnimationStyles.firstLayer} />
-      <animated.div style={slideAnimationStyles.secondLayer} />
-      <animated.div style={slideAnimationStyles.thirdLayer} />
+      <animated.div style={firstLayerAnimationStyles} />
+      <animated.div style={secondLayerAnimationStyles} />
+      <animated.div style={thirdLayerAnimationStyles} />
     </>
   );
 }
