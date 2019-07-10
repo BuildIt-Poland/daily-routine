@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
 import { Route, withRouter } from 'react-router-dom';
 
@@ -12,31 +13,36 @@ import LandingPage from '../LandingPage';
 import FrontEndRolePage from '../FrontEndRolePage';
 import BackEndRolePage from '../BackEndRolePage';
 import DevOpsRolePage from '../DevOpsRolePage';
+import { LandingPageAnimationProvider } from '../../context/LandingPageAnimationContext';
+import { ROOT_PATH } from '../../constants/routes';
+import LandingPageSlideTransition from '../LandingPageSlideTransition/LandingPageSlideTransition';
 import AnimatedWrapper from './AnimatedWrapper';
 
-const ROOT_PATH = '/';
-
-function App({ location }) {
+function App({ location, history }) {
   return (
-    <GenderProvider>
-      <ThemeProvider theme={generateTheme(location.pathname)}>
-        <AnimatedWrapper location={location}>
-          <AppBar />
-          <main>
-            <Route exact path={ROOT_PATH} component={LandingPage} />
-            <Route path={`/${FRONT_END_ROLE}`} component={FrontEndRolePage} />
-            <Route path={`/${BACK_END_ROLE}`} component={BackEndRolePage} />
-            <Route path={`/${DEV_OPS_ROLE}`} component={DevOpsRolePage} />
-          </main>
-          <Footer />
-        </AnimatedWrapper>
-      </ThemeProvider>
-    </GenderProvider>
+    <LandingPageAnimationProvider history={history}>
+      <LandingPageSlideTransition />
+      <GenderProvider>
+        <ThemeProvider theme={generateTheme(location.pathname)}>
+          <AnimatedWrapper location={location}>
+            <AppBar />
+            <main>
+              <Route exact path={ROOT_PATH} component={LandingPage} />
+              <Route path={`/${FRONT_END_ROLE}`} component={FrontEndRolePage} />
+              <Route path={`/${BACK_END_ROLE}`} component={BackEndRolePage} />
+              <Route path={`/${DEV_OPS_ROLE}`} component={DevOpsRolePage} />
+            </main>
+            <Footer />
+          </AnimatedWrapper>
+        </ThemeProvider>
+      </GenderProvider>
+    </LandingPageAnimationProvider>
   );
 }
 
 App.propTypes = {
-  location
+  location,
+  history: PropTypes.object
 };
 
 export default withRouter(App);
