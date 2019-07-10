@@ -1,52 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`COMPONENT - LandingPageSlideTransition renders correctly 1`] = `
-Array [
-  <div
-    style={
-      Object {
-        "background": "rgba(255, 255, 255, 1)",
-        "display": "block",
-        "height": 768,
-        "left": "0",
-        "position": "fixed",
-        "top": -768,
-        "width": "100%",
-        "zIndex": 8000,
-      }
-    }
-  />,
-  <div
-    style={
-      Object {
-        "background": "rgba(21, 88, 161, 1)",
-        "display": "block",
-        "height": 256,
-        "left": "0",
-        "position": "fixed",
-        "top": -384,
-        "width": "100%",
-        "zIndex": 8000,
-      }
-    }
-  />,
-  <div
-    style={
-      Object {
-        "background": "rgba(255, 255, 255, 1)",
-        "display": "block",
-        "height": 192,
-        "left": "0",
-        "position": "fixed",
-        "top": -192,
-        "width": "100%",
-        "zIndex": 8000,
-      }
-    }
-  />,
-]
-`;
-
 exports[`COMPONENT - LandingPageSlideTransition renders correctly when "isAnimating" is  "true" 1`] = `
 Array [
   <div
