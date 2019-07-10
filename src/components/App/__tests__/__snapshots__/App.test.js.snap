@@ -85,10 +85,9 @@ exports[`COMPONENT - App renders correctly default route 1`] = `
     location={
       Object {
         "hash": "",
-        "key": "ijrpo4",
+        "key": "utwyk7",
         "pathname": "/",
         "search": "",
-        "state": undefined,
       }
     }
   />

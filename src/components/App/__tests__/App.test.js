@@ -13,8 +13,13 @@ jest.mock('../../Characters', () => ({
 
 describe('COMPONENT - App', () => {
   it('renders correctly default route', () => {
+    const mockLocation = {
+      key: 'utwyk7',
+      pathname: '/'
+    };
+
     const component = create(
-      <MemoryRouter initialEntries={['/']}>
+      <MemoryRouter initialEntries={[mockLocation]}>
         <App />
       </MemoryRouter>
     );
