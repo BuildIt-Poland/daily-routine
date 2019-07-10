@@ -6,7 +6,7 @@ import { colorBlack, spacingSmall, borderWidthThin } from '../../styles/designTo
 import { Logo as LogoIcon } from '../Icons';
 import { LandingPageAnimationContext } from '../../context/LandingPageAnimationContext';
 import { ROOT_PATH } from '../../constants/routes';
-
+import { location } from './../../types';
 const Link = styled(LinkBase)`
   display: flex;
   text-decoration: none;
@@ -31,12 +31,12 @@ const Tagline = styled.p`
   text-transform: uppercase;
 `;
 
-function Logo() {
+function Logo({ location }) {
   const { animateAndRedirect } = useContext(LandingPageAnimationContext);
 
   function handleClick(e) {
     e.preventDefault();
-    if (window.location.pathname !== ROOT_PATH) {
+    if (location.pathname !== ROOT_PATH) {
       animateAndRedirect(ROOT_PATH);
     }
   }
@@ -53,5 +53,9 @@ function Logo() {
     </Link>
   );
 }
+
+Logo.propTypes = {
+  location
+};
 
 export default Logo;
