@@ -81,7 +81,17 @@ exports[`COMPONENT - App renders correctly default route 1`] = `
     }
   }
 >
-  <AppBar />
+  <AppBar
+    location={
+      Object {
+        "hash": "",
+        "key": "ijrpo4",
+        "pathname": "/",
+        "search": "",
+        "state": undefined,
+      }
+    }
+  />
   <main>
     <article
       className="c1 c2"
