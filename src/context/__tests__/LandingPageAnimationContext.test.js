@@ -4,9 +4,7 @@ import { create } from 'react-test-renderer';
 import { LandingPageAnimationProvider } from '../LandingPageAnimationContext';
 
 describe('COMPONENT - LandingPageAnimationProvider', () => {
-  it('renders correctly when "isAnimating" is  "true"', () => {
-    const animateAndRedirect = () => {};
-    const isAnimating = true;
+  it('renders correctly', () => {
     const component = create(<LandingPageAnimationProvider></LandingPageAnimationProvider>);
 
     expect(component.toJSON()).toMatchSnapshot();
