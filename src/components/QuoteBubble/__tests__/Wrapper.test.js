@@ -1,11 +1,11 @@
 import React from 'react';
 import { create } from 'react-test-renderer';
 
-import GenderFlower from '../../CharactersDecors/GenderFlower';
+import Wrapper from '../Wrapper';
 
-describe('COMPONENT - Characters GenderFlower', () => {
+describe('COMPONENT - QuoteBubble Wrapper', () => {
   it('renders correctly', () => {
-    const component = create(<GenderFlower />);
+    const component = create(<Wrapper />);
 
     expect(component.toJSON()).toMatchSnapshot();
   });

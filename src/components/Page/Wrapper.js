@@ -4,7 +4,7 @@ import media from '../../styles/media';
 
 const Wrapper = styled.article`
   display: grid;
-  grid-template-rows: auto minmax(41rem, max-content) 1fr;
+  grid-template-rows: auto minmax(46rem, max-content) 1fr;
   align-content: stretch;
   height: 100%;
 

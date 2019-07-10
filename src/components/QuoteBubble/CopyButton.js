@@ -8,7 +8,7 @@ import HitboxBase from '../Hitbox';
 
 const Hitbox = styled(HitboxBase)`
   position: absolute;
-  top: 5rem;
+  bottom: 0.8rem;
   right: 0;
 `;
 

@@ -5,7 +5,7 @@ exports[`COMPONENT - QuoteBubble doesn't show copy to clipboard button when it's
   <Quote>
     Hello! I'm Taylor Swift!
   </Quote>
-  <SpeechBubble
+  <BubbleTail
     variant="speech"
   />
 </Wrapper>
@@ -16,7 +16,7 @@ exports[`COMPONENT - QuoteBubble renders correct defaults when no props are prov
   <Quote>
     Daily in 5 minutes and I'm still not sure what to say...
   </Quote>
-  <SpeechBubble
+  <BubbleTail
     variant="speech"
   />
   <CopyButton
@@ -30,7 +30,7 @@ exports[`COMPONENT - QuoteBubble renders correctly thought variant of bubble 1`]
   <Quote>
     Hello! I'm Taylor Swift!
   </Quote>
-  <SpeechBubble
+  <BubbleTail
     variant="thought"
   />
 </Wrapper>
@@ -41,7 +41,7 @@ exports[`COMPONENT - QuoteBubble renders custom quote 1`] = `
   <Quote>
     Hello! I'm Taylor Swift!
   </Quote>
-  <SpeechBubble
+  <BubbleTail
     variant="speech"
   />
   <CopyButton

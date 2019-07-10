@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import ConfusionMarksBase from '../CharactersDecors/ConfusionMarks';
 
 const ConfusionMarks = styled(ConfusionMarksBase)`
-  top: 12.6rem;
+  top: -0.8rem;
   left: 6rem;
 `;
 

@@ -8,8 +8,8 @@ import QuoteBubble from '../QuoteBubble';
 function DevOpsDefault() {
   return (
     <>
-      <Whale pose={DEFAULT} />
       <QuoteBubble variant={THOUGHT} noCopyToClipboard />
+      <Whale pose={DEFAULT} />
     </>
   );
 }

@@ -13,7 +13,9 @@ const Wrapper = styled(animated.span)`
 function Tear(props) {
   const animationStyles = useSpring({
     from: { opacity: 0, transform: 'scale(0)' },
-    to: { opacity: 1, transform: 'scale(1.3)' }
+    to: { opacity: 1, transform: 'scale(1.3)' },
+    delay: 200,
+    config: { mass: 1, tension: 180, friction: 12 }
   });
 
   return (

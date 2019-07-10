@@ -8,8 +8,8 @@ import QuoteBubble from '../QuoteBubble';
 function FrontEndDefault() {
   return (
     <>
-      <Fox pose={DEFAULT} />
       <QuoteBubble variant={THOUGHT} noCopyToClipboard />
+      <Fox pose={DEFAULT} />
     </>
   );
 }

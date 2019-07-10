@@ -8,8 +8,8 @@ import QuoteBubble from '../QuoteBubble';
 function BackEndDefault() {
   return (
     <>
-      <Robot pose={DEFAULT} />
       <QuoteBubble variant={THOUGHT} noCopyToClipboard />
+      <Robot pose={DEFAULT} />
     </>
   );
 }

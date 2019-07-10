@@ -13,8 +13,8 @@ const QUOTE = sample(QUOTES);
 function FrontEndConfess() {
   return (
     <>
-      <Fox pose={CONFESS} />
       <QuoteBubble quote={QUOTE} />
+      <Fox pose={CONFESS} />
     </>
   );
 }

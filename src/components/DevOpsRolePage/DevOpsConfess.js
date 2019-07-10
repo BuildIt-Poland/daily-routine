@@ -13,8 +13,8 @@ const QUOTE = sample(QUOTES);
 function DevOpsConfess() {
   return (
     <>
-      <Whale pose={CONFESS} />
       <QuoteBubble quote={QUOTE} />
+      <Whale pose={CONFESS} />
     </>
   );
 }

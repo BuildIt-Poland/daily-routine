@@ -16,8 +16,8 @@ function Whale({ pose = DEFAULT }) {
 
   return (
     <>
-      <AnimatedWhaleShadow />
       <FloatingAnimationWrapper>
+        <AnimatedWhaleShadow />
         <WhaleArtwork pose={pose} />
         {pose === CONFESS && <Tear />}
         {pose === DEFAULT && <ConfusionMarks />}

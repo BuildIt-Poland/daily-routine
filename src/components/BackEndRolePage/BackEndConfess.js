@@ -13,8 +13,8 @@ const QUOTE = sample(QUOTES);
 function BackEndConfess() {
   return (
     <>
-      <Robot pose={CONFESS} />
       <QuoteBubble quote={QUOTE} />
+      <Robot pose={CONFESS} />
     </>
   );
 }

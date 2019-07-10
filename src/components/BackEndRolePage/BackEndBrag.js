@@ -13,8 +13,8 @@ const QUOTE = sample(QUOTES);
 function BackEndBrag() {
   return (
     <>
-      <Robot pose={BRAG} />
       <QuoteBubble quote={QUOTE} />
+      <Robot pose={BRAG} />
     </>
   );
 }

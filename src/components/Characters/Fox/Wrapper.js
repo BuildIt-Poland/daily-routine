@@ -1,10 +1,9 @@
 import styled from 'styled-components';
 
-import { spacingLarge } from '../../../styles/designTokens';
+import CharacterWrapper from '../CharacterWrapper';
 
-const Wrapper = styled.div`
-  padding: 16rem 0 ${spacingLarge} 0;
-  position: relative;
+const Wrapper = styled(CharacterWrapper)`
+  padding-top: 3rem;
 `;
 
 export default Wrapper;

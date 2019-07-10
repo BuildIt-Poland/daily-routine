@@ -1,7 +1,7 @@
 import React from 'react';
 import { create } from 'react-test-renderer';
 
-import Tear from '../../CharactersDecors/Tear';
+import Tear from '../Tear';
 
 describe('COMPONENT - Characters Tear', () => {
   it('renders correctly', () => {
