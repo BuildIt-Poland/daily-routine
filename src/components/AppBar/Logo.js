@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link as LinkBase } from 'react-router-dom';
 import styled from 'styled-components';
 
 import { colorBlack, spacingSmall, borderWidthThin } from '../../styles/designTokens';
 import { Logo as LogoIcon } from '../Icons';
+import { LandingPageAnimationContext } from '../../context/LandingPageAnimationContext';
+import { ROOT_PATH } from '../../constants/routes';
 
 const Link = styled(LinkBase)`
   display: flex;
@@ -30,8 +32,17 @@ const Tagline = styled.p`
 `;
 
 function Logo() {
+  const { animateAndRedirect } = useContext(LandingPageAnimationContext);
+
+  function handleClick(e) {
+    e.preventDefault();
+    if (window.location.pathname !== ROOT_PATH) {
+      animateAndRedirect(ROOT_PATH);
+    }
+  }
+
   return (
-    <Link to="/" data-testid="logo">
+    <Link onClick={handleClick} to={ROOT_PATH} data-testid="logo">
       <LogoWrapper>
         <LogoIcon />
       </LogoWrapper>

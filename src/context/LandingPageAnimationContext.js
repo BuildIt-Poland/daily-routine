@@ -5,7 +5,7 @@ const LandingPageAnimationContext = createContext();
 const { Provider } = LandingPageAnimationContext;
 
 function LandingPageAnimationProvider({ children, history }) {
-  const REDIRECT_DELAY = 1000;
+  const REDIRECT_DELAY = 1300;
 
   function redirectWithDelay(url) {
     setTimeout(() => {
