@@ -6,11 +6,10 @@ import Logo from '../Logo';
 import { LandingPageAnimationContext } from '../../../context/LandingPageAnimationContext';
 import { ROOT_PATH } from '../../../constants/routes';
 
+afterEach(cleanup);
+const animateAndRedirect = jest.fn();
+
 describe('COMPONENT - AppBar Logo', () => {
-  afterEach(cleanup);
-
-  const animateAndRedirect = jest.fn();
-
   it('renders correctly', () => {
     const { getByTestId } = render(
       <LandingPageAnimationContext.Provider value={{ animateAndRedirect }}>
@@ -41,7 +40,7 @@ describe('COMPONENT - AppBar Logo', () => {
     });
 
     describe('and on on other path (non root path)', () => {
-      it('should not call context method "animateAndRedirect"', () => {
+      it(`should call context method "animateAndRedirect" passing ${ROOT_PATH} as an argument`, () => {
         const { getByTestId } = render(
           <LandingPageAnimationContext.Provider value={{ animateAndRedirect }}>
             <MemoryRouter initialEntries={[`${ROOT_PATH}/foo`]}>
@@ -51,7 +50,7 @@ describe('COMPONENT - AppBar Logo', () => {
         );
 
         fireEvent.click(getByTestId('logo'));
-        expect(animateAndRedirect).toHaveBeenCalledTimes(1);
+        expect(animateAndRedirect).toHaveBeenCalledWith(ROOT_PATH);
       });
     });
   });
