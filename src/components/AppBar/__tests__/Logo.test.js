@@ -1,19 +1,18 @@
 import React from 'react';
-import { create } from 'react-test-renderer';
 import { MemoryRouter } from 'react-router-dom';
+import { render, cleanup, fireEvent } from '@testing-library/react';
 
 import Logo from '../Logo';
 import { LandingPageAnimationContext } from '../../../context/LandingPageAnimationContext';
-
-jest.mock('../../Icons', () => ({
-  Logo: 'LogoIcon'
-}));
+import { ROOT_PATH } from '../../../constants/routes';
 
 describe('COMPONENT - AppBar Logo', () => {
-  it('renders correctly', () => {
-    const animateAndRedirect = () => {};
+  afterEach(cleanup);
 
-    const component = create(
+  const animateAndRedirect = jest.fn();
+
+  it('renders correctly', () => {
+    const { getByTestId } = render(
       <LandingPageAnimationContext.Provider value={{ animateAndRedirect }}>
         <MemoryRouter initialEntries={['/']}>
           <Logo />
@@ -21,6 +20,39 @@ describe('COMPONENT - AppBar Logo', () => {
       </LandingPageAnimationContext.Provider>
     );
 
-    expect(component.toJSON()).toMatchSnapshot();
+    const elem = getByTestId('logo');
+    expect(elem.getAttribute('href')).toEqual(ROOT_PATH);
+  });
+
+  describe('when clicked', () => {
+    describe('and on on root path', () => {
+      it('should not call context method "animateAndRedirect"', () => {
+        const { getByTestId } = render(
+          <LandingPageAnimationContext.Provider value={{ animateAndRedirect }}>
+            <MemoryRouter initialEntries={[ROOT_PATH]}>
+              <Logo />
+            </MemoryRouter>
+          </LandingPageAnimationContext.Provider>
+        );
+
+        fireEvent.click(getByTestId('logo'));
+        expect(animateAndRedirect).not.toHaveBeenCalled();
+      });
+    });
+
+    describe('and on on other path (non root path)', () => {
+      it('should not call context method "animateAndRedirect"', () => {
+        const { getByTestId } = render(
+          <LandingPageAnimationContext.Provider value={{ animateAndRedirect }}>
+            <MemoryRouter initialEntries={[`${ROOT_PATH}/foo`]}>
+              <Logo />
+            </MemoryRouter>
+          </LandingPageAnimationContext.Provider>
+        );
+
+        fireEvent.click(getByTestId('logo'));
+        expect(animateAndRedirect).toHaveBeenCalledTimes(1);
+      });
+    });
   });
 });
