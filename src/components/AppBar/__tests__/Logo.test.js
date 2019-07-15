@@ -1,11 +1,10 @@
 import React from 'react';
 import { create } from 'react-test-renderer';
+import { MemoryRouter } from 'react-router-dom';
+
 import Logo from '../Logo';
 import { LandingPageAnimationContext } from '../../../context/LandingPageAnimationContext';
 
-jest.mock('react-router-dom', () => ({
-  Link: 'Link'
-}));
 jest.mock('../../Icons', () => ({
   Logo: 'LogoIcon'
 }));
@@ -13,9 +12,12 @@ jest.mock('../../Icons', () => ({
 describe('COMPONENT - AppBar Logo', () => {
   it('renders correctly', () => {
     const animateAndRedirect = () => {};
+
     const component = create(
       <LandingPageAnimationContext.Provider value={{ animateAndRedirect }}>
-        <Logo />
+        <MemoryRouter initialEntries={['/']}>
+          <Logo />
+        </MemoryRouter>
       </LandingPageAnimationContext.Provider>
     );
 

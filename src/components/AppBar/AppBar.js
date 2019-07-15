@@ -1,19 +1,14 @@
 import React from 'react';
 
-import { location } from '../../types';
 import Wrapper from './Wrapper';
 import Logo from './Logo';
 
-function AppBar({ location }) {
+function AppBar() {
   return (
     <Wrapper role="banner">
-      <Logo location={location} />
+      <Logo />
     </Wrapper>
   );
 }
-
-AppBar.propTypes = {
-  location
-};
 
 export default AppBar;

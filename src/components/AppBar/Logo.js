@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { Link as LinkBase } from 'react-router-dom';
+import { withRouter } from 'react-router';
 import styled from 'styled-components';
 
 import { colorBlack, spacingSmall, borderWidthThin } from '../../styles/designTokens';
@@ -34,9 +35,13 @@ const Tagline = styled.p`
 function Logo({ location }) {
   const { animateAndRedirect } = useContext(LandingPageAnimationContext);
 
+  function isRootPath(location) {
+    return location.pathname !== ROOT_PATH;
+  }
+
   function handleClick(e) {
     e.preventDefault();
-    if (location.pathname !== ROOT_PATH) {
+    if (isRootPath(location)) {
       animateAndRedirect(ROOT_PATH);
     }
   }
@@ -58,4 +63,4 @@ Logo.propTypes = {
   location
 };
 
-export default Logo;
+export default withRouter(Logo);

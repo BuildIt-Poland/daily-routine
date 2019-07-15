@@ -81,16 +81,7 @@ exports[`COMPONENT - App renders correctly default route 1`] = `
     }
   }
 >
-  <AppBar
-    location={
-      Object {
-        "hash": "",
-        "key": "utwyk7",
-        "pathname": "/",
-        "search": "",
-      }
-    }
-  />
+  <AppBar />
   <main>
     <article
       className="c1 c2"

@@ -25,7 +25,7 @@ function App({ location, history }) {
       <GenderProvider>
         <ThemeProvider theme={generateTheme(location.pathname)}>
           <AnimatedWrapper location={location}>
-            <AppBar location={location} />
+            <AppBar />
             <main>
               <Route exact path={ROOT_PATH} component={LandingPage} />
               <Route path={`/${FRONT_END_ROLE}`} component={FrontEndRolePage} />

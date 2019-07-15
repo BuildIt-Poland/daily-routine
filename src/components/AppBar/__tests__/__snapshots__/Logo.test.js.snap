@@ -32,11 +32,11 @@ exports[`COMPONENT - AppBar Logo renders correctly 1`] = `
   text-transform: uppercase;
 }
 
-<Link
+<a
   className="c0"
   data-testid="logo"
+  href="/"
   onClick={[Function]}
-  to="/"
 >
   <div
     className="c1"
@@ -50,5 +50,5 @@ exports[`COMPONENT - AppBar Logo renders correctly 1`] = `
     <br />
     absurd answers
   </p>
-</Link>
+</a>
 `;
