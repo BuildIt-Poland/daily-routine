@@ -4,9 +4,6 @@ import { DEVOPS_BRAG, DEVOPS_CONFESS } from '../quotes/devOpsQuotes';
 import { BACKEND_BRAG, BACKEND_CONFESS } from '../quotes/backEndQuotes';
 import { FRONTEND_BRAG, FRONTEND_CONFESS } from '../quotes/frontEndQuotes';
 
-import extractRoleFromPath from './extractRoleFromPath';
-import extractActionFromPath from './extractActionFromPath';
-
 const DEFAULT_QUOTE = "Daily in 5 minutes and I'm still not sure what to say...";
 
 const roleQuotes = {
@@ -24,10 +21,7 @@ const roleQuotes = {
   }
 };
 
-export function getQuoteByUrl(url, quoteID) {
-  const role = extractRoleFromPath(url);
-  const action = extractActionFromPath(url);
-
+export function getQuote(role, action, quoteID) {
   if (!role || !quoteID || !action) {
     return DEFAULT_QUOTE;
   }
@@ -35,11 +29,6 @@ export function getQuoteByUrl(url, quoteID) {
   return roleQuotes[role][action][quoteID];
 }
 
-export function getRandomQuotesIDs(role) {
-  const { brag, confess } = roleQuotes[role];
-
-  return {
-    bragQuoteID: sample(Object.keys(brag)),
-    confessQuoteID: sample(Object.keys(confess))
-  };
+export function getRandomQuoteID(role, action) {
+  return sample(Object.keys(roleQuotes[role][action]));
 }
