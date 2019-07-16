@@ -1,11 +1,16 @@
 export const DEVOPS_BRAG = {
-  '1':
-    "Yesterday I was implementing PUT method for missing RESTful API endpoint with complex database transactions. Also added experimental fundamental interface. I think we are missing good 'ol lorem ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-  '2':
-    "I think we are missing good 'ol lorem ipsum. Yesterday I was implementing PUT method for missing RESTful API endpoint with complex database transactions. Also added experimental fundamental interface. Lorem ipsum dolor sit amet, consectetur adipiscing elit..."
+  glamorouswhale:
+    "Yesterday I was implementing PUT method for missing RESTful API endpoint with complex database transactions. Also added experimental fundamental interface. I think we are missing good 'ol lorem ipsum...",
+  fundamentalwhale: 'Also added experimental fundamental.',
+  whaleresponsive: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit...',
+  cssishard: 'RESTful API endpoint with complex database transactions. Also added experimental fundamental interface.'
 };
 
 export const DEVOPS_CONFESS = {
-  '1':
-    "Yesterday I was implementing PUT method for missing RESTful API endpoint with complex database transactions. Also added experimental fundamental interface. I think we are missing good 'ol lorem ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit..."
+  heavydutywhale:
+    "Sadface... Yesterday I was implementing PUT method for missing RESTful API endpoint with complex database transactions. Also added experimental fundamental interface. I think we are missing good 'ol lorem ipsum...",
+  psychodelicwhale: 'Sadface...Also added experimental fundamental.',
+  whaleextrovert: 'Sadface...Lorem ipsum dolor sit amet, consectetur adipiscing elit...',
+  whalenightclawler:
+    'Sadface... RESTful API endpoint with complex database transactions. Also added experimental fundamental interface.'
 };
