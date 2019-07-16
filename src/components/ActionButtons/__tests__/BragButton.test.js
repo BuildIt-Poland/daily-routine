@@ -11,7 +11,7 @@ describe('COMPONENT - RoleButton BragButton', () => {
   it('should contain proper elements', () => {
     const { container } = render(
       <MemoryRouter initialEntries={['/']}>
-        <BragButton role={FRONT_END_ROLE} />
+        <BragButton quoteID={'1'} role={FRONT_END_ROLE} />
       </MemoryRouter>
     );
 
@@ -24,7 +24,7 @@ describe('COMPONENT - RoleButton BragButton', () => {
   it('after a click text should change to `Brag more`', () => {
     const { container } = render(
       <MemoryRouter initialEntries={['/']}>
-        <BragButton role={FRONT_END_ROLE} />
+        <BragButton quoteID={'1'} role={FRONT_END_ROLE} />
       </MemoryRouter>
     );
 

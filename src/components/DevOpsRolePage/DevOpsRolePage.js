@@ -3,6 +3,7 @@ import { Route } from 'react-router-dom';
 
 import { DEV_OPS_ROLE, DEV_OPS_ROLE_LABEL } from '../../constants/roles';
 import { BRAG, CONFESS } from '../../constants/roleActions';
+
 import Page from '../Page';
 import ActionButtons from '../ActionButtons';
 import RoleBar from '../RoleBar';
@@ -20,8 +21,8 @@ function DevOpsRolePage() {
         <Section>
           <RoleContent>
             <Route exact path={`/${DEV_OPS_ROLE}`} component={Default} />
-            <Route exact path={`/${DEV_OPS_ROLE}/${BRAG}`} component={Brag} />
-            <Route exact path={`/${DEV_OPS_ROLE}/${CONFESS}`} component={Confess} />
+            <Route exact path={`/${DEV_OPS_ROLE}/${BRAG}/:quoteID`} component={Brag} />
+            <Route exact path={`/${DEV_OPS_ROLE}/${CONFESS}/:quoteID`} component={Confess} />
           </RoleContent>
         </Section>
         <ActionButtons role={DEV_OPS_ROLE} />

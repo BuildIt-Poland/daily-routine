@@ -18,5 +18,8 @@ export const theme = shape({
 export const location = shape({
   pathname: string.isRequired
 });
+export const match = shape({
+  url: string.isRequired
+});
 
 export const speechBubbleVariant = oneOf([SPEECH, THOUGHT]);

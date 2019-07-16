@@ -20,8 +20,8 @@ function BackEndRolePage() {
         <Section>
           <RoleContent>
             <Route exact path={`/${BACK_END_ROLE}`} component={Default} />
-            <Route exact path={`/${BACK_END_ROLE}/${BRAG}`} component={Brag} />
-            <Route exact path={`/${BACK_END_ROLE}/${CONFESS}`} component={Confess} />
+            <Route exact path={`/${BACK_END_ROLE}/${BRAG}/:quoteID`} component={Brag} />
+            <Route exact path={`/${BACK_END_ROLE}/${CONFESS}/:quoteID`} component={Confess} />
           </RoleContent>
         </Section>
         <ActionButtons role={BACK_END_ROLE} />

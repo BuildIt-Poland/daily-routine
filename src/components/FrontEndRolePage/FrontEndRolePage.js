@@ -20,8 +20,8 @@ function FrontEndRolePage() {
         <Section>
           <RoleContent>
             <Route exact path={`/${FRONT_END_ROLE}`} component={Default} />
-            <Route exact path={`/${FRONT_END_ROLE}/${BRAG}`} component={Brag} />
-            <Route exact path={`/${FRONT_END_ROLE}/${CONFESS}`} component={Confess} />
+            <Route exact path={`/${FRONT_END_ROLE}/${BRAG}/:quoteID`} component={Brag} />
+            <Route exact path={`/${FRONT_END_ROLE}/${CONFESS}/:quoteID`} component={Confess} />
           </RoleContent>
         </Section>
         <ActionButtons role={FRONT_END_ROLE} />
