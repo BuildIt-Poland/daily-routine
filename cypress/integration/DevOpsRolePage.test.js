@@ -15,7 +15,7 @@ describe('DevOpsRolePage', () => {
     describe('when clicked', () => {
       it(`should redirect to the /${DEV_OPS_ROLE}/${BRAG_ROLE_ACTION}`, () => {
         cy.getByTestId(`${DEV_OPS_ROLE}-${BRAG_ROLE_ACTION}-button`).click();
-        cy.location('pathname').should('eq', `/${DEV_OPS_ROLE}/${BRAG_ROLE_ACTION}`);
+        cy.location('pathname').should('eq', `/${DEV_OPS_ROLE}/${BRAG_ROLE_ACTION}/1`);
       });
     })
   });
@@ -24,7 +24,7 @@ describe('DevOpsRolePage', () => {
     describe('when clicked', () => {
       it(`should redirect to the /${DEV_OPS_ROLE}/${CONFESS_ROLE_ACTION}`, () => {
         cy.getByTestId(`${DEV_OPS_ROLE}-${CONFESS_ROLE_ACTION}-button`).click();
-        cy.location('pathname').should('eq', `/${DEV_OPS_ROLE}/${CONFESS_ROLE_ACTION}`);
+        cy.location('pathname').should('eq', `/${DEV_OPS_ROLE}/${CONFESS_ROLE_ACTION}/1`);
       });
     });
   });
