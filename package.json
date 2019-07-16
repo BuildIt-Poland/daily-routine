@@ -122,7 +122,8 @@
       "!src/constants/**/*",
       "!src/components/Root/**/*",
       "!src/components/**/index.js",
-      "!src/components/GlobalStyle/**/*"
+      "!src/components/GlobalStyle/**/*",
+      "!src/quotes/**/*"
     ],
     "coverageThreshold": {
       "global": {
