@@ -22,4 +22,8 @@ export const match = shape({
   url: string.isRequired
 });
 
+export const history = shape({
+  location
+});
+
 export const speechBubbleVariant = oneOf([SPEECH, THOUGHT]);
