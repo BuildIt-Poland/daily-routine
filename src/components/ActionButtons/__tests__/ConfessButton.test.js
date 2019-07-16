@@ -11,7 +11,7 @@ describe('COMPONENT - RoleButton ConfessButton', () => {
   it('should contain proper elements', () => {
     const { container } = render(
       <MemoryRouter initialEntries={['/']}>
-        <ConfessButton role={FRONT_END_ROLE} />
+        <ConfessButton quoteID={'1'} role={FRONT_END_ROLE} />
       </MemoryRouter>
     );
 
@@ -24,7 +24,7 @@ describe('COMPONENT - RoleButton ConfessButton', () => {
   it('after a click text should change to `Confess again`', () => {
     const { container } = render(
       <MemoryRouter initialEntries={['/']}>
-        <ConfessButton role={FRONT_END_ROLE} />
+        <ConfessButton quoteID={'1'} role={FRONT_END_ROLE} />
       </MemoryRouter>
     );
 
