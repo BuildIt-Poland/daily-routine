@@ -10,12 +10,9 @@ exports[`COMPONENT - DevOpsRolePage renders correctly for /devops path 1`] = `
   <Section>
     <RoleContent>
       <QuoteBubble
-        noCopyToClipboard={true}
-        variant="thought"
+        quote="Daily in 5 minutes and I'm still not sure what to say..."
       />
-      <Whale
-        pose="default"
-      />
+      <Whale />
     </RoleContent>
   </Section>
   <ActionButtons
@@ -32,7 +29,14 @@ exports[`COMPONENT - DevOpsRolePage renders correctly for /devops/brag path 1`] 
     label="Dev Ops"
   />
   <Section>
-    <RoleContent />
+    <RoleContent>
+      <QuoteBubble
+        quote="Daily in 5 minutes and I'm still not sure what to say..."
+      />
+      <Whale
+        pose="brag"
+      />
+    </RoleContent>
   </Section>
   <ActionButtons
     role="devops"
@@ -48,7 +52,14 @@ exports[`COMPONENT - DevOpsRolePage renders correctly for /devops/confess path 1
     label="Dev Ops"
   />
   <Section>
-    <RoleContent />
+    <RoleContent>
+      <QuoteBubble
+        quote="Daily in 5 minutes and I'm still not sure what to say..."
+      />
+      <Whale
+        pose="confess"
+      />
+    </RoleContent>
   </Section>
   <ActionButtons
     role="devops"

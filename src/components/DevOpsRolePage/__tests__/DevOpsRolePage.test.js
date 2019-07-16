@@ -13,6 +13,8 @@ jest.mock('../../QuoteBubble', () => 'QuoteBubble');
 jest.mock('../../Page', () => 'Page');
 jest.mock('../../RoleContent', () => 'RoleContent');
 jest.mock('../../Section', () => 'Section');
+jest.mock('../../CharacterWithQuote', () => 'CharacterWithQuote');
+jest.mock('../../Characters/Whale', () => 'Whale');
 
 describe('COMPONENT - DevOpsRolePage', () => {
   it('renders correctly for /devops path', () => {

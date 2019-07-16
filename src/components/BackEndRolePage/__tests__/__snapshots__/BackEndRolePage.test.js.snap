@@ -10,12 +10,9 @@ exports[`COMPONENT - BackEndRolePage renders correctly for /backend path 1`] = `
   <Section>
     <RoleContent>
       <QuoteBubble
-        noCopyToClipboard={true}
-        variant="thought"
+        quote="Daily in 5 minutes and I'm still not sure what to say..."
       />
-      <Robot
-        pose="default"
-      />
+      <Robot />
     </RoleContent>
   </Section>
   <ActionButtons
@@ -32,7 +29,14 @@ exports[`COMPONENT - BackEndRolePage renders correctly for /backend/brag path 1`
     label="Back End Developer"
   />
   <Section>
-    <RoleContent />
+    <RoleContent>
+      <QuoteBubble
+        quote="Daily in 5 minutes and I'm still not sure what to say..."
+      />
+      <Robot
+        pose="brag"
+      />
+    </RoleContent>
   </Section>
   <ActionButtons
     role="backend"
@@ -48,7 +52,14 @@ exports[`COMPONENT - BackEndRolePage renders correctly for /backend/confess path
     label="Back End Developer"
   />
   <Section>
-    <RoleContent />
+    <RoleContent>
+      <QuoteBubble
+        quote="Daily in 5 minutes and I'm still not sure what to say..."
+      />
+      <Robot
+        pose="confess"
+      />
+    </RoleContent>
   </Section>
   <ActionButtons
     role="backend"
