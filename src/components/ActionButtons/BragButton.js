@@ -16,7 +16,7 @@ const StyledButton = styled(ButtonBase)`
 const BUTTON_LABEL = 'Brag about my efforts';
 const UPDATED_BUTTON_LABEL = 'Brag more';
 
-function BragButton({ quoteID = 1, role, ...props }) {
+function BragButton({ quoteID, role, ...props }) {
   const [text, setText] = useState(BUTTON_LABEL);
 
   const updateButtonLabel = () => setText(UPDATED_BUTTON_LABEL);
@@ -35,7 +35,7 @@ function BragButton({ quoteID = 1, role, ...props }) {
 
 BragButton.propTypes = {
   role: role.isRequired,
-  quoteID: PropTypes.string
+  quoteID: PropTypes.string.isRequired
 };
 
 export default BragButton;

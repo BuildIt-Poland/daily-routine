@@ -12,7 +12,9 @@ import Wrapper from './Wrapper';
 import Quote from './Quote';
 import BubbleTail from './BubbleTail';
 
-function QuoteBubble({ variant = SPEECH, noCopyToClipboard = false, match: { url } }) {
+function QuoteBubble({ variant = SPEECH, noCopyToClipboard = false, match }) {
+  const { url } = match;
+
   const role = extractRoleFromPath(url);
   const action = extractActionFromPath(url);
   const quoteID = extractQuoteIDFromPath(url);
