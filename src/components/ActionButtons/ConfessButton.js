@@ -16,7 +16,7 @@ const StyledButton = styled(ButtonBase)`
 const BUTTON_LABEL = 'Confess my mistake';
 const UPDATED_BUTTON_LABEL = 'Confess again';
 
-function ConfessButton({ quoteID = 1, role, ...props }) {
+function ConfessButton({ quoteID, role, ...props }) {
   const [text, setText] = useState(BUTTON_LABEL);
 
   const updateButtonLabel = () => setText(UPDATED_BUTTON_LABEL);
@@ -35,7 +35,7 @@ function ConfessButton({ quoteID = 1, role, ...props }) {
 
 ConfessButton.propTypes = {
   role: role.isRequired,
-  quoteID: PropTypes.string
+  quoteID: PropTypes.string.isRequired
 };
 
 export default ConfessButton;
