@@ -7,6 +7,7 @@ import ActionButtons from '../ActionButtons';
 import Section from '../Section';
 import RoleContent from '../RoleContent';
 import Fox from '../Characters/Fox';
+import QuoteBubble from '../QuoteBubble';
 import CharacterWitQuote from './../CharacterWithQuote';
 
 function FrontEndRolePage() {
@@ -17,6 +18,7 @@ function FrontEndRolePage() {
         <Section>
           <RoleContent>
             <CharacterWitQuote>
+              <QuoteBubble />
               <Fox />
             </CharacterWitQuote>
           </RoleContent>

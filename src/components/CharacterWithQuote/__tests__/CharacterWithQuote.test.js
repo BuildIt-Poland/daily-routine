@@ -1,7 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { render, cleanup, act } from '@testing-library/react';
 import { createMemoryHistory } from 'history';
 import { Router } from 'react-router-dom';
+
 import CharacterWitQuote from '../CharacterWithQuote';
 import { GenderContext } from '../../../context/GenderContext';
 import { MALE } from '../../../constants/genders';
@@ -24,6 +26,14 @@ MockCharacter.propTypes = {
   pose
 };
 
+function MockQuoteBubble({ quote }) {
+  return <div data-testid="quote">{quote}</div>;
+}
+
+MockQuoteBubble.propTypes = {
+  quote: PropTypes.string
+};
+
 const mockHistory = createMemoryHistory({ initialEntries: ['/frontend/confess/1'] });
 
 function renderWithRouter(ui, { history = mockHistory } = {}) {
@@ -37,6 +47,7 @@ function setupComponent() {
   return renderWithRouter(
     <GenderContext.Provider value={{ gender: MALE }}>
       <CharacterWitQuote>
+        <MockQuoteBubble />
         <MockCharacter />
       </CharacterWitQuote>
     </GenderContext.Provider>

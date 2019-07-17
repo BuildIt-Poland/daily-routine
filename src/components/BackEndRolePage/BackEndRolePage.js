@@ -8,6 +8,7 @@ import Section from '../Section';
 import RoleContent from '../RoleContent';
 import CharacterWitQuote from '../CharacterWithQuote/CharacterWithQuote';
 import Robot from '../Characters/Robot';
+import QuoteBubble from '../QuoteBubble';
 
 function BackEndRolePage() {
   return (
@@ -17,6 +18,7 @@ function BackEndRolePage() {
         <Section>
           <RoleContent>
             <CharacterWitQuote>
+              <QuoteBubble />
               <Robot />
             </CharacterWitQuote>
           </RoleContent>

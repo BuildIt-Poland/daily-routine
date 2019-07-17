@@ -10,6 +10,7 @@ exports[`COMPONENT - FrontEndRolePage renders correctly 1`] = `
   <Section>
     <RoleContent>
       <CharacterWithQuote>
+        <QuoteBubble />
         <Fox />
       </CharacterWithQuote>
     </RoleContent>

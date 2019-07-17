@@ -8,6 +8,7 @@ import Section from '../Section';
 import RoleContent from '../RoleContent';
 import CharacterWitQuote from '../CharacterWithQuote/CharacterWithQuote';
 import Whale from '../Characters/Whale';
+import QuoteBubble from '../QuoteBubble';
 
 function DevOpsRolePage() {
   return (
@@ -17,6 +18,7 @@ function DevOpsRolePage() {
         <Section>
           <RoleContent>
             <CharacterWitQuote>
+              <QuoteBubble />
               <Whale />
             </CharacterWitQuote>
           </RoleContent>
