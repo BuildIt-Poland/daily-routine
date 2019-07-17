@@ -24,7 +24,7 @@ MockCharacter.propTypes = {
   pose
 };
 
-const mockHistory = createMemoryHistory({ initialEntries: ['/frontend/brag/1'] });
+const mockHistory = createMemoryHistory({ initialEntries: ['/frontend/confess/1'] });
 
 function renderWithRouter(ui, { history = mockHistory } = {}) {
   return {
