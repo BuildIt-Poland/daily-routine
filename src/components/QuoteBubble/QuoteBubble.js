@@ -48,8 +48,8 @@ function QuoteBubble({ location }) {
 
   const transitions = useTransition(bubble, bubble => bubble.quoteID, {
     from: { opacity: 0, transform: 'perspective(600px) rotateX(45deg) translateY(-20px) scale(0.8)' },
-    enter: { opacity: 1, transform: 'perspective(600px) rotateX(0) translateY(0) scaleY(1)' },
-    leave: { opacity: 0, transform: 'perspective(600px) translateY(-30px) scale(0.6)', color: '#fff' },
+    enter: { opacity: 1, transform: 'perspective(600px) rotateX(0deg) translateY(0) scaleY(1)' },
+    leave: { opacity: 0, transform: 'perspective(600px) rotateX(0deg) translateY(-30px) scale(0.6)', color: '#fff' },
     config: {
       mass: 1,
       tension: 200,
