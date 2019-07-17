@@ -1,11 +1,11 @@
 import React from 'react';
 import { create } from 'react-test-renderer';
 
-import Wrapper from '../Wrapper';
+import Bubble from '../Bubble';
 
-describe('COMPONENT - QuoteBubble Wrapper', () => {
+describe('COMPONENT - QuoteBubble Bubble', () => {
   it('renders correctly', () => {
-    const component = create(<Wrapper />);
+    const component = create(<Bubble />);
 
     expect(component.toJSON()).toMatchSnapshot();
   });
