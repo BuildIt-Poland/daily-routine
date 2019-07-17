@@ -1,46 +1,16 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { useTransition } from 'react-spring';
 import { withRouter } from 'react-router-dom';
 
-import extractRoleFromPath from '../../utils/extractRoleFromPath';
-import extractActionFromPath from '../../utils/extractActionFromPath';
-import extractQuoteIDFromPath from '../../utils/extractQuoteIDFromPath';
-import { getQuote } from '../../utils/quotesService';
 import { location } from '../../types';
 import { THOUGHT, SPEECH } from '../../constants/speechBubbleVariant';
+import { colorWhite } from '../../styles/designTokens';
+import useBubble from './useBubble';
 import CopyButton from './CopyButton';
 import Wrapper from './Wrapper';
 import Bubble from './Bubble';
 import Quote from './Quote';
 import BubbleTail from './BubbleTail';
-
-function checkIfInDefaultPose(pathname) {
-  return !extractActionFromPath(pathname) && !extractQuoteIDFromPath(pathname);
-}
-
-function useBubble(pathname) {
-  const [bubble, setBubble] = useState({
-    quote: '',
-    quoteID: '',
-    isInDefaultPose: false
-  });
-
-  useEffect(() => {
-    const role = extractRoleFromPath(pathname);
-    const action = extractActionFromPath(pathname);
-    const quoteID = extractQuoteIDFromPath(pathname);
-
-    const randomQuote = getQuote(role, action, quoteID);
-
-    setBubble({
-      quote: randomQuote,
-      quoteID,
-      isInDefaultPose: checkIfInDefaultPose(pathname)
-    });
-  }, [pathname]);
-
-  return bubble;
-}
 
 function QuoteBubble({ location }) {
   const { pathname } = location;
@@ -49,7 +19,11 @@ function QuoteBubble({ location }) {
   const transitions = useTransition(bubble, bubble => bubble.quoteID, {
     from: { opacity: 0, transform: 'perspective(600px) rotateX(45deg) translateY(-20px) scale(0.8)' },
     enter: { opacity: 1, transform: 'perspective(600px) rotateX(0deg) translateY(0) scaleY(1)' },
-    leave: { opacity: 0, transform: 'perspective(600px) rotateX(0deg) translateY(-30px) scale(0.6)', color: '#fff' },
+    leave: {
+      opacity: 0,
+      transform: 'perspective(600px) rotateX(0deg) translateY(-30px) scale(0.6)',
+      color: colorWhite
+    },
     config: {
       mass: 1,
       tension: 200,
