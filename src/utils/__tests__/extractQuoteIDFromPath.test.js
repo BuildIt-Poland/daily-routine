@@ -12,12 +12,12 @@ describe('FUNC - extractQuoteIDFromPath', () => {
   it("shouldn't extract any QUOTE_ID from given path", () => {
     const path = '/backend';
 
-    expect(extractQuoteIDFromPath(path)).toEqual('');
+    expect(extractQuoteIDFromPath(path)).toBeUndefined();
   });
 
   it("shouldn't extract any QUOTE_ID from given path", () => {
     const path = '/backend/brag';
 
-    expect(extractQuoteIDFromPath(path)).toEqual('');
+    expect(extractQuoteIDFromPath(path)).toBeUndefined();
   });
 });

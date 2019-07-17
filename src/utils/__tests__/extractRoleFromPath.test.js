@@ -22,6 +22,6 @@ describe('FUNC - extractRoleFromPath', () => {
   it('should extract correct role when path is empty', () => {
     const path = '';
 
-    expect(extractRoleFromPath(path)).toEqual('');
+    expect(extractRoleFromPath(path)).toBeUndefined();
   });
 });

@@ -6,7 +6,7 @@ describe('FUNC - extractActionFromPath', () => {
   it("shouldn't extract any action from given path", () => {
     const path = '/backend';
 
-    expect(extractActionFromPath(path)).toEqual('');
+    expect(extractActionFromPath(path)).toBeUndefined();
   });
 
   it('should extract action from given path', () => {
