@@ -7,6 +7,7 @@ import Page from '../Page';
 import ActionButtons from '../ActionButtons';
 import RoleBar from '../RoleBar';
 import Section from '../Section';
+import QuoteBubble from '../QuoteBubble';
 import RoleContent from '../RoleContent';
 import Confess from './BackEndConfess';
 import Brag from './BackEndBrag';
@@ -19,6 +20,7 @@ function BackEndRolePage() {
         <RoleBar label={BACK_END_ROLE_LABEL} />
         <Section>
           <RoleContent>
+            <QuoteBubble />
             <Route exact path={`/${BACK_END_ROLE}`} component={Default} />
             <Route exact path={`/${BACK_END_ROLE}/${BRAG}/:quoteID`} component={Brag} />
             <Route exact path={`/${BACK_END_ROLE}/${CONFESS}/:quoteID`} component={Confess} />

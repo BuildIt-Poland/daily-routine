@@ -9,6 +9,7 @@ import ActionButtons from '../ActionButtons';
 import RoleBar from '../RoleBar';
 import Section from '../Section';
 import RoleContent from '../RoleContent';
+import QuoteBubble from '../QuoteBubble';
 import Default from './DevOpsDefault';
 import Brag from './DevOpsBrag';
 import Confess from './DevOpsConfess';
@@ -20,6 +21,7 @@ function DevOpsRolePage() {
         <RoleBar label={DEV_OPS_ROLE_LABEL} />
         <Section>
           <RoleContent>
+            <QuoteBubble />
             <Route exact path={`/${DEV_OPS_ROLE}`} component={Default} />
             <Route exact path={`/${DEV_OPS_ROLE}/${BRAG}/:quoteID`} component={Brag} />
             <Route exact path={`/${DEV_OPS_ROLE}/${CONFESS}/:quoteID`} component={Confess} />
