@@ -2,38 +2,42 @@
 
 exports[`COMPONENT - QuoteBubble doesn't show copy to clipboard button when it's disabled 1`] = `
 <Wrapper>
-  <Quote />
+  <Quote
+    data-testid="quote"
+  >
+    Daily in 5 minutes and I'm still not sure what to say...
+  </Quote>
   <BubbleTail
     variant="speech"
   />
 </Wrapper>
 `;
 
-exports[`COMPONENT - QuoteBubble renders correct defaults when no props are provieded 1`] = `
+exports[`COMPONENT - QuoteBubble renders correct default quote 1`] = `
 <Wrapper>
-  <Quote />
+  <Quote
+    data-testid="quote"
+  >
+    Daily in 5 minutes and I'm still not sure what to say...
+  </Quote>
   <BubbleTail
     variant="speech"
   />
-  <CopyButton />
+  <CopyButton
+    valueToCopy="Daily in 5 minutes and I'm still not sure what to say..."
+  />
 </Wrapper>
 `;
 
 exports[`COMPONENT - QuoteBubble renders correctly thought variant of bubble 1`] = `
 <Wrapper>
-  <Quote />
+  <Quote
+    data-testid="quote"
+  >
+    Daily in 5 minutes and I'm still not sure what to say...
+  </Quote>
   <BubbleTail
     variant="thought"
   />
-</Wrapper>
-`;
-
-exports[`COMPONENT - QuoteBubble renders custom quote 1`] = `
-<Wrapper>
-  <Quote />
-  <BubbleTail
-    variant="speech"
-  />
-  <CopyButton />
 </Wrapper>
 `;

@@ -4,7 +4,7 @@ import { DEVOPS_BRAG, DEVOPS_CONFESS } from '../quotes/devOpsQuotes';
 import { BACKEND_BRAG, BACKEND_CONFESS } from '../quotes/backEndQuotes';
 import { FRONTEND_BRAG, FRONTEND_CONFESS } from '../quotes/frontEndQuotes';
 
-const DEFAULT_QUOTE = "Daily in 5 minutes and I'm still not sure what to say...";
+export const DEFAULT_QUOTE = "Daily in 5 minutes and I'm still not sure what to say...";
 
 const roleQuotes = {
   devops: {

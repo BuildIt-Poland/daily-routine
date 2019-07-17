@@ -10,10 +10,12 @@ import QuoteBubble from '../QuoteBubble';
 import { history } from '../../types';
 
 function CharacterWitQuote({ history, children }) {
-  const [{ quote, action }, updatePose] = useState({
+  const initialState = {
     quote: getQuote(extractQuoteIDFromPath(history.location.pathname)),
     action: extractActionFromPath(history.location.pathname)
-  });
+  };
+
+  const [{ quote, action }, setQuoteAndAction] = useState(initialState);
 
   function addHistoryListener() {
     return history.listen(({ pathname }) => {
@@ -21,7 +23,7 @@ function CharacterWitQuote({ history, children }) {
       const action = extractActionFromPath(pathname);
       const quoteID = extractQuoteIDFromPath(pathname);
       const quote = getQuote(role, action, quoteID);
-      updatePose({ quote, action });
+      setQuoteAndAction({ quote, action });
     });
   }
 
@@ -37,8 +39,7 @@ function CharacterWitQuote({ history, children }) {
 
 CharacterWitQuote.propTypes = {
   history,
-  // TODO: Setup more precise type
-  children: PropTypes.object
+  children: PropTypes.node
 };
 
 export default withRouter(CharacterWitQuote);
