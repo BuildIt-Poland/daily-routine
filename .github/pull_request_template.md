@@ -1,5 +1,5 @@
 PR template for features/fixes:
-[#JIRAID / FIX](https://digitalrig.atlassian.net/browse/DR-XX) #Feature / Fix name
+# [JIRAID / FIX](https://digitalrig.atlassian.net/browse/DR-XX) Feature / Fix name
 
 # Description 
 [Screenshoot if anything to show]
