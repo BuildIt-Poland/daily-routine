@@ -22,7 +22,6 @@
     "react": "16.8.6",
     "react-copy-to-clipboard": "5.0.1",
     "react-dom": "16.8.6",
-    "react-measure": "2.3.0",
     "react-router-dom": "5.0.1",
     "react-scripts": "3.0.1",
     "react-spring": "8.0.25",

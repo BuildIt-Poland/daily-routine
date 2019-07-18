@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useTransition } from 'react-spring';
 import { withRouter } from 'react-router-dom';
-import Measure from 'react-measure';
 
 import { location } from '../../types';
 import { THOUGHT, SPEECH } from '../../constants/speechBubbleVariant';
@@ -13,14 +12,11 @@ import Bubble from './Bubble';
 import Quote from './Quote';
 import BubbleTail from './BubbleTail';
 
+// TODO handle Wrapper resize for big quotes @blurbyte
+
 function QuoteBubble({ location }) {
   const { pathname } = location;
   const bubble = useBubble(pathname);
-
-  // Increases wrapper height for big quote bubbles
-  // wrapperHeight and Measure is pretty much required only for small mobile devices
-  // TODO check performance implications and maybe better way to handle it @blurbyte
-  const [wrapperHeight, setWrapperHeight] = useState(0);
 
   const transitions = useTransition(bubble, bubble => bubble.quoteID, {
     from: { opacity: 0, transform: 'perspective(600px) rotateX(45deg) translateY(-20px) scale(0.8)' },
@@ -38,30 +34,19 @@ function QuoteBubble({ location }) {
     delay: 200
   });
 
-  const handleResize = contentRect => {
-    const offsetHeight = contentRect.offset.height;
-    if (wrapperHeight !== offsetHeight) {
-      setWrapperHeight(offsetHeight);
-    }
-  };
-
   return (
-    <Measure offset onResize={handleResize}>
-      {({ measureRef }) => (
-        <Wrapper calculatedHeight={wrapperHeight}>
-          {transitions.map(
-            ({ item, props, key }) =>
-              item && (
-                <Bubble key={key} style={props} ref={measureRef}>
-                  <Quote>{item.quote}</Quote>
-                  <BubbleTail variant={item.isInDefaultPose ? THOUGHT : SPEECH} />
-                  {!item.isInDefaultPose && <CopyButton valueToCopy={item.quote} />}
-                </Bubble>
-              )
-          )}
-        </Wrapper>
+    <Wrapper>
+      {transitions.map(
+        ({ item, props, key }) =>
+          item && (
+            <Bubble key={key} style={props}>
+              <Quote>{item.quote}</Quote>
+              <BubbleTail variant={item.isInDefaultPose ? THOUGHT : SPEECH} />
+              {!item.isInDefaultPose && <CopyButton valueToCopy={item.quote} />}
+            </Bubble>
+          )
       )}
-    </Measure>
+    </Wrapper>
   );
 }
 
