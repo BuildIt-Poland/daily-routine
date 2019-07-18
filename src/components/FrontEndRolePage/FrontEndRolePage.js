@@ -6,6 +6,7 @@ import { BRAG, CONFESS } from '../../constants/roleActions';
 import Page from '../Page';
 import RoleBar from '../RoleBar';
 import ActionButtons from '../ActionButtons';
+import QuoteBubble from '../QuoteBubble';
 import Section from '../Section';
 import RoleContent from '../RoleContent';
 import Default from './FrontEndDefault';
@@ -19,6 +20,7 @@ function FrontEndRolePage() {
         <RoleBar label={FRONT_END_ROLE_LABEL} />
         <Section>
           <RoleContent>
+            <QuoteBubble />
             <Route exact path={`/${FRONT_END_ROLE}`} component={Default} />
             <Route exact path={`/${FRONT_END_ROLE}/${BRAG}/:quoteID`} component={Brag} />
             <Route exact path={`/${FRONT_END_ROLE}/${CONFESS}/:quoteID`} component={Confess} />

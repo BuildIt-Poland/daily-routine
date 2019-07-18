@@ -1,21 +1,16 @@
 import styled from 'styled-components';
 
-import media from '../../styles/media';
-import SpeechBubbleArtwork from './SpeechBubbleArtwork';
+import { spacingMedium, zIndexDefault } from '../../styles/designTokens';
 
-const Wrapper = styled.section`
+const Wrapper = styled.section.attrs(props => ({
+  style: { height: props.calculatedHeight }
+}))`
   position: relative;
-  margin-bottom: 2rem;
-  margin-left: auto;
+  width: 100%;
+  height: 100%;
   min-height: 9.6rem;
-  min-width: 21rem;
-  max-width: 36rem;
-  background: url(${SpeechBubbleArtwork}) no-repeat;
-  background-size: 100% 100%;
-
-  ${media.phone`
-    max-width: 100%;
-  `}
+  margin-bottom: ${spacingMedium};
+  z-index: ${zIndexDefault};
 `;
 
 export default Wrapper;
