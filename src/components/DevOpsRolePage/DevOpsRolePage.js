@@ -6,7 +6,7 @@ import ActionButtons from '../ActionButtons';
 import RoleBar from '../RoleBar';
 import Section from '../Section';
 import RoleContent from '../RoleContent';
-import CharacterWitQuote from '../CharacterWithQuote/CharacterWithQuote';
+import Character from '../Character';
 import Whale from '../Characters/Whale';
 import QuoteBubble from '../QuoteBubble';
 
@@ -17,10 +17,10 @@ function DevOpsRolePage() {
         <RoleBar label={DEV_OPS_ROLE_LABEL} />
         <Section>
           <RoleContent>
-            <CharacterWitQuote>
-              <QuoteBubble />
+            <QuoteBubble />
+            <Character>
               <Whale />
-            </CharacterWitQuote>
+            </Character>
           </RoleContent>
         </Section>
         <ActionButtons role={DEV_OPS_ROLE} />

@@ -1,28 +1,57 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { useTransition } from 'react-spring';
+import { withRouter } from 'react-router-dom';
 
-import { speechBubbleVariant } from '../../types';
-import { SPEECH } from '../../constants/speechBubbleVariant';
-import { DEFAULT_QUOTE } from '../../utils/quotesService';
+import { location } from '../../types';
+import { THOUGHT, SPEECH } from '../../constants/speechBubbleVariant';
+import { colorWhite } from '../../styles/designTokens';
+import useBubble from './useBubble';
 import CopyButton from './CopyButton';
 import Wrapper from './Wrapper';
+import Bubble from './Bubble';
 import Quote from './Quote';
 import BubbleTail from './BubbleTail';
 
-function QuoteBubble({ variant = SPEECH, noCopyToClipboard = false, quote = DEFAULT_QUOTE }) {
+// TODO handle Wrapper resize for big quotes @blurbyte
+
+function QuoteBubble({ location }) {
+  const { pathname } = location;
+  const bubble = useBubble(pathname);
+
+  const transitions = useTransition(bubble, bubble => bubble.quoteID, {
+    from: { opacity: 0, transform: 'perspective(600px) rotateX(45deg) translateY(-20px) scale(0.8)' },
+    enter: { opacity: 1, transform: 'perspective(600px) rotateX(0deg) translateY(0) scaleY(1)' },
+    leave: {
+      opacity: 0,
+      transform: 'perspective(600px) rotateX(0deg) translateY(-30px) scale(0.6)',
+      color: colorWhite
+    },
+    config: {
+      mass: 1,
+      tension: 200,
+      friction: 14
+    },
+    delay: 200
+  });
+
   return (
     <Wrapper>
-      <Quote data-testid="quote">{quote}</Quote>
-      <BubbleTail variant={variant} />
-      {!noCopyToClipboard && <CopyButton valueToCopy={quote} />}
+      {transitions.map(
+        ({ item, props, key }) =>
+          item && (
+            <Bubble key={key} style={props}>
+              <Quote>{item.quote}</Quote>
+              <BubbleTail variant={item.isInDefaultPose ? THOUGHT : SPEECH} />
+              {!item.isInDefaultPose && <CopyButton valueToCopy={item.quote} />}
+            </Bubble>
+          )
+      )}
     </Wrapper>
   );
 }
 
 QuoteBubble.propTypes = {
-  quote: PropTypes.string,
-  noCopyToClipboard: PropTypes.bool,
-  variant: speechBubbleVariant
+  location: location.isRequired
 };
 
-export default QuoteBubble;
+export default withRouter(QuoteBubble);

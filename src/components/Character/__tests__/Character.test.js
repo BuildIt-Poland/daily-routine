@@ -1,22 +1,15 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { render, cleanup, act } from '@testing-library/react';
 import { createMemoryHistory } from 'history';
 import { Router } from 'react-router-dom';
 
-import CharacterWitQuote from '../CharacterWithQuote';
+import CharacterWitQuote from '../Character';
 import { GenderContext } from '../../../context/GenderContext';
 import { MALE } from '../../../constants/genders';
 import { pose } from '../../../types';
-import { getQuote } from '../../../utils/quotesService';
-import extractQuoteIDFromPath from '../../../utils/extractQuoteIDFromPath';
 import extractActionFromPath from '../../../utils/extractActionFromPath';
-import extractRoleFromPath from '../../../utils/extractRoleFromPath';
 
-jest.mock('../../../utils/quotesService');
-jest.mock('../../../utils/extractRoleFromPath');
 jest.mock('../../../utils/extractActionFromPath');
-jest.mock('../../../utils/extractQuoteIDFromPath');
 
 function MockCharacter({ pose }) {
   return <div data-testid="mock-character">{pose}</div>;
@@ -24,14 +17,6 @@ function MockCharacter({ pose }) {
 
 MockCharacter.propTypes = {
   pose
-};
-
-function MockQuoteBubble({ quote }) {
-  return <div data-testid="quote">{quote}</div>;
-}
-
-MockQuoteBubble.propTypes = {
-  quote: PropTypes.string
 };
 
 const mockHistory = createMemoryHistory({ initialEntries: ['/frontend/confess/1'] });
@@ -47,7 +32,6 @@ function setupComponent() {
   return renderWithRouter(
     <GenderContext.Provider value={{ gender: MALE }}>
       <CharacterWitQuote>
-        <MockQuoteBubble />
         <MockCharacter />
       </CharacterWitQuote>
     </GenderContext.Provider>
@@ -57,13 +41,7 @@ function setupComponent() {
 describe('COMPONENT - CharacterWitQuote', () => {
   afterEach(cleanup);
 
-  it('should render QuoteBubble', () => {
-    const { getByTestId } = setupComponent();
-    expect(getByTestId('quote')).toBeDefined();
-  });
-
   it('should render character component with brag pose', () => {
-    getQuote.mockImplementation(() => 'foo');
     extractActionFromPath.mockImplementation(() => 'brag');
 
     const { getByTestId } = setupComponent();
@@ -74,9 +52,6 @@ describe('COMPONENT - CharacterWitQuote', () => {
 
     expect(getByTestId('mock-character')).toBeDefined();
     expect(getByTestId('mock-character')).toHaveTextContent('brag');
-    expect(getQuote).toBeCalled();
-    expect(extractRoleFromPath).toBeCalled();
-    expect(extractQuoteIDFromPath).toBeCalled();
     expect(extractActionFromPath).toBeCalled();
   });
 });

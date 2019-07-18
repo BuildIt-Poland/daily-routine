@@ -9,10 +9,10 @@ exports[`COMPONENT - DevOpsRolePage renders correctly for /devops path 1`] = `
   />
   <Section>
     <RoleContent>
-      <QuoteBubble
-        quote="Daily in 5 minutes and I'm still not sure what to say..."
-      />
-      <Whale />
+      <QuoteBubble />
+      <Character>
+        <Whale />
+      </Character>
     </RoleContent>
   </Section>
   <ActionButtons
@@ -30,12 +30,10 @@ exports[`COMPONENT - DevOpsRolePage renders correctly for /devops/brag path 1`] 
   />
   <Section>
     <RoleContent>
-      <QuoteBubble
-        quote="Daily in 5 minutes and I'm still not sure what to say..."
-      />
-      <Whale
-        pose="brag"
-      />
+      <QuoteBubble />
+      <Character>
+        <Whale />
+      </Character>
     </RoleContent>
   </Section>
   <ActionButtons
@@ -53,12 +51,10 @@ exports[`COMPONENT - DevOpsRolePage renders correctly for /devops/confess path 1
   />
   <Section>
     <RoleContent>
-      <QuoteBubble
-        quote="Daily in 5 minutes and I'm still not sure what to say..."
-      />
-      <Whale
-        pose="confess"
-      />
+      <QuoteBubble />
+      <Character>
+        <Whale />
+      </Character>
     </RoleContent>
   </Section>
   <ActionButtons

@@ -1,3 +1,1 @@
-import QuoteBubble from './QuoteBubble';
-
-export default QuoteBubble;
+export { default } from './QuoteBubble';

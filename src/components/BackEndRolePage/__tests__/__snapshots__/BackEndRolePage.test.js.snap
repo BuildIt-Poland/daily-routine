@@ -9,10 +9,10 @@ exports[`COMPONENT - BackEndRolePage renders correctly for /backend path 1`] = `
   />
   <Section>
     <RoleContent>
-      <QuoteBubble
-        quote="Daily in 5 minutes and I'm still not sure what to say..."
-      />
-      <Robot />
+      <QuoteBubble />
+      <Character>
+        <Robot />
+      </Character>
     </RoleContent>
   </Section>
   <ActionButtons
@@ -30,12 +30,10 @@ exports[`COMPONENT - BackEndRolePage renders correctly for /backend/brag path 1`
   />
   <Section>
     <RoleContent>
-      <QuoteBubble
-        quote="Daily in 5 minutes and I'm still not sure what to say..."
-      />
-      <Robot
-        pose="brag"
-      />
+      <QuoteBubble />
+      <Character>
+        <Robot />
+      </Character>
     </RoleContent>
   </Section>
   <ActionButtons
@@ -53,12 +51,10 @@ exports[`COMPONENT - BackEndRolePage renders correctly for /backend/confess path
   />
   <Section>
     <RoleContent>
-      <QuoteBubble
-        quote="Daily in 5 minutes and I'm still not sure what to say..."
-      />
-      <Robot
-        pose="confess"
-      />
+      <QuoteBubble />
+      <Character>
+        <Robot />
+      </Character>
     </RoleContent>
   </Section>
   <ActionButtons

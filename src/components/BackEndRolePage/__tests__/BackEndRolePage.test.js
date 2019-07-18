@@ -13,7 +13,7 @@ jest.mock('../../QuoteBubble', () => 'QuoteBubble');
 jest.mock('../../Page', () => 'Page');
 jest.mock('../../RoleContent', () => 'RoleContent');
 jest.mock('../../Section', () => 'Section');
-jest.mock('../../CharacterWithQuote', () => 'CharacterWithQuote');
+jest.mock('../../Character', () => 'Character');
 jest.mock('../../Characters/Robot', () => 'Robot');
 
 describe('COMPONENT - BackEndRolePage', () => {

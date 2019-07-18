@@ -1,43 +1,42 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`COMPONENT - QuoteBubble doesn't show copy to clipboard button when it's disabled 1`] = `
-<Wrapper>
-  <Quote
-    data-testid="quote"
-  >
-    Daily in 5 minutes and I'm still not sure what to say...
-  </Quote>
-  <BubbleTail
-    variant="speech"
-  />
-</Wrapper>
-`;
+exports[`COMPONENT - QuoteBubble renders correctly 1`] = `
+.c0 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  min-height: 9.6rem;
+  min-width: 21rem;
+  max-width: 36rem;
+  background: url(SpeechBubbleArtwork) no-repeat;
+  background-size: 100% 100%;
+  -webkit-transform-origin: 50% 100%;
+  -ms-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+}
 
-exports[`COMPONENT - QuoteBubble renders correct default quote 1`] = `
-<Wrapper>
-  <Quote
-    data-testid="quote"
-  >
-    Daily in 5 minutes and I'm still not sure what to say...
-  </Quote>
-  <BubbleTail
-    variant="speech"
-  />
-  <CopyButton
-    valueToCopy="Daily in 5 minutes and I'm still not sure what to say..."
-  />
-</Wrapper>
-`;
+@media (max-width:26.25em) {
+  .c0 {
+    max-width: 100%;
+  }
+}
 
-exports[`COMPONENT - QuoteBubble renders correctly thought variant of bubble 1`] = `
 <Wrapper>
-  <Quote
-    data-testid="quote"
+  <section
+    className="c0"
+    style={
+      Object {
+        "opacity": 0,
+        "transform": "perspective(600px) rotateX(45deg) translateY(-20px) scale(0.8)",
+      }
+    }
   >
-    Daily in 5 minutes and I'm still not sure what to say...
-  </Quote>
-  <BubbleTail
-    variant="thought"
-  />
+    <Quote>
+      
+    </Quote>
+    <BubbleTail
+      variant="thought"
+    />
+  </section>
 </Wrapper>
 `;
