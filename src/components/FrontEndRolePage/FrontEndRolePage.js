@@ -1,17 +1,14 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
 
 import { FRONT_END_ROLE, FRONT_END_ROLE_LABEL } from '../../constants/roles';
-import { BRAG, CONFESS } from '../../constants/roleActions';
 import Page from '../Page';
 import RoleBar from '../RoleBar';
 import ActionButtons from '../ActionButtons';
-import QuoteBubble from '../QuoteBubble';
 import Section from '../Section';
 import RoleContent from '../RoleContent';
-import Default from './FrontEndDefault';
-import Brag from './FrontEndBrag';
-import Confess from './FrontEndConfess';
+import Fox from '../Characters/Fox';
+import QuoteBubble from '../QuoteBubble';
+import Character from '../Character';
 
 function FrontEndRolePage() {
   return (
@@ -21,9 +18,9 @@ function FrontEndRolePage() {
         <Section>
           <RoleContent>
             <QuoteBubble />
-            <Route exact path={`/${FRONT_END_ROLE}`} component={Default} />
-            <Route exact path={`/${FRONT_END_ROLE}/${BRAG}/:quoteID`} component={Brag} />
-            <Route exact path={`/${FRONT_END_ROLE}/${CONFESS}/:quoteID`} component={Confess} />
+            <Character>
+              <Fox />
+            </Character>
           </RoleContent>
         </Section>
         <ActionButtons role={FRONT_END_ROLE} />

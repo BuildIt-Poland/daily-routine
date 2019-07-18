@@ -10,9 +10,9 @@ exports[`COMPONENT - DevOpsRolePage renders correctly for /devops path 1`] = `
   <Section>
     <RoleContent>
       <QuoteBubble />
-      <Whale
-        pose="default"
-      />
+      <Character>
+        <Whale />
+      </Character>
     </RoleContent>
   </Section>
   <ActionButtons
@@ -31,6 +31,9 @@ exports[`COMPONENT - DevOpsRolePage renders correctly for /devops/brag path 1`] 
   <Section>
     <RoleContent>
       <QuoteBubble />
+      <Character>
+        <Whale />
+      </Character>
     </RoleContent>
   </Section>
   <ActionButtons
@@ -49,6 +52,9 @@ exports[`COMPONENT - DevOpsRolePage renders correctly for /devops/confess path 1
   <Section>
     <RoleContent>
       <QuoteBubble />
+      <Character>
+        <Whale />
+      </Character>
     </RoleContent>
   </Section>
   <ActionButtons
