@@ -21,9 +21,7 @@ exports[`COMPONENT - QuoteBubble renders correctly 1`] = `
   }
 }
 
-<Wrapper
-  calculatedHeight={0}
->
+<Wrapper>
   <section
     className="c0"
     style={
