@@ -18,7 +18,7 @@ function GenderFlower({ isVisible, className }) {
     from: { opacity: 0, transform: 'scale(0) rotate(-180deg)' },
     enter: { opacity: 1, transform: 'scale(1) rotate(0)' },
     leave: { opacity: 0, transform: 'scale(0) rotate(-180deg)' },
-    config: { mass: 1, tension: 160, friction: 8 }
+    config: { mass: 1, tension: 160, friction: 8, delay: 200 }
   });
 
   return transitions.map(({ item, key, props }) => {
