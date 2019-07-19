@@ -13,13 +13,13 @@ export const DEVOPS_BRAG = {
     'At last I have ' +
     'decoupled intermediete layers of web-proxify-echo container to lessen in-memory footprints. ' +
     'Plan to further ' +
-    ' verify if Jenkins pipeline flows operate respecting new image build scenarios.'
+    'verify if Jenkins pipeline flows operate respecting new image build scenarios.'
 };
 
 export const DEVOPS_CONFESS = {
   heavydutywhale:
     'Sadly yesterday I ' +
-    ' failed to apply global csrf rules as a secret exposure dependency. ' +
+    'failed to apply global csrf rules as a secret exposure dependency. ' +
     'I will try hard at ' +
     'verifying Ansible output of the concatantion to diagnose failed ruling file.',
   psychodelicwhale:
@@ -29,7 +29,7 @@ export const DEVOPS_CONFESS = {
     'resolve issues related to namespace targetting as a potentional roadblock.',
   whaleextrovert:
     'Failing to ' +
-    ' set missing routing multiplication for seconadry VLAN gateway hops. ' +
+    'set missing routing multiplication for seconadry VLAN gateway hops. ' +
     'Hopefully today, ' +
-    ' I can reestablish the routing table disparities to resolve hop debounces.'
+    'I can reestablish the routing table disparities to resolve hop debounces.'
 };
