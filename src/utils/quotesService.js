@@ -32,3 +32,11 @@ export function getQuote(role, action, quoteID) {
 export function getRandomQuoteID(role, action) {
   return sample(Object.keys(roleQuotes[role][action]));
 }
+
+// export function getRandomQuoteID(role, action) {
+//   let _temp_translate = {
+//     brag: "success",
+//     confess: "fail",
+//   }
+//   action = _temp_translate[action]
+// }
