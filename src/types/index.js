@@ -19,4 +19,8 @@ export const location = shape({
   pathname: string.isRequired
 });
 
+export const history = shape({
+  location
+});
+
 export const speechBubbleVariant = oneOf([SPEECH, THOUGHT]);

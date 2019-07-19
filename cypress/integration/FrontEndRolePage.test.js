@@ -15,7 +15,7 @@ describe('FrontEndRolePage', () => {
     describe('when clicked', () => {
       it(`should redirect to the /${FRONT_END_ROLE}/${BRAG_ROLE_ACTION}`, () => {
         cy.getByTestId(`${FRONT_END_ROLE}-${BRAG_ROLE_ACTION}-button`).click();
-        cy.location('pathname').should('eq', `/${FRONT_END_ROLE}/${BRAG_ROLE_ACTION}`);
+        cy.location('pathname').should('contain', `/${FRONT_END_ROLE}/${BRAG_ROLE_ACTION}`);
       });
     })
   });
@@ -24,7 +24,7 @@ describe('FrontEndRolePage', () => {
     describe('when clicked', () => {
       it(`should redirect to the /${FRONT_END_ROLE}/${CONFESS_ROLE_ACTION}`, () => {
         cy.getByTestId(`${FRONT_END_ROLE}-${CONFESS_ROLE_ACTION}-button`).click();
-        cy.location('pathname').should('eq', `/${FRONT_END_ROLE}/${CONFESS_ROLE_ACTION}`);
+        cy.location('pathname').should('contain', `/${FRONT_END_ROLE}/${CONFESS_ROLE_ACTION}`);
       });
     });
   });

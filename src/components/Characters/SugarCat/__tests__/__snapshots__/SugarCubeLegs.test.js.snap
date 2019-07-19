@@ -4,7 +4,7 @@ exports[`COMPONENT - Characters SugarCat SugarCubeLegs renders correctly 1`] = `
 Array [
   .c0 {
   position: absolute;
-  bottom: 0.1rem;
+  bottom: 2.1rem;
   left: 23rem;
   -webkit-animation: kRJNIP 2.5s ease-in-out -0.3s infinite;
   animation: kRJNIP 2.5s ease-in-out -0.3s infinite;
@@ -24,7 +24,7 @@ Array [
   </svg>,
   .c0 {
   position: absolute;
-  bottom: 0;
+  bottom: 2rem;
   left: 23.8rem;
   -webkit-animation: cpXlhx 2.5s ease-in-out infinite;
   animation: cpXlhx 2.5s ease-in-out infinite;

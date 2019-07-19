@@ -8,17 +8,12 @@ exports[`COMPONENT - BackEndRolePage renders correctly for /backend path 1`] = `
     label="Back End Developer"
   />
   <Section>
-    <Content
-      narrow={true}
-    >
-      <Robot
-        pose="default"
-      />
-      <QuoteBubble
-        noCopyToClipboard={true}
-        variant="thought"
-      />
-    </Content>
+    <RoleContent>
+      <QuoteBubble />
+      <Character>
+        <Robot />
+      </Character>
+    </RoleContent>
   </Section>
   <ActionButtons
     role="backend"
@@ -34,16 +29,12 @@ exports[`COMPONENT - BackEndRolePage renders correctly for /backend/brag path 1`
     label="Back End Developer"
   />
   <Section>
-    <Content
-      narrow={true}
-    >
-      <Robot
-        pose="brag"
-      />
-      <QuoteBubble
-        quote="Yesterday I was implementing PUT method for missing RESTful API endpoint."
-      />
-    </Content>
+    <RoleContent>
+      <QuoteBubble />
+      <Character>
+        <Robot />
+      </Character>
+    </RoleContent>
   </Section>
   <ActionButtons
     role="backend"
@@ -59,16 +50,12 @@ exports[`COMPONENT - BackEndRolePage renders correctly for /backend/confess path
     label="Back End Developer"
   />
   <Section>
-    <Content
-      narrow={true}
-    >
-      <Robot
-        pose="confess"
-      />
-      <QuoteBubble
-        quote="Yesterday I was implementing PUT method for missing RESTful API endpoint."
-      />
-    </Content>
+    <RoleContent>
+      <QuoteBubble />
+      <Character>
+        <Robot />
+      </Character>
+    </RoleContent>
   </Section>
   <ActionButtons
     role="backend"

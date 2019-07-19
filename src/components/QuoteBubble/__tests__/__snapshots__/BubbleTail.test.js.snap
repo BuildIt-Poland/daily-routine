@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`COMPONENT - QuoteBubble BubbleTail renders correctly 1`] = `
+.c0 {
+  position: absolute;
+  bottom: -3.2rem;
+  left: 10%;
+  -webkit-transform: translateY(-20px);
+  -ms-transform: translateY(-20px);
+  transform: translateY(-20px);
+  -webkit-animation: oZTux 400ms cubic-bezier(0.68,-0.55,0.265,1.6) forwards;
+  animation: oZTux 400ms cubic-bezier(0.68,-0.55,0.265,1.6) forwards;
+  -webkit-transform-origin: 50% 0;
+  -ms-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+}
+
+.c0 #top-blob {
+  -webkit-animation: gdMPTF 600ms ease-in 400ms forwards;
+  animation: gdMPTF 600ms ease-in 400ms forwards;
+}
+
+.c0 #mid-blob {
+  -webkit-animation: gdMPTF 600ms ease-in 800ms forwards;
+  animation: gdMPTF 600ms ease-in 800ms forwards;
+}
+
+.c0 #bottom-blob {
+  -webkit-animation: gdMPTF 600ms ease-in 1200ms forwards;
+  animation: gdMPTF 600ms ease-in 1200ms forwards;
+}
+
+@media (max-width:26.25em) {
+  .c0 {
+    left: 50%;
+  }
+}
+
+<BubbleTailArtwork
+  className="c0"
+/>
+`;

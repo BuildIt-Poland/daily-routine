@@ -5,6 +5,10 @@ import { MemoryRouter } from 'react-router-dom';
 import { BACK_END_ROLE } from '../../../constants/roles';
 import ActionButtons from '../ActionButtons';
 
+jest.mock('../../../utils/quotesService.js', () => ({
+  getRandomQuoteID: () => '1'
+}));
+
 afterEach(cleanup);
 
 describe('COMPONENT - ActionButtons', () => {

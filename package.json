@@ -18,7 +18,9 @@
     "deploy": "node ./deploy.js"
   },
   "dependencies": {
+    "lodash.sample": "4.2.1",
     "react": "16.8.6",
+    "react-copy-to-clipboard": "5.0.1",
     "react-dom": "16.8.6",
     "react-router-dom": "5.0.1",
     "react-scripts": "3.0.1",
@@ -29,7 +31,7 @@
     "@testing-library/react": "8.0.1",
     "@testing-library/react-hooks": "1.1.0",
     "check-dependencies": "1.1.0",
-    "cypress": "3.3.1",
+    "cypress": "3.4.0",
     "eslint": "5.16.0",
     "eslint-config-prettier": "5.0.0",
     "eslint-plugin-import": "2.17.3",
@@ -55,6 +57,13 @@
       "import"
     ],
     "rules": {
+      "no-unused-vars": [
+        "error",
+        {
+          "varsIgnorePattern": "_",
+          "argsIgnorePattern": "_"
+        }
+      ],
       "no-console": [
         "error"
       ],
@@ -113,7 +122,8 @@
       "!src/constants/**/*",
       "!src/components/Root/**/*",
       "!src/components/**/index.js",
-      "!src/components/GlobalStyle/**/*"
+      "!src/components/GlobalStyle/**/*",
+      "!src/quotes/**/*"
     ],
     "coverageThreshold": {
       "global": {

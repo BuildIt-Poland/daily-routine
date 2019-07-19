@@ -8,17 +8,12 @@ exports[`COMPONENT - DevOpsRolePage renders correctly for /devops path 1`] = `
     label="Dev Ops"
   />
   <Section>
-    <Content
-      narrow={true}
-    >
-      <Whale
-        pose="default"
-      />
-      <QuoteBubble
-        noCopyToClipboard={true}
-        variant="thought"
-      />
-    </Content>
+    <RoleContent>
+      <QuoteBubble />
+      <Character>
+        <Whale />
+      </Character>
+    </RoleContent>
   </Section>
   <ActionButtons
     role="devops"
@@ -34,16 +29,12 @@ exports[`COMPONENT - DevOpsRolePage renders correctly for /devops/brag path 1`] 
     label="Dev Ops"
   />
   <Section>
-    <Content
-      narrow={true}
-    >
-      <Whale
-        pose="brag"
-      />
-      <QuoteBubble
-        quote="Yesterday I was implementing PUT method for missing RESTful API endpoint."
-      />
-    </Content>
+    <RoleContent>
+      <QuoteBubble />
+      <Character>
+        <Whale />
+      </Character>
+    </RoleContent>
   </Section>
   <ActionButtons
     role="devops"
@@ -59,16 +50,12 @@ exports[`COMPONENT - DevOpsRolePage renders correctly for /devops/confess path 1
     label="Dev Ops"
   />
   <Section>
-    <Content
-      narrow={true}
-    >
-      <Whale
-        pose="confess"
-      />
-      <QuoteBubble
-        quote="Yesterday I was implementing PUT method for missing RESTful API endpoint."
-      />
-    </Content>
+    <RoleContent>
+      <QuoteBubble />
+      <Character>
+        <Whale />
+      </Character>
+    </RoleContent>
   </Section>
   <ActionButtons
     role="devops"
