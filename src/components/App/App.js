@@ -16,7 +16,7 @@ import FrontEndRolePage from '../FrontEndRolePage';
 import BackEndRolePage from '../BackEndRolePage';
 import DevOpsRolePage from '../DevOpsRolePage';
 import RouteTransitionAnimation from '../RouteTransitionAnimation';
-import AnimatedWrapper from './AnimatedWrapper';
+import Wrapper from './Wrapper';
 
 function App({ location, history }) {
   return (
@@ -25,7 +25,7 @@ function App({ location, history }) {
         <>
           <RouteTransitionAnimation location={location} />
           <GenderProvider>
-            <AnimatedWrapper location={location}>
+            <Wrapper>
               <AppBar />
               <main>
                 <Route exact path={ROOT_PATH} component={LandingPage} />
@@ -34,7 +34,7 @@ function App({ location, history }) {
                 <Route path={`/${DEV_OPS_ROLE}`} component={DevOpsRolePage} />
               </main>
               <Footer />
-            </AnimatedWrapper>
+            </Wrapper>
           </GenderProvider>
         </>
       </ThemeProvider>
