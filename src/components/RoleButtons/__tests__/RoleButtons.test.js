@@ -3,7 +3,7 @@ import { render, cleanup, fireEvent } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 
 import RoleButtons from '../RoleButtons';
-import { LandingPageAnimationContext } from '../../../context/LandingPageAnimationContext';
+import { RouteTransitionAnimationContext } from '../../../context/RouteTransitionAnimationContext';
 import {
   BACK_END_ROLE,
   BACK_END_ROLE_LABEL,
@@ -21,9 +21,9 @@ describe('COMPONENT - RoleButtons', () => {
   it('renders correct all roles button', () => {
     const { getByTestId } = render(
       <MemoryRouter initialEntries={['/']} initialIndex={1}>
-        <LandingPageAnimationContext.Provider value={{ animateAndRedirect }}>
+        <RouteTransitionAnimationContext.Provider value={{ animateAndRedirect }}>
           <RoleButtons />
-        </LandingPageAnimationContext.Provider>
+        </RouteTransitionAnimationContext.Provider>
       </MemoryRouter>
     );
 
@@ -36,9 +36,9 @@ describe('COMPONENT - RoleButtons', () => {
     it(`should call context method "animateAndRedirect" passing url as an argument`, () => {
       const { getByTestId } = render(
         <MemoryRouter initialEntries={[ROOT_PATH]} initialIndex={1}>
-          <LandingPageAnimationContext.Provider value={{ animateAndRedirect }}>
+          <RouteTransitionAnimationContext.Provider value={{ animateAndRedirect }}>
             <RoleButtons />
-          </LandingPageAnimationContext.Provider>
+          </RouteTransitionAnimationContext.Provider>
         </MemoryRouter>
       );
 

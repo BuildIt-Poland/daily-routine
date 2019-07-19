@@ -1,19 +1,19 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 
-import { LandingPageAnimationProvider, LandingPageAnimationContext } from '../LandingPageAnimationContext';
+import { RouteTransitionAnimationProvider, RouteTransitionAnimationContext } from '../RouteTransitionAnimationContext';
 import { ROOT_PATH } from '../../constants/routes';
 
-describe('COMPONENT - LandingPageAnimationProvider', () => {
+describe('COMPONENT - RouteTransitionAnimationProvider', () => {
   it('should not render child component when "isAnimating" is "false"', () => {
     const { container } = render(
-      <LandingPageAnimationProvider>
-        <LandingPageAnimationContext.Consumer>
+      <RouteTransitionAnimationProvider>
+        <RouteTransitionAnimationContext.Consumer>
           {({ isAnimating }) => {
             return isAnimating && <p>MockComponent</p>;
           }}
-        </LandingPageAnimationContext.Consumer>
-      </LandingPageAnimationProvider>
+        </RouteTransitionAnimationContext.Consumer>
+      </RouteTransitionAnimationProvider>
     );
 
     expect(container.querySelectorAll('p')[0]).not.toBeDefined();
@@ -21,14 +21,14 @@ describe('COMPONENT - LandingPageAnimationProvider', () => {
 
   it('should render child component when animateAndRedirect is called', () => {
     const { container } = render(
-      <LandingPageAnimationProvider>
-        <LandingPageAnimationContext.Consumer>
+      <RouteTransitionAnimationProvider>
+        <RouteTransitionAnimationContext.Consumer>
           {({ isAnimating, animateAndRedirect }) => {
             animateAndRedirect(ROOT_PATH);
             return isAnimating && <p>MockComponent</p>;
           }}
-        </LandingPageAnimationContext.Consumer>
-      </LandingPageAnimationProvider>
+        </RouteTransitionAnimationContext.Consumer>
+      </RouteTransitionAnimationProvider>
     );
 
     expect(container.querySelectorAll('p')[0]).toHaveTextContent('MockComponent');
@@ -36,15 +36,15 @@ describe('COMPONENT - LandingPageAnimationProvider', () => {
 
   it('should not render child component when stopAnimation is called', () => {
     const { container } = render(
-      <LandingPageAnimationProvider>
-        <LandingPageAnimationContext.Consumer>
+      <RouteTransitionAnimationProvider>
+        <RouteTransitionAnimationContext.Consumer>
           {({ isAnimating, animateAndRedirect, stopAnimation }) => {
             animateAndRedirect(ROOT_PATH);
             stopAnimation();
             return isAnimating && <p>MockComponent</p>;
           }}
-        </LandingPageAnimationContext.Consumer>
-      </LandingPageAnimationProvider>
+        </RouteTransitionAnimationContext.Consumer>
+      </RouteTransitionAnimationProvider>
     );
 
     expect(container.querySelectorAll('p')[0]).not.toBeDefined();

@@ -1,11 +1,11 @@
 import React, { createContext, useState } from 'react';
 import PropTypes from 'prop-types';
 
-const LandingPageAnimationContext = createContext();
-const { Provider } = LandingPageAnimationContext;
+const RouteTransitionAnimationContext = createContext();
+const { Provider } = RouteTransitionAnimationContext;
 
-function LandingPageAnimationProvider({ children, history }) {
-  const REDIRECT_DELAY = 1300;
+function RouteTransitionAnimationProvider({ children, history }) {
+  const REDIRECT_DELAY = 250;
 
   function redirectWithDelay(url) {
     setTimeout(() => {
@@ -27,9 +27,9 @@ function LandingPageAnimationProvider({ children, history }) {
   return <Provider value={{ isAnimating, animateAndRedirect, stopAnimation }}>{children}</Provider>;
 }
 
-LandingPageAnimationProvider.propTypes = {
+RouteTransitionAnimationProvider.propTypes = {
   children: PropTypes.node,
   history: PropTypes.object
 };
 
-export { LandingPageAnimationContext, LandingPageAnimationProvider };
+export { RouteTransitionAnimationContext, RouteTransitionAnimationProvider };

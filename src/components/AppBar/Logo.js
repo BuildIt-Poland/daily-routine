@@ -3,11 +3,12 @@ import { Link as LinkBase } from 'react-router-dom';
 import { withRouter } from 'react-router';
 import styled from 'styled-components';
 
+import { location } from '../../types';
+import { RouteTransitionAnimationContext } from '../../context/RouteTransitionAnimationContext';
 import { colorBlack, spacingSmall, borderWidthThin } from '../../styles/designTokens';
-import { Logo as LogoIcon } from '../Icons';
-import { LandingPageAnimationContext } from '../../context/LandingPageAnimationContext';
 import { ROOT_PATH } from '../../constants/routes';
-import { location } from './../../types';
+import { Logo as LogoIcon } from '../Icons';
+
 const Link = styled(LinkBase)`
   display: flex;
   text-decoration: none;
@@ -33,7 +34,7 @@ const Tagline = styled.p`
 `;
 
 function Logo({ location }) {
-  const { animateAndRedirect } = useContext(LandingPageAnimationContext);
+  const { animateAndRedirect } = useContext(RouteTransitionAnimationContext);
 
   function isRootPath(location) {
     return location.pathname !== ROOT_PATH;

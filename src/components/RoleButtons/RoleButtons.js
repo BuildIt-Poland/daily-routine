@@ -13,14 +13,14 @@ import {
 import Content from '../Content';
 import Headline from '../Headline';
 import Navigation from '../Navigation';
-import { LandingPageAnimationContext } from '../../context/LandingPageAnimationContext';
+import { RouteTransitionAnimationContext } from '../../context/RouteTransitionAnimationContext';
 import Wrapper from './Wrapper';
 import FrontEndButton from './FrontEndButton';
 import BackEndButton from './BackEndButton';
 import DevOpsButton from './DevOpsButton';
 
 function RoleButtons() {
-  const { animateAndRedirect } = useContext(LandingPageAnimationContext);
+  const { animateAndRedirect } = useContext(RouteTransitionAnimationContext);
 
   return (
     <Wrapper>

@@ -3,7 +3,7 @@ import { render, cleanup } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 
 import AppBar from '../AppBar';
-import { LandingPageAnimationContext } from '../../../context/LandingPageAnimationContext';
+import { RouteTransitionAnimationContext } from '../../../context/RouteTransitionAnimationContext';
 
 afterEach(cleanup);
 
@@ -16,9 +16,9 @@ describe('COMPONENT - AppBar', () => {
     };
     const { container } = render(
       <MemoryRouter initialEntries={[mockLocation]} initialIndex={1}>
-        <LandingPageAnimationContext.Provider value={{ animateAndRedirect }}>
+        <RouteTransitionAnimationContext.Provider value={{ animateAndRedirect }}>
           <AppBar />
-        </LandingPageAnimationContext.Provider>
+        </RouteTransitionAnimationContext.Provider>
       </MemoryRouter>
     );
 
