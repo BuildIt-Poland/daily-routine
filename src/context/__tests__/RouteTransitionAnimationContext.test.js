@@ -5,9 +5,17 @@ import { RouteTransitionAnimationProvider, RouteTransitionAnimationContext } fro
 import { ROOT_PATH } from '../../constants/routes';
 
 describe('COMPONENT - RouteTransitionAnimationProvider', () => {
+  const history = {
+    location: {
+      pathname: '/',
+      hash: 'ab34b'
+    },
+    push: jest.fn()
+  };
+
   it('should not render child component when "isAnimating" is "false"', () => {
     const { container } = render(
-      <RouteTransitionAnimationProvider>
+      <RouteTransitionAnimationProvider history={history}>
         <RouteTransitionAnimationContext.Consumer>
           {({ isAnimating }) => {
             return isAnimating && <p>MockComponent</p>;
@@ -21,7 +29,7 @@ describe('COMPONENT - RouteTransitionAnimationProvider', () => {
 
   it('should render child component when animateAndRedirect is called', () => {
     const { container } = render(
-      <RouteTransitionAnimationProvider>
+      <RouteTransitionAnimationProvider history={history}>
         <RouteTransitionAnimationContext.Consumer>
           {({ isAnimating, animateAndRedirect }) => {
             animateAndRedirect(ROOT_PATH);
@@ -36,7 +44,7 @@ describe('COMPONENT - RouteTransitionAnimationProvider', () => {
 
   it('should not render child component when stopAnimation is called', () => {
     const { container } = render(
-      <RouteTransitionAnimationProvider>
+      <RouteTransitionAnimationProvider history={history}>
         <RouteTransitionAnimationContext.Consumer>
           {({ isAnimating, animateAndRedirect, stopAnimation }) => {
             animateAndRedirect(ROOT_PATH);
