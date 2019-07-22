@@ -1,7 +1,7 @@
 export const BACKEND_BRAG = {
   glamorousrobot:
     'Happy to state, I have ' +
-    'dinished throwing atomicized errors in nonpast conditions. ' +
+    'finished throwing atomicized errors in nonpast conditions. ' +
     'Now I can ' +
     'reevaluate application of RESNET120 deep neural network for log data analysis.',
   fundamentalrobot:

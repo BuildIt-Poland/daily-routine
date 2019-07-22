@@ -1,4 +1,5 @@
-import _ from "lodash";
+// import _ from "lodash";
+let _ = require('lodash');
 
 const SUCCESS = 'success';
 const FAIL = 'fail';
@@ -7,10 +8,30 @@ const FUTURE = 'future';
 const DEVOPS = 'devops';
 const BACKEND = 'backend';
 const FRONTEND = 'frontend';
+const PREFIX = 'prefix';
+
+// kindof hackish providing enums via array indexing
+// something here should be used to collapse binary paths
+// to more congested numbers for example: 2018 -> 178
+const PATH_PARTS = [[DEVOPS, BACKEND, FRONTEND], [SUCCESS, FAIL]];
+
+// encode path as root_number, currently 0-6
+// matching pattern for instance 5 -> rootnum , 4345 -> pattern elemnts
+// this is lightly enforced by decimal system currently, but should be flexible till 35-ary system
+
+let cartesian_merge = (a, b) => a.map(x => b.map(y => [].concat(x, y))).flat();
+// static cartesian product required if we need to keep links consistent across updates
+// order is important
+let cartesian = (a, b, ...c) => (b ? cartesian(cartesian_merge(a, b), ...c) : a);
+
+const PATHS = cartesian(...PATH_PARTS);
+const ENCODING_ARRITY = PATHS.length;
+// considering building assert mechanism for (1 < ENCODING_ARRITY < 36)
+// this is a list of all possible paths, order is important
 
 // Still consider this experimental
 // ORDER HERE MATTERS, ALWAYS ADD AT THE END
-const PREFIX = {
+const PREFIX_LEAF = {
   [SUCCESS]: {
     [PAST]: [
       'Yesterday I finally',
@@ -117,65 +138,128 @@ const FRONTEND_LEAF = {
 const ROLES = {
   [DEVOPS]: DEVOPS_LEAF,
   [BACKEND]: BACKEND_LEAF,
-  [FRONTEND]: FRONTEND_LEAF
+  [FRONTEND]: FRONTEND_LEAF,
+  // keeping in one tree for better bookkeeping structure
+  [PREFIX]: PREFIX_LEAF
 };
 
-function _getQuote(role, kind) {
+function _getQuoteFromNum(number) {
+  let [roleIx, prefixPast, rolePast, prefixFuture, roleFuture, ..._] = number.toString().split('');
+  let [role, kind] = PATHS[roleIx];
+
   let roleLeaf = ROLES[role][kind];
-  let prefixLeaf = PREFIX[kind];
+  let prefixLeaf = ROLES[PREFIX][kind];
+
+  let samplePositions = [prefixPast, rolePast, prefixFuture, roleFuture];
+  // this order is not fluid and affects proper encoding, decoding, it can be refactored
+  // by encoding this order, yeah i know :)
   let arrayOfExpressions = [prefixLeaf[PAST], roleLeaf[PAST], prefixLeaf[FUTURE], roleLeaf[FUTURE]];
-  let expressions = arrayOfExpressions.map(sample).join(' ');
+  let expressions = arrayOfExpressions.map(
+    // module is if we somehow run out of bounds, it should not happen, but it will map to something
+    (phrases, ix) => phrases[samplePositions[ix] % phrases.length]
+  );
   return expressions;
 }
 
+function _getQuote(role, kind) {
+  //let role_ix = PATHS.indexOf([role, kind]);
+  let roleMatch = _.partial(_.isEqual, [role, kind]);
+  let role_ix = PATHS.findIndex(roleMatch);
 
-function _convertToNumber(nickname){
-  words = nickname.split("-")
+  let roleLeaf = ROLES[role][kind];
+  let prefixLeaf = ROLES[PREFIX][kind];
 
+  // this order is not fluid and affects proper encoding, decoding, it can be refactored
+  // by encoding this order, yeah i know :)
+  let arrayOfExpressions = [prefixLeaf[PAST], roleLeaf[PAST], prefixLeaf[FUTURE], roleLeaf[FUTURE]];
+
+  let sample_and_ix = items => {
+    let ix = Math.floor(Math.random() * items.length);
+    let item = items[ix];
+    return [item, ix];
+  };
+  let [expressions, ixs] = _.unzip(arrayOfExpressions.map(phrases => sample_and_ix(phrases)));
+  let expression = expressions.join(' ');
+
+  return [expression, [role_ix, ...ixs]];
 }
 
+// nickname generating
+// we keep it decimal here, no arrity nescessary
+const adverbs = [
+  'neatly',
+  'uncleanly',
+  'bluntly',
+  'trivially',
+  'bravely',
+  'spirtually',
+  'so',
+  'lazily',
+  'ruthlessly',
+  'eagerly'
+];
 
-// it is not the most
-function _convertToNickname(number_key){
-  // seeds need to be in 10
-  const adverbs = [
-    "neatly", "uncleanly", "bluntly", "trivially", "bravely",
-    "spirtually", "so", "lazily", "ruthlessly", "eagerly"
-  ];
-  // const supp = [
-  //   "somewhat", "kindof", "likea", "moreso", "en"
-  // ]
-  const adjectives = [
-    "abusive", "leaking", "reverting", "unapologetic", "raginng",
-    "ample", "admirable", "arctic", "corny", "dense", "feisty"
-  ];
-  const nouns = [
-    "boxer", "walrus", "trickster", "typist", "kidoh",
-    "soul", "minion", "telegraph", "painter", "jungleboy"
-  ];
+const adjectives = [
+  'abusive',
+  'leaking',
+  'reverting',
+  'unapologetic',
+  'raginng',
+  'ample',
+  'admirable',
+  'arctic',
+  'corny',
+  'dense',
+  'feisty'
+];
+const nouns = [
+  'boxer',
+  'walrus',
+  'trickster',
+  'typist',
+  'kidoh',
+  'soul',
+  'minion',
+  'telegraph',
+  'painter',
+  'jungleboy'
+];
 
-  // formation flipped here for easier module
-  let formation = [[adverbs, adjectives], nouns];
+let domain = [[adverbs, adjectives], nouns];
+function getWordFromDomain(digit, ix, num_arr, domain) {
+  return ix === 0 ? domain[1][digit] : domain[0][ix % 2][digit];
+}
+function getIntFromDomain(word, ix, words, domain) {
+  return ix == 0 ? domain[1].indexOf(word) : domain[0][ix % 2].indexOf(word);
+}
+let getWord = _.partialRight(getWordFromDomain, domain);
+let getInt = _.partialRight(getIntFromDomain, domain);
 
-  let lazy_binary = function* () {
-    let x = 0;
-    while(true) { x = (x+1) % 2; yield x; }
-  }
+function _convertToNumber(nickname) {
+  let words = nickname.split('-');
+  // reversing twice for processing without lazy generators
+  let number = parseInt(
+    words
+      .reverse()
+      .map((word, ix, words) => getInt(word, ix, words))
+      .reverse()
+      .join(''),
+    ENCODING_ARRITY
+  );
+  return number;
+}
 
-  function getDomainWithFormation(item, ix, items, formation, lazy_gen){
-    let l = lazy_gen
-    return ix === items.length - 1
-           ? formation[1][item]
-           : formation[0][l.next().value][item];
-  }
-  let l = lazy_binary()
-  let getWord = _.partialRight(getDomainWithFormation, formation, l)
-  let digits = number_key.toString().split("").map(num => parseInt(num));
+function _convertToNickname(number_key) {
+  let digits = number_key
+    .toString()
+    .split('')
+    .map(num => parseInt(num));
+  // reversing twice for processing without lazy generators
+  let nickName = digits
+    .reverse()
+    .map((item, ix, arr) => getWord(item, ix, arr))
+    .reverse()
+    .join('-');
 
-  let nickName = digits.map(
-      (item, ix, arr) => getWord(item, ix, arr)
-    ).join("-")
-    ;
   return nickName;
-
 }
