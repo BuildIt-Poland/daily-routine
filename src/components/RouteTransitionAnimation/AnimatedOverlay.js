@@ -60,7 +60,7 @@ function AnimatedOverlay({ onFinished, theme }) {
       opacity: 0,
       backgroundColor: primaryColor
     },
-    config: { mass: 1, tension: 120, friction: 22, clamp: true }
+    config: { tension: 120, friction: 22, clamp: true }
   });
 
   const thickBarAnimation = useSpring({
@@ -74,7 +74,7 @@ function AnimatedOverlay({ onFinished, theme }) {
       transform: 'translateY(140vh)',
       backgroundColor: primaryColor
     },
-    config: { mass: 1, tension: 300, friction: 140 }
+    config: { tension: 300, friction: 140 }
   });
 
   return (
