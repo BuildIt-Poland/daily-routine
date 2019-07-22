@@ -1,14 +1,15 @@
-import sample from 'lodash.sample';
+import _ from "lodash";
 
-const SUCCESS = 'SUCCESS';
-const FAIL = 'FAIL';
-const PAST = 'PAST';
-const FUTURE = 'FUTURE';
-const DEVOPS = 'DEVOPS';
-const BACKEND = 'BACKEND';
-const FRONTEND = 'FRONTEND';
+const SUCCESS = 'success';
+const FAIL = 'fail';
+const PAST = 'past';
+const FUTURE = 'future';
+const DEVOPS = 'devops';
+const BACKEND = 'backend';
+const FRONTEND = 'frontend';
 
 // Still consider this experimental
+// ORDER HERE MATTERS, ALWAYS ADD AT THE END
 const PREFIX = {
   [SUCCESS]: {
     [PAST]: [
@@ -52,7 +53,7 @@ const DEVOPS_LEAF = {
   [SUCCESS]: {
     [PAST]: [
       'completed fixing ingress path aliasing in periodically scheduled jobs.',
-      'runned a SUCCESSful migration of skew-library for node annotations.',
+      'runned a successful migration of skew-library for node annotations.',
       'decoupled intermediete layers of web-proxify-echo container to lessen in-memory footprints.'
     ],
     [FUTURE]: [
@@ -63,7 +64,7 @@ const DEVOPS_LEAF = {
   },
   [FAIL]: {
     [PAST]: [
-      'FAILed to apply global csrf rules as a secret exposure dependency.',
+      'failed to apply global csrf rules as a secret exposure dependency.',
       'debuged pods health probes resolution in prometheus namespace.',
       'set missing routing multiplication for seconadry VLAN gateway hops.'
     ],
@@ -120,9 +121,61 @@ const ROLES = {
 };
 
 function _getQuote(role, kind) {
-  var roleLeaf = ROLES[role][kind];
-  var prefixLeaf = PREFIX[kind];
-  var arrayOfExpressions = [prefixLeaf[PAST], roleLeaf[PAST], prefixLeaf[FUTURE], roleLeaf[FUTURE]];
-  var expressions = arrayOfExpressions.map(sample).join(' ');
+  let roleLeaf = ROLES[role][kind];
+  let prefixLeaf = PREFIX[kind];
+  let arrayOfExpressions = [prefixLeaf[PAST], roleLeaf[PAST], prefixLeaf[FUTURE], roleLeaf[FUTURE]];
+  let expressions = arrayOfExpressions.map(sample).join(' ');
   return expressions;
+}
+
+
+function _convertToNumber(nickname){
+  words = nickname.split("-")
+
+}
+
+
+// it is not the most
+function _convertToNickname(number_key){
+  // seeds need to be in 10
+  const adverbs = [
+    "neatly", "uncleanly", "bluntly", "trivially", "bravely",
+    "spirtually", "so", "lazily", "ruthlessly", "eagerly"
+  ];
+  // const supp = [
+  //   "somewhat", "kindof", "likea", "moreso", "en"
+  // ]
+  const adjectives = [
+    "abusive", "leaking", "reverting", "unapologetic", "raginng",
+    "ample", "admirable", "arctic", "corny", "dense", "feisty"
+  ];
+  const nouns = [
+    "boxer", "walrus", "trickster", "typist", "kidoh",
+    "soul", "minion", "telegraph", "painter", "jungleboy"
+  ];
+
+  // formation flipped here for easier module
+  let formation = [[adverbs, adjectives], nouns];
+
+  let lazy_binary = function* () {
+    let x = 0;
+    while(true) { x = (x+1) % 2; yield x; }
+  }
+
+  function getDomainWithFormation(item, ix, items, formation, lazy_gen){
+    let l = lazy_gen
+    return ix === items.length - 1
+           ? formation[1][item]
+           : formation[0][l.next().value][item];
+  }
+  let l = lazy_binary()
+  let getWord = _.partialRight(getDomainWithFormation, formation, l)
+  let digits = number_key.toString().split("").map(num => parseInt(num));
+
+  let nickName = digits.map(
+      (item, ix, arr) => getWord(item, ix, arr)
+    ).join("-")
+    ;
+  return nickName;
+
 }
