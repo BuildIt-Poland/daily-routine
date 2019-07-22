@@ -13,3 +13,8 @@ export { default as BuilditLogo } from './BuilditLogo';
 export { default as LongArrow } from './LongArrow';
 export { default as Lightbulb } from './Lightbulb';
 export { default as SaltGrinder } from './SaltGrinder';
+
+// Social media sharing
+export { default as Share } from './Share';
+export { default as Facebook } from './Facebook';
+export { default as Twitter } from './Twitter';
