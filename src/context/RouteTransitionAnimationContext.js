@@ -1,6 +1,8 @@
 import React, { createContext, useState } from 'react';
 import PropTypes from 'prop-types';
 
+import { history } from '../types';
+
 const RouteTransitionAnimationContext = createContext();
 const { Provider } = RouteTransitionAnimationContext;
 
@@ -29,7 +31,7 @@ function RouteTransitionAnimationProvider({ children, history }) {
 
 RouteTransitionAnimationProvider.propTypes = {
   children: PropTypes.node,
-  history: PropTypes.object
+  history: history.isRequired
 };
 
 export { RouteTransitionAnimationContext, RouteTransitionAnimationProvider };

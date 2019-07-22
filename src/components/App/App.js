@@ -1,14 +1,13 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
 import { Route, withRouter } from 'react-router-dom';
 
 import { FRONT_END_ROLE, BACK_END_ROLE, DEV_OPS_ROLE } from '../../constants/roles';
 import { ROOT_PATH } from '../../constants/routes';
-import { location } from '../../types';
+import { location, history } from '../../types';
 import { GenderProvider } from '../../context/GenderContext';
-import generateTheme from '../../utils/generateTheme';
 import { RouteTransitionAnimationProvider } from '../../context/RouteTransitionAnimationContext';
+import generateTheme from '../../utils/generateTheme';
 import AppBar from '../AppBar';
 import Footer from '../Footer';
 import LandingPage from '../LandingPage';
@@ -44,7 +43,7 @@ function App({ location, history }) {
 
 App.propTypes = {
   location,
-  history: PropTypes.object
+  history
 };
 
 export default withRouter(App);
