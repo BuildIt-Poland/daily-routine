@@ -3,14 +3,18 @@ import { render, cleanup } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 
 import LandingPage from '../LandingPage';
+import { RouteTransitionAnimationContext } from '../../../context/RouteTransitionAnimationContext';
 
 afterEach(cleanup);
 
 describe('COMPONENT - LandingPage', () => {
   it('renders correct elements', () => {
+    const animateAndRedirect = () => {};
     const { container } = render(
       <MemoryRouter initialEntries={['/']} initialIndex={1}>
-        <LandingPage />
+        <RouteTransitionAnimationContext.Provider value={{ animateAndRedirect }}>
+          <LandingPage />
+        </RouteTransitionAnimationContext.Provider>
       </MemoryRouter>
     );
 
