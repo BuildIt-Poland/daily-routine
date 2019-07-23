@@ -22,8 +22,12 @@ const roleQuotes = {
 };
 
 export function getQuote(role, action, quoteID) {
-  if (!role || !quoteID || !action) {
+  if (!role | (!quoteID & !action)) {
     return DEFAULT_QUOTE;
+  }
+
+  if (!roleQuotes[role][action]) {
+    return undefined;
   }
 
   return roleQuotes[role][action][quoteID];

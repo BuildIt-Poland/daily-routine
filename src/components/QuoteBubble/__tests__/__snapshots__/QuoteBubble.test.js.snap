@@ -15,6 +15,12 @@ exports[`COMPONENT - QuoteBubble renders correctly 1`] = `
   transform-origin: 50% 100%;
 }
 
+.c1 {
+  margin: 0;
+  padding: 1.6rem 2.4rem;
+  padding-bottom: 3rem;
+}
+
 @media (max-width:26.25em) {
   .c0 {
     max-width: 100%;
@@ -31,9 +37,11 @@ exports[`COMPONENT - QuoteBubble renders correctly 1`] = `
       }
     }
   >
-    <Quote>
-      
-    </Quote>
+    <p
+      className="c1"
+    >
+      404 - Message not found
+    </p>
     <BubbleTail
       variant="thought"
     />

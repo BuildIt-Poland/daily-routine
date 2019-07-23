@@ -25,6 +25,7 @@ function useBubble(pathname) {
     setBubble({
       quote: randomQuote,
       quoteID,
+      action,
       isInDefaultPose: checkIfInDefaultPose(pathname)
     });
   }, [pathname]);

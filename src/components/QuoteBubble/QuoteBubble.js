@@ -11,6 +11,7 @@ import Wrapper from './Wrapper';
 import Bubble from './Bubble';
 import Quote from './Quote';
 import BubbleTail from './BubbleTail';
+import ErrorMessage from './ErrorMessage';
 
 // TODO handle Wrapper resize for big quotes @blurbyte
 
@@ -40,9 +41,9 @@ function QuoteBubble({ location }) {
         ({ item, props, key }) =>
           item && (
             <Bubble key={key} style={props}>
-              <Quote>{item.quote}</Quote>
+              {item.quote ? <Quote>{item.quote}</Quote> : <ErrorMessage>404 - Message not found</ErrorMessage>}
               <BubbleTail variant={item.isInDefaultPose ? THOUGHT : SPEECH} />
-              {!item.isInDefaultPose && <CopyButton valueToCopy={item.quote} />}
+              {!item.isInDefaultPose && item.quote && <CopyButton valueToCopy={item.quote} />}
             </Bubble>
           )
       )}
