@@ -2,7 +2,6 @@
 
 import React from 'react';
 
-import { BRAG_ROLE_ACTION, CONFESS_ROLE_ACTION } from '../../constants/roles';
 import { BRAG, CONFESS } from '../../constants/roleActions';
 import { role } from '../../types';
 
@@ -21,8 +20,8 @@ function ActionButtons({ role }) {
     <Wrapper>
       <Content>
         <Navigation>
-          <BragButton quoteID={bragQuoteID} role={role} data-testid={`${role}-${BRAG_ROLE_ACTION}-button`} />
-          <ConfessButton quoteID={confessQuoteID} role={role} data-testid={`${role}-${CONFESS_ROLE_ACTION}-button`} />
+          <BragButton quoteID={bragQuoteID} role={role} data-testid={`${role}-${BRAG}-button`} />
+          <ConfessButton quoteID={confessQuoteID} role={role} data-testid={`${role}-${CONFESS}-button`} />
         </Navigation>
       </Content>
     </Wrapper>
