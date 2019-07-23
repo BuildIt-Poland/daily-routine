@@ -25,7 +25,8 @@ let cartesian_merge = (a, b) => a.map(x => b.map(y => [].concat(x, y))).flat();
 let cartesian = (a, b, ...c) => (b ? cartesian(cartesian_merge(a, b), ...c) : a);
 
 const PATHS = cartesian(...PATH_PARTS);
-const ENCODING_ARRITY = PATHS.length;
+
+// const ENCODING_ARRITY = PATHS.length;
 // considering building assert mechanism for (1 < ENCODING_ARRITY < 36)
 // this is a list of all possible paths, order is important
 
@@ -150,9 +151,10 @@ function _getQuoteFromNum(number) {
   let roleLeaf = ROLES[role][kind];
   let prefixLeaf = ROLES[PREFIX][kind];
 
-  let samplePositions = [prefixPast, rolePast, prefixFuture, roleFuture];
   // this order is not fluid and affects proper encoding, decoding, it can be refactored
   // by encoding this order, yeah i know :)
+  let samplePositions = [prefixPast, rolePast, prefixFuture, roleFuture];
+
   let arrayOfExpressions = [prefixLeaf[PAST], roleLeaf[PAST], prefixLeaf[FUTURE], roleLeaf[FUTURE]];
   let expressions = arrayOfExpressions.map(
     // module is if we somehow run out of bounds, it should not happen, but it will map to something
@@ -181,11 +183,11 @@ function _getQuote(role, kind) {
   let [expressions, ixs] = _.unzip(arrayOfExpressions.map(phrases => sample_and_ix(phrases)));
   let expression = expressions.join(' ');
 
-  return [expression, [role_ix, ...ixs]];
+  return [expression, parseInt([role_ix, ...ixs].join(''))];
 }
 
 // nickname generating
-// we keep it decimal here, no arrity nescessary
+// we keep it decimal here
 const adverbs = [
   'neatly',
   'uncleanly',
@@ -203,7 +205,6 @@ const adjectives = [
   'abusive',
   'leaking',
   'reverting',
-  'unapologetic',
   'raginng',
   'ample',
   'admirable',
@@ -225,15 +226,14 @@ const nouns = [
   'jungleboy'
 ];
 
-let domain = [[adverbs, adjectives], nouns];
-function getWordFromDomain(digit, ix, num_arr, domain) {
-  return ix === 0 ? domain[1][digit] : domain[0][ix % 2][digit];
-}
-function getIntFromDomain(word, ix, words, domain) {
-  return ix == 0 ? domain[1].indexOf(word) : domain[0][ix % 2].indexOf(word);
-}
-let getWord = _.partialRight(getWordFromDomain, domain);
-let getInt = _.partialRight(getIntFromDomain, domain);
+let DOMAIN = [[adverbs, adjectives], nouns];
+let getWordFromDomain = (digit, ix, num_arr, domain) => (ix === 0 ? domain[1][digit] : domain[0][ix % 2][digit]);
+
+let getIntFromDomain = (word, ix, words, domain) =>
+  ix == 0 ? domain[1].indexOf(word) : domain[0][ix % 2].indexOf(word);
+
+let getWord = _.partialRight(getWordFromDomain, DOMAIN);
+let getInt = _.partialRight(getIntFromDomain, DOMAIN);
 
 function _convertToNumber(nickname) {
   let words = nickname.split('-');
@@ -243,8 +243,7 @@ function _convertToNumber(nickname) {
       .reverse()
       .map((word, ix, words) => getInt(word, ix, words))
       .reverse()
-      .join(''),
-    ENCODING_ARRITY
+      .join('')
   );
   return number;
 }
