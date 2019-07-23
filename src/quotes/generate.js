@@ -1,13 +1,14 @@
-// import _ from "lodash";
-let _ = require('lodash');
+import L from 'lodash';
+import { FRONT_END_ROLE, BACK_END_ROLE, DEV_OPS_ROLE } from '../constants/roles.js';
+import { BRAG, CONFESS } from '../constants/roleActions.js';
 
-const SUCCESS = 'brag';
-const FAIL = 'confess';
+const SUCCESS = BRAG;
+const FAIL = CONFESS;
 const PAST = 'past';
 const FUTURE = 'future';
-const DEVOPS = 'devops';
-const BACKEND = 'backend';
-const FRONTEND = 'frontend';
+const DEVOPS = DEV_OPS_ROLE;
+const BACKEND = BACK_END_ROLE;
+const FRONTEND = FRONT_END_ROLE;
 const PREFIX = 'prefix';
 
 // Still consider this experimental
@@ -125,10 +126,11 @@ const ROLES = {
 };
 
 export function getQuoteFromID(role, action, quoteID) {
-  let [prefixPast, rolePast, prefixFuture, roleFuture, ..._] = convertToNumber(quoteID)
-    .toString()
-    .split('');
-
+  let digits = convertToDigits(quoteID);
+  if (L.isNil(digits)) {
+    return null;
+  }
+  let [prefixPast, rolePast, prefixFuture, roleFuture] = digits;
   let roleLeaf = ROLES[role][action];
   let prefixLeaf = ROLES[PREFIX][action];
 
@@ -145,8 +147,8 @@ export function getQuoteFromID(role, action, quoteID) {
 }
 
 export function getRandomQuoteID(role, action) {
-  let [_, quoteID] = convertToNickname(getRandomQuoteAndID(role, action));
-  return quoteID;
+  let [, quoteID] = getRandomQuoteAndID(role, action);
+  return convertToNickname(quoteID);
 }
 
 function getRandomQuoteAndID(role, action) {
@@ -159,15 +161,14 @@ function getRandomQuoteAndID(role, action) {
 
   let sample_and_ix = items => {
     // ix as string, to cover for 0
-    let ix = Math.floor(Math.random() * items.length).toString();
+    let ix = Math.floor(Math.random() * items.length);
     let item = items[ix];
     return [item, ix];
   };
 
-  let [expressions, ixs] = _.unzip(arrayOfExpressions.map(phrases => sample_and_ix(phrases)));
+  let [expressions, ixs] = L.unzip(arrayOfExpressions.map(phrases => sample_and_ix(phrases)));
   let expression = expressions.join(' ');
-  // keep ix as string
-  return [expression, ixs.join('')];
+  return [expression, ixs];
 }
 
 // URL-NICKNAME GENERATING
@@ -215,27 +216,24 @@ let getWordFromDomain = (digit, ix, _, domain) => (ix === 0 ? domain[1][digit] :
 
 let getIntFromDomain = (word, ix, _, domain) => (ix === 0 ? domain[1].indexOf(word) : domain[0][ix % 2].indexOf(word));
 
-let getWord = _.partialRight(getWordFromDomain, DOMAIN);
-let getInt = _.partialRight(getIntFromDomain, DOMAIN);
+let getWord = L.partialRight(getWordFromDomain, DOMAIN);
+let getInt = L.partialRight(getIntFromDomain, DOMAIN);
 
-function convertToNumber(nickname) {
+function convertToDigits(nickname) {
   let words = nickname.split('-');
   // reversing twice for processing without lazy generators
-  let number = parseInt(
-    words
-      .reverse()
-      .map((word, ix, words) => getInt(word, ix, words).toString())
-      .reverse()
-      .join('')
-  );
-  return number;
+  let digits = words
+    .reverse()
+    .map((word, ix, words) => getInt(word, ix, words))
+    .reverse();
+  // fix it later with proper reduce
+  if (L.includes(digits, null) || L.includes(digits, undefined)) {
+    return null;
+  }
+  return digits;
 }
 
-function convertToNickname(number_str) {
-  let digits = number_str
-    .toString()
-    .split('')
-    .map(num => parseInt(num));
+function convertToNickname(digits) {
   // reversing twice for processing without lazy generators
   let nickName = digits
     .reverse()

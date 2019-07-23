@@ -3,75 +3,41 @@ import { BRAG, CONFESS } from '../../constants/roleActions';
 
 import { getQuote, getRandomQuoteID } from '../quotesService';
 
-jest.mock('../../quotes/backEndQuotes.js', () => ({
-  BACKEND_BRAG: {
-    '1': 'Backend-Brag test quote no. 1',
-    '2': 'Backend-Brag test quote no. 2'
-  },
-  BACKEND_CONFESS: {
-    '1': 'Backend-Confess test quote no. 1',
-    '2': 'Backend-Confess test quote no. 2'
-  }
-}));
+let count_chars = (str, char) => str.split('').reduce((acc, ch) => (ch === char ? acc + 1 : acc), 0);
 
-jest.mock('../../quotes/frontEndQuotes.js', () => ({
-  FRONTEND_BRAG: {
-    '1': 'FrontEnd-Brag test quote no. 1',
-    '2': 'FrontEnd-Brag test quote no. 2'
-  },
-  FRONTEND_CONFESS: {
-    '1': 'FrontEnd-Confess test quote no. 1',
-    '2': 'FrontEnd-Confess test quote no. 2'
-  }
-}));
-
-jest.mock('../../quotes/devOpsQuotes.js', () => ({
-  DEVOPS_BRAG: {
-    '1': 'DevOps-Brag test quote no. 1',
-    '2': 'DevOps-Brag test quote no. 2'
-  },
-  DEVOPS_CONFESS: {
-    '1': 'DevOps-Confess test quote no. 1',
-    '2': 'DevOps-Confess test quote no. 2'
-  }
-}));
-
-describe('quotesService - getQuote', () => {
-  it('should return the quote for BackEnd Brag with quoteID = 1', () => {
-    const quote = getQuote(BACK_END_ROLE, BRAG, '1');
-
-    expect(quote).toEqual('Backend-Brag test quote no. 1');
-  });
-
-  it('should return the quote for BackEnd Brag with quoteID = 2', () => {
-    const quote = getQuote(BACK_END_ROLE, BRAG, '2');
-
-    expect(quote).toEqual('Backend-Brag test quote no. 2');
-  });
-
-  it('should return the quote for FrontEnd Confess with quoteID = 1', () => {
-    const quote = getQuote(FRONT_END_ROLE, CONFESS, '1');
-
-    expect(quote).toEqual('FrontEnd-Confess test quote no. 1');
-  });
-
-  it('should return the quote for DevOps Confess with quoteID = 1', () => {
-    const quote = getQuote(DEV_OPS_ROLE, CONFESS, '1');
-
-    expect(quote).toEqual('DevOps-Confess test quote no. 1');
-  });
-
-  it('should return the default quote for not defined role, action or quoteID', () => {
-    const quote = getQuote(null, null, null);
-
-    expect(quote).toEqual("Daily in 5 minutes and I'm still not sure what to say...");
+describe('quotesService - getRandomQuoteID should return something long enough with spacers', () => {
+  [BACK_END_ROLE, FRONT_END_ROLE, DEV_OPS_ROLE].map(role => {
+    it('should return random possible quoteID for backend role and BRAG', () => {
+      const randomQuoteID = getRandomQuoteID(role, BRAG);
+      expect(count_chars(randomQuoteID, '-')).toEqual(3);
+      expect(randomQuoteID.length).toBeGreaterThan(3 * 4);
+    });
+    it('should return random possible quoteID for backend role and BRAG', () => {
+      const randomQuoteID = getRandomQuoteID(role, CONFESS);
+      expect(count_chars(randomQuoteID, '-')).toEqual(3);
+      expect(randomQuoteID.length).toBeGreaterThan(3 * 4);
+    });
   });
 });
 
-describe('quotesService - getRandomQuoteID', () => {
-  it('should return random possible quoteID for given action and role', () => {
-    const randomQuoteID = getRandomQuoteID(BACK_END_ROLE, BRAG);
+describe('quotesService - getRandomQuoteID and then verify if text is the same', () => {
+  [BACK_END_ROLE, FRONT_END_ROLE, DEV_OPS_ROLE].map(role => {
+    it('should return random possible quoteID for backend role and BRAG', () => {
+      // this is probability but given several iterations the list should be different
+      let x = new Set();
+      x.add(getRandomQuoteID(role, BRAG));
+      x.add(getRandomQuoteID(role, BRAG));
+      x.add(getRandomQuoteID(role, BRAG));
+      x.add(getRandomQuoteID(role, BRAG));
+      expect(x.size).toBeGreaterThan(1);
 
-    expect(['1', '2']).toContain(randomQuoteID);
+      const randomQuoteIDbrag = getRandomQuoteID(role, BRAG);
+      const quote0 = getQuote(role, BRAG, randomQuoteIDbrag);
+      const quote1 = getQuote(role, BRAG, randomQuoteIDbrag);
+      // same pattern different branch
+      const quote2 = getQuote(role, CONFESS, randomQuoteIDbrag);
+      expect(quote0).toEqual(quote1);
+      expect(quote2).not.toEqual(quote1);
+    });
   });
 });

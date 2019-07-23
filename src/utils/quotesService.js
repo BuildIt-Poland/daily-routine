@@ -10,5 +10,6 @@ export function getQuote(role, action, quoteID) {
 }
 
 export function getRandomQuoteID(role, action) {
-  return generate.getRandomQuoteID(role, action);
+  let url = generate.getRandomQuoteID(role, action);
+  return url;
 }
