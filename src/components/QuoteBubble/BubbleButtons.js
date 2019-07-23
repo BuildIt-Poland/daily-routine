@@ -7,7 +7,7 @@ import CopyButton from './CopyButton';
 import MobileShare from './MobileShare';
 import DesktopShare from './DesktopShare';
 
-const FlexWrapper = styled.div`
+const Wrapper = styled.div`
   display: flex;
   justify-content: flex-end;
   padding-bottom: 1rem;
@@ -18,7 +18,7 @@ function ButtonsGroup({ quote }) {
   const canUseShareAPI = !!navigator.share;
 
   return (
-    <FlexWrapper>
+    <Wrapper>
       {canUseShareAPI && <MobileShare />}
       {!canUseShareAPI && (
         <>
@@ -27,7 +27,7 @@ function ButtonsGroup({ quote }) {
         </>
       )}
       <CopyButton valueToCopy={quote} />
-    </FlexWrapper>
+    </Wrapper>
   );
 }
 

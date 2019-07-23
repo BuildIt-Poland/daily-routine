@@ -3,13 +3,14 @@ import React from 'react';
 import { socialMediaVariant } from '../../types';
 import { Facebook, Twitter } from '../Icons';
 import Hitbox from '../Hitbox';
+import { FACEBOOK, TWITTER } from '../../constants/socialMedia';
 
 const socialMediaData = {
-  facebook: {
+  [FACEBOOK]: {
     shareUrl: `http://www.facebook.com/sharer.php?u=${window.location.href}`,
     Icon: Facebook
   },
-  twitter: {
+  [TWITTER]: {
     shareUrl: `http://www.twitter.com/share?url=${window.location.href}`,
     Icon: Twitter
   }
