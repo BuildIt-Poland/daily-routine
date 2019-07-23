@@ -22,7 +22,7 @@ describe('quotesService - getRandomQuoteID should return something long enough w
 
 describe('quotesService - getRandomQuoteID and then verify if text is the same', () => {
   [BACK_END_ROLE, FRONT_END_ROLE, DEV_OPS_ROLE].map(role => {
-    it('should return random possible quoteID for backend role and BRAG', () => {
+    it('given 4 trials it should have chances of 576 ** 4 to be all the same', () => {
       // this is probability but given several iterations the list should be different
       let x = new Set();
       x.add(getRandomQuoteID(role, BRAG));
@@ -30,7 +30,8 @@ describe('quotesService - getRandomQuoteID and then verify if text is the same',
       x.add(getRandomQuoteID(role, BRAG));
       x.add(getRandomQuoteID(role, BRAG));
       expect(x.size).toBeGreaterThan(1);
-
+    });
+    it('should return random possible quoteID for backend role and BRAG', () => {
       const randomQuoteIDbrag = getRandomQuoteID(role, BRAG);
       const quote0 = getQuote(role, BRAG, randomQuoteIDbrag);
       const quote1 = getQuote(role, BRAG, randomQuoteIDbrag);
@@ -38,6 +39,14 @@ describe('quotesService - getRandomQuoteID and then verify if text is the same',
       const quote2 = getQuote(role, CONFESS, randomQuoteIDbrag);
       expect(quote0).toEqual(quote1);
       expect(quote2).not.toEqual(quote1);
+    });
+    it('malformed quote should return null', () => {
+      const randomQuoteIDbrag = getRandomQuoteID(role, BRAG);
+      let x = randomQuoteIDbrag.split('-');
+      x[3] = 'somethingnotreal';
+      let randomQuoteIDbragMalformed = x.join('-');
+      const quoteNull = getQuote(role, BRAG, randomQuoteIDbragMalformed);
+      expect(quoteNull).toEqual(null);
     });
   });
 });

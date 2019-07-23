@@ -127,7 +127,7 @@ const ROLES = {
 
 export function getQuoteFromID(role, action, quoteID) {
   let digits = convertToDigits(quoteID);
-  if (L.isNil(digits)) {
+  if (L.isEmpty(digits)) {
     return null;
   }
   let [prefixPast, rolePast, prefixFuture, roleFuture] = digits;
@@ -219,27 +219,18 @@ let getIntFromDomain = (word, ix, _, domain) => (ix === 0 ? domain[1].indexOf(wo
 let getWord = L.partialRight(getWordFromDomain, DOMAIN);
 let getInt = L.partialRight(getIntFromDomain, DOMAIN);
 
+let reduceEmptyOnNegative = (prev, item) => (item < 0 ? [] : L.isEqual([], prev) ? [] : [].concat(prev, item));
+
 function convertToDigits(nickname) {
   let words = nickname.split('-');
   // reversing twice for processing without lazy generators
-  let digits = words
-    .reverse()
-    .map((word, ix, words) => getInt(word, ix, words))
-    .reverse();
-  // fix it later with proper reduce
-  if (L.includes(digits, null) || L.includes(digits, undefined)) {
-    return null;
-  }
+  let digits = words.map((word, ix, words) => getInt(word, ix, words)).reduce(reduceEmptyOnNegative);
   return digits;
 }
 
 function convertToNickname(digits) {
   // reversing twice for processing without lazy generators
-  let nickName = digits
-    .reverse()
-    .map((item, ix, arr) => getWord(item, ix, arr))
-    .reverse()
-    .join('-');
+  let nickName = digits.map((item, ix, arr) => getWord(item, ix, arr)).join('-');
 
   return nickName;
 }
