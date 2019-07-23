@@ -5,7 +5,7 @@ exports[`COMPONENT - Characters Fox Tail renders correctly 1`] = `
   position: absolute;
   top: 3.8rem;
   left: 16.8rem;
-  z-index: 20;
+  z-index: 40;
   -webkit-transform-origin: 10.4rem 0.2rem;
   -ms-transform-origin: 10.4rem 0.2rem;
   transform-origin: 10.4rem 0.2rem;
