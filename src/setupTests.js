@@ -8,4 +8,7 @@ const localStorageMock = {
   clear: jest.fn()
 };
 
+global.document.title = 'Dialy Routine - tests';
 global.localStorage = localStorageMock;
+global.navigator.share = jest.fn();
+global.window.open = jest.fn();

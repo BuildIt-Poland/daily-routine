@@ -21,7 +21,7 @@ function DesktopShare({ variant }) {
   const share = () =>
     window.open(
       shareUrl,
-      'targetWindow',
+      'shareWindow',
       'toolbar=no,location=0,status=no,menubar=no,scrollbars=yes,resizable=yes,width=600,height=275'
     );
 
