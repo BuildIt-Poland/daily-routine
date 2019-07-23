@@ -19,7 +19,6 @@ function ButtonsGroup({ quote }) {
 
   return (
     <FlexWrapper>
-      <CopyButton valueToCopy={quote} />
       {canUseShareAPI && <MobileShare />}
       {!canUseShareAPI && (
         <>
@@ -27,6 +26,7 @@ function ButtonsGroup({ quote }) {
           <DesktopShare variant={TWITTER} />
         </>
       )}
+      <CopyButton valueToCopy={quote} />
     </FlexWrapper>
   );
 }
