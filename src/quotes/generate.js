@@ -1,34 +1,14 @@
 // import _ from "lodash";
 let _ = require('lodash');
 
-const SUCCESS = 'success';
-const FAIL = 'fail';
+const SUCCESS = 'brag';
+const FAIL = 'confess';
 const PAST = 'past';
 const FUTURE = 'future';
 const DEVOPS = 'devops';
 const BACKEND = 'backend';
 const FRONTEND = 'frontend';
 const PREFIX = 'prefix';
-
-// kindof hackish providing enums via array indexing
-// something here should be used to collapse binary paths
-// to more congested numbers for example: 2018 -> 178
-const PATH_PARTS = [[DEVOPS, BACKEND, FRONTEND], [SUCCESS, FAIL]];
-
-// encode path as root_number, currently 0-6
-// matching pattern for instance 5 -> rootnum , 4345 -> pattern elemnts
-// this is lightly enforced by decimal system currently, but should be flexible till 35-ary system
-
-let cartesian_merge = (a, b) => a.map(x => b.map(y => [].concat(x, y))).flat();
-// static cartesian product required if we need to keep links consistent across updates
-// order is important
-let cartesian = (a, b, ...c) => (b ? cartesian(cartesian_merge(a, b), ...c) : a);
-
-const PATHS = cartesian(...PATH_PARTS);
-
-// const ENCODING_ARRITY = PATHS.length;
-// considering building assert mechanism for (1 < ENCODING_ARRITY < 36)
-// this is a list of all possible paths, order is important
 
 // Still consider this experimental
 // ORDER HERE MATTERS, ALWAYS ADD AT THE END
@@ -62,10 +42,10 @@ const PREFIX_LEAF = {
     ],
     [PAST]: [
       'Sadly yesterday I',
-      'I was unable to',
-      'Failing to',
-      'I got humbled by',
-      'Yeterday I have unsuccessfully',
+      'I failed in having',
+      'Failed to have',
+      'I stand correct as I',
+      'Yeterday I have unsuccessfully in having',
       "Sadly I havn't "
     ]
   }
@@ -86,7 +66,7 @@ const DEVOPS_LEAF = {
   },
   [FAIL]: {
     [PAST]: [
-      'failed to apply global csrf rules as a secret exposure dependency.',
+      'applied global csrf rules as a secret exposure dependency.',
       'debuged pods health probes resolution in prometheus namespace.',
       'set missing routing multiplication for seconadry VLAN gateway hops.'
     ],
@@ -144,49 +124,53 @@ const ROLES = {
   [PREFIX]: PREFIX_LEAF
 };
 
-function _getQuoteFromNum(number) {
-  let [roleIx, prefixPast, rolePast, prefixFuture, roleFuture, ..._] = number.toString().split('');
-  let [role, kind] = PATHS[roleIx];
+export function getQuoteFromID(role, action, quoteID) {
+  let [prefixPast, rolePast, prefixFuture, roleFuture, ..._] = convertToNumber(quoteID)
+    .toString()
+    .split('');
 
-  let roleLeaf = ROLES[role][kind];
-  let prefixLeaf = ROLES[PREFIX][kind];
+  let roleLeaf = ROLES[role][action];
+  let prefixLeaf = ROLES[PREFIX][action];
 
   // this order is not fluid and affects proper encoding, decoding, it can be refactored
   // by encoding this order, yeah i know :)
-  let samplePositions = [prefixPast, rolePast, prefixFuture, roleFuture];
+  let expressionIxs = [prefixPast, rolePast, prefixFuture, roleFuture];
+  let arrayExpressions = [prefixLeaf[PAST], roleLeaf[PAST], prefixLeaf[FUTURE], roleLeaf[FUTURE]];
 
-  let arrayOfExpressions = [prefixLeaf[PAST], roleLeaf[PAST], prefixLeaf[FUTURE], roleLeaf[FUTURE]];
-  let expressions = arrayOfExpressions.map(
+  let expressions = arrayExpressions
     // module is if we somehow run out of bounds, it should not happen, but it will map to something
-    (phrases, ix) => phrases[samplePositions[ix] % phrases.length]
-  );
+    .map((phrases, ix) => phrases[expressionIxs[ix] % phrases.length])
+    .join(' ');
   return expressions;
 }
 
-function _getQuote(role, kind) {
-  //let role_ix = PATHS.indexOf([role, kind]);
-  let roleMatch = _.partial(_.isEqual, [role, kind]);
-  let role_ix = PATHS.findIndex(roleMatch);
+export function getRandomQuoteID(role, action) {
+  let [_, quoteID] = convertToNickname(getRandomQuoteAndID(role, action));
+  return quoteID;
+}
 
-  let roleLeaf = ROLES[role][kind];
-  let prefixLeaf = ROLES[PREFIX][kind];
+function getRandomQuoteAndID(role, action) {
+  let roleLeaf = ROLES[role][action];
+  let prefixLeaf = ROLES[PREFIX][action];
 
   // this order is not fluid and affects proper encoding, decoding, it can be refactored
   // by encoding this order, yeah i know :)
   let arrayOfExpressions = [prefixLeaf[PAST], roleLeaf[PAST], prefixLeaf[FUTURE], roleLeaf[FUTURE]];
 
   let sample_and_ix = items => {
-    let ix = Math.floor(Math.random() * items.length);
+    // ix as string, to cover for 0
+    let ix = Math.floor(Math.random() * items.length).toString();
     let item = items[ix];
     return [item, ix];
   };
+
   let [expressions, ixs] = _.unzip(arrayOfExpressions.map(phrases => sample_and_ix(phrases)));
   let expression = expressions.join(' ');
-
-  return [expression, parseInt([role_ix, ...ixs].join(''))];
+  // keep ix as string
+  return [expression, ixs.join('')];
 }
 
-// nickname generating
+// URL-NICKNAME GENERATING
 // we keep it decimal here
 const adverbs = [
   'neatly',
@@ -227,29 +211,28 @@ const nouns = [
 ];
 
 let DOMAIN = [[adverbs, adjectives], nouns];
-let getWordFromDomain = (digit, ix, num_arr, domain) => (ix === 0 ? domain[1][digit] : domain[0][ix % 2][digit]);
+let getWordFromDomain = (digit, ix, _, domain) => (ix === 0 ? domain[1][digit] : domain[0][ix % 2][digit]);
 
-let getIntFromDomain = (word, ix, words, domain) =>
-  ix == 0 ? domain[1].indexOf(word) : domain[0][ix % 2].indexOf(word);
+let getIntFromDomain = (word, ix, _, domain) => (ix === 0 ? domain[1].indexOf(word) : domain[0][ix % 2].indexOf(word));
 
 let getWord = _.partialRight(getWordFromDomain, DOMAIN);
 let getInt = _.partialRight(getIntFromDomain, DOMAIN);
 
-function _convertToNumber(nickname) {
+function convertToNumber(nickname) {
   let words = nickname.split('-');
   // reversing twice for processing without lazy generators
   let number = parseInt(
     words
       .reverse()
-      .map((word, ix, words) => getInt(word, ix, words))
+      .map((word, ix, words) => getInt(word, ix, words).toString())
       .reverse()
       .join('')
   );
   return number;
 }
 
-function _convertToNickname(number_key) {
-  let digits = number_key
+function convertToNickname(number_str) {
+  let digits = number_str
     .toString()
     .split('')
     .map(num => parseInt(num));
