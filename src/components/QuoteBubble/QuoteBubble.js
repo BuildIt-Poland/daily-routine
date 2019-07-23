@@ -42,7 +42,7 @@ function QuoteBubble({ location }) {
             <Bubble key={key} style={props}>
               <Quote>{item.quote}</Quote>
               <BubbleTail variant={item.isInDefaultPose ? THOUGHT : SPEECH} />
-              {!item.isInDefaultPose && <BubbleButtons bubble={item} />}
+              {!item.isInDefaultPose && <BubbleButtons quote={item.quote} />}
             </Bubble>
           )
       )}

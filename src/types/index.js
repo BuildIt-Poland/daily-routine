@@ -34,4 +34,4 @@ export const bubble = shape({
   quoteID: string.isRequired,
   isInDefaultPose: bool.isRequired
 });
-export const socialMediaType = oneOf([FACEBOOK, TWITTER]);
+export const socialMediaVariant = oneOf([FACEBOOK, TWITTER]);

@@ -1,22 +1,22 @@
 import React from 'react';
 
-import { socialMediaType } from '../../types';
+import { socialMediaVariant } from '../../types';
 import { Facebook, Twitter } from '../Icons';
 import Hitbox from '../Hitbox';
 
-const socialMedia = {
+const socialMediaData = {
   facebook: {
     shareUrl: `http://www.facebook.com/sharer.php?u=${window.location.href}`,
-    SocialMediaIcon: Facebook
+    Icon: Facebook
   },
   twitter: {
     shareUrl: `http://www.twitter.com/share?url=${window.location.href}`,
-    SocialMediaIcon: Twitter
+    Icon: Twitter
   }
 };
 
-function DesktopShare({ socialMediaType }) {
-  const { SocialMediaIcon, shareUrl } = socialMedia[socialMediaType];
+function DesktopShare({ variant }) {
+  const { Icon, shareUrl } = socialMediaData[variant];
 
   const share = () =>
     window.open(
@@ -27,13 +27,13 @@ function DesktopShare({ socialMediaType }) {
 
   return (
     <Hitbox onClick={share}>
-      <SocialMediaIcon />
+      <Icon />
     </Hitbox>
   );
 }
 
 DesktopShare.propTypes = {
-  socialMediaType: socialMediaType.isRequired
+  variant: socialMediaVariant.isRequired
 };
 
 export default DesktopShare;
