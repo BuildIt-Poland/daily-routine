@@ -8,7 +8,7 @@ const Section = styled.section`
   padding: 0;
   padding-top: ${spacingMedium};
 
-  ${media.smallPhone`
+  ${media.phone`
     padding-top: 4rem
   `};
 `;

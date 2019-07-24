@@ -33,9 +33,7 @@ const StyledButton = styled.button`
 
   ${media.phone`
     height: 5rem;
-  `};
-  ${media.smallPhone`
-      padding: 0 ${spacingSmall};
+    padding: 0 ${spacingSmall};
   `};
   &:not(:disabled) {
     cursor: pointer;

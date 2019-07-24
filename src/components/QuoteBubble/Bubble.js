@@ -17,10 +17,8 @@ const Bubble = styled(animated.section)`
 
   ${media.phone`
     max-width: 100%;
-  `}
-  ${media.smallPhone`
     bottom: ${props => (props.default ? 2.5 : -1)}rem;
-  `};
+  `}
 `;
 
 export default Bubble;

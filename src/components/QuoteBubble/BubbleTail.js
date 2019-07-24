@@ -23,6 +23,8 @@ const BubbleTail = styled(BubbleTailArtwork)`
 
   ${media.phone`
     left: 50%;
+    height: 30px;
+    bottom: -2.3rem;
   `}
 
   #top-blob {
@@ -36,11 +38,6 @@ const BubbleTail = styled(BubbleTailArtwork)`
   #bottom-blob {
     animation: ${fadeInAnimation} 600ms ease-in 1200ms forwards;
   }
-
-  ${media.smallPhone`
-    height: 30px;
-    bottom: -2.3rem
-  `};
 `;
 
 export default BubbleTail;

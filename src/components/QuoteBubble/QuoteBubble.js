@@ -40,8 +40,6 @@ function QuoteBubble({ location }) {
       length: 220,
       separator: ' '
     });
-    // return quote.slice(0,225).trim().concat('...');
-    return quote;
   }
 
   return (
@@ -50,11 +48,7 @@ function QuoteBubble({ location }) {
         ({ item, props, key }) =>
           item && (
             <Bubble key={key} style={props} default={item.isInDefaultPose}>
-              <Quote default={item.isInDefaultPose}>
-                {trimQuote(
-                  `It's difficult to find examples of lorem ipsum in use before Letraset made it popular as a dummy text in the 1960s, although McClintock says he remembers coming across the lorem ipsum passage in a book of old metal type samples. So far he hasn't relocated where he once saw the passage, but the popularity of Cicero in the 15th century supports the theory that the filler text has been used for centuries.`
-                )}
-              </Quote>
+              <Quote default={item.isInDefaultPose}>{trimQuote(item.quote)}</Quote>
               <BubbleTail variant={item.isInDefaultPose ? THOUGHT : SPEECH} />
               {!item.isInDefaultPose && <BubbleButtons quote={item.quote} />}
             </Bubble>

@@ -11,9 +11,6 @@ const Subheadline = styled.h2`
 
   ${media.phone`
     text-align: left;
-  `};
-
-  ${media.smallPhone`
     font-size: ${fontMedium};
   `};
 `;

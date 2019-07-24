@@ -14,10 +14,7 @@ const Header = styled.header`
 
   ${media.phone`
     padding-left: ${spacingMedium};
-  `};
-
-  ${media.smallPhone`
-      height: 4rem;
+    height: 4rem;
   `};
 `;
 
