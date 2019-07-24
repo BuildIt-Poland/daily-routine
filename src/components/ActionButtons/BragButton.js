@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import { role } from '../../types';
-import { BRAG_ROLE_ACTION } from '../../constants/roles';
+import { BRAG } from '../../constants/roleActions';
 import { colorGreen, colorDarkGreen } from '../../styles/designTokens';
 import LightbulbIcon from './LightbulbIcon';
 import ButtonBase from './ButtonBase';
@@ -22,12 +22,7 @@ function BragButton({ quoteID, role, ...props }) {
   const updateButtonLabel = () => setText(UPDATED_BUTTON_LABEL);
 
   return (
-    <StyledButton
-      {...props}
-      to={`/${role}/${BRAG_ROLE_ACTION}/${quoteID}`}
-      icon={LightbulbIcon}
-      onClick={updateButtonLabel}
-    >
+    <StyledButton {...props} to={`/${role}/${BRAG}/${quoteID}`} icon={LightbulbIcon} onClick={updateButtonLabel}>
       {text}
     </StyledButton>
   );

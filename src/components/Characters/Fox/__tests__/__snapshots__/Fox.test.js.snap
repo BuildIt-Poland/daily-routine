@@ -24,6 +24,7 @@ exports[`COMPONENT - Characters Robot renders confusion marks and flower if fema
   <GenderFlower
     isVisible={true}
   />
+  <Tail />
 </div>
 `;
 
@@ -51,6 +52,7 @@ exports[`COMPONENT - Characters Robot renders confusion marks if fox is in defau
   <GenderFlower
     isVisible={false}
   />
+  <Tail />
 </div>
 `;
 
@@ -78,6 +80,7 @@ exports[`COMPONENT - Characters Robot renders correctly with default props 1`] =
   <GenderFlower
     isVisible={false}
   />
+  <Tail />
 </div>
 `;
 
@@ -105,5 +108,6 @@ exports[`COMPONENT - Characters Robot renders flower if female gender is passed 
   <GenderFlower
     isVisible={true}
   />
+  <Tail />
 </div>
 `;
