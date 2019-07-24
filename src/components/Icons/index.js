@@ -5,6 +5,7 @@ export { default as Logo } from './Logo';
 export { default as Gear } from './Gear';
 export { default as Cross } from './Cross';
 export { default as CopyCards } from './CopyCards';
+export { default as CopyIndicator } from './CopyIndicator';
 export { default as Heart } from './Heart';
 export { default as GithubLogo } from './GithubLogo';
 export { default as BuilditLogo } from './BuilditLogo';
