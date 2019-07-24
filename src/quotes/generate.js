@@ -9,17 +9,16 @@ export function getQuoteFromID(role, action, quoteID) {
   if (isEmpty(digits)) {
     return;
   }
-  const [prefixPast, rolePast, prefixFuture, roleFuture] = digits;
-  const roleLeaf = ROLES[role][action];
+  const roleLeaf = ROLES[role];
   const prefixLeaf = ROLES[PREFIX][action];
 
   // this order is not fluid and affects proper encoding, decoding, refactor by encoding this list
-  const expressionIndexes = [prefixPast, rolePast, prefixFuture, roleFuture];
+  // const digits = [prefixPast, rolePast, prefixFuture, roleFuture];
   const arrayExpressions = [prefixLeaf[PAST], roleLeaf[PAST], prefixLeaf[FUTURE], roleLeaf[FUTURE]];
 
   const expressions = arrayExpressions
     // module is if we somehow run out of bounds, it should not happen, but it will map to something
-    .map((phrases, index) => phrases[expressionIndexes[index] % phrases.length])
+    .map((phrases, index) => phrases[digits[index] % phrases.length])
     .join(' ');
   return expressions;
 }
@@ -30,7 +29,7 @@ export function getRandomQuoteID(role, action) {
 }
 
 function getRandomQuoteAndID(role, action) {
-  const roleLeaf = ROLES[role][action];
+  const roleLeaf = ROLES[role];
   const prefixLeaf = ROLES[PREFIX][action];
 
   // this order is not fluid and affects proper encoding, decoding, refactor by encoding this list

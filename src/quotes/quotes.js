@@ -47,84 +47,60 @@ const PREFIX_LEAF = {
 };
 
 const DEVOPS_LEAF = {
-  [BRAG]: {
-    [PAST]: [
-      'completed fixing ingress path aliasing in periodically scheduled jobs.',
-      'launched a successful migration of skew-library for node annotations.',
-      'decoupled intermediete layers of web-proxify-echo container to lessen in-memory footprints.'
-    ],
-    [FUTURE]: [
-      'reapply to reapply context recapture for discarded jobs.',
-      'reevaluate distributed label state synchronisation for running pods.',
-      'verify if Jenkins pipeline flows operate respecting new image build scenarios.'
-    ]
-  },
-  [CONFESS]: {
-    [PAST]: [
-      'applied global csrf rules as a secret exposure dependency.',
-      'debuged pods health probes resolution in prometheus namespace.',
-      'set missing routing multiplication for seconadry VLAN gateway hops.'
-    ],
-    [FUTURE]: [
-      'verify Ansible output of the concatantion to diagnose FAILed ruling file.',
-      'resolve issues related to namespace targetting as a potentional roadblock.',
-      'reestablish the routing table disparities to resolve hop debounces.'
-    ]
-  }
+  [PAST]: [
+    'completed fixing ingress path aliasing in periodically scheduled jobs.',
+    'launched a successful migration of skew-library for node annotations.',
+    'decoupled intermediete layers of web-proxify-echo container to lessen in-memory footprints.',
+    'applied global csrf rules as a secret exposure dependency.',
+    'debuged pods health probes resolution in prometheus namespace.',
+    'set missing routing multiplication for seconadry VLAN gateway hops.'
+  ],
+  [FUTURE]: [
+    'reapply to reapply context recapture for discarded jobs.',
+    'reevaluate distributed label state synchronisation for running pods.',
+    'verify if Jenkins pipeline flows operate respecting new image build scenarios.',
+    'verify Ansible output of the concatantion to diagnose failed ruling file.',
+    'resolve issues related to namespace targetting as a potentional roadblock.',
+    'reestablish the routing table disparities to resolve hop debounces.'
+  ]
 };
 
 const BACKEND_LEAF = {
-  [BRAG]: {
-    [PAST]: [
-      'finished throwing atomicized errors in nonPAST conditions.',
-      'refactored module switching scheduler affinities for dereferenced items.',
-      'redfined Actor methods signatures for HTTP state tracking.'
-    ],
-    [FUTURE]: [
-      'reevaluate application of RESNET120 deep neural network for log data analysis.',
-      'restore conditionals for inferior module uploads ad-hoc.',
-      'derefence FAILed requests mid Redis session sustaining.'
-    ]
-  },
-  [CONFESS]: {
-    [PAST]: [
-      'obtained race condition debugging scopes in inner maintainer loops.',
-      'collapsed curried parameters in Retry Monad Transformers.',
-      'reintegrated database schema validation dynamic libraries.'
-    ],
-    [FUTURE]: [
-      'reread and reason on debugger flip states.',
-      'try mapping applicative switchers to recover from runtime errors.',
-      'configure the managment chaining of query structures.'
-    ]
-  }
+  [PAST]: [
+    'finished throwing atomicized errors in nonpast conditions.',
+    'refactored module switching scheduler affinities for dereferenced items.',
+    'redfined Actor methods signatures for HTTP state tracking.',
+    'obtained race condition debugging scopes in inner maintainer loops.',
+    'collapsed curried parameters in Retry Monad Transformers.',
+    'reintegrated database schema validation dynamic libraries.'
+  ],
+  [FUTURE]: [
+    'reevaluate application of RESNET120 deep neural network for log data analysis.',
+    'restore conditionals for inferior module uploads ad-hoc.',
+    'derefence failed requests mid Redis session sustaining.',
+    'reread and reason on debugger flip states.',
+    'try mapping applicative switchers to recover from runtime errors.',
+    'configure the managment chaining of query structures.'
+  ]
 };
 
 const FRONTEND_LEAF = {
-  [BRAG]: {
-    [PAST]: [
-      'repopulated bundling dependencies in repository structures. ',
-      'concretized treeshakeing entities in unportable packages.',
-      'refitted component properties into lifting abstractions.'
-    ],
-    [FUTURE]: [
-      'reinitiate state-view reducers depending on flow constraints.',
-      'fabricate animation effects as N-matrix transformations.',
-      'resupply parameters for inline form enforcements.'
-    ]
-  },
-  [CONFESS]: {
-    [PAST]: [
-      'unnested doctype declarations into iterative conditionals.',
-      'refactored dynamically changing view contexts in cross-browser compilations.',
-      'flattened stylesheet selectors for performant domain-scale compression.'
-    ],
-    [FUTURE]: [
-      'relocate implicit relative pathing to crossdomain cdn structures.',
-      'adapt in-browser interface zooming as native SPA operation.',
-      'phase out mutating data dependencies out of context-heavy external hooks.'
-    ]
-  }
+  [PAST]: [
+    'repopulated bundling dependencies in repository structures. ',
+    'concretized treeshakeing entities in unportable packages.',
+    'refitted component properties into lifting abstractions.',
+    'unnested doctype declarations into iterative conditionals.',
+    'refactored dynamically changing view contexts in cross-browser compilations.',
+    'flattened stylesheet selectors for performant domain-scale compression.'
+  ],
+  [FUTURE]: [
+    'reinitiate state-view reducers depending on flow constraints.',
+    'fabricate animation effects as N-matrix transformations.',
+    'resupply parameters for inline form enforcements.',
+    'relocate implicit relative pathing to crossdomain cdn structures.',
+    'adapt in-browser interface zooming as native SPA operation.',
+    'phase out mutating data dependencies out of context-heavy external hooks.'
+  ]
 };
 
 export const ROLES = {
