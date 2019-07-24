@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import media from '../../styles/media';
-import { spacingSmall, fontWeightNormal, fontLarge } from '../../styles/designTokens';
+import { spacingSmall, fontWeightNormal, fontLarge, fontMedium } from '../../styles/designTokens';
 
 const Subheadline = styled.h2`
   font-size: ${fontLarge};
@@ -11,6 +11,10 @@ const Subheadline = styled.h2`
 
   ${media.phone`
     text-align: left;
+  `};
+
+  ${media.smallPhone`
+    font-size: ${fontMedium};
   `};
 `;
 

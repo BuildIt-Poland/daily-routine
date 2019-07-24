@@ -9,7 +9,8 @@ import {
   fontLarge,
   fontWeightBold,
   borderRadius,
-  spacingMedium
+  spacingMedium,
+  spacingSmall
 } from '../../styles/designTokens';
 
 const StyledButton = styled.button`
@@ -33,7 +34,9 @@ const StyledButton = styled.button`
   ${media.phone`
     height: 5rem;
   `};
-
+  ${media.smallPhone`
+      padding: 0 ${spacingSmall};
+  `};
   &:not(:disabled) {
     cursor: pointer;
   }

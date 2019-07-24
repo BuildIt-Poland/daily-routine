@@ -6,7 +6,8 @@ import { css } from 'styled-components';
 const breakpoints = {
   desktop: 992,
   tablet: 768,
-  phone: 420
+  phone: 420,
+  smallPhone: 375
 };
 
 // Iterate through the sizes and create a media template

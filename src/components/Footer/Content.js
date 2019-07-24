@@ -15,6 +15,11 @@ const Content = styled(ContentBase)`
   ${media.phone`
     justify-content: center;
   `};
+
+  ${media.smallPhone`
+    padding-top: ${spacingSmall};
+    padding-bottom: ${spacingSmall};
+  `};
 `;
 
 export default Content;

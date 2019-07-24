@@ -15,6 +15,10 @@ const Wrapper = styled.header`
   ${media.phone`
     justify-content: flex-start;
   `};
+
+  ${media.smallPhone`
+      height: 5rem;
+  `};
 `;
 
 export default Wrapper;

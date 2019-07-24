@@ -10,6 +10,10 @@ const Wrapper = styled(Section)`
   ${media.phone`
     background: inherit;
   `};
+
+  ${media.smallPhone`
+    padding-top: 0
+  `};
 `;
 
 export default Wrapper;
