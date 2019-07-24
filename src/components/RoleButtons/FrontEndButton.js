@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 import { colorYellow, colorDarkYellow } from '../../styles/designTokens';
-import ButtonBase from './ButtonBase';
+import RoleButton from '../RoleButton';
 
-const FrontEndButton = styled(ButtonBase)`
+const FrontEndButton = styled(RoleButton)`
   background-color: ${colorYellow};
   border-bottom-color: ${colorDarkYellow};
 `;

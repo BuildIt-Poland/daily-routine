@@ -1,6 +1,6 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
-import { Route, withRouter } from 'react-router-dom';
+import { Route, withRouter, Switch } from 'react-router-dom';
 
 import { FRONT_END_ROLE, BACK_END_ROLE, DEV_OPS_ROLE } from '../../constants/roles';
 import { ROOT_PATH } from '../../constants/routes';
@@ -15,6 +15,7 @@ import FrontEndRolePage from '../FrontEndRolePage';
 import BackEndRolePage from '../BackEndRolePage';
 import DevOpsRolePage from '../DevOpsRolePage';
 import RouteTransitionAnimation from '../RouteTransitionAnimation';
+import PageNotFound from '../PageNotFound';
 import Wrapper from './Wrapper';
 
 function App({ location, history }) {
@@ -27,10 +28,13 @@ function App({ location, history }) {
             <Wrapper>
               <AppBar />
               <main>
-                <Route exact path={ROOT_PATH} component={LandingPage} />
-                <Route path={`/${FRONT_END_ROLE}`} component={FrontEndRolePage} />
-                <Route path={`/${BACK_END_ROLE}`} component={BackEndRolePage} />
-                <Route path={`/${DEV_OPS_ROLE}`} component={DevOpsRolePage} />
+                <Switch>
+                  <Route exact path={ROOT_PATH} component={LandingPage} />
+                  <Route path={`/${FRONT_END_ROLE}`} component={FrontEndRolePage} />
+                  <Route path={`/${BACK_END_ROLE}`} component={BackEndRolePage} />
+                  <Route path={`/${DEV_OPS_ROLE}`} component={DevOpsRolePage} />
+                  <Route path="*" component={PageNotFound} />
+                </Switch>
               </main>
               <Footer />
             </Wrapper>

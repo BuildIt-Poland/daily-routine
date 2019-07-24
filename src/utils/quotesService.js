@@ -27,7 +27,7 @@ export function getQuote(role, action, quoteID) {
   }
 
   if (!roleQuotes[role][action]) {
-    return undefined;
+    return;
   }
 
   return roleQuotes[role][action][quoteID];

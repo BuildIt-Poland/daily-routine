@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 import { colorPurple, colorDeepPurple } from '../../styles/designTokens';
-import ButtonBase from './ButtonBase';
+import RoleButton from '../RoleButton';
 
-const BackEndButton = styled(ButtonBase)`
+const BackEndButton = styled(RoleButton)`
   background-color: ${colorPurple};
   border-bottom-color: ${colorDeepPurple};
 `;

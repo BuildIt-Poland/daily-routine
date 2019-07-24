@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`COMPONENT - RoleButtons ArrowIcon renders correctly 1`] = `
+exports[`COMPONENT - ArrowIcon renders correctly 1`] = `
 .c0 {
   position: absolute;
   right: 1.4rem;
