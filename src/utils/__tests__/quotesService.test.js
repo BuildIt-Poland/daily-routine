@@ -66,6 +66,12 @@ describe('quotesService - getQuote', () => {
 
     expect(quote).toEqual("Daily in 5 minutes and I'm still not sure what to say...");
   });
+
+  it('should return undefined for not defined action', () => {
+    const quote = getQuote(DEV_OPS_ROLE, null, '1');
+
+    expect(quote).toEqual(undefined);
+  });
 });
 
 describe('quotesService - getRandomQuoteID', () => {

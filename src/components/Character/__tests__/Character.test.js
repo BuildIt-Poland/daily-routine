@@ -7,7 +7,7 @@ import CharacterWitQuote from '../Character';
 import { GenderContext } from '../../../context/GenderContext';
 import { MALE } from '../../../constants/genders';
 import { pose } from '../../../types';
-import { getPose } from '../../../utils/getPose';
+import getPose from '../../../utils/getPose';
 
 jest.mock('../../../utils/getPose');
 
