@@ -18,6 +18,7 @@ exports[`COMPONENT - QuoteBubble Bubble renders correctly 1`] = `
 @media (max-width:26.25em) {
   .c0 {
     max-width: 100%;
+    bottom: -1rem;
   }
 }
 

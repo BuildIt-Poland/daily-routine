@@ -18,12 +18,14 @@ exports[`COMPONENT - QuoteBubble renders correctly 1`] = `
 @media (max-width:26.25em) {
   .c0 {
     max-width: 100%;
+    bottom: 2.5rem;
   }
 }
 
 <Wrapper>
   <section
     className="c0"
+    default={true}
     style={
       Object {
         "opacity": 0,
@@ -31,7 +33,9 @@ exports[`COMPONENT - QuoteBubble renders correctly 1`] = `
       }
     }
   >
-    <Quote>
+    <Quote
+      default={true}
+    >
       
     </Quote>
     <BubbleTail

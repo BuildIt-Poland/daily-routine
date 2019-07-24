@@ -38,6 +38,7 @@ exports[`COMPONENT - Button renders correctly 1`] = `
 @media (max-width:26.25em) {
   .c0 {
     height: 5rem;
+    padding: 0 1rem;
   }
 }
 

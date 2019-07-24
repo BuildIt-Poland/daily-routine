@@ -26,6 +26,7 @@ exports[`COMPONENT - AppBar Wrapper renders correctly 1`] = `
     -webkit-justify-content: flex-start;
     -ms-flex-pack: start;
     justify-content: flex-start;
+    height: 5rem;
   }
 }
 

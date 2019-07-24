@@ -10,7 +10,14 @@ exports[`COMPONENT - ActionButtons Wrapper renders correctly 1`] = `
 
 @media (max-width:26.25em) {
   .c0 {
+    padding-top: 4rem;
+  }
+}
+
+@media (max-width:26.25em) {
+  .c0 {
     background: inherit;
+    padding-top: 0;
   }
 }
 

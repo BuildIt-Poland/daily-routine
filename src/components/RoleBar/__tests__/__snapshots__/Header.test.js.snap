@@ -16,6 +16,7 @@ exports[`COMPONENT - RoleBar Header renders correctly 1`] = `
 @media (max-width:26.25em) {
   .c0 {
     padding-left: 2rem;
+    height: 4rem;
   }
 }
 

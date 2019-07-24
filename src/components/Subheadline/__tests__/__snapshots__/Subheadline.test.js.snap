@@ -11,6 +11,7 @@ exports[`COMPONENT - Subheadline renders correctly 1`] = `
 @media (max-width:26.25em) {
   .c0 {
     text-align: left;
+    font-size: 1.4rem;
   }
 }
 

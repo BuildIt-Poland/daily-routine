@@ -49,6 +49,7 @@ exports[`COMPONENT - RoleButtons DevOpsButton renders correctly 1`] = `
 @media (max-width:26.25em) {
   .c1 {
     height: 5rem;
+    padding: 0 1rem;
   }
 }
 
