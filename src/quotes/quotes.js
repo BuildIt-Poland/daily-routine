@@ -1,19 +1,14 @@
-import { FRONT_END_ROLE, BACK_END_ROLE, DEV_OPS_ROLE } from '../constants/roles.js';
-import { BRAG, CONFESS } from '../constants/roleActions.js';
+import { FRONT_END_ROLE, BACK_END_ROLE, DEV_OPS_ROLE } from '../constants/roles';
+import { BRAG, CONFESS } from '../constants/roleActions';
 
-const SUCCESS = BRAG;
-const FAIL = CONFESS;
 export const PAST = 'past';
 export const FUTURE = 'future';
-const DEVOPS = DEV_OPS_ROLE;
-const BACKEND = BACK_END_ROLE;
-const FRONTEND = FRONT_END_ROLE;
 export const PREFIX = 'prefix';
 
 // Still consider this experimental
 // ORDER HERE MATTERS, ALWAYS ADD AT THE END
 const PREFIX_LEAF = {
-  [SUCCESS]: {
+  [BRAG]: {
     [PAST]: [
       'Yesterday I finally',
       'I have managed and',
@@ -31,7 +26,7 @@ const PREFIX_LEAF = {
       'Plan to further'
     ]
   },
-  [FAIL]: {
+  [CONFESS]: {
     [FUTURE]: [
       'My current approach is to',
       'Now I will',
@@ -52,7 +47,7 @@ const PREFIX_LEAF = {
 };
 
 const DEVOPS_LEAF = {
-  [SUCCESS]: {
+  [BRAG]: {
     [PAST]: [
       'completed fixing ingress path aliasing in periodically scheduled jobs.',
       'runned a successful migration of skew-library for node annotations.',
@@ -64,7 +59,7 @@ const DEVOPS_LEAF = {
       'verify if Jenkins pipeline flows operate respecting new image build scenarios.'
     ]
   },
-  [FAIL]: {
+  [CONFESS]: {
     [PAST]: [
       'applied global csrf rules as a secret exposure dependency.',
       'debuged pods health probes resolution in prometheus namespace.',
@@ -79,7 +74,7 @@ const DEVOPS_LEAF = {
 };
 
 const BACKEND_LEAF = {
-  [SUCCESS]: {
+  [BRAG]: {
     [PAST]: [
       'finished throwing atomicized errors in nonPAST conditions.',
       'refactored module switching scheduler affinities for dereferenced items.',
@@ -91,7 +86,7 @@ const BACKEND_LEAF = {
       'derefence FAILed requests mid Redis session sustaining.'
     ]
   },
-  [FAIL]: {
+  [CONFESS]: {
     [PAST]: [
       'obtain race condition debugging scopes in inner maintainer loops.',
       'collapsed curried parameters in Retry Monad Transformers.',
@@ -106,20 +101,20 @@ const BACKEND_LEAF = {
 };
 
 const FRONTEND_LEAF = {
-  [SUCCESS]: {
+  [BRAG]: {
     [PAST]: ['dummy'],
     [FUTURE]: ['dummy']
   },
-  [FAIL]: {
+  [CONFESS]: {
     [PAST]: ['dummy'],
     [FUTURE]: ['dummy']
   }
 };
 
 export const ROLES = {
-  [DEVOPS]: DEVOPS_LEAF,
-  [BACKEND]: BACKEND_LEAF,
-  [FRONTEND]: FRONTEND_LEAF,
+  [DEV_OPS_ROLE]: DEVOPS_LEAF,
+  [BACK_END_ROLE]: BACKEND_LEAF,
+  [FRONT_END_ROLE]: FRONTEND_LEAF,
   // keeping in one tree for better bookkeeping structure
   [PREFIX]: PREFIX_LEAF
 };
