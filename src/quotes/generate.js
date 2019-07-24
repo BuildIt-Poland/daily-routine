@@ -51,7 +51,8 @@ function getRandomQuoteAndID(role, action) {
 // URL-NICKNAME GENERATING
 // we keep it decimal here
 
-//domain assumes [0] -> repeating group, [1] -> static group
+// domain assumes [0] -> repeating group, [1] -> static group
+// changes here impact url persistance
 const DOMAIN = [[ADVERBS, ADVERBS, ADJECTIVES], NOUNS];
 const REPEATL = DOMAIN[0].length;
 

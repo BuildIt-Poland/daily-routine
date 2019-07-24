@@ -12,9 +12,9 @@ const PREFIX_LEAF = {
     [PAST]: [
       'Yesterday I finally',
       'I have managed and',
-      'At last I have',
+      'At last, I',
       'Happy to state, I have',
-      'I have managed to finish',
+      'I had a great day and',
       'Finally it worked! I have'
     ],
     [FUTURE]: [
@@ -30,17 +30,17 @@ const PREFIX_LEAF = {
     [FUTURE]: [
       'My current approach is to',
       'Now I will',
-      'Today, I will reapproach to',
+      'Today, I will retry to',
       'I will try hard to',
       'Today, plan to continue to',
       'Hopefully today, '
     ],
     [PAST]: [
-      'Sadly yesterday I',
+      'Sadly yesterday I have not',
       'I failed in having',
       'Failed to have',
       'I stand correct as I',
-      'Yeterday I have unsuccessfully in having',
+      'Yeterday I failed and have not',
       "Sadly I havn't "
     ]
   }
@@ -50,7 +50,7 @@ const DEVOPS_LEAF = {
   [BRAG]: {
     [PAST]: [
       'completed fixing ingress path aliasing in periodically scheduled jobs.',
-      'runned a successful migration of skew-library for node annotations.',
+      'launched a successful migration of skew-library for node annotations.',
       'decoupled intermediete layers of web-proxify-echo container to lessen in-memory footprints.'
     ],
     [FUTURE]: [
@@ -88,7 +88,7 @@ const BACKEND_LEAF = {
   },
   [CONFESS]: {
     [PAST]: [
-      'obtain race condition debugging scopes in inner maintainer loops.',
+      'obtained race condition debugging scopes in inner maintainer loops.',
       'collapsed curried parameters in Retry Monad Transformers.',
       'reintegrated database schema validation dynamic libraries.'
     ],
@@ -102,12 +102,28 @@ const BACKEND_LEAF = {
 
 const FRONTEND_LEAF = {
   [BRAG]: {
-    [PAST]: ['dummy'],
-    [FUTURE]: ['dummy']
+    [PAST]: [
+      'repopulated bundling dependencies in repository structures. ',
+      'concretized treeshakeing entities in unportable packages.',
+      'refitted component properties into lifting abstractions.'
+    ],
+    [FUTURE]: [
+      'reinitiate state-view reducers depending on flow constraints.',
+      'fabricate animation effects as N-matrix transformations.',
+      'resupply parameters for inline form enforcements.'
+    ]
   },
   [CONFESS]: {
-    [PAST]: ['dummy'],
-    [FUTURE]: ['dummy']
+    [PAST]: [
+      'unnested doctype declarations into iterative conditionals.',
+      'refactored dynamically changing view contexts in cross-browser compilations.',
+      'flattened stylesheet selectors for performant domain-scale compression.'
+    ],
+    [FUTURE]: [
+      'relocate implicit relative pathing to crossdomain cdn structures.',
+      'adapt in-browser interface zooming as native SPA operation.',
+      'phase out mutating data dependencies out of context-heavy external hooks.'
+    ]
   }
 };
 
