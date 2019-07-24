@@ -7,8 +7,6 @@ import { FACEBOOK, TWITTER } from '../../../constants/socialMedia';
 
 afterEach(cleanup);
 
-jest.mock();
-
 describe('COMPONENT - QuoteBubble DesktopShare', () => {
   it('renders correctly for Facebook variant', () => {
     const component = create(<DesktopShare variant={FACEBOOK} />);

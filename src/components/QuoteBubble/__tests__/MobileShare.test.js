@@ -6,8 +6,6 @@ import MobileShare from '../MobileShare';
 
 afterEach(cleanup);
 
-jest.mock();
-
 describe('COMPONENT - QuoteBubble MobileShare', () => {
   it('renders correctly', () => {
     const component = create(<MobileShare />);
