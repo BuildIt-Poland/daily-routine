@@ -19,6 +19,7 @@ exports[`COMPONENT - QuoteBubble renders correctly 1`] = `
   margin: 0;
   padding: 1.6rem 2.4rem;
   padding-bottom: 3rem;
+  color: #eb4640;
 }
 
 @media (max-width:26.25em) {

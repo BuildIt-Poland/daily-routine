@@ -20,7 +20,7 @@ function PageNotFound() {
       <Section>
         <Content>
           <Headline>404 - Page not found</Headline>
-          <Subheadline>The requested page does not exist.</Subheadline>
+          <Subheadline>You're in the wrong place.</Subheadline>
           <SugarCat />
         </Content>
       </Section>
