@@ -1,16 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 import { CopyCards } from '../Icons';
-import HitboxBase from '../Hitbox';
-
-const Hitbox = styled(HitboxBase)`
-  position: absolute;
-  bottom: 0.8rem;
-  right: 0;
-`;
+import Hitbox from '../Hitbox';
 
 function CopyButton({ valueToCopy }) {
   return (
