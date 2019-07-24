@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`COMPONENT - Characters Robot Neck renders correctly 1`] = `
+.c0 {
+  position: absolute;
+  top: 5.6rem;
+  left: 4.4rem;
+  z-index: 1;
+}
+
+<svg
+  className="c0"
+  height="16"
+  viewBox="0 0 52 16"
+  width="52"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M2.326 0h47.795v16H2.326z"
+    fill="currentColor"
+  />
+  <path
+    d="M.412 16L.956 0H4.24v16H.412zm51.176 0V0h-2.933v16h2.933z"
+    fill="#222"
+  />
+</svg>
+`;

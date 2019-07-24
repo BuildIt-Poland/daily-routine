@@ -3,27 +3,18 @@ import { create } from 'react-test-renderer';
 
 import RobotArtwork from '../RobotArtwork';
 
+jest.mock('../Head', () => 'Head');
+jest.mock('../Neck', () => 'Neck');
+jest.mock('../Chest', () => 'Chest');
+jest.mock('../Shadow', () => 'Shadow');
+jest.mock('../RightArm', () => 'RightArm');
+jest.mock('../LeftArm', () => 'LeftArm');
+jest.mock('../RightLeg', () => 'RightLeg');
+jest.mock('../LeftLeg', () => 'LeftLeg');
+
 describe('COMPONENT - Characters Robot', () => {
-  it('renders confused robot when pose is not set', () => {
+  it('renders correctly', () => {
     const component = create(<RobotArtwork />);
-
-    expect(component.toJSON()).toMatchSnapshot();
-  });
-
-  it("renders sad robot when 'confess' pose is provided", () => {
-    const component = create(<RobotArtwork pose="confess" />);
-
-    expect(component.toJSON()).toMatchSnapshot();
-  });
-
-  it("renders confused robot when 'default' pose is provided", () => {
-    const component = create(<RobotArtwork pose="default" />);
-
-    expect(component.toJSON()).toMatchSnapshot();
-  });
-
-  it("renders confident robot when 'brag' pose is provided", () => {
-    const component = create(<RobotArtwork pose="brag" />);
 
     expect(component.toJSON()).toMatchSnapshot();
   });

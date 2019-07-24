@@ -1,4 +1,4 @@
-import { CONFESS_ROLE_ACTION } from '../constants/roles';
+import { CONFESS } from '../constants/roleActions';
 import { getQuote } from './quotesService';
 import extractActionFromPath from './extractActionFromPath';
 import extractRoleFromPath from './extractRoleFromPath';
@@ -13,7 +13,7 @@ export function getPose(pathname) {
   const role = extractRoleFromPath(pathname);
   const quoteID = extractQuoteIDFromPath(pathname);
 
-  return !getQuote(role, pose, quoteID) ? CONFESS_ROLE_ACTION : pose;
+  return !getQuote(role, pose, quoteID) ? CONFESS : pose;
 }
 
 export default getPose;
