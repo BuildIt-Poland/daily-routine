@@ -45,8 +45,8 @@ describe('quotesService - getRandomQuoteID and then verify if text is the same',
       let x = randomQuoteIDbrag.split('-');
       x[3] = 'somethingnotreal';
       let randomQuoteIDbragMalformed = x.join('-');
-      const quoteNull = getQuote(role, BRAG, randomQuoteIDbragMalformed);
-      expect(quoteNull).toEqual(null);
+      const quoteNone = getQuote(role, BRAG, randomQuoteIDbragMalformed);
+      expect(quoteNone).toBeUndefined();
     });
   });
 });
