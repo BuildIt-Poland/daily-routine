@@ -5,7 +5,7 @@ exports[`COMPONENT - Error Wrapper render Cart component 1`] = `
   width: 100%;
   border: 2px solid #eb4640;
   color: #222222;
-  background-color: #fadcdd;
+  background-color: #ffffff;
   font-size: 1.4rem;
   font-weight: 700;
   padding: 1rem;
@@ -17,6 +17,7 @@ exports[`COMPONENT - Error Wrapper render Cart component 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  border-radius: 8px;
 }
 
 <div
