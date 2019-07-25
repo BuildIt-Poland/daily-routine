@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`COMPONENT - ErrorBoundary renders fallback Error component if there is error 1`] = `
+.c0 {
+  width: 100%;
+  border: 2px solid #eb4640;
+  color: #222222;
+  background-color: #fadcdd;
+  font-size: 1.4rem;
+  font-weight: 700;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+<div
+  className="c0"
+  role="alert"
+>
+  Oops, something went wrong.
+</div>
+`;
+
+exports[`COMPONENT - ErrorBoundary renders the child component if there is no error 1`] = `
+<p>
+  I'm child component!
+</p>
+`;

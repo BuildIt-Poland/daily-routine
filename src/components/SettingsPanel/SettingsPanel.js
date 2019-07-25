@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import SidePanel from '../SidePanel';
 import Subheadline from '../Subheadline';
 import GenderSettings from '../GenderSettings';
+import ErrorBoundary from '../ErrorBoundary';
 import Header from './Header';
 import CloseButton from './CloseButton';
 import Form from './Form';
@@ -18,7 +19,9 @@ function SettingsPanel({ isVisible, onClose }) {
         <CloseButton onClick={onClose} />
       </Header>
       <Form>
-        <GenderSettings />
+        <ErrorBoundary>
+          <GenderSettings />
+        </ErrorBoundary>
       </Form>
     </SidePanel>
   );

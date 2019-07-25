@@ -6,6 +6,7 @@ export const colorLightTeal = '#80cbd6';
 export const colorGreen = '#21c230';
 export const colorDarkGreen = '#138a1e';
 export const colorRed = '#eb4640';
+export const colorLightRed = '#fadcdd';
 export const colorDarkRed = '#a32f2a';
 export const colorLightPurple = '#cfaded';
 export const colorPurple = '#923be3';
