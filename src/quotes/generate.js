@@ -9,17 +9,8 @@ export function getQuoteFromID(role, action, quoteID) {
   if (isEmpty(digits)) {
     return;
   }
-  const roleLeaf = ROLES[role];
-  const prefixLeaf = ROLES[PREFIX][action];
-
-  // this order is not fluid and affects proper encoding, decoding, refactor by encoding this list
-  // const digits = [prefixPast, rolePast, prefixFuture, roleFuture];
-  const arrayExpressions = [prefixLeaf[PAST], roleLeaf[PAST], prefixLeaf[FUTURE], roleLeaf[FUTURE]];
-
-  const expressions = arrayExpressions
-    // module is if we somehow run out of bounds, it should not happen, but it will map to something
-    .map((phrases, index) => phrases[digits[index] % phrases.length])
-    .join(' ');
+  const expressionsAndIndexes = getOptionsFromLeaf(role, action, PREFIX, ROLES);
+  const expressions = expressionsAndIndexes.map((phrases, index) => phrases[digits[index] % phrases.length]).join(' ');
   return expressions;
 }
 
@@ -28,30 +19,29 @@ export function getRandomQuoteID(role, action) {
   return convertToNickname(quoteID);
 }
 
-function getRandomQuoteAndID(role, action) {
-  const roleLeaf = ROLES[role];
-  const prefixLeaf = ROLES[PREFIX][action];
-
-  // this order is not fluid and affects proper encoding, decoding, refactor by encoding this list
+const getOptionsFromLeaf = (role, action, prefix, tree) => {
+  const roleLeaf = tree[role];
+  const prefixLeaf = tree[prefix][action];
+  // this order is not fluid and affects proper encoding, decoding
   const arrayOfExpressions = [prefixLeaf[PAST], roleLeaf[PAST], prefixLeaf[FUTURE], roleLeaf[FUTURE]];
+  return arrayOfExpressions;
+};
 
+function getRandomQuoteAndID(role, action) {
   const sampleAndIndex = items => {
-    // index as string, to cover for 0
     const index = Math.floor(Math.random() * items.length);
     const item = items[index];
     return [item, index];
   };
-
-  const [expressions, index] = unzip(arrayOfExpressions.map(phrases => sampleAndIndex(phrases)));
+  const expressionsAndIndexes = getOptionsFromLeaf(role, action, PREFIX, ROLES);
+  const [expressions, index] = unzip(expressionsAndIndexes.map(phrases => sampleAndIndex(phrases)));
   const expression = expressions.join(' ');
   return [expression, index];
 }
 
-// URL-NICKNAME GENERATING
-// we keep it decimal here
+// URL-NICKNAME ENCODING
 
 // domain assumes [0] -> repeating group, [1] -> static group
-// changes here impact url persistance
 const DOMAIN = [[ADVERBS, ADVERBS, ADJECTIVES], NOUNS];
 const REPEATL = DOMAIN[0].length;
 
@@ -62,12 +52,11 @@ const getIntFromDomain = (word, index, _, domain) =>
 
 const getWord = partialRight(getWordFromDomain, DOMAIN);
 const getInt = partialRight(getIntFromDomain, DOMAIN);
-// if one of the indexes is 0, reduce to empty list (keep it a list for future chaining)
 const reduceEmptyOnNegative = (prev, item) => (item < 0 ? [] : isEqual(prev, []) ? [] : [].concat(prev, item));
 
 function convertToDigits(nickname) {
   const words = nickname.split('-');
-  // reversing twice for processing without lazy generators
+  // reversing twice to "mapRight"
   const digits = words
     .reverse()
     .map((word, index, words) => getInt(word, index, words))
