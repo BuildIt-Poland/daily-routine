@@ -9,9 +9,8 @@ exports[`COMPONENT - Characters Fox Tail renders correctly 1`] = `
   -webkit-transform-origin: 10.4rem 0.2rem;
   -ms-transform-origin: 10.4rem 0.2rem;
   transform-origin: 10.4rem 0.2rem;
-  -webkit-transform: rotateZ(0deg);
-  -ms-transform: rotateZ(0deg);
-  transform: rotateZ(0deg);
+  -webkit-animation: fFhBeW 5s ease-in-out infinite;
+  animation: fFhBeW 5s ease-in-out infinite;
 }
 
 <svg
