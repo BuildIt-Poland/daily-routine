@@ -7,9 +7,9 @@ import CharacterWitQuote from '../Character';
 import { GenderContext } from '../../../context/GenderContext';
 import { MALE } from '../../../constants/genders';
 import { pose } from '../../../types';
-import { extractPose } from '../../../utils/extractSomethingFromPath';
+import { extractPose } from '../../../utils/extractFromPath';
 
-jest.mock('../../../utils/extractSomethingFromPath');
+jest.mock('../../../utils/extractFromPath');
 
 function MockCharacter({ pose }) {
   return <div data-testid="mock-character">{pose}</div>;

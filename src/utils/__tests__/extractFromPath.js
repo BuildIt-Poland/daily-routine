@@ -1,10 +1,10 @@
 import { DEFAULT, BRAG, CONFESS } from '../../constants/roleActions';
-import { extractRole, extractQuoteID, extractAction, extractPose } from '../extractSomethingFromPath';
+import { extractRole, extractQuoteID, extractAction, extractPose } from '../extractFromPath';
 
 const EXAMPLE_QUOTE_ID = 'elatedWhale';
 const EXAMPLE_ACTION = 'brag';
 
-describe('extractSomethingFromPath', () => {
+describe('extractFromPath', () => {
   describe('FUNC - extractRole', () => {
     it('should extract correct role from given ended by slash path', () => {
       const path = '/backend/';

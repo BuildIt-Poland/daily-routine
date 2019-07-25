@@ -2,7 +2,7 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-import { extractPose } from '../../utils/extractSomethingFromPath';
+import { extractPose } from '../../utils/extractFromPath';
 import { location } from '../../types';
 
 function Character({ location, children }) {

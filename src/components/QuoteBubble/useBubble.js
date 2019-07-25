@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 
-import { extractRole, extractAction, extractQuoteID } from '../../utils/extractSomethingFromPath';
+import { extractRole, extractAction, extractQuoteID } from '../../utils/extractFromPath';
 import checkIfInDefaultPose from '../../utils/checkIfInDefaultPose';
 import { getQuote } from '../../utils/quotesService';
 
