@@ -2,12 +2,12 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-import getPose from '../../utils/getPose';
+import { extractPose } from '../../utils/extractSomethingFromPath';
 import { location } from '../../types';
 
 function Character({ location, children }) {
   const { pathname } = location;
-  const pose = getPose(pathname);
+  const pose = extractPose(pathname);
 
   return React.cloneElement(children, { pose });
 }

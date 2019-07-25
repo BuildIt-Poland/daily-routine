@@ -7,9 +7,9 @@ import CharacterWitQuote from '../Character';
 import { GenderContext } from '../../../context/GenderContext';
 import { MALE } from '../../../constants/genders';
 import { pose } from '../../../types';
-import getPose from '../../../utils/getPose';
+import { extractPose } from '../../../utils/extractSomethingFromPath';
 
-jest.mock('../../../utils/getPose');
+jest.mock('../../../utils/extractSomethingFromPath');
 
 function MockCharacter({ pose }) {
   return <div data-testid="mock-character">{pose}</div>;
@@ -42,7 +42,7 @@ describe('COMPONENT - CharacterWitQuote', () => {
   afterEach(cleanup);
 
   it('should render character component with brag pose', () => {
-    getPose.mockImplementation(() => 'brag');
+    extractPose.mockImplementation(() => 'brag');
 
     const { getByTestId } = setupComponent();
 
@@ -52,6 +52,6 @@ describe('COMPONENT - CharacterWitQuote', () => {
 
     expect(getByTestId('mock-character')).toBeDefined();
     expect(getByTestId('mock-character')).toHaveTextContent('brag');
-    expect(getPose).toBeCalled();
+    expect(extractPose).toBeCalled();
   });
 });

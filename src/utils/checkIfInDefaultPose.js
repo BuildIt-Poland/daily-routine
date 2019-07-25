@@ -1,10 +1,9 @@
 // Wheter character is in default pose or not
 
-import extractActionFromPath from './extractActionFromPath';
-import extractQuoteIDFromPath from './extractQuoteIDFromPath';
+import { extractAction, extractQuoteID } from './extractSomethingFromPath';
 
 function checkIfInDefaultPose(pathname) {
-  return !extractActionFromPath(pathname) && !extractQuoteIDFromPath(pathname);
+  return !extractAction(pathname) && !extractQuoteID(pathname);
 }
 
 export default checkIfInDefaultPose;
