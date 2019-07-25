@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Button from '../Button';
 import ArrowIcon from './ArrowIcon';
 
-function RoleButton({ children, ...props }) {
+function RedirectButton({ children, ...props }) {
   return (
     <Button {...props}>
       {children}
@@ -13,8 +13,8 @@ function RoleButton({ children, ...props }) {
   );
 }
 
-RoleButton.propTypes = {
+RedirectButton.propTypes = {
   children: PropTypes.node.isRequired
 };
 
-export default RoleButton;
+export default RedirectButton;

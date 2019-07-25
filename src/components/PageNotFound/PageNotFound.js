@@ -16,7 +16,7 @@ function PageNotFound() {
   const { animateAndRedirect } = useContext(RouteTransitionAnimationContext);
 
   return (
-    <Page>
+    <Page title="404 - Page not found">
       <Section>
         <Content>
           <Headline>404 - Page not found</Headline>
@@ -27,7 +27,7 @@ function PageNotFound() {
       <Wrapper>
         <Content>
           <Navigation>
-            <Button onClick={() => animateAndRedirect(ROOT_PATH)}>Take me to home page</Button>
+            <Button onClick={() => animateAndRedirect(ROOT_PATH)}>Take me home</Button>
           </Navigation>
         </Content>
       </Wrapper>

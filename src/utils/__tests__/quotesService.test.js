@@ -70,7 +70,7 @@ describe('quotesService - getQuote', () => {
   it('should return undefined for not defined action', () => {
     const quote = getQuote(DEV_OPS_ROLE, null, '1');
 
-    expect(quote).toEqual(undefined);
+    expect(quote).toEqual(null);
   });
 });
 
