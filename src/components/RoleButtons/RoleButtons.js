@@ -1,6 +1,6 @@
-// Set of links to vsrious roles
+// Set of links to various roles
 
-import React from 'react';
+import React, { useContext } from 'react';
 
 import {
   FRONT_END_ROLE,
@@ -13,24 +13,27 @@ import {
 import Content from '../Content';
 import Headline from '../Headline';
 import Navigation from '../Navigation';
+import { RouteTransitionAnimationContext } from '../../context/RouteTransitionAnimationContext';
 import Wrapper from './Wrapper';
 import FrontEndButton from './FrontEndButton';
 import BackEndButton from './BackEndButton';
 import DevOpsButton from './DevOpsButton';
 
 function RoleButtons() {
+  const { animateAndRedirect } = useContext(RouteTransitionAnimationContext);
+
   return (
     <Wrapper>
       <Content>
         <Headline>Pick your role!</Headline>
         <Navigation>
-          <FrontEndButton to={`/${FRONT_END_ROLE}`} data-testid={`${FRONT_END_ROLE}-button`}>
+          <FrontEndButton onClick={() => animateAndRedirect(FRONT_END_ROLE)} data-testid={`${FRONT_END_ROLE}-button`}>
             {FRONT_END_ROLE_LABEL}
           </FrontEndButton>
-          <BackEndButton to={`/${BACK_END_ROLE}`} data-testid={`${BACK_END_ROLE}-button`}>
+          <BackEndButton onClick={() => animateAndRedirect(BACK_END_ROLE)} data-testid={`${BACK_END_ROLE}-button`}>
             {BACK_END_ROLE_LABEL}
           </BackEndButton>
-          <DevOpsButton to={`/${DEV_OPS_ROLE}`} data-testid={`${DEV_OPS_ROLE}-button`}>
+          <DevOpsButton onClick={() => animateAndRedirect(DEV_OPS_ROLE)} data-testid={`${DEV_OPS_ROLE}-button`}>
             {DEV_OPS_ROLE_LABEL}
           </DevOpsButton>
         </Navigation>

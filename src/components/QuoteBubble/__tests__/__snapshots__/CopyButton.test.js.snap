@@ -21,9 +21,6 @@ exports[`COMPONENT - QuoteBubble CopyButton renders correctly 1`] = `
   min-width: 4rem;
   min-height: 4rem;
   cursor: pointer;
-  position: absolute;
-  bottom: 0.8rem;
-  right: 0;
 }
 
 <button

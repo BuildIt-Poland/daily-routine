@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import { role } from '../../types';
-import { CONFESS_ROLE_ACTION } from '../../constants/roles';
+import { CONFESS } from '../../constants/roleActions';
 import { colorRed, colorDarkRed } from '../../styles/designTokens';
 import SaltGrinderIcon from './SaltGrinderIcon';
 import ButtonBase from './ButtonBase';
@@ -22,12 +22,7 @@ function ConfessButton({ quoteID, role, ...props }) {
   const updateButtonLabel = () => setText(UPDATED_BUTTON_LABEL);
 
   return (
-    <StyledButton
-      {...props}
-      to={`/${role}/${CONFESS_ROLE_ACTION}/${quoteID}`}
-      icon={SaltGrinderIcon}
-      onClick={updateButtonLabel}
-    >
+    <StyledButton {...props} to={`/${role}/${CONFESS}/${quoteID}`} icon={SaltGrinderIcon} onClick={updateButtonLabel}>
       {text}
     </StyledButton>
   );

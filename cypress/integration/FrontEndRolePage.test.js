@@ -1,6 +1,8 @@
 /* global cy*/
 
-import { BRAG_ROLE_ACTION, CONFESS_ROLE_ACTION, FRONT_END_ROLE } from '../../src/constants/roles';
+import { FRONT_END_ROLE } from '../../src/constants/roles';
+import { BRAG, CONFESS } from '../../src/constants/roleActions';
+
 
 describe('FrontEndRolePage', () => {
   beforeEach(function() {
@@ -11,20 +13,20 @@ describe('FrontEndRolePage', () => {
     cy.location('pathname').should('eq', `/${FRONT_END_ROLE}`);
   });
 
-  describe(`${BRAG_ROLE_ACTION} button`, () => {
+  describe(`${BRAG} button`, () => {
     describe('when clicked', () => {
-      it(`should redirect to the /${FRONT_END_ROLE}/${BRAG_ROLE_ACTION}`, () => {
-        cy.getByTestId(`${FRONT_END_ROLE}-${BRAG_ROLE_ACTION}-button`).click();
-        cy.location('pathname').should('contain', `/${FRONT_END_ROLE}/${BRAG_ROLE_ACTION}`);
+      it(`should redirect to the /${FRONT_END_ROLE}/${BRAG}`, () => {
+        cy.getByTestId(`${FRONT_END_ROLE}-${BRAG}-button`).click();
+        cy.location('pathname').should('contain', `/${FRONT_END_ROLE}/${BRAG}`);
       });
     })
   });
 
-  describe(`${CONFESS_ROLE_ACTION} button`, () => {
+  describe(`${CONFESS} button`, () => {
     describe('when clicked', () => {
-      it(`should redirect to the /${FRONT_END_ROLE}/${CONFESS_ROLE_ACTION}`, () => {
-        cy.getByTestId(`${FRONT_END_ROLE}-${CONFESS_ROLE_ACTION}-button`).click();
-        cy.location('pathname').should('contain', `/${FRONT_END_ROLE}/${CONFESS_ROLE_ACTION}`);
+      it(`should redirect to the /${FRONT_END_ROLE}/${CONFESS}`, () => {
+        cy.getByTestId(`${FRONT_END_ROLE}-${CONFESS}-button`).click();
+        cy.location('pathname').should('contain', `/${FRONT_END_ROLE}/${CONFESS}`);
       });
     });
   });

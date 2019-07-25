@@ -14,7 +14,7 @@ function ConfusionMarks(props) {
   const animationStyles = useSpring({
     to: { opacity: 1, transform: 'scale(1)' },
     from: { opacity: 0, transform: 'scale(0)' },
-    delay: 200,
+    delay: 400,
     config: { mass: 0.4, tension: 200, friction: 6 }
   });
 

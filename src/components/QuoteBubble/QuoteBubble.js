@@ -1,16 +1,17 @@
 import React from 'react';
 import { useTransition } from 'react-spring';
 import { withRouter } from 'react-router-dom';
+import truncate from 'lodash.truncate';
 
 import { location } from '../../types';
 import { THOUGHT, SPEECH } from '../../constants/speechBubbleVariant';
 import { colorWhite } from '../../styles/designTokens';
 import useBubble from './useBubble';
-import CopyButton from './CopyButton';
 import Wrapper from './Wrapper';
 import Bubble from './Bubble';
 import Quote from './Quote';
 import BubbleTail from './BubbleTail';
+import BubbleButtons from './BubbleButtons';
 
 // TODO handle Wrapper resize for big quotes @blurbyte
 
@@ -34,15 +35,22 @@ function QuoteBubble({ location }) {
     delay: 200
   });
 
+  function trimQuote(quote) {
+    return truncate(quote, {
+      length: 220,
+      separator: ' '
+    });
+  }
+
   return (
     <Wrapper>
       {transitions.map(
         ({ item, props, key }) =>
           item && (
             <Bubble key={key} style={props}>
-              <Quote>{item.quote}</Quote>
+              <Quote>{trimQuote(item.quote)}</Quote>
               <BubbleTail variant={item.isInDefaultPose ? THOUGHT : SPEECH} />
-              {!item.isInDefaultPose && <CopyButton valueToCopy={item.quote} />}
+              {!item.isInDefaultPose && <BubbleButtons quote={item.quote} />}
             </Bubble>
           )
       )}
