@@ -1,12 +1,15 @@
 import React from 'react';
-import { create } from 'react-test-renderer';
+import { render, cleanup } from '@testing-library/react';
 
 import CopyButton from '../CopyButton';
 
+afterEach(cleanup);
+
 describe('COMPONENT - QuoteBubble CopyButton', () => {
   it('renders correctly', () => {
-    const component = create(<CopyButton valueToCopy="Taylor Swift" />);
+    const { container } = render(<CopyButton valueToCopy="Taylor Swift" />);
 
-    expect(component.toJSON()).toMatchSnapshot();
+    expect(container.querySelector('button')).toBeDefined();
+    expect(container.querySelector('svg title')).toHaveTextContent('Copy');
   });
 });

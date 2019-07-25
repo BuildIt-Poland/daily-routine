@@ -11,10 +11,10 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: flex-end;
   padding-bottom: 1rem;
-  padding-right: 1rem;
+  padding-right: 0.8rem;
 `;
 
-function ButtonsGroup({ quote }) {
+function BubbleButtons({ quote }) {
   const canUseShareAPI = !!navigator.share;
 
   return (
@@ -31,8 +31,8 @@ function ButtonsGroup({ quote }) {
   );
 }
 
-ButtonsGroup.propTypes = {
+BubbleButtons.propTypes = {
   quote: PropTypes.string.isRequired
 };
 
-export default ButtonsGroup;
+export default BubbleButtons;

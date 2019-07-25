@@ -4,6 +4,7 @@
 import styled from 'styled-components';
 
 const Hitbox = styled.button`
+  position: relative;
   border: 0;
   margin: 0;
   padding: 0;
@@ -14,6 +15,7 @@ const Hitbox = styled.button`
   min-width: 4rem;
   min-height: 4rem;
   cursor: pointer;
+  outline: 0;
 `;
 
 export default Hitbox;

@@ -2,6 +2,7 @@
 
 exports[`COMPONENT - QuoteBubble DesktopShare renders correctly for Facebook variant 1`] = `
 .c0 {
+  position: relative;
   border: 0;
   margin: 0;
   padding: 0;
@@ -21,10 +22,12 @@ exports[`COMPONENT - QuoteBubble DesktopShare renders correctly for Facebook var
   min-width: 4rem;
   min-height: 4rem;
   cursor: pointer;
+  outline: 0;
 }
 
 <button
   className="c0"
+  data-testid="facebook-share-button"
   onClick={[Function]}
 >
   <svg
@@ -49,6 +52,7 @@ exports[`COMPONENT - QuoteBubble DesktopShare renders correctly for Facebook var
 
 exports[`COMPONENT - QuoteBubble DesktopShare renders correctly for Twitter variant 1`] = `
 .c0 {
+  position: relative;
   border: 0;
   margin: 0;
   padding: 0;
@@ -68,10 +72,12 @@ exports[`COMPONENT - QuoteBubble DesktopShare renders correctly for Twitter vari
   min-width: 4rem;
   min-height: 4rem;
   cursor: pointer;
+  outline: 0;
 }
 
 <button
   className="c0"
+  data-testid="twitter-share-button"
   onClick={[Function]}
 >
   <svg
