@@ -3,19 +3,21 @@ import { BRAG, CONFESS } from '../../constants/roleActions';
 
 import { getQuote, getRandomQuoteID } from '../quotesService';
 
-let count_chars = (str, char) => str.split('').reduce((acc, ch) => (ch === char ? acc + 1 : acc), 0);
+function countChars(str, char) {
+  return str.split('').reduce((acc, ch) => (ch === char ? acc + 1 : acc), 0);
+}
 
 describe('quotesService - getRandomQuoteID should return something long enough with spacers', () => {
   [BACK_END_ROLE, FRONT_END_ROLE, DEV_OPS_ROLE].forEach(role => {
     it('should return random possible quoteID for backend role and BRAG', () => {
       const randomQuoteID = getRandomQuoteID(role, BRAG);
-      expect(count_chars(randomQuoteID, '-')).toEqual(3);
+      expect(countChars(randomQuoteID, '-')).toEqual(3);
       expect(randomQuoteID.length).toBeGreaterThan(3 * 4);
     });
 
     it('should return random possible quoteID for backend role and BRAG', () => {
       const randomQuoteID = getRandomQuoteID(role, CONFESS);
-      expect(count_chars(randomQuoteID, '-')).toEqual(3);
+      expect(countChars(randomQuoteID, '-')).toEqual(3);
       expect(randomQuoteID.length).toBeGreaterThan(3 * 4);
     });
   });
