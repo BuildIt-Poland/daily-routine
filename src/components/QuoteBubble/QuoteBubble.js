@@ -1,6 +1,7 @@
 import React from 'react';
 import { useTransition } from 'react-spring';
 import { withRouter } from 'react-router-dom';
+import truncate from 'lodash.truncate';
 
 import { location } from '../../types';
 import { THOUGHT, SPEECH } from '../../constants/speechBubbleVariant';
@@ -34,13 +35,20 @@ function QuoteBubble({ location }) {
     delay: 200
   });
 
+  function trimQuote(quote) {
+    return truncate(quote, {
+      length: 220,
+      separator: ' '
+    });
+  }
+
   return (
     <Wrapper>
       {transitions.map(
         ({ item, props, key }) =>
           item && (
             <Bubble key={key} style={props}>
-              <Quote>{item.quote}</Quote>
+              <Quote>{trimQuote(item.quote)}</Quote>
               <BubbleTail variant={item.isInDefaultPose ? THOUGHT : SPEECH} />
               {!item.isInDefaultPose && <BubbleButtons quote={item.quote} />}
             </Bubble>
