@@ -27,11 +27,6 @@ describe('QuoteBubble', () => {
     });
   })
 
-  // describe('when Copy-to-clipboard button is clicked ', () => {
-  //   it('should show notification', () => {
-  //     cy.getByTestId('copy-to-clipboard-button').click();
-  //     cy.getByTestId('copy-notification').should('exist');
-  //   });
-  // })
+  // TODO Check where notification is displayed after button got clicked @blurbyte
 
 });

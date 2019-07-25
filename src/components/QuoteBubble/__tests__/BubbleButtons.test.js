@@ -9,7 +9,7 @@ jest.mock('../MobileShare', () => 'MobileShare');
 
 describe('COMPONENT - QuoteBubble BubbleButtons', () => {
   it('renders correctly if navigator share API is availible', () => {
-    global.navigator.share = jest.fn();
+    // Navigator API is defined by default
 
     const component = create(<BubbleButtons quote={'Test Quote'} />);
 
@@ -23,7 +23,7 @@ describe('COMPONENT - QuoteBubble BubbleButtons', () => {
 
     expect(component.toJSON()).toMatchSnapshot();
 
-    // resets variable to default value
+    // Resets variable to default value
     global.navigator.share = jest.fn();
   });
 });
