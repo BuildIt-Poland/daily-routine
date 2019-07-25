@@ -2,7 +2,9 @@ import partialRight from 'lodash.partialright';
 import unzip from 'lodash.unzip';
 import isEmpty from 'lodash.isempty';
 import isEqual from 'lodash.isequal';
-import { ROLES, PREFIX, PAST, FUTURE, ADVERBS, ADJECTIVES, NOUNS } from './quotes';
+
+import { ADVERBS, ADJECTIVES, NOUNS } from './nicknameParts';
+import { ROLES, PREFIX, PAST, FUTURE } from './quotes';
 
 export function getQuoteFromID(role, action, quoteID) {
   const digits = convertToDigits(quoteID);
@@ -15,17 +17,18 @@ export function getQuoteFromID(role, action, quoteID) {
 }
 
 export function getRandomQuoteID(role, action) {
-  const [, quoteID] = getRandomQuoteAndID(role, action);
+  // eslint-disable-next-line no-unused-var
+  const [_, quoteID] = getRandomQuoteAndID(role, action);
   return convertToNickname(quoteID);
 }
 
-const getOptionsFromLeaf = (role, action, prefix, tree) => {
+function getOptionsFromLeaf(role, action, prefix, tree) {
   const roleLeaf = tree[role];
   const prefixLeaf = tree[prefix][action];
   // this order is not fluid and affects proper encoding, decoding
   const arrayOfExpressions = [prefixLeaf[PAST], roleLeaf[PAST], prefixLeaf[FUTURE], roleLeaf[FUTURE]];
   return arrayOfExpressions;
-};
+}
 
 function getRandomQuoteAndID(role, action) {
   const sampleAndIndex = items => {
@@ -45,14 +48,18 @@ function getRandomQuoteAndID(role, action) {
 const DOMAIN = [[ADVERBS, ADVERBS, ADJECTIVES], NOUNS];
 const REPEATL = DOMAIN[0].length;
 
-const getWordFromDomain = (digit, index, _, domain) =>
-  index === 0 ? domain[1][digit] : domain[0][(REPEATL - index) % REPEATL][digit];
-const getIntFromDomain = (word, index, _, domain) =>
-  index === 0 ? domain[1].indexOf(word) : domain[0][(REPEATL - index) % REPEATL].indexOf(word);
-
+function getWordFromDomain(digit, index, _, domain) {
+  return index === 0 ? domain[1][digit] : domain[0][(REPEATL - index) % REPEATL][digit];
+}
+function getIntFromDomain(word, index, _, domain) {
+  return index === 0 ? domain[1].indexOf(word) : domain[0][(REPEATL - index) % REPEATL].indexOf(word);
+}
 const getWord = partialRight(getWordFromDomain, DOMAIN);
 const getInt = partialRight(getIntFromDomain, DOMAIN);
-const reduceEmptyOnNegative = (prev, item) => (item < 0 ? [] : isEqual(prev, []) ? [] : [].concat(prev, item));
+
+function reduceEmptyOnNegative(prev, item) {
+  return item < 0 ? [] : isEqual(prev, []) ? [] : [].concat(prev, item);
+}
 
 function convertToDigits(nickname) {
   const words = nickname.split('-');

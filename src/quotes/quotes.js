@@ -6,7 +6,7 @@ export const FUTURE = 'future';
 export const PREFIX = 'prefix';
 
 // ORDER HERE MATTERS, ALWAYS ADD AT THE END
-const PREFIX_LEAF = {
+const PREFIX_QUOTES = {
   [BRAG]: {
     [PAST]: [
       'Yesterday I finally',
@@ -45,7 +45,7 @@ const PREFIX_LEAF = {
   }
 };
 
-const DEVOPS_LEAF = {
+const DEVOPS_QUOTES = {
   [PAST]: [
     'completed fixing ingress path aliasing in periodically scheduled jobs.',
     'launched a successful migration of skew-library for node annotations.',
@@ -64,7 +64,7 @@ const DEVOPS_LEAF = {
   ]
 };
 
-const BACKEND_LEAF = {
+const BACKEND_QUOTES = {
   [PAST]: [
     'finished throwing atomicized errors in nonpast conditions.',
     'refactored module switching scheduler affinities for dereferenced items.',
@@ -83,12 +83,12 @@ const BACKEND_LEAF = {
   ]
 };
 
-const FRONTEND_LEAF = {
+const FRONTEND_QUOTES = {
   [PAST]: [
     'repopulated bundling dependencies in repository structures. ',
     'concretized treeshakeing entities in unportable packages.',
     'refitted component properties into lifting abstractions.',
-    'unnested doctype declarations into iterative conditionals.',
+    'flattened doctype declarations into iterative conditionals.',
     'refactored dynamically changing view contexts in cross-browser compilations.',
     'flattened stylesheet selectors for performant domain-scale compression.'
   ],
@@ -103,46 +103,8 @@ const FRONTEND_LEAF = {
 };
 
 export const ROLES = {
-  [DEV_OPS_ROLE]: DEVOPS_LEAF,
-  [BACK_END_ROLE]: BACKEND_LEAF,
-  [FRONT_END_ROLE]: FRONTEND_LEAF,
-  [PREFIX]: PREFIX_LEAF
+  [DEV_OPS_ROLE]: DEVOPS_QUOTES,
+  [BACK_END_ROLE]: BACKEND_QUOTES,
+  [FRONT_END_ROLE]: FRONTEND_QUOTES,
+  [PREFIX]: PREFIX_QUOTES
 };
-
-export const ADVERBS = [
-  'neatly',
-  'uncleanly',
-  'bluntly',
-  'trivially',
-  'bravely',
-  'spiritually',
-  'so',
-  'lazily',
-  'ruthlessly',
-  'eagerly'
-];
-
-export const ADJECTIVES = [
-  'abusive',
-  'leaking',
-  'reverting',
-  'raging',
-  'ample',
-  'admirable',
-  'arctic',
-  'corny',
-  'dense',
-  'feisty'
-];
-export const NOUNS = [
-  'boxer',
-  'walrus',
-  'trickster',
-  'typist',
-  'kidoh',
-  'soul',
-  'minion',
-  'telegraph',
-  'painter',
-  'jungleboy'
-];
