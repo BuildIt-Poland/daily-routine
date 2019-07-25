@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link as LinkBase } from 'react-router-dom';
+import { withRouter } from 'react-router';
 import styled from 'styled-components';
 
+import { location } from '../../types';
+import { RouteTransitionAnimationContext } from '../../context/RouteTransitionAnimationContext';
 import { colorBlack, spacingSmall, borderWidthThin } from '../../styles/designTokens';
+import { ROOT_PATH } from '../../constants/routes';
 import { Logo as LogoIcon } from '../Icons';
 
 const Link = styled(LinkBase)`
@@ -29,9 +33,22 @@ const Tagline = styled.p`
   text-transform: uppercase;
 `;
 
-function Logo() {
+function Logo({ location }) {
+  const { animateAndRedirect } = useContext(RouteTransitionAnimationContext);
+
+  function isRootPath(location) {
+    return location.pathname !== ROOT_PATH;
+  }
+
+  function handleClick(e) {
+    e.preventDefault();
+    if (isRootPath(location)) {
+      animateAndRedirect(ROOT_PATH);
+    }
+  }
+
   return (
-    <Link to="/" data-testid="logo">
+    <Link onClick={handleClick} to={ROOT_PATH} data-testid="logo">
       <LogoWrapper>
         <LogoIcon />
       </LogoWrapper>
@@ -43,4 +60,8 @@ function Logo() {
   );
 }
 
-export default Logo;
+Logo.propTypes = {
+  location
+};
+
+export default withRouter(Logo);

@@ -9,6 +9,7 @@ import Fox from '../Fox';
 jest.mock('../GenderFlower', () => 'GenderFlower');
 jest.mock('../ConfusionMarks', () => 'ConfusionMarks');
 jest.mock('../FoxArtwork', () => 'FoxArtwork');
+jest.mock('../Tail', () => 'Tail');
 
 describe('COMPONENT - Characters Robot', () => {
   it('renders correctly with default props', () => {

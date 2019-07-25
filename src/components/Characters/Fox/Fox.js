@@ -9,6 +9,7 @@ import FoxArtwork from './FoxArtwork';
 import ConfusionMarks from './ConfusionMarks';
 import GenderFlower from './GenderFlower';
 import Tear from './Tear';
+import Tail from './Tail';
 
 function Fox({ pose = DEFAULT }) {
   const { gender } = useContext(GenderContext);
@@ -19,6 +20,7 @@ function Fox({ pose = DEFAULT }) {
       {pose === CONFESS && <Tear />}
       {pose === DEFAULT && <ConfusionMarks />}
       <GenderFlower isVisible={gender === FEMALE} />
+      <Tail />
     </Wrapper>
   );
 }
