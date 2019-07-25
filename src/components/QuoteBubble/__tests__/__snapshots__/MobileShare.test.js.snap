@@ -2,6 +2,7 @@
 
 exports[`COMPONENT - QuoteBubble MobileShare renders correctly 1`] = `
 .c0 {
+  position: relative;
   border: 0;
   margin: 0;
   padding: 0;
@@ -21,6 +22,7 @@ exports[`COMPONENT - QuoteBubble MobileShare renders correctly 1`] = `
   min-width: 4rem;
   min-height: 4rem;
   cursor: pointer;
+  outline: 0;
 }
 
 <button

@@ -3,7 +3,6 @@
 import { FRONT_END_ROLE } from '../../src/constants/roles';
 import { BRAG, CONFESS } from '../../src/constants/roleActions';
 
-
 describe('FrontEndRolePage', () => {
   beforeEach(function() {
     cy.visit(`/${FRONT_END_ROLE}`)
