@@ -13,7 +13,8 @@ import Quote from './Quote';
 import BubbleTail from './BubbleTail';
 import BubbleButtons from './BubbleButtons';
 
-// TODO handle Wrapper resize for big quotes @blurbyte
+const ERROR_MESSAGE =
+  ' – The blockchain distributed ledger failed to achieve quorum with deep learning neural network of your pseudo-generated Turning complaisant daily message.';
 
 function QuoteBubble({ location }) {
   const { pathname } = location;
@@ -48,7 +49,14 @@ function QuoteBubble({ location }) {
         ({ item, props, key }) =>
           item && (
             <Bubble key={key} style={props}>
-              {item.quote ? <Quote>{trimQuote(item.quote)}</Quote> : <Quote>404 - Message not found</Quote>}
+              {item.quote ? (
+                <Quote>{trimQuote(item.quote)}</Quote>
+              ) : (
+                <Quote>
+                  <strong>4o4 Error</strong>
+                  {ERROR_MESSAGE}
+                </Quote>
+              )}
 
               <BubbleTail variant={item.isInDefaultPose ? THOUGHT : SPEECH} />
               {!item.isInDefaultPose && item.quote && <BubbleButtons quote={item.quote} />}
