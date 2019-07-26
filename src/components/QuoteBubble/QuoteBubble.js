@@ -1,11 +1,11 @@
 import React from 'react';
 import { useTransition } from 'react-spring';
 import { withRouter } from 'react-router-dom';
-import truncate from 'lodash.truncate';
 
 import { location } from '../../types';
 import { THOUGHT, SPEECH } from '../../constants/speechBubbleVariant';
 import { colorWhite } from '../../styles/designTokens';
+import trimQuote from './trimQuote';
 import useBubble from './useBubble';
 import Wrapper from './Wrapper';
 import Bubble from './Bubble';
@@ -35,13 +35,6 @@ function QuoteBubble({ location }) {
     },
     delay: 200
   });
-
-  function trimQuote(quote) {
-    return truncate(quote, {
-      length: 220,
-      separator: ' '
-    });
-  }
 
   return (
     <Wrapper>

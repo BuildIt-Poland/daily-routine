@@ -32,7 +32,10 @@ exports[`COMPONENT - QuoteBubble renders correctly 1`] = `
     }
   >
     <Quote>
-      404 - Message not found
+      <strong>
+        4o4 Error
+      </strong>
+       – The blockchain distributed ledger failed to achieve quorum with deep learning neural network of your pseudo-generated Turning complaisant daily message.
     </Quote>
     <BubbleTail
       variant="thought"
