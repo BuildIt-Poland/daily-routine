@@ -22,7 +22,7 @@ function QuoteBubble({ location }) {
   const { pathname } = location;
   const { handleQuoteChange } = useContext(QuoteContext);
 
-  const bubble = useBubble(pathname, handleQuoteChange);
+  const bubble = useBubble(pathname);
   // Puts quote into context
   handleQuoteChange(bubble.quote);
 
