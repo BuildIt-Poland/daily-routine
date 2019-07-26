@@ -16,7 +16,7 @@ const Frame = styled.div`
   position: relative;
   height: 24.4rem;
   width: 14.8rem;
-  color: ${props => props.theme.primaryColor};
+  color: ${({ theme }) => theme.primaryColor};
 `;
 
 function RobotArtwork({ pose = DEFAULT }) {

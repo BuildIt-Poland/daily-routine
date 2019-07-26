@@ -1,7 +1,22 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 import { zIndexArtworkPart } from '../../../styles/designTokens';
+
+const rightLegAnimation = keyframes`
+  0% { transform: scaleY(1); }
+  50% { transform: scaleY(0.98); }
+  100% { transform: scaleY(1); }
+`;
+
+const RightLeg = styled(RightLegArtwork)`
+  transform-origin: bottom;
+  animation: ${rightLegAnimation} 180ms ease-in-out -0.6s infinite;
+  position: absolute;
+  top: 14.2rem;
+  left: 1.8rem;
+  z-index: ${zIndexArtworkPart + 1};
+`;
 
 function RightLegArtwork(props) {
   return (
@@ -17,14 +32,5 @@ function RightLegArtwork(props) {
     </svg>
   );
 }
-
-const RightLeg = styled(RightLegArtwork)`
-  position: absolute;
-  top: 14.2rem;
-  left: 1.8rem;
-  z-index: ${zIndexArtworkPart + 1};
-  transform-origin: 3.6rem 0;
-  transform: rotateZ(0deg);
-`;
 
 export default RightLeg;
