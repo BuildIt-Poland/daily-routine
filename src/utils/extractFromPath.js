@@ -1,5 +1,4 @@
 import { CONFESS, DEFAULT } from '../constants/roleActions';
-import { getQuote } from './quotesService';
 
 export function extractAction(path) {
   return path.split('/')[2];
@@ -19,14 +18,11 @@ export function extractRole(path) {
   return match[0];
 }
 
-export function extractPose(path) {
+export function extractPose(path, quote) {
   const pose = extractAction(path);
   if (!pose) {
     return DEFAULT;
   }
 
-  const role = extractRole(path);
-  const quoteID = extractQuoteID(path);
-
-  return !getQuote(role, pose, quoteID) ? CONFESS : pose;
+  return !quote ? CONFESS : pose;
 }

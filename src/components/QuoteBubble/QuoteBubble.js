@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useTransition } from 'react-spring';
 import { withRouter } from 'react-router-dom';
 
 import { location } from '../../types';
 import { THOUGHT, SPEECH } from '../../constants/speechBubbleVariant';
 import { colorWhite } from '../../styles/designTokens';
+import { QuoteContext } from '../../context/QuoteContext';
 import trimQuote from './trimQuote';
 import useBubble from './useBubble';
 import Wrapper from './Wrapper';
@@ -18,7 +19,11 @@ const ERROR_MESSAGE =
 
 function QuoteBubble({ location }) {
   const { pathname } = location;
-  const bubble = useBubble(pathname);
+  const { handleQuoteChange } = useContext(QuoteContext);
+
+  const bubble = useBubble(pathname, handleQuoteChange);
+  // Puts quote into context
+  handleQuoteChange(bubble.quote);
 
   const transitions = useTransition(bubble, bubble => bubble.quoteID, {
     from: { opacity: 0, transform: 'perspective(600px) rotateX(45deg) translateY(-20px) scale(0.8)' },

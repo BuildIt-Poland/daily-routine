@@ -73,19 +73,19 @@ describe('extractFromPath', () => {
 
   describe('FUNC - extractPose', () => {
     it('should returns default pose', () => {
-      const pose = extractPose('');
+      const pose = extractPose('', null);
 
       expect(pose).toEqual(DEFAULT);
     });
 
     it('should returns brag pose', () => {
-      const pose = extractPose('/backend/brag/fundamentalrobot');
+      const pose = extractPose('/backend/brag/fundamentalrobot', 'Taylor Swift said...');
 
       expect(pose).toEqual(BRAG);
     });
 
     it('should returns confess pose for invalid url', () => {
-      const pose = extractPose('/backend/brag');
+      const pose = extractPose('/backend/brag', null);
 
       expect(pose).toEqual(CONFESS);
     });

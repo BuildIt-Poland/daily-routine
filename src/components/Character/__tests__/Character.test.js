@@ -8,6 +8,7 @@ import { GenderContext } from '../../../context/GenderContext';
 import { MALE } from '../../../constants/genders';
 import { pose } from '../../../types';
 import { extractPose } from '../../../utils/extractFromPath';
+import { QuoteContext } from '../../../context/QuoteContext';
 
 jest.mock('../../../utils/extractFromPath');
 
@@ -31,9 +32,11 @@ function renderWithRouter(ui, { history = mockHistory } = {}) {
 function setupComponent() {
   return renderWithRouter(
     <GenderContext.Provider value={{ gender: MALE }}>
-      <CharacterWitQuote>
-        <MockCharacter />
-      </CharacterWitQuote>
+      <QuoteContext.Provider value={{ quote: 'Taylor Swift', handleQuoteChange: jest.fn() }}>
+        <CharacterWitQuote>
+          <MockCharacter />
+        </CharacterWitQuote>
+      </QuoteContext.Provider>
     </GenderContext.Provider>
   );
 }
