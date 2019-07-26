@@ -6,6 +6,7 @@ import truncate from 'lodash.truncate';
 import { location } from '../../types';
 import { THOUGHT, SPEECH } from '../../constants/speechBubbleVariant';
 import { colorWhite } from '../../styles/designTokens';
+import ErrorBoundary from '../ErrorBoundary';
 import useBubble from './useBubble';
 import Wrapper from './Wrapper';
 import Bubble from './Bubble';
@@ -43,18 +44,20 @@ function QuoteBubble({ location }) {
   }
 
   return (
-    <Wrapper>
-      {transitions.map(
-        ({ item, props, key }) =>
-          item && (
-            <Bubble key={key} style={props}>
-              <Quote>{trimQuote(item.quote)}</Quote>
-              <BubbleTail variant={item.isInDefaultPose ? THOUGHT : SPEECH} />
-              {!item.isInDefaultPose && <BubbleButtons quote={item.quote} />}
-            </Bubble>
-          )
-      )}
-    </Wrapper>
+    <ErrorBoundary>
+      <Wrapper>
+        {transitions.map(
+          ({ item, props, key }) =>
+            item && (
+              <Bubble key={key} style={props}>
+                <Quote>{trimQuote(item.quote)}</Quote>
+                <BubbleTail variant={item.isInDefaultPose ? THOUGHT : SPEECH} />
+                {!item.isInDefaultPose && <BubbleButtons quote={item.quote} />}
+              </Bubble>
+            )
+        )}
+      </Wrapper>
+    </ErrorBoundary>
   );
 }
 
