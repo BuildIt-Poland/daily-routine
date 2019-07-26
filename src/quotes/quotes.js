@@ -19,10 +19,10 @@ const PREFIX_QUOTES = {
     [FUTURE]: [
       'Now I can',
       'At last I can',
-      'This unlocked me to have',
+      'This unlocked me to',
       'Today I will,',
-      'Will continue to',
-      'Plan to further'
+      'I will continue to',
+      'I am planning to further'
     ]
   },
   [CONFESS]: {
@@ -31,8 +31,8 @@ const PREFIX_QUOTES = {
       'Now I will',
       'Today, I will retry to',
       'I will try hard to',
-      'Today, plan to continue to',
-      'Hopefully today, '
+      'Today, I plan to continue to',
+      'Hopefully today I will,'
     ],
     [PAST]: [
       'Sadly yesterday I have not',
