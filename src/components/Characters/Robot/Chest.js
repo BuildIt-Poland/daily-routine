@@ -1,7 +1,20 @@
 import React from 'react';
-import styled from 'styled-components';
-
+import styled, { keyframes } from 'styled-components';
 import { zIndexArtworkPart } from '../../../styles/designTokens';
+
+const chestAnimation = keyframes`
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(-2deg); }
+  100% { transform: rotate(0deg); }
+`;
+
+const Chest = styled(ChestArtwork)`
+  animation: ${chestAnimation} 110ms ease-in-out -0.2s infinite;
+  position: absolute;
+  top: 6.4rem;
+  left: 1.1rem;
+  z-index: ${zIndexArtworkPart + 3};
+`;
 
 function ChestArtwork(props) {
   return (
@@ -18,12 +31,5 @@ function ChestArtwork(props) {
     </svg>
   );
 }
-
-const Chest = styled(ChestArtwork)`
-  position: absolute;
-  top: 6.4rem;
-  left: 1.1rem;
-  z-index: ${zIndexArtworkPart + 3};
-`;
 
 export default Chest;

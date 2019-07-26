@@ -1,7 +1,22 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 import { zIndexArtworkPart } from '../../../styles/designTokens';
+
+const rightArmAnimation = keyframes`
+  0% { transform: translateX(0) rotate(0deg); }
+  50% { transform: translateX(0) rotate(-2deg); }
+  100% { transform: translateX(0) rotate(0deg); }
+`;
+
+const RightArm = styled(RightArmArtwork)`
+  animation: ${rightArmAnimation} 130ms ease-in-out -0.2s infinite;
+  transform-origin: 3.6rem 1rem;
+  position: absolute;
+  top: 7.4rem;
+  left: 0.3rem;
+  z-index: ${zIndexArtworkPart + 4};
+`;
 
 function RightArmArtwork(props) {
   return (
@@ -17,14 +32,5 @@ function RightArmArtwork(props) {
     </svg>
   );
 }
-
-const RightArm = styled(RightArmArtwork)`
-  position: absolute;
-  top: 7.4rem;
-  left: 0.3rem;
-  z-index: ${zIndexArtworkPart + 4};
-  transform-origin: 3.6rem 1rem;
-  transform: rotateZ(0deg);
-`;
 
 export default RightArm;

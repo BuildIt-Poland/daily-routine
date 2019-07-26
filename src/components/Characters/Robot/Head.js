@@ -1,9 +1,41 @@
-import React from 'react';
-import styled from 'styled-components';
+import React, { useContext } from 'react';
+import styled, { keyframes } from 'styled-components';
 
 import { pose } from '../../../types';
+import { GenderContext } from '../../../context/GenderContext';
 import { DEFAULT, BRAG, CONFESS } from '../../../constants/roleActions';
 import { zIndexArtworkPart } from '../../../styles/designTokens';
+import { FEMALE } from '../../../constants/genders';
+import GenderFlower from './GenderFlower';
+
+const headAnimation = keyframes`
+  0% { transform: translateY(0) rotate(-1deg); }
+  50% { transform: translateY(0.1px) rotate(1deg); }
+  100% { transform: translateY(0) rotate(-1deg); }
+`;
+
+const AnimatedHead = styled.div`
+  animation: ${headAnimation} 110ms ease-in-out infinite;
+  z-index: ${zIndexArtworkPart};
+  position: absolute;
+  top: 0;
+  left: 1.4rem;
+`;
+
+function Head({ pose }) {
+  const { gender } = useContext(GenderContext);
+
+  return (
+    <AnimatedHead>
+      <HeadArtwork pose={pose} />
+      <GenderFlower isVisible={gender === FEMALE} />
+    </AnimatedHead>
+  );
+}
+
+Head.propTypes = {
+  pose
+};
 
 function HeadArtwork({ pose = DEFAULT, ...props }) {
   return (
@@ -48,12 +80,5 @@ function HeadArtwork({ pose = DEFAULT, ...props }) {
 HeadArtwork.propTypes = {
   pose
 };
-
-const Head = styled(HeadArtwork)`
-  position: absolute;
-  top: 0;
-  left: 1.4rem;
-  z-index: ${zIndexArtworkPart};
-`;
 
 export default Head;

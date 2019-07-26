@@ -2,16 +2,15 @@
 
 exports[`COMPONENT - Characters Robot LeftLeg renders correctly 1`] = `
 .c0 {
+  -webkit-transform-origin: bottom;
+  -ms-transform-origin: bottom;
+  transform-origin: bottom;
+  -webkit-animation: bpwMKn 180ms ease-in-out -0.2s infinite;
+  animation: bpwMKn 180ms ease-in-out -0.2s infinite;
   position: absolute;
   top: 14.2rem;
   left: 6.4rem;
   z-index: 20;
-  -webkit-transform-origin: 1.8rem 0;
-  -ms-transform-origin: 1.8rem 0;
-  transform-origin: 1.8rem 0;
-  -webkit-transform: rotateZ(0deg);
-  -ms-transform: rotateZ(0deg);
-  transform: rotateZ(0deg);
 }
 
 <svg
