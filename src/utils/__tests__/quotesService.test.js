@@ -7,6 +7,15 @@ function countChars(str, char) {
   return str.split('').reduce((acc, ch) => (ch === char ? acc + 1 : acc), 0);
 }
 
+describe('quotesService - return undefined if action or role malformed', () => {
+  it('should return random possible quoteID for backend role and BRAG', () => {
+    const quote0 = getQuote('XXXX', 'YYYY', 'ZZZZ');
+    expect(quote0).toBeUndefined();
+    const quote1 = getQuote(FRONT_END_ROLE, BRAG, 23);
+    expect(quote1).toBeUndefined();
+  });
+});
+
 describe('quotesService - getRandomQuoteID should return something long enough with spacers', () => {
   [BACK_END_ROLE, FRONT_END_ROLE, DEV_OPS_ROLE].forEach(role => {
     it('should return random possible quoteID for backend role and BRAG', () => {
