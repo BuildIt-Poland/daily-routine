@@ -102,7 +102,7 @@ const FRONTEND_QUOTES = {
   ]
 };
 
-export const ROLES = {
+export const PHRASES = {
   [DEV_OPS_ROLE]: DEVOPS_QUOTES,
   [BACK_END_ROLE]: BACKEND_QUOTES,
   [FRONT_END_ROLE]: FRONTEND_QUOTES,
