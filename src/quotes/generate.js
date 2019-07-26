@@ -1,9 +1,7 @@
-import partialRight from 'lodash.partialright';
 import unzip from 'lodash.unzip';
 import isEmpty from 'lodash.isempty';
-import isEqual from 'lodash.isequal';
 
-import { ADVERBS, ADJECTIVES, NOUNS } from './nicknameParts';
+import { convertToDigits, convertToNickname } from './encode';
 import { ROLES, PREFIX, PAST, FUTURE } from './quotes';
 
 export function getQuoteFromID(role, action, quoteID) {
@@ -44,50 +42,4 @@ function getRandomQuoteAndID(role, action) {
   const expression = expressions.join(' ');
 
   return [expression, index];
-}
-
-// URL-NICKNAME ENCODING
-
-// domain assumes [0] -> repeating group, [1] -> static group
-const DOMAIN = [[ADVERBS, ADVERBS, ADJECTIVES], NOUNS];
-const REPEATL = DOMAIN[0].length;
-
-function getWordFromDomain(digit, index, _, domain) {
-  return index === 0 ? domain[1][digit] : domain[0][(REPEATL - index) % REPEATL][digit];
-}
-function getIntFromDomain(word, index, _, domain) {
-  return index === 0 ? domain[1].indexOf(word) : domain[0][(REPEATL - index) % REPEATL].indexOf(word);
-}
-const getWord = partialRight(getWordFromDomain, DOMAIN);
-const getInt = partialRight(getIntFromDomain, DOMAIN);
-
-function reduceEmptyOnNegative(prev, item) {
-  if (item < 0 || isEqual(prev, [])) {
-    return [];
-  }
-
-  return [].concat(prev, item);
-}
-
-function convertToDigits(nickname) {
-  const words = nickname.split('-');
-  // reversing twice to "mapRight"
-  const digits = words
-    .reverse()
-    .map(getInt)
-    .reverse()
-    .reduce(reduceEmptyOnNegative);
-
-  return digits;
-}
-
-function convertToNickname(digits) {
-  // reversing twice for processing without lazy generators
-  const nickName = digits
-    .reverse()
-    .map(getWord)
-    .reverse()
-    .join('-');
-
-  return nickName;
 }
