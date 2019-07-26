@@ -8,22 +8,22 @@ jobs:
       - checkout
       - run:
           name: Install Dependencies
-          command: 'npm install'
+          command: npm install
       - run:
           name: Run Linter
-          command: 'npm run lint'
+          command: npm run lint
       - run:
           name: Code Formatting Check
-          command: 'npm run format:check'
+          command: npm run format:check
       - run:
           name: Run Unit Tests With Code Coverage
-          command: 'npm run test:coverage'
+          command: npm run test:ci
       - run:
           name: Install codecov
-          command: 'npm install -g codecov'
+          command: npm install -g codecov
       - run:
           name: Upload Coverage Report to Codecov
-          command: 'codecov'
+          command: codecov
       - run:
           name: Run E2E tests on release ready code
           command: |
