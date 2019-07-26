@@ -18,7 +18,7 @@ describe('COMPONENT - LandingPage', () => {
       </MemoryRouter>
     );
 
-    expect(container.querySelector('h1')).toHaveTextContent("Don't know what to say?");
+    expect(container.querySelector('h1')).toHaveTextContent('Daily Scrum is coming!');
     expect(container.querySelector('svg title')).toHaveTextContent('Sugar cat');
     expect(container.querySelector('nav')).toBeDefined();
   });
