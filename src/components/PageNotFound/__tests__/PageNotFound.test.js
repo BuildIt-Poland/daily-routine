@@ -2,24 +2,23 @@ import React from 'react';
 import { render, cleanup } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 
-import LandingPage from '../LandingPage';
 import { RouteTransitionAnimationContext } from '../../../context/RouteTransitionAnimationContext';
+import PageNotFound from '../PageNotFound';
 
 afterEach(cleanup);
 
-describe('COMPONENT - LandingPage', () => {
+describe('COMPONENT - PageNotFound', () => {
   it('renders correct elements', () => {
     const animateAndRedirect = () => {};
     const { container } = render(
       <MemoryRouter initialEntries={['/']} initialIndex={1}>
         <RouteTransitionAnimationContext.Provider value={{ animateAndRedirect }}>
-          <LandingPage />
+          <PageNotFound />
         </RouteTransitionAnimationContext.Provider>
       </MemoryRouter>
     );
 
-    expect(container.querySelector('h1')).toHaveTextContent('Daily Scrum is coming!');
+    expect(container.querySelector('h1')).toHaveTextContent('404 - Page not found');
     expect(container.querySelector('svg title')).toHaveTextContent('Sugar cat');
-    expect(container.querySelector('nav')).toBeDefined();
   });
 });

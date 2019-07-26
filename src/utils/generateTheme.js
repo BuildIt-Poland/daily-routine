@@ -1,8 +1,8 @@
 import generateColors from '../utils/generateColors';
-import extractRoleFromPath from './extractRoleFromPath';
+import { extractRole } from './extractFromPath';
 
 function generateTheme(currentLocation) {
-  const role = extractRoleFromPath(currentLocation);
+  const role = extractRole(currentLocation);
 
   return {
     ...generateColors(role)

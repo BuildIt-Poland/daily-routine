@@ -15,8 +15,8 @@ function LandingPage() {
       <Page>
         <Section>
           <Content>
-            <Headline>Don't know what to say?</Headline>
-            <Subheadline>Worry not! Find your perfect scenario for incoming daily.</Subheadline>
+            <Headline>Daily Scrum is coming!</Headline>
+            <Subheadline>Don't know what to say? Worry not &ndash; we got your back!</Subheadline>
             <SugarCat />
           </Content>
         </Section>

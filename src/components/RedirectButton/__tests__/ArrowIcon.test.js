@@ -7,7 +7,7 @@ jest.mock('../../Icons', () => ({
   LongArrow: 'LongArrow'
 }));
 
-describe('COMPONENT - RoleButtons ArrowIcon', () => {
+describe('COMPONENT - ArrowIcon', () => {
   it('renders correctly', () => {
     const component = create(<ArrowIcon />);
 

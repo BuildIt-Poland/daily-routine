@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 import { colorPurple, colorDeepPurple } from '../../styles/designTokens';
-import ButtonBase from './ButtonBase';
+import RedirectButton from '../RedirectButton';
 
-const BackEndButton = styled(ButtonBase)`
+const BackEndButton = styled(RedirectButton)`
   background-color: ${colorPurple};
   border-bottom-color: ${colorDeepPurple};
 `;

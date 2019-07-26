@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 import { colorBlue, colorDarkBlue } from '../../styles/designTokens';
-import ButtonBase from './ButtonBase';
+import RedirectButton from '../RedirectButton';
 
-const DevOpsButton = styled(ButtonBase)`
+const DevOpsButton = styled(RedirectButton)`
   background-color: ${colorBlue};
   border-bottom-color: ${colorDarkBlue};
 `;

@@ -10,9 +10,9 @@ const { Provider } = GenderContext;
 const GENDER_LOCAL_STORAGE_KEY = 'DAILY_ROUTINE_GENDER';
 
 function GenderProvider({ children }) {
-  const handleGenderChange = gender => setGender(gender);
-
   const [gender, setGender] = useLocalStorage(GENDER_LOCAL_STORAGE_KEY, MALE);
+
+  const handleGenderChange = gender => setGender(gender);
 
   return <Provider value={{ gender, handleGenderChange }}>{children}</Provider>;
 }

@@ -1,14 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
+import { extractPose } from '../../utils/extractFromPath';
 import { location } from '../../types';
-import extractActionFromPath from '../../utils/extractActionFromPath';
+import { QuoteContext } from '../../context/QuoteContext';
 import ErrorBoundary from '../ErrorBoundary';
 
 function Character({ location, children }) {
   const { pathname } = location;
-  const pose = extractActionFromPath(pathname);
+  const { quote } = useContext(QuoteContext);
+
+  const pose = extractPose(pathname, quote);
+
   return <ErrorBoundary>{React.cloneElement(children, { pose })}</ErrorBoundary>;
 }
 

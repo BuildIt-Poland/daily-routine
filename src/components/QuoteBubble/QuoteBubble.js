@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useTransition } from 'react-spring';
 import { withRouter } from 'react-router-dom';
-import truncate from 'lodash.truncate';
 
 import { location } from '../../types';
 import { THOUGHT, SPEECH } from '../../constants/speechBubbleVariant';
 import { colorWhite } from '../../styles/designTokens';
+import { QuoteContext } from '../../context/QuoteContext';
 import ErrorBoundary from '../ErrorBoundary';
+import trimQuote from './trimQuote';
 import useBubble from './useBubble';
 import Wrapper from './Wrapper';
 import Bubble from './Bubble';
@@ -14,11 +15,16 @@ import Quote from './Quote';
 import BubbleTail from './BubbleTail';
 import BubbleButtons from './BubbleButtons';
 
-// TODO handle Wrapper resize for big quotes @blurbyte
+const ERROR_MESSAGE =
+  ' – The blockchain distributed ledger failed to achieve quorum with deep learning neural network of your pseudo-generated Turning complaisant daily message.';
 
 function QuoteBubble({ location }) {
   const { pathname } = location;
+  const { handleQuoteChange } = useContext(QuoteContext);
+
   const bubble = useBubble(pathname);
+  // Puts quote into context
+  handleQuoteChange(bubble.quote);
 
   const transitions = useTransition(bubble, bubble => bubble.quoteID, {
     from: { opacity: 0, transform: 'perspective(600px) rotateX(45deg) translateY(-20px) scale(0.8)' },
@@ -36,13 +42,6 @@ function QuoteBubble({ location }) {
     delay: 200
   });
 
-  function trimQuote(quote) {
-    return truncate(quote, {
-      length: 220,
-      separator: ' '
-    });
-  }
-
   return (
     <ErrorBoundary>
       <Wrapper>
@@ -50,9 +49,17 @@ function QuoteBubble({ location }) {
           ({ item, props, key }) =>
             item && (
               <Bubble key={key} style={props}>
-                <Quote>{trimQuote(item.quote)}</Quote>
+                {item.quote ? (
+                  <Quote>{trimQuote(item.quote)}</Quote>
+                ) : (
+                  <Quote>
+                    <strong>4o4 Error</strong>
+                    {ERROR_MESSAGE}
+                  </Quote>
+                )}
+
                 <BubbleTail variant={item.isInDefaultPose ? THOUGHT : SPEECH} />
-                {!item.isInDefaultPose && <BubbleButtons quote={item.quote} />}
+                {!item.isInDefaultPose && item.quote && <BubbleButtons quote={item.quote} />}
               </Bubble>
             )
         )}

@@ -1,7 +1,7 @@
 import React from 'react';
 import { create } from 'react-test-renderer';
 
-import ButtonBase from '../ButtonBase';
+import RedirectButton from '../RedirectButton';
 
 jest.mock('react-router-dom', () => ({
   Link: 'Link'
@@ -10,9 +10,9 @@ jest.mock('../../Icons', () => ({
   LongArrow: 'LongArrow'
 }));
 
-describe('COMPONENT - RoleButtons ButtonBase', () => {
+describe('COMPONENT - RedirectButton', () => {
   it('renders correctly', () => {
-    const component = create(<ButtonBase to="/taylorswift">Taylor Swift</ButtonBase>);
+    const component = create(<RedirectButton to="/taylorswift">Taylor Swift</RedirectButton>);
 
     expect(component.toJSON()).toMatchSnapshot();
   });

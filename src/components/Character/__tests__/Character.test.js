@@ -7,9 +7,10 @@ import CharacterWitQuote from '../Character';
 import { GenderContext } from '../../../context/GenderContext';
 import { MALE } from '../../../constants/genders';
 import { pose } from '../../../types';
-import extractActionFromPath from '../../../utils/extractActionFromPath';
+import { extractPose } from '../../../utils/extractFromPath';
+import { QuoteContext } from '../../../context/QuoteContext';
 
-jest.mock('../../../utils/extractActionFromPath');
+jest.mock('../../../utils/extractFromPath');
 
 function MockCharacter({ pose }) {
   return <div data-testid="mock-character">{pose}</div>;
@@ -31,9 +32,11 @@ function renderWithRouter(ui, { history = mockHistory } = {}) {
 function setupComponent() {
   return renderWithRouter(
     <GenderContext.Provider value={{ gender: MALE }}>
-      <CharacterWitQuote>
-        <MockCharacter />
-      </CharacterWitQuote>
+      <QuoteContext.Provider value={{ quote: 'Taylor Swift', handleQuoteChange: jest.fn() }}>
+        <CharacterWitQuote>
+          <MockCharacter />
+        </CharacterWitQuote>
+      </QuoteContext.Provider>
     </GenderContext.Provider>
   );
 }
@@ -42,7 +45,7 @@ describe('COMPONENT - CharacterWitQuote', () => {
   afterEach(cleanup);
 
   it('should render character component with brag pose', () => {
-    extractActionFromPath.mockImplementation(() => 'brag');
+    extractPose.mockImplementation(() => 'brag');
 
     const { getByTestId } = setupComponent();
 
@@ -52,6 +55,6 @@ describe('COMPONENT - CharacterWitQuote', () => {
 
     expect(getByTestId('mock-character')).toBeDefined();
     expect(getByTestId('mock-character')).toHaveTextContent('brag');
-    expect(extractActionFromPath).toBeCalled();
+    expect(extractPose).toBeCalled();
   });
 });

@@ -21,6 +21,12 @@ describe('quotesService - getRandomQuoteID should return something long enough w
       expect(randomQuoteID.length).toBeGreaterThan(3 * 4);
     });
   });
+
+  it('should return undefined for not defined action', () => {
+    const quote = getQuote(DEV_OPS_ROLE, null, '1');
+
+    expect(quote).toBeUndefined();
+  });
 });
 
 describe('quotesService - getRandomQuoteID and then verify if text is the same', () => {

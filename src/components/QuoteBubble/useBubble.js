@@ -2,9 +2,7 @@
 
 import { useState, useEffect } from 'react';
 
-import extractRoleFromPath from '../../utils/extractRoleFromPath';
-import extractActionFromPath from '../../utils/extractActionFromPath';
-import extractQuoteIDFromPath from '../../utils/extractQuoteIDFromPath';
+import { extractRole, extractAction, extractQuoteID } from '../../utils/extractFromPath';
 import checkIfInDefaultPose from '../../utils/checkIfInDefaultPose';
 import { getQuote } from '../../utils/quotesService';
 
@@ -16,9 +14,9 @@ function useBubble(pathname) {
   });
 
   useEffect(() => {
-    const role = extractRoleFromPath(pathname);
-    const action = extractActionFromPath(pathname);
-    const quoteID = extractQuoteIDFromPath(pathname);
+    const role = extractRole(pathname);
+    const action = extractAction(pathname);
+    const quoteID = extractQuoteID(pathname);
 
     const randomQuote = getQuote(role, action, quoteID);
 

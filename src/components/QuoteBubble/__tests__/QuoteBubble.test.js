@@ -4,6 +4,7 @@ import React from 'react';
 import { create } from 'react-test-renderer';
 import { MemoryRouter } from 'react-router-dom';
 
+import { QuoteContext } from '../../../context/QuoteContext';
 import QuoteBubble from '../QuoteBubble';
 
 jest.mock('../../Icons', () => ({
@@ -19,7 +20,9 @@ describe('COMPONENT - QuoteBubble', () => {
   it('renders correctly', () => {
     const component = create(
       <MemoryRouter initialEntries={['/frontend']}>
-        <QuoteBubble />
+        <QuoteContext.Provider value={{ quote: 'Taylor Swift', handleQuoteChange: jest.fn() }}>
+          <QuoteBubble />
+        </QuoteContext.Provider>
       </MemoryRouter>
     );
 

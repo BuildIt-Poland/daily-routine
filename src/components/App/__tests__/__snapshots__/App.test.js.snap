@@ -91,12 +91,12 @@ exports[`COMPONENT - App renders correctly default route 1`] = `
           <h1
             className="c5"
           >
-            Don't know what to say?
+            Daily Scrum is coming!
           </h1>
           <h2
             className="c6"
           >
-            Worry not! Find your perfect scenario for incoming daily.
+            Don't know what to say? Worry not – we got your back!
           </h2>
           <SugarCat />
         </div>

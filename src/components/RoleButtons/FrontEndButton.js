@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 import { colorYellow, colorDarkYellow } from '../../styles/designTokens';
-import ButtonBase from './ButtonBase';
+import RedirectButton from '../RedirectButton';
 
-const FrontEndButton = styled(ButtonBase)`
+const FrontEndButton = styled(RedirectButton)`
   background-color: ${colorYellow};
   border-bottom-color: ${colorDarkYellow};
 `;
