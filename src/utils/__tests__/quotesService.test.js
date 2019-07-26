@@ -25,7 +25,7 @@ describe('quotesService - getRandomQuoteID should return something long enough w
   it('should return undefined for not defined action', () => {
     const quote = getQuote(DEV_OPS_ROLE, null, '1');
 
-    expect(quote).toEqual(null);
+    expect(quote).toBeUndefined();
   });
 });
 

@@ -23,9 +23,9 @@ function TailArtwork(props) {
 }
 
 const tailAnimation = keyframes`
-  0% { transform: rotate(0deg)}
+  0% { transform: rotate(-4deg)}
   50% { transform: rotate(8deg)}
-  100% { transform: rotate(0deg)}
+  100% { transform: rotate(-4deg)}
 `;
 
 const Tail = styled(TailArtwork)`
@@ -35,7 +35,7 @@ const Tail = styled(TailArtwork)`
   color: ${props => props.theme.primaryColor};
   z-index: ${zIndexArtworkMainDecor};
   transform-origin: 10.4rem 0.2rem;
-  animation: ${tailAnimation} 5s ease-in-out infinite;
+  animation: ${tailAnimation} 6s ease-in-out infinite;
 `;
 
 export default Tail;
