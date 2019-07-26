@@ -1,7 +1,22 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 import { zIndexDefault } from '../../../styles/designTokens';
+
+const leftArmAnimation = keyframes`
+  0% { transform: translateX(0) rotate(0deg); }
+  50% { transform: translateX(0) rotate(-2deg); }
+  100% { transform: translateX(0) rotate(0deg); }
+`;
+
+const LeftArm = styled(LeftArmArtwork)`
+  animation: ${leftArmAnimation} 130ms ease-in-out infinite;
+  transform-origin: 1.2rem 0.6rem;
+  position: absolute;
+  top: 8.4rem;
+  left: 10.2rem;
+  z-index: ${zIndexDefault};
+`;
 
 function LeftArmArtwork(props) {
   return (
@@ -17,14 +32,5 @@ function LeftArmArtwork(props) {
     </svg>
   );
 }
-
-const LeftArm = styled(LeftArmArtwork)`
-  position: absolute;
-  top: 8.4rem;
-  left: 10.2rem;
-  z-index: ${zIndexDefault};
-  transform-origin: 1.2rem 0.6rem;
-  transform: rotateZ(0deg);
-`;
 
 export default LeftArm;

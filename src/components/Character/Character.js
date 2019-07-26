@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import { extractPose } from '../../utils/extractFromPath';
 import { location } from '../../types';
 import { QuoteContext } from '../../context/QuoteContext';
+import ErrorBoundary from '../ErrorBoundary';
 
 function Character({ location, children }) {
   const { pathname } = location;
@@ -12,7 +13,7 @@ function Character({ location, children }) {
 
   const pose = extractPose(pathname, quote);
 
-  return React.cloneElement(children, { pose });
+  return <ErrorBoundary>{React.cloneElement(children, { pose })}</ErrorBoundary>;
 }
 
 Character.propTypes = {

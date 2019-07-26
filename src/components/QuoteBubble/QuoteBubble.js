@@ -6,6 +6,7 @@ import { location } from '../../types';
 import { THOUGHT, SPEECH } from '../../constants/speechBubbleVariant';
 import { colorWhite } from '../../styles/designTokens';
 import { QuoteContext } from '../../context/QuoteContext';
+import ErrorBoundary from '../ErrorBoundary';
 import trimQuote from './trimQuote';
 import useBubble from './useBubble';
 import Wrapper from './Wrapper';
@@ -42,26 +43,28 @@ function QuoteBubble({ location }) {
   });
 
   return (
-    <Wrapper>
-      {transitions.map(
-        ({ item, props, key }) =>
-          item && (
-            <Bubble key={key} style={props}>
-              {item.quote ? (
-                <Quote>{trimQuote(item.quote)}</Quote>
-              ) : (
-                <Quote>
-                  <strong>4o4 Error</strong>
-                  {ERROR_MESSAGE}
-                </Quote>
-              )}
+    <ErrorBoundary>
+      <Wrapper>
+        {transitions.map(
+          ({ item, props, key }) =>
+            item && (
+              <Bubble key={key} style={props}>
+                {item.quote ? (
+                  <Quote>{trimQuote(item.quote)}</Quote>
+                ) : (
+                  <Quote>
+                    <strong>4o4 Error</strong>
+                    {ERROR_MESSAGE}
+                  </Quote>
+                )}
 
-              <BubbleTail variant={item.isInDefaultPose ? THOUGHT : SPEECH} />
-              {!item.isInDefaultPose && item.quote && <BubbleButtons quote={item.quote} />}
-            </Bubble>
-          )
-      )}
-    </Wrapper>
+                <BubbleTail variant={item.isInDefaultPose ? THOUGHT : SPEECH} />
+                {!item.isInDefaultPose && item.quote && <BubbleButtons quote={item.quote} />}
+              </Bubble>
+            )
+        )}
+      </Wrapper>
+    </ErrorBoundary>
   );
 }
 

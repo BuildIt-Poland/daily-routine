@@ -1,7 +1,21 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 import { zIndexDefault } from '../../../styles/designTokens';
+
+const neckAnimation = keyframes`
+  0% { transform: translateX(0) rotate(-5deg); }
+  50% { transform: translateX(0) rotate(10deg); }
+  100% { transform: translateX(0) rotate(-5deg); }
+`;
+
+const Neck = styled(NeckArtwork)`
+  animation: ${neckAnimation} 110ms ease-in-out infinite;
+  position: absolute;
+  top: 5.6rem;
+  left: 4.4rem;
+  z-index: ${zIndexDefault};
+`;
 
 function NeckArtwork(props) {
   return (
@@ -11,12 +25,5 @@ function NeckArtwork(props) {
     </svg>
   );
 }
-
-const Neck = styled(NeckArtwork)`
-  position: absolute;
-  top: 5.6rem;
-  left: 4.4rem;
-  z-index: ${zIndexDefault};
-`;
 
 export default Neck;

@@ -2,16 +2,15 @@
 
 exports[`COMPONENT - Characters Robot RightArm renders correctly 1`] = `
 .c0 {
+  -webkit-animation: cnodRm 130ms ease-in-out -0.2s infinite;
+  animation: cnodRm 130ms ease-in-out -0.2s infinite;
+  -webkit-transform-origin: 3.6rem 1rem;
+  -ms-transform-origin: 3.6rem 1rem;
+  transform-origin: 3.6rem 1rem;
   position: absolute;
   top: 7.4rem;
   left: 0.3rem;
   z-index: 24;
-  -webkit-transform-origin: 3.6rem 1rem;
-  -ms-transform-origin: 3.6rem 1rem;
-  transform-origin: 3.6rem 1rem;
-  -webkit-transform: rotateZ(0deg);
-  -ms-transform: rotateZ(0deg);
-  transform: rotateZ(0deg);
 }
 
 <svg

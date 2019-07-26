@@ -2,6 +2,8 @@
 
 exports[`COMPONENT - Characters Robot Neck renders correctly 1`] = `
 .c0 {
+  -webkit-animation: guOtyT 110ms ease-in-out infinite;
+  animation: guOtyT 110ms ease-in-out infinite;
   position: absolute;
   top: 5.6rem;
   left: 4.4rem;
