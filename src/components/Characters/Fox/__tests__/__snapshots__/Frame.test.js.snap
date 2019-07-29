@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`COMPONENT - Characters Fox Frame renders correctly 1`] = `
+.c0 {
+  position: relative;
+  max-width: 32rem;
+  width: 100%;
+}
+
+<div
+  className="c0"
+/>
+`;

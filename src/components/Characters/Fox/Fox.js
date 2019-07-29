@@ -5,6 +5,7 @@ import { FEMALE } from '../../../constants/genders';
 import { pose } from '../../../types';
 import { GenderContext } from '../../../context/GenderContext';
 import Wrapper from './Wrapper';
+import Frame from './Frame';
 import FoxArtwork from './FoxArtwork';
 import ConfusionMarks from './ConfusionMarks';
 import GenderFlower from './GenderFlower';
@@ -16,11 +17,13 @@ function Fox({ pose = DEFAULT }) {
 
   return (
     <Wrapper>
-      <FoxArtwork pose={pose} />
+      <Frame>
+        <FoxArtwork pose={pose} />
+        <Tail />
+      </Frame>
       {pose === CONFESS && <Tear />}
       {pose === DEFAULT && <ConfusionMarks />}
       <GenderFlower isVisible={gender === FEMALE} />
-      <Tail />
     </Wrapper>
   );
 }

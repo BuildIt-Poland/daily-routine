@@ -3,21 +3,20 @@
 exports[`COMPONENT - Characters Fox Tail renders correctly 1`] = `
 .c0 {
   position: absolute;
-  top: 3.8rem;
-  left: 16.8rem;
+  top: 5.2%;
+  right: 0.4%;
+  height: 88%;
   z-index: 40;
-  -webkit-transform-origin: 10.4rem 0.2rem;
-  -ms-transform-origin: 10.4rem 0.2rem;
-  transform-origin: 10.4rem 0.2rem;
+  -webkit-transform-origin: 70.5% 0.1%;
+  -ms-transform-origin: 70.5% 0.1%;
+  transform-origin: 70.5% 0.1%;
   -webkit-animation: jURMpM 6s ease-in-out infinite;
   animation: jURMpM 6s ease-in-out infinite;
 }
 
 <svg
   className="c0"
-  height="136"
   viewBox="0 0 147 136"
-  width="147"
   xmlns="http://www.w3.org/2000/svg"
 >
   <path

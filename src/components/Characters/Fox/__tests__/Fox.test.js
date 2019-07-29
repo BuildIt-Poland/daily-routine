@@ -10,6 +10,7 @@ jest.mock('../GenderFlower', () => 'GenderFlower');
 jest.mock('../ConfusionMarks', () => 'ConfusionMarks');
 jest.mock('../FoxArtwork', () => 'FoxArtwork');
 jest.mock('../Tail', () => 'Tail');
+jest.mock('../Frame', () => 'Frame');
 
 describe('COMPONENT - Characters Robot', () => {
   it('renders correctly with default props', () => {

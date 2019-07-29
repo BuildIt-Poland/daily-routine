@@ -6,6 +6,10 @@ exports[`COMPONENT - Characters Robot renders confusion marks and flower if fema
   padding-bottom: 3rem;
   position: relative;
   padding-top: 3rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 @media (max-width:26.25em) {
@@ -17,14 +21,16 @@ exports[`COMPONENT - Characters Robot renders confusion marks and flower if fema
 <div
   className="c0"
 >
-  <FoxArtwork
-    pose="default"
-  />
+  <Frame>
+    <FoxArtwork
+      pose="default"
+    />
+    <Tail />
+  </Frame>
   <ConfusionMarks />
   <GenderFlower
     isVisible={true}
   />
-  <Tail />
 </div>
 `;
 
@@ -34,6 +40,10 @@ exports[`COMPONENT - Characters Robot renders confusion marks if fox is in defau
   padding-bottom: 3rem;
   position: relative;
   padding-top: 3rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 @media (max-width:26.25em) {
@@ -45,14 +55,16 @@ exports[`COMPONENT - Characters Robot renders confusion marks if fox is in defau
 <div
   className="c0"
 >
-  <FoxArtwork
-    pose="default"
-  />
+  <Frame>
+    <FoxArtwork
+      pose="default"
+    />
+    <Tail />
+  </Frame>
   <ConfusionMarks />
   <GenderFlower
     isVisible={false}
   />
-  <Tail />
 </div>
 `;
 
@@ -62,6 +74,10 @@ exports[`COMPONENT - Characters Robot renders correctly with default props 1`] =
   padding-bottom: 3rem;
   position: relative;
   padding-top: 3rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 @media (max-width:26.25em) {
@@ -73,14 +89,16 @@ exports[`COMPONENT - Characters Robot renders correctly with default props 1`] =
 <div
   className="c0"
 >
-  <FoxArtwork
-    pose="default"
-  />
+  <Frame>
+    <FoxArtwork
+      pose="default"
+    />
+    <Tail />
+  </Frame>
   <ConfusionMarks />
   <GenderFlower
     isVisible={false}
   />
-  <Tail />
 </div>
 `;
 
@@ -90,6 +108,10 @@ exports[`COMPONENT - Characters Robot renders flower if female gender is passed 
   padding-bottom: 3rem;
   position: relative;
   padding-top: 3rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 @media (max-width:26.25em) {
@@ -101,13 +123,15 @@ exports[`COMPONENT - Characters Robot renders flower if female gender is passed 
 <div
   className="c0"
 >
-  <FoxArtwork
-    pose="default"
-  />
+  <Frame>
+    <FoxArtwork
+      pose="default"
+    />
+    <Tail />
+  </Frame>
   <ConfusionMarks />
   <GenderFlower
     isVisible={true}
   />
-  <Tail />
 </div>
 `;

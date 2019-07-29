@@ -5,7 +5,7 @@ import { DEFAULT, BRAG, CONFESS } from '../../../constants/roleActions';
 
 function FoxArtwork({ pose = DEFAULT }) {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="317" height="157" viewBox="0 0 317 157">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 317 157">
       <g>
         <path
           fill="#222"
