@@ -2,8 +2,8 @@
 
 exports[`COMPONENT - Characters Robot GenderFlower renders correctly 1`] = `
 .c0 {
-  top: -1.4rem;
-  left: 0.6rem;
+  top: 0.4rem;
+  left: 0.5rem;
 }
 
 <GenderFlower
