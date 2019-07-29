@@ -3,7 +3,6 @@
 exports[`COMPONENT - Characters SugarCat SugarCatArtwork renders correctly 1`] = `
 <svg
   aria-labelledby="sugar-cat-character"
-  id="sugar-cat"
   role="img"
   viewBox="0 0 293 296"
   xmlns="http://www.w3.org/2000/svg"
