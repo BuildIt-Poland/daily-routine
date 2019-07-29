@@ -2,14 +2,7 @@ import React from 'react';
 
 function SugarCatSVG() {
   return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="293"
-      height="296"
-      viewBox="0 0 293 296"
-      role="img"
-      aria-labelledby="sugar-cat-character"
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 293 296" role="img" aria-labelledby="sugar-cat-character">
       <title id="sugar-cat-character">Sugar cat</title>
       <path
         fill="#222"
