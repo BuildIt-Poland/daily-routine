@@ -4,17 +4,16 @@ exports[`COMPONENT - Characters SugarCat SugarCubeLegs renders correctly 1`] = `
 Array [
   .c0 {
   position: absolute;
-  bottom: 2.1rem;
-  left: 23rem;
+  height: 8%;
+  bottom: -0.1%;
+  right: 13.5%;
   -webkit-animation: kRJNIP 2.5s ease-in-out -0.3s infinite;
   animation: kRJNIP 2.5s ease-in-out -0.3s infinite;
 }
 
 <svg
     className="c0"
-    height="22"
     viewBox="0 0 12 22"
-    width="12"
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
@@ -24,17 +23,16 @@ Array [
   </svg>,
   .c0 {
   position: absolute;
-  bottom: 2rem;
-  left: 23.8rem;
+  height: 8%;
+  bottom: -0.2%;
+  right: 11.5%;
   -webkit-animation: cpXlhx 2.5s ease-in-out infinite;
   animation: cpXlhx 2.5s ease-in-out infinite;
 }
 
 <svg
     className="c0"
-    height="23"
     viewBox="0 0 12 23"
-    width="12"
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
