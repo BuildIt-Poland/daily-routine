@@ -1,18 +1,17 @@
 import React from 'react';
 
-import { Heart, BuilditLogo, GithubLogo } from '../Icons';
+import { GithubLogo } from '../Icons';
 import Content from './Content';
 import Wrapper from './Wrapper';
 import Link from './Link';
 import DesktopOnly from './DesktopOnly';
+import CraftedWitLove from './CraftedWithLove';
 
 function Footer() {
   return (
     <Wrapper>
       <Content narrow>
-        <Link href="https://buildit.wiprodigital.com/" data-testid="buildit-home-page-link">
-          Crafted with <Heart /> by <BuilditLogo />
-        </Link>
+        <CraftedWitLove />
         <Link href="https://github.com/BuildIt-Poland/daily-routine" data-testid="github-link">
           <GithubLogo />
           <DesktopOnly>Contribute</DesktopOnly>

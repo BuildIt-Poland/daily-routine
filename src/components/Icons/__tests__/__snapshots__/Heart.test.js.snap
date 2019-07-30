@@ -15,7 +15,7 @@ exports[`COMPONENT - Icons Heart renders correctly 1`] = `
   </title>
   <path
     d="M8.5 15.5S.113 10.504.113 4.694a4.194 4.194 0 1 1 8.387 0 4.194 4.194 0 0 1 8.388 0C16.887 10.504 8.5 15.5 8.5 15.5"
-    fill="#222"
+    fill="currentColor"
   />
 </svg>
 `;

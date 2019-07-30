@@ -31,7 +31,7 @@ exports[`COMPONENT - QuoteBubble renders correctly 1`] = `
       "entries": Array [
         Object {
           "hash": "",
-          "key": "vxm28i",
+          "key": "pqm8xs",
           "pathname": "/frontend",
           "search": "",
           "state": undefined,
@@ -45,7 +45,7 @@ exports[`COMPONENT - QuoteBubble renders correctly 1`] = `
       "listen": [Function],
       "location": Object {
         "hash": "",
-        "key": "vxm28i",
+        "key": "pqm8xs",
         "pathname": "/frontend",
         "search": "",
         "state": undefined,
