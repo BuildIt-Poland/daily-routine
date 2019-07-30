@@ -18,12 +18,14 @@
     "deploy": "node ./deploy.js"
   },
   "dependencies": {
+    "lodash.includes": "4.3.0",
     "lodash.isempty": "4.4.0",
     "lodash.isequal": "4.5.0",
     "lodash.partialright": "4.2.1",
     "lodash.sample": "4.2.1",
     "lodash.truncate": "4.4.2",
     "lodash.unzip": "3.4.0",
+    "mod-op": "1.0.1",
     "react": "16.8.6",
     "react-copy-to-clipboard": "5.0.1",
     "react-dom": "16.8.6",
