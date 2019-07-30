@@ -1,11 +1,11 @@
 import React from 'react';
 import { create } from 'react-test-renderer';
 
-import Frame from '../Frame';
+import Hitbox from '../Hitbox';
 
-describe('COMPONENT - Characters SugarCat Frame', () => {
+describe('COMPONENT - Footer Hitbox', () => {
   it('renders correctly', () => {
-    const component = create(<Frame />);
+    const component = create(<Hitbox />);
 
     expect(component.toJSON()).toMatchSnapshot();
   });

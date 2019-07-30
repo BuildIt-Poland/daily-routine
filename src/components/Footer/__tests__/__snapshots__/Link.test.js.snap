@@ -2,37 +2,34 @@
 
 exports[`COMPONENT - Footer Link renders correctly 1`] = `
 .c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   height: 3.6rem;
-  min-width: 6rem;
-  margin: 4px;
-  cursor: pointer;
   white-space: nowrap;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 1.4rem;
   font-weight: 400;
-  color: #222222;
-  opacity: 0.3;
+  color: rgba(34,34,34,0.4);
+  margin: 0 0.4rem;
+  cursor: pointer;
+  font-weight: 700;
+  background-image: linear-gradient(180deg,undefined 50%,transparent 0);
   background-repeat: repeat-x;
   background-size: 2px 0.2rem;
-  background-position: 0 1.5rem;
-}
-
-.c0 svg {
-  display: inline-block;
-  margin: 0 0.4rem;
+  background-position: 0 2.5rem;
 }
 
 @media (max-width:31.25em) {
   .c0 {
-    color: #222222;
-    opacity: 0.3;
-    background-image: none;
-    font-weight: 700;
+    color: rgba(34,34,34,0.4);
+    background-image: linear-gradient(180deg,rgba(34,34,34,0.4) 50%,transparent 0);
   }
 }
 

@@ -3,7 +3,7 @@
 exports[`COMPONENT - LandingPage Page renders correctly 1`] = `
 .c1 {
   display: grid;
-  grid-template-rows: auto minmax(46rem,max-content) 1fr;
+  grid-template-rows: auto minmax(43rem,max-content) 1fr;
   -webkit-align-content: stretch;
   -ms-flex-line-pack: stretch;
   align-content: stretch;
@@ -11,13 +11,7 @@ exports[`COMPONENT - LandingPage Page renders correctly 1`] = `
 }
 
 .c0 {
-  grid-template-rows: minmax(51rem,max-content) 1fr;
-}
-
-@media (max-width:31.25em) {
-  .c1 {
-    grid-template-rows: auto 1fr auto;
-  }
+  grid-template-rows: minmax(48rem,max-content) 1fr;
 }
 
 @media (max-width:31.25em) {

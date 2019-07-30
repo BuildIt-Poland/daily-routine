@@ -9,12 +9,12 @@ jest.mock('../../Characters', () => ({
 }));
 jest.mock('../../ActionButtons', () => 'ActionButtons');
 jest.mock('../../RoleBar', () => 'RoleBar');
-jest.mock('../../QuoteBubble', () => 'QuoteBubble');
 jest.mock('../../Page', () => 'Page');
 jest.mock('../../RoleContent', () => 'RoleContent');
 jest.mock('../../Section', () => 'Section');
 jest.mock('../../Character', () => 'Character');
 jest.mock('../../Characters/Whale', () => 'Whale');
+jest.mock('../QuoteBubble', () => 'QuoteBubble');
 
 describe('COMPONENT - DevOpsRolePage', () => {
   it('renders correctly for /devops path', () => {

@@ -8,7 +8,7 @@ import Section from '../Section';
 import RoleContent from '../RoleContent';
 import Character from '../Character';
 import Robot from '../Characters/Robot';
-import QuoteBubble from '../QuoteBubble';
+import QuoteBubble from './QuoteBubble';
 
 function BackEndRolePage() {
   return (

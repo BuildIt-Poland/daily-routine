@@ -2,9 +2,7 @@
 
 exports[`COMPONENT - Characters Fox renders confident Fox when 'brag' pose is provided 1`] = `
 <svg
-  height="157"
   viewBox="0 0 317 157"
-  width="317"
   xmlns="http://www.w3.org/2000/svg"
 >
   <g>
@@ -39,9 +37,7 @@ exports[`COMPONENT - Characters Fox renders confident Fox when 'brag' pose is pr
 
 exports[`COMPONENT - Characters Fox renders confused Fox when 'default' pose is provided 1`] = `
 <svg
-  height="157"
   viewBox="0 0 317 157"
-  width="317"
   xmlns="http://www.w3.org/2000/svg"
 >
   <g>
@@ -76,9 +72,7 @@ exports[`COMPONENT - Characters Fox renders confused Fox when 'default' pose is 
 
 exports[`COMPONENT - Characters Fox renders confused Fox when pose is not set 1`] = `
 <svg
-  height="157"
   viewBox="0 0 317 157"
-  width="317"
   xmlns="http://www.w3.org/2000/svg"
 >
   <g>
@@ -113,9 +107,7 @@ exports[`COMPONENT - Characters Fox renders confused Fox when pose is not set 1`
 
 exports[`COMPONENT - Characters Fox renders sad Fox when 'confess' pose is provided 1`] = `
 <svg
-  height="157"
   viewBox="0 0 317 157"
-  width="317"
   xmlns="http://www.w3.org/2000/svg"
 >
   <g>

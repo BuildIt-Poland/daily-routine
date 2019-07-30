@@ -19,7 +19,7 @@ jest.mock('../SpeechBubbleArtwork', () => 'SpeechBubbleArtwork');
 describe('COMPONENT - QuoteBubble', () => {
   it('renders correctly', () => {
     const component = create(
-      <MemoryRouter initialEntries={['/frontend']}>
+      <MemoryRouter initialEntries={[{ key: 'utwyk7', pathname: '/frontend' }]}>
         <QuoteContext.Provider value={{ quote: 'Taylor Swift', handleQuoteChange: jest.fn() }}>
           <QuoteBubble />
         </QuoteContext.Provider>

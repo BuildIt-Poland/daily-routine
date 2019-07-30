@@ -21,7 +21,46 @@ exports[`COMPONENT - QuoteBubble renders correctly 1`] = `
   }
 }
 
-<Wrapper>
+<Wrapper
+  history={
+    Object {
+      "action": "POP",
+      "block": [Function],
+      "canGo": [Function],
+      "createHref": [Function],
+      "entries": Array [
+        Object {
+          "hash": "",
+          "key": "utwyk7",
+          "pathname": "/frontend",
+          "search": "",
+        },
+      ],
+      "go": [Function],
+      "goBack": [Function],
+      "goForward": [Function],
+      "index": 0,
+      "length": 1,
+      "listen": [Function],
+      "location": Object {
+        "hash": "",
+        "key": "utwyk7",
+        "pathname": "/frontend",
+        "search": "",
+      },
+      "push": [Function],
+      "replace": [Function],
+    }
+  }
+  match={
+    Object {
+      "isExact": false,
+      "params": Object {},
+      "path": "/",
+      "url": "/",
+    }
+  }
+>
   <section
     className="c0"
     style={

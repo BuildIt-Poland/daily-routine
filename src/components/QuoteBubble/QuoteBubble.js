@@ -18,7 +18,7 @@ import BubbleButtons from './BubbleButtons';
 const ERROR_MESSAGE =
   ' – The blockchain distributed ledger failed to achieve quorum with deep learning neural network of your pseudo-generated Turning complaisant daily message.';
 
-function QuoteBubble({ location }) {
+function QuoteBubble({ location, ...props }) {
   const { pathname } = location;
   const { handleQuoteChange } = useContext(QuoteContext);
 
@@ -44,7 +44,7 @@ function QuoteBubble({ location }) {
 
   return (
     <ErrorBoundary>
-      <Wrapper>
+      <Wrapper {...props}>
         {transitions.map(
           ({ item, props, key }) =>
             item && (

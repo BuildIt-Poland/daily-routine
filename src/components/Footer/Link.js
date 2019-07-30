@@ -1,40 +1,26 @@
 import styled from 'styled-components';
 
 import media from '../../styles/media';
-import { fontMedium, colorWhite, colorBlack, fontWeightNormal, fontWeightBold } from '../../styles/designTokens';
+import { colorOpaqueBlack, fontWeightBold } from '../../styles/designTokens';
+import Hitbox from './Hitbox';
 
-const Link = styled.a.attrs({
+const Link = styled(Hitbox).attrs({
   target: '_blank'
 })`
-  height: 3.6rem;
-  min-width: 6rem;
-  margin: 4px;
+  margin: 0 0.4rem;
   cursor: pointer;
-  white-space: nowrap;
-  justify-content: center;
-  text-decoration: none;
-  font-size: ${fontMedium};
-  font-weight: ${fontWeightNormal};
+  font-weight: ${fontWeightBold};
 
-  color: ${({ highlight, theme }) => (highlight ? theme.secondaryColor : colorBlack)};
-  opacity: ${({ highlight }) => (highlight ? 0.9 : 0.3)};
-  background-image: ${({ highlight, theme }) =>
-    highlight && `linear-gradient(180deg, ${theme.secondaryColor} 50%, transparent 0)`};
+  color: ${({ theme }) => theme.secondaryColor};
+  background-image: ${({ theme }) => `linear-gradient(180deg, ${theme.secondaryColor} 50%, transparent 0)`};
   background-repeat: repeat-x;
   background-size: 2px 0.2rem;
-  background-position: 0 1.5rem;
+  background-position: 0 2.5rem;
 
   ${media.phone`
-    color: ${({ highlight }) => (highlight ? colorWhite : colorBlack)};
-    opacity: ${({ highlight }) => (highlight ? 0.7 : 0.3)};
-    background-image: none;
-    font-weight: ${fontWeightBold};
+    color: ${colorOpaqueBlack};
+    background-image: linear-gradient(180deg, ${colorOpaqueBlack} 50%, transparent 0);
   `};
-
-  svg {
-    display: inline-block;
-    margin: 0 0.4rem;
-  }
 `;
 
 export default Link;

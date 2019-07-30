@@ -5,7 +5,7 @@ import { zIndexArtworkMainDecor } from './../../../styles/designTokens';
 
 function TailArtwork(props) {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="147" height="136" viewBox="0 0 147 136" {...props}>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 147 136" {...props}>
       <path
         fill="currentColor"
         d="M2.147 128.216c2.323-14.595 9.986-59.07 74.224-54.098 12.278-2.778 35.634-5.292 37.578-25.845 1.556-16.462-5.112-29.28-10.567-34.117-3.346-6.325-.7-8.462 2.298-11.878 21.144 19.691 26.624 25.904 33.073 42.894s17.703 60.679-46.431 71.443c-35.423 5.945-58.363-23.173-90.175 11.601z"
@@ -30,11 +30,12 @@ const tailAnimation = keyframes`
 
 const Tail = styled(TailArtwork)`
   position: absolute;
-  top: 3.8rem;
-  left: 16.8rem;
+  top: 5.2%;
+  right: 0.4%;
+  height: 88%;
   color: ${props => props.theme.primaryColor};
   z-index: ${zIndexArtworkMainDecor};
-  transform-origin: 10.4rem 0.2rem;
+  transform-origin: 70.5% 0.1%;
   animation: ${tailAnimation} 6s ease-in-out infinite;
 `;
 
