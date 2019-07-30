@@ -5,7 +5,7 @@ exports[`COMPONENT - Button Text renders correctly 1`] = `
   max-width: 14rem;
 }
 
-@media (max-width:26.25em) {
+@media (max-width:31.25em) {
   .c0 {
     max-width: inherit;
   }

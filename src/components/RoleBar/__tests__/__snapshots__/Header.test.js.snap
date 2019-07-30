@@ -13,7 +13,7 @@ exports[`COMPONENT - RoleBar Header renders correctly 1`] = `
   background-color: rgba(255,255,255,0.5);
 }
 
-@media (max-width:26.25em) {
+@media (max-width:31.25em) {
   .c0 {
     padding-left: 2rem;
   }

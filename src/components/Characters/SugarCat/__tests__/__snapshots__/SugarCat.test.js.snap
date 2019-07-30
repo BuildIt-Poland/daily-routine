@@ -24,7 +24,7 @@ exports[`COMPONENT - Characters SugarCat renders correctly 1`] = `
   animation: cpXlhx 2.5s ease-in-out infinite;
 }
 
-@media (max-width:26.25em) {
+@media (max-width:31.25em) {
   .c0 {
     padding-top: 0;
   }

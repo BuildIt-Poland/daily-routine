@@ -7,7 +7,7 @@ exports[`COMPONENT - Characters CharacterWrapper renders correctly 1`] = `
   position: relative;
 }
 
-@media (max-width:26.25em) {
+@media (max-width:31.25em) {
   .c0 {
     padding-bottom: 0;
   }

@@ -8,7 +8,7 @@ exports[`COMPONENT - Characters Robot renders confusion marks and flower if fema
   padding-top: 3rem;
 }
 
-@media (max-width:26.25em) {
+@media (max-width:31.25em) {
   .c0 {
     padding-bottom: 0;
   }
@@ -36,7 +36,7 @@ exports[`COMPONENT - Characters Robot renders confusion marks if fox is in defau
   padding-top: 3rem;
 }
 
-@media (max-width:26.25em) {
+@media (max-width:31.25em) {
   .c0 {
     padding-bottom: 0;
   }
@@ -64,7 +64,7 @@ exports[`COMPONENT - Characters Robot renders correctly with default props 1`] =
   padding-top: 3rem;
 }
 
-@media (max-width:26.25em) {
+@media (max-width:31.25em) {
   .c0 {
     padding-bottom: 0;
   }
@@ -92,7 +92,7 @@ exports[`COMPONENT - Characters Robot renders flower if female gender is passed 
   padding-top: 3rem;
 }
 
-@media (max-width:26.25em) {
+@media (max-width:31.25em) {
   .c0 {
     padding-bottom: 0;
   }

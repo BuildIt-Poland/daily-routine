@@ -1,21 +1,35 @@
 import styled from 'styled-components';
 
-import { colorBlack, fontMedium } from '../../styles/designTokens';
+import media from '../../styles/media';
+import { fontMedium, fontWeightMedium, colorWhite, colorBlack, fontWeightBold } from '../../styles/designTokens';
 
 const Link = styled.a.attrs({
   target: '_blank'
 })`
   height: 3.6rem;
   min-width: 6rem;
-  font-size: ${fontMedium};
-  color: ${colorBlack};
-  opacity: 0.3;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  margin: 4px;
   cursor: pointer;
-  text-decoration: none;
   white-space: nowrap;
+  justify-content: center;
+  text-decoration: none;
+  font-size: ${fontMedium};
+  font-weight: ${fontWeightMedium};
+
+  color: ${({ highlight, theme }) => (highlight ? theme.secondaryColor : colorBlack)};
+  opacity: ${({ highlight }) => (highlight ? 0.85 : 0.3)};
+  background-image: ${({ highlight, theme }) =>
+    highlight && `linear-gradient(180deg, ${theme.secondaryColor} 50%, transparent 0)`};
+  background-repeat: repeat-x;
+  background-size: 2px 0.2rem;
+  background-position: 0 1.5rem;
+
+  ${media.phone`
+    color: ${({ highlight }) => (highlight ? colorWhite : colorBlack)};
+    opacity: ${({ highlight }) => (highlight ? 0.7 : 0.3)};
+    background-image: none;
+    font-weight: ${fontWeightBold};
+  `};
 
   svg {
     display: inline-block;

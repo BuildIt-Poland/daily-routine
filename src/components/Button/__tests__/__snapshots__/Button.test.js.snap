@@ -35,13 +35,13 @@ exports[`COMPONENT - Button renders correctly 1`] = `
   max-width: 14rem;
 }
 
-@media (max-width:26.25em) {
+@media (max-width:31.25em) {
   .c0 {
     height: 5rem;
   }
 }
 
-@media (max-width:26.25em) {
+@media (max-width:31.25em) {
   .c1 {
     max-width: inherit;
   }
