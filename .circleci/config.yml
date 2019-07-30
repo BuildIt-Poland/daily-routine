@@ -26,10 +26,7 @@ jobs:
           command: codecov
       - run:
           name: Run E2E tests on release ready code
-          command: |
-            if [ "${CIRCLE_BRANCH}" == "master" ]; then
-              npm run e2e
-            fi
+          command: npm run e2e
       - run:
           name: Perform Test Application Build
           command: 'npm run build'
