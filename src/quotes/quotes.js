@@ -4,6 +4,7 @@ import { BRAG, CONFESS } from '../constants/roleActions';
 export const PAST = 'past';
 export const FUTURE = 'future';
 export const PREFIX = 'prefix';
+export const ROLES = 'roles';
 
 // ORDER HERE MATTERS, ALWAYS ADD AT THE END
 const PREFIX_QUOTES = {
@@ -103,8 +104,10 @@ const FRONTEND_QUOTES = {
 };
 
 export const PHRASES = {
-  [DEV_OPS_ROLE]: DEVOPS_QUOTES,
-  [BACK_END_ROLE]: BACKEND_QUOTES,
-  [FRONT_END_ROLE]: FRONTEND_QUOTES,
+  [ROLES]: {
+    [DEV_OPS_ROLE]: DEVOPS_QUOTES,
+    [BACK_END_ROLE]: BACKEND_QUOTES,
+    [FRONT_END_ROLE]: FRONTEND_QUOTES
+  },
   [PREFIX]: PREFIX_QUOTES
 };

@@ -46,19 +46,19 @@ exports[`COMPONENT - RoleButtons DevOpsButton renders correctly 1`] = `
   border-bottom-color: #1558a1;
 }
 
-@media (max-width:26.25em) {
+@media (max-width:31.25em) {
   .c1 {
     height: 5rem;
   }
 }
 
-@media (max-width:26.25em) {
+@media (max-width:31.25em) {
   .c2 {
     max-width: inherit;
   }
 }
 
-@media (max-width:26.25em) {
+@media (max-width:31.25em) {
   .c3 {
     bottom: 1.4rem;
   }

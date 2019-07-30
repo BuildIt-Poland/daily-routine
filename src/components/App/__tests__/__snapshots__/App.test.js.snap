@@ -50,19 +50,25 @@ exports[`COMPONENT - App renders correctly default route 1`] = `
   background-color: #80cbd6;
 }
 
-@media (max-width:26.25em) {
+@media (max-width:31.25em) {
   .c5 {
     text-align: left;
   }
 }
 
-@media (max-width:26.25em) {
+@media (max-width:31.25em) {
   .c6 {
     text-align: left;
   }
 }
 
-@media (max-width:26.25em) {
+@media (max-width:31.25em) {
+  .c2 {
+    grid-template-rows: auto 1fr auto;
+  }
+}
+
+@media (max-width:31.25em) {
   .c1 {
     grid-template-rows: 1fr auto;
   }

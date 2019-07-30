@@ -8,7 +8,7 @@ exports[`COMPONENT - ActionButtons LightbulbIcon renders correctly 1`] = `
   right: -0.8rem;
 }
 
-@media (max-width:26.25em) {
+@media (max-width:31.25em) {
   .c0 {
     width: 6.6rem;
     bottom: -1rem;
