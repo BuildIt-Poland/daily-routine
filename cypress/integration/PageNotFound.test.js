@@ -6,7 +6,7 @@ describe('PageNotFound', () => {
     cy.visit('/');
   });
 
-  it('page should contains header with `404 - Page not found`', () => {
+  it('page should contain header with `404 - Page not found`', () => {
     cy.visit('/invalidurl');
     cy.get('h1').contains('404 - Page not found');
   });
