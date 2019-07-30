@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import media from '../../styles/media';
-import { fontMedium, fontWeightMedium, colorWhite, colorBlack, fontWeightBold } from '../../styles/designTokens';
+import { fontMedium, colorWhite, colorBlack, fontWeightNormal, fontWeightBold } from '../../styles/designTokens';
 
 const Link = styled.a.attrs({
   target: '_blank'
@@ -14,10 +14,10 @@ const Link = styled.a.attrs({
   justify-content: center;
   text-decoration: none;
   font-size: ${fontMedium};
-  font-weight: ${fontWeightMedium};
+  font-weight: ${fontWeightNormal};
 
   color: ${({ highlight, theme }) => (highlight ? theme.secondaryColor : colorBlack)};
-  opacity: ${({ highlight }) => (highlight ? 0.85 : 0.3)};
+  opacity: ${({ highlight }) => (highlight ? 0.9 : 0.3)};
   background-image: ${({ highlight, theme }) =>
     highlight && `linear-gradient(180deg, ${theme.secondaryColor} 50%, transparent 0)`};
   background-repeat: repeat-x;
