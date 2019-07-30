@@ -11,7 +11,7 @@ describe('PageNotFound', () => {
     cy.get('h1').contains('404 - Page not found');
   });
 
-  it('qoute bubble should contain error message when url is `frontend/brag/invalidmessage`', () => {
+  it('quote bubble should contain error message when url is `frontend/brag/invalidmessage`', () => {
     cy.visit('frontend/brag/invalidmessage');
     cy.get('[data-testid="quote-error-message"] strong').contains('4o4 Error');
   });
