@@ -1,5 +1,6 @@
 import partialRight from 'lodash.partialright';
 import isEqual from 'lodash.isequal';
+import mod from 'mod-op';
 
 import { ADVERBS, ADJECTIVES, NOUNS } from './nicknameParts';
 
@@ -10,10 +11,10 @@ const DOMAIN = [[ADVERBS, ADVERBS, ADJECTIVES], NOUNS];
 const REPEATL = DOMAIN[0].length;
 
 function getWordFromDomain(digit, index, _, domain) {
-  return index === 0 ? domain[1][digit] : domain[0][(REPEATL - index) % REPEATL][digit];
+  return index === 0 ? domain[1][digit] : domain[0][mod(REPEATL - index, REPEATL)][digit];
 }
 function getIntFromDomain(word, index, _, domain) {
-  return index === 0 ? domain[1].indexOf(word) : domain[0][(REPEATL - index) % REPEATL].indexOf(word);
+  return index === 0 ? domain[1].indexOf(word) : domain[0][mod(REPEATL - index, REPEATL)].indexOf(word);
 }
 const getWord = partialRight(getWordFromDomain, DOMAIN);
 const getInt = partialRight(getIntFromDomain, DOMAIN);
@@ -32,6 +33,7 @@ export function convertToDigits(nickname) {
   const digits = words
     .reverse()
     .map(getInt)
+    // .map((ix) => {console.log(ix); return ix;})
     .reverse()
     .reduce(reduceEmptyOnNegative);
 

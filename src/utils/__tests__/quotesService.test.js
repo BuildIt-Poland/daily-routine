@@ -13,6 +13,10 @@ describe('quotesService - return undefined if action or role malformed', () => {
     expect(quote0).toBeUndefined();
     const quote1 = getQuote(FRONT_END_ROLE, BRAG, 23);
     expect(quote1).toBeUndefined();
+    const quote2 = getQuote(FRONT_END_ROLE, 'fdsfds', 2113);
+    expect(quote2).toBeUndefined();
+    const quote3 = getQuote(FRONT_END_ROLE, BRAG, 'test-test-test-test-test');
+    expect(quote3).toBeUndefined();
   });
 });
 
