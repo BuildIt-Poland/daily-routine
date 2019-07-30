@@ -10,12 +10,6 @@ exports[`COMPONENT - Page Wrapper renders correctly 1`] = `
   height: 100%;
 }
 
-@media (max-width:31.25em) {
-  .c0 {
-    grid-template-rows: auto 1fr auto;
-  }
-}
-
 <article
   className="c0"
 />
