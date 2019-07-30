@@ -31,10 +31,9 @@ exports[`COMPONENT - QuoteBubble renders correctly 1`] = `
       "entries": Array [
         Object {
           "hash": "",
-          "key": "pqm8xs",
+          "key": "utwyk7",
           "pathname": "/frontend",
           "search": "",
-          "state": undefined,
         },
       ],
       "go": [Function],
@@ -45,10 +44,9 @@ exports[`COMPONENT - QuoteBubble renders correctly 1`] = `
       "listen": [Function],
       "location": Object {
         "hash": "",
-        "key": "pqm8xs",
+        "key": "utwyk7",
         "pathname": "/frontend",
         "search": "",
-        "state": undefined,
       },
       "push": [Function],
       "replace": [Function],
