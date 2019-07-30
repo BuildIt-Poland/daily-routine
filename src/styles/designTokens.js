@@ -35,9 +35,9 @@ export const fontLarge = '1.8rem';
 export const fontXLarge = '2.4rem';
 
 // Font weight
+export const fontWeightThin = 300;
 export const fontWeightNormal = 400;
 export const fontWeightBold = 700;
-export const fontWeightThin = 300;
 
 // Z-index
 export const zIndexModal = 9000;

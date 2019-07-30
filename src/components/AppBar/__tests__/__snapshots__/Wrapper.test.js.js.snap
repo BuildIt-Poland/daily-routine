@@ -20,7 +20,7 @@ exports[`COMPONENT - AppBar Wrapper renders correctly 1`] = `
   padding: 0 2rem;
 }
 
-@media (max-width:26.25em) {
+@media (max-width:31.25em) {
   .c0 {
     -webkit-box-pack: start;
     -webkit-justify-content: flex-start;

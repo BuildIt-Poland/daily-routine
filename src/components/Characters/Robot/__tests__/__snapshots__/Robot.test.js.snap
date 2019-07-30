@@ -8,7 +8,7 @@ exports[`COMPONENT - Characters Robot renders confusion marks if robot is in def
   padding-top: 0.4rem;
 }
 
-@media (max-width:26.25em) {
+@media (max-width:31.25em) {
   .c0 {
     padding-bottom: 0;
   }
@@ -32,7 +32,7 @@ exports[`COMPONENT - Characters Robot renders correctly with default props 1`] =
   padding-top: 0.4rem;
 }
 
-@media (max-width:26.25em) {
+@media (max-width:31.25em) {
   .c0 {
     padding-bottom: 0;
   }
