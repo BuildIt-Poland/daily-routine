@@ -2,15 +2,9 @@
 
 exports[`COMPONENT - Characters SugarCat Frame renders correctly 1`] = `
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  margin-top: 2rem;
+  position: relative;
+  width: 100%;
+  max-width: 34rem;
 }
 
 <div

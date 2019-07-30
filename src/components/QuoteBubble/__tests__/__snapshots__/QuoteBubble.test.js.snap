@@ -21,7 +21,48 @@ exports[`COMPONENT - QuoteBubble renders correctly 1`] = `
   }
 }
 
-<Wrapper>
+<Wrapper
+  history={
+    Object {
+      "action": "POP",
+      "block": [Function],
+      "canGo": [Function],
+      "createHref": [Function],
+      "entries": Array [
+        Object {
+          "hash": "",
+          "key": "vxm28i",
+          "pathname": "/frontend",
+          "search": "",
+          "state": undefined,
+        },
+      ],
+      "go": [Function],
+      "goBack": [Function],
+      "goForward": [Function],
+      "index": 0,
+      "length": 1,
+      "listen": [Function],
+      "location": Object {
+        "hash": "",
+        "key": "vxm28i",
+        "pathname": "/frontend",
+        "search": "",
+        "state": undefined,
+      },
+      "push": [Function],
+      "replace": [Function],
+    }
+  }
+  match={
+    Object {
+      "isExact": false,
+      "params": Object {},
+      "path": "/",
+      "url": "/",
+    }
+  }
+>
   <section
     className="c0"
     style={
@@ -31,7 +72,9 @@ exports[`COMPONENT - QuoteBubble renders correctly 1`] = `
       }
     }
   >
-    <Quote>
+    <Quote
+      error={true}
+    >
       <strong>
         4o4 Error
       </strong>

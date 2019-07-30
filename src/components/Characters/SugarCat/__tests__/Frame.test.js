@@ -1,7 +1,7 @@
 import React from 'react';
 import { create } from 'react-test-renderer';
 
-import Frame from '../Wrapper';
+import Frame from '../Frame';
 
 describe('COMPONENT - Characters SugarCat Frame', () => {
   it('renders correctly', () => {
