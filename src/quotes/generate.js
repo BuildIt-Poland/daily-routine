@@ -1,11 +1,16 @@
 import unzip from 'lodash.unzip';
 import isEmpty from 'lodash.isempty';
+import includes from 'lodash.includes';
 
 import { convertToDigits, convertToNickname } from './encode';
-import { PHRASES, PREFIX, PAST, FUTURE } from './quotes';
+import { PHRASES, PREFIX, ROLES, PAST, FUTURE } from './quotes';
 
 export function getQuoteFromID(role, action, quoteID) {
   if (typeof quoteID != 'string') {
+    return;
+  }
+
+  if (!includes(getActions(), action)) {
     return;
   }
 
@@ -16,6 +21,10 @@ export function getQuoteFromID(role, action, quoteID) {
 
   const expressionsAndIndexes = getOptions(role, action);
   if (!expressionsAndIndexes) {
+    return;
+  }
+
+  if (expressionsAndIndexes.length !== digits.length) {
     return;
   }
 
@@ -31,13 +40,17 @@ export function getRandomQuoteID(role, action) {
   return convertToNickname(quoteID);
 }
 
+function getActions() {
+  return Object.keys(PHRASES[PREFIX]);
+}
+
 function getOptions(role, action) {
-  const roleLeaf = PHRASES[role];
+  const roleLeaf = PHRASES[ROLES][role];
   const prefixLeaf = PHRASES[PREFIX][action];
   // this order is not fluid and affects proper encoding, decoding
   const arrayOfExpressions = [prefixLeaf[PAST], roleLeaf[PAST], prefixLeaf[FUTURE], roleLeaf[FUTURE]];
   if (arrayOfExpressions.includes(undefined)) {
-    return;
+    return [];
   }
   return arrayOfExpressions;
 }
