@@ -71,7 +71,6 @@ exports[`COMPONENT - QuoteBubble renders correctly 1`] = `
     }
   >
     <Quote
-      error={true}
       data-testid="quote-error-message"
     >
       <strong>

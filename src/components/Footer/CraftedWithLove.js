@@ -1,9 +1,19 @@
 import React, { useState } from 'react';
+import styled from 'styled-components';
 import { useSpring } from 'react-spring';
 
-import { colorRed, colorBlack } from '../../styles/designTokens';
+import { colorRed, colorOpaqueBlack } from '../../styles/designTokens';
 import { Heart, BuilditLogo } from '../Icons';
-import Link from './Link';
+import Hitbox from './Hitbox';
+
+const Link = styled(Hitbox).attrs({
+  target: '_blank'
+})`
+  svg {
+    display: inline-block;
+    margin: 0 0.4rem;
+  }
+`;
 
 function CraftedWithLove() {
   const [isAnimated, setIsAnimated] = useState(false);
@@ -18,7 +28,7 @@ function CraftedWithLove() {
   });
 
   const iconAnimation = {
-    color: x.interpolate({ range: [0, 0.25, 1], output: [colorBlack, colorRed, colorRed] }),
+    color: x.interpolate({ range: [0, 0.25, 1], output: [colorOpaqueBlack, colorRed, colorRed] }),
     transform: x.interpolate({ range: [0, 0.5, 1], output: [1, 2.2, 1] }).interpolate(x => `scale(${x})`)
   };
 

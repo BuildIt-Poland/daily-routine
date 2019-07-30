@@ -1,5 +1,6 @@
 // Colors
 export const colorBlack = '#222222';
+export const colorOpaqueBlack = 'rgba(34,34,34,0.4)';
 export const colorWhite = '#ffffff';
 export const colorLightGrey = '#cccccc';
 export const colorLightTeal = '#80cbd6';
