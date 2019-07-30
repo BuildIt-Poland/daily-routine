@@ -33,7 +33,6 @@ export function convertToDigits(nickname) {
   const digits = words
     .reverse()
     .map(getInt)
-    // .map((ix) => {console.log(ix); return ix;})
     .reverse()
     .reduce(reduceEmptyOnNegative);
 
