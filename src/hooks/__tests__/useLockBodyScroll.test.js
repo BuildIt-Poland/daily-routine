@@ -3,13 +3,13 @@ import { renderHook } from '@testing-library/react-hooks';
 import useLockBodyScroll from '../useLockBodyScroll';
 
 describe('HOOK - useLockBodyScroll', () => {
-  it('should write to localStorage the value of `TEST_VALUE` for the key `TEST_KEY`', () => {
+  it("sets body overflow to 'scroll' when falsy flag is passed", () => {
     renderHook(() => useLockBodyScroll(false));
 
     expect(document.body.style.overflowY).toEqual('scroll');
   });
 
-  it('should write to localStorage the value of `TEST_VALUE` for the key `TEST_KEY`', () => {
+  it("sets body overflow to 'hidden' when truthy flag is passed", () => {
     renderHook(() => useLockBodyScroll(true));
 
     expect(document.body.style.overflowY).toEqual('hidden');
