@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { FRONT_END_ROLE, FRONT_END_ROLE_LABEL } from '../../constants/roles';
+import ErrorBoundary from '../ErrorBoundary';
 import Page from '../Page';
 import RoleBar from '../RoleBar';
 import ActionButtons from '../ActionButtons';
@@ -12,7 +13,7 @@ import Character from '../Character';
 
 function FrontEndRolePage() {
   return (
-    <>
+    <ErrorBoundary>
       <Page title={FRONT_END_ROLE_LABEL}>
         <RoleBar label={FRONT_END_ROLE_LABEL} />
         <Section>
@@ -25,7 +26,7 @@ function FrontEndRolePage() {
         </Section>
         <ActionButtons role={FRONT_END_ROLE} />
       </Page>
-    </>
+    </ErrorBoundary>
   );
 }
 

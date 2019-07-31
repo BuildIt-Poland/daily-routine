@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { DEV_OPS_ROLE, DEV_OPS_ROLE_LABEL } from '../../constants/roles';
+import ErrorBoundary from '../ErrorBoundary';
 import Page from '../Page';
 import ActionButtons from '../ActionButtons';
 import RoleBar from '../RoleBar';
@@ -12,7 +13,7 @@ import QuoteBubble from './QuoteBubble';
 
 function DevOpsRolePage() {
   return (
-    <>
+    <ErrorBoundary>
       <Page title={DEV_OPS_ROLE_LABEL}>
         <RoleBar label={DEV_OPS_ROLE_LABEL} />
         <Section>
@@ -25,7 +26,7 @@ function DevOpsRolePage() {
         </Section>
         <ActionButtons role={DEV_OPS_ROLE} />
       </Page>
-    </>
+    </ErrorBoundary>
   );
 }
 

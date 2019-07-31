@@ -10,6 +10,7 @@ import {
   DEV_OPS_ROLE_LABEL,
   BACK_END_ROLE_LABEL
 } from '../../constants/roles';
+import ErrorBoundary from '../ErrorBoundary';
 import Content from '../Content';
 import Headline from '../Headline';
 import Navigation from '../Navigation';
@@ -23,22 +24,24 @@ function RoleButtons() {
   const { animateAndRedirect } = useContext(RouteTransitionAnimationContext);
 
   return (
-    <Wrapper>
-      <Content>
-        <Headline>Pick your role!</Headline>
-        <Navigation>
-          <FrontEndButton onClick={() => animateAndRedirect(FRONT_END_ROLE)} data-testid={`${FRONT_END_ROLE}-button`}>
-            {FRONT_END_ROLE_LABEL}
-          </FrontEndButton>
-          <BackEndButton onClick={() => animateAndRedirect(BACK_END_ROLE)} data-testid={`${BACK_END_ROLE}-button`}>
-            {BACK_END_ROLE_LABEL}
-          </BackEndButton>
-          <DevOpsButton onClick={() => animateAndRedirect(DEV_OPS_ROLE)} data-testid={`${DEV_OPS_ROLE}-button`}>
-            {DEV_OPS_ROLE_LABEL}
-          </DevOpsButton>
-        </Navigation>
-      </Content>
-    </Wrapper>
+    <ErrorBoundary>
+      <Wrapper>
+        <Content>
+          <Headline>Pick your role!</Headline>
+          <Navigation>
+            <FrontEndButton onClick={() => animateAndRedirect(FRONT_END_ROLE)} data-testid={`${FRONT_END_ROLE}-button`}>
+              {FRONT_END_ROLE_LABEL}
+            </FrontEndButton>
+            <BackEndButton onClick={() => animateAndRedirect(BACK_END_ROLE)} data-testid={`${BACK_END_ROLE}-button`}>
+              {BACK_END_ROLE_LABEL}
+            </BackEndButton>
+            <DevOpsButton onClick={() => animateAndRedirect(DEV_OPS_ROLE)} data-testid={`${DEV_OPS_ROLE}-button`}>
+              {DEV_OPS_ROLE_LABEL}
+            </DevOpsButton>
+          </Navigation>
+        </Content>
+      </Wrapper>
+    </ErrorBoundary>
   );
 }
 
