@@ -58,7 +58,7 @@ function AnimatedOverlay({ onFinished, theme }) {
       await next({ transform: 'scaleY(1)' });
       await next({ transform: 'scaleY(0)' });
     },
-    config: { mass: 2, tension: 180, friction: 18, precision: 0.1, clamp: true },
+    config: { mass: 2, tension: 160, friction: 22, precision: 0.1, clamp: true },
     onRest: onFinished
   });
 
@@ -73,23 +73,21 @@ function AnimatedOverlay({ onFinished, theme }) {
       opacity: 0,
       backgroundColor: primaryColor
     },
-    config: { tension: 140, friction: 20, clamp: true, duration: 150 }
+    config: { tension: 140, friction: 24, clamp: true }
   });
 
   const thickBarAnimation = useSpring({
     from: {
       height: '0%',
-      opacity: 0.3,
-      transform: 'translateY(-40vh)',
+      transform: 'translateY(-20vh)',
       backgroundColor: primaryColor
     },
     to: {
       height: '30%',
-      opacity: 0.9,
       transform: 'translateY(160vh)',
       backgroundColor: primaryColor
     },
-    config: { tension: 300, friction: 120, clamp: true }
+    config: { tension: 300, friction: 140 }
   });
 
   return (
