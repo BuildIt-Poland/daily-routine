@@ -1,6 +1,7 @@
 import styled, { keyframes } from 'styled-components';
 
 import media from '../../styles/media';
+import { zIndexDefault } from '../../styles/designTokens';
 import BubbleTailArtwork from './BubbleTailArtwork';
 
 const fadeInAnimation = keyframes`
@@ -20,6 +21,7 @@ const BubbleTail = styled(BubbleTailArtwork)`
   transform: translateY(-20px);
   animation: ${tailAnimation} 400ms cubic-bezier(0.68, -0.55, 0.265, 1.6) forwards;
   transform-origin: 50% 0;
+  z-index: ${zIndexDefault};
 
   ${media.phone`
     left: 50%;

@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { animated } from 'react-spring';
 
 import media from '../../styles/media';
+import { zIndexDefault } from '../../styles/designTokens';
 import { SaltGrinder } from '../Icons';
 
 const Wrapper = styled.span`
@@ -10,6 +11,7 @@ const Wrapper = styled.span`
   position: absolute;
   bottom: -0.9rem;
   right: -0.6rem;
+  z-index: ${zIndexDefault};
 
   ${media.phone`
     width: 6.6rem;

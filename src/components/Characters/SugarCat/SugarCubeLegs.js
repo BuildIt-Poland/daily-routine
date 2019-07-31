@@ -1,6 +1,7 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
 
+import { zIndexDefault } from '../../../styles/designTokens';
 import SugarCubeLeftLegArtwork from './SugarCubeLeftLegArtwork';
 import SugarCubeRightLegArtwork from './SugarCubeRightLegArtwork';
 
@@ -22,6 +23,7 @@ const SugarCubeLeftLeg = styled(SugarCubeLeftLegArtwork)`
   bottom: -0.1%;
   right: 13.5%;
   animation: ${rightLegWaveAnimation} 2.5s ease-in-out -0.3s infinite;
+  z-index: ${zIndexDefault};
 `;
 
 const SugarCubeRightLeg = styled(SugarCubeRightLegArtwork)`
@@ -30,6 +32,7 @@ const SugarCubeRightLeg = styled(SugarCubeRightLegArtwork)`
   bottom: -0.2%;
   right: 11.5%;
   animation: ${leftLegWaveAnimation} 2.5s ease-in-out infinite;
+  z-index: ${zIndexDefault};
 `;
 
 function SugarCubeLegs() {
