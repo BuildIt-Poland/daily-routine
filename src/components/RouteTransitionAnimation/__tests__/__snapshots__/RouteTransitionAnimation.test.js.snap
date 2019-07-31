@@ -81,8 +81,7 @@ exports[`COMPONENT - RouteTransitionAnimation renders correctly when "isAnimatin
       Object {
         "backgroundColor": "rgba(255, 255, 255, 1)",
         "height": "0%",
-        "opacity": 0.3,
-        "transform": "translateY(-40vh)",
+        "transform": "translateY(-20vh)",
       }
     }
   />
