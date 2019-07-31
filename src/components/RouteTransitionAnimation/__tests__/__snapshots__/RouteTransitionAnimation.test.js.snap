@@ -1,13 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`COMPONENT - RouteTransitionAnimation renders correctly when "isAnimating" is  "true" 1`] = `
-Array [
-  .c0 {
+.c0 {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 8000;
+  overflow: hidden;
+}
+
+.c1 {
   width: 100%;
   height: 160vh;
   background-color: #ffffff;
   left: 0;
-  top: 6rem;
   position: absolute;
   z-index: 8000;
   opacity: 1;
@@ -19,59 +27,67 @@ Array [
   transform-origin: 0 0;
 }
 
-<div
-    className="c0"
-    style={
-      Object {
-        "transform": "scaleY(0)",
-      }
-    }
-  />,
-  .c0 {
+.c3 {
   width: 100%;
-  height: 0;
+  height: 160vh;
+  background-color: #ffffff;
   left: 0;
-  top: 6rem;
   position: absolute;
+  z-index: 8000;
+  opacity: 1;
+  -webkit-transform: scaleY(0) translateY(0);
+  -ms-transform: scaleY(0) translateY(0);
+  transform: scaleY(0) translateY(0);
+  -webkit-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
   z-index: 8002;
-  -webkit-transform: translateY(0);
-  -ms-transform: translateY(0);
-  transform: translateY(0);
-}
-
-<div
-    className="c0"
-    style={
-      Object {
-        "backgroundColor": "rgba(255, 255, 255, 1)",
-        "height": "0%",
-        "transform": "translateY(0vh)",
-      }
-    }
-  />,
-  .c0 {
-  width: 100%;
-  height: 160vh;
-  background-color: #ffffff;
-  left: 0;
-  top: 6rem;
-  position: absolute;
-  z-index: 8000;
-  opacity: 1;
-  -webkit-transform: scaleY(0) translateY(0);
-  -ms-transform: scaleY(0) translateY(0);
-  transform: scaleY(0) translateY(0);
-  -webkit-transform-origin: 0 0;
-  -ms-transform-origin: 0 0;
-  transform-origin: 0 0;
-  z-index: 8001;
   -webkit-transform-origin: 100% 100%;
   -ms-transform-origin: 100% 100%;
   transform-origin: 100% 100%;
 }
 
+.c2 {
+  width: 100%;
+  height: 0;
+  left: 0;
+  position: absolute;
+  z-index: 8003;
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+}
+
+@media (min-height:51.25em) and (min-width:31.25em) {
+  .c0 {
+    top: 6rem;
+  }
+}
+
 <div
-    className="c0"
+  className="c0"
+>
+  <div
+    className="c1"
+    style={
+      Object {
+        "transform": "scaleY(0)",
+      }
+    }
+  />
+  <div
+    className="c2"
+    style={
+      Object {
+        "backgroundColor": "rgba(255, 255, 255, 1)",
+        "height": "0%",
+        "opacity": 0.3,
+        "transform": "translateY(-40vh)",
+      }
+    }
+  />
+  <div
+    className="c3"
     style={
       Object {
         "backgroundColor": "rgba(255, 255, 255, 1)",
@@ -79,6 +95,6 @@ Array [
         "transform": "scaleY(0) translateY(50%)",
       }
     }
-  />,
-]
+  />
+</div>
 `;

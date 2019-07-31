@@ -11,6 +11,8 @@ function RouteTransitionAnimationProvider({ children, history }) {
 
   function redirectWithDelay(url) {
     setTimeout(() => {
+      // Restore scroll position to top of a page
+      window.scrollTo(0, 0);
       history.push(url);
     }, REDIRECT_DELAY);
   }
