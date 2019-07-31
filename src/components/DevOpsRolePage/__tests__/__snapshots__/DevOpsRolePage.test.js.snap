@@ -2,10 +2,10 @@
 
 exports[`COMPONENT - DevOpsRolePage renders correctly for /devops path 1`] = `
 <Page
-  title="Dev Ops"
+  title="Dev Ops Engineer"
 >
   <RoleBar
-    label="Dev Ops"
+    label="Dev Ops Engineer"
   />
   <Section>
     <RoleContent>
@@ -23,10 +23,10 @@ exports[`COMPONENT - DevOpsRolePage renders correctly for /devops path 1`] = `
 
 exports[`COMPONENT - DevOpsRolePage renders correctly for /devops/brag path 1`] = `
 <Page
-  title="Dev Ops"
+  title="Dev Ops Engineer"
 >
   <RoleBar
-    label="Dev Ops"
+    label="Dev Ops Engineer"
   />
   <Section>
     <RoleContent>
@@ -44,10 +44,10 @@ exports[`COMPONENT - DevOpsRolePage renders correctly for /devops/brag path 1`] 
 
 exports[`COMPONENT - DevOpsRolePage renders correctly for /devops/confess path 1`] = `
 <Page
-  title="Dev Ops"
+  title="Dev Ops Engineer"
 >
   <RoleBar
-    label="Dev Ops"
+    label="Dev Ops Engineer"
   />
   <Section>
     <RoleContent>
