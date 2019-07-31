@@ -39,6 +39,7 @@ exports[`COMPONENT - RoleButtons FrontEndButton renders correctly 1`] = `
   position: absolute;
   right: 1.4rem;
   bottom: 2.4rem;
+  z-index: 1;
 }
 
 .c0 {
