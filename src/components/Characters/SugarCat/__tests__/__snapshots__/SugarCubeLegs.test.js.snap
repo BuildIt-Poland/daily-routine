@@ -9,6 +9,7 @@ Array [
   right: 13.5%;
   -webkit-animation: kRJNIP 2.5s ease-in-out -0.3s infinite;
   animation: kRJNIP 2.5s ease-in-out -0.3s infinite;
+  z-index: 1;
 }
 
 <svg
@@ -28,6 +29,7 @@ Array [
   right: 11.5%;
   -webkit-animation: cpXlhx 2.5s ease-in-out infinite;
   animation: cpXlhx 2.5s ease-in-out infinite;
+  z-index: 1;
 }
 
 <svg

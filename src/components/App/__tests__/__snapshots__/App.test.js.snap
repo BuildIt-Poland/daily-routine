@@ -48,6 +48,7 @@ exports[`COMPONENT - App renders correctly default route 1`] = `
   display: grid;
   grid-template-rows: auto 1fr auto;
   background-color: #80cbd6;
+  z-index: 1;
 }
 
 @media (max-width:31.25em) {

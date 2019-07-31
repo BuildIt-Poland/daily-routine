@@ -5,6 +5,7 @@ exports[`COMPONENT - ArrowIcon renders correctly 1`] = `
   position: absolute;
   right: 1.4rem;
   bottom: 2.4rem;
+  z-index: 1;
 }
 
 @media (max-width:31.25em) {

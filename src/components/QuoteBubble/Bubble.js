@@ -14,6 +14,7 @@ const Bubble = styled(animated.section)`
   background: url(${SpeechBubbleArtwork}) no-repeat;
   background-size: 100% 100%;
   transform-origin: 50% 100%;
+  z-index: -1;
 
   ${media.phone`
     max-width: 100%;
