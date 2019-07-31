@@ -8,6 +8,7 @@ import { location, history } from '../../types';
 import { GenderProvider } from '../../context/GenderContext';
 import { RouteTransitionAnimationProvider } from '../../context/RouteTransitionAnimationContext';
 import generateTheme from '../../utils/generateTheme';
+import ErrorBoundary from '../ErrorBoundary';
 import AppBar from '../AppBar';
 import Footer from '../Footer';
 import LandingPage from '../LandingPage';
@@ -27,15 +28,17 @@ function App({ location, history }) {
           <GenderProvider>
             <Wrapper>
               <AppBar />
-              <main>
-                <Switch>
-                  <Route exact path={ROOT_PATH} component={LandingPage} />
-                  <Route path={`/${FRONT_END_ROLE}`} component={FrontEndRolePage} />
-                  <Route path={`/${BACK_END_ROLE}`} component={BackEndRolePage} />
-                  <Route path={`/${DEV_OPS_ROLE}`} component={DevOpsRolePage} />
-                  <Route path="*" component={PageNotFound} />
-                </Switch>
-              </main>
+              <ErrorBoundary>
+                <main>
+                  <Switch>
+                    <Route exact path={ROOT_PATH} component={LandingPage} />
+                    <Route path={`/${FRONT_END_ROLE}`} component={FrontEndRolePage} />
+                    <Route path={`/${BACK_END_ROLE}`} component={BackEndRolePage} />
+                    <Route path={`/${DEV_OPS_ROLE}`} component={DevOpsRolePage} />
+                    <Route path="*" component={PageNotFound} />
+                  </Switch>
+                </main>
+              </ErrorBoundary>
               <Footer />
             </Wrapper>
           </GenderProvider>

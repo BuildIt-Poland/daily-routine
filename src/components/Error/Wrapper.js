@@ -7,20 +7,22 @@ import {
   fontWeightBold,
   spacingSmall,
   borderWidthThick,
-  colorWhite
+  colorWhite,
+  borderRadius
 } from '../../styles/designTokens';
 
 const Wrapper = styled.div`
-  width: 100%;
   border: ${borderWidthThick} solid ${colorRed};
   color: ${colorBlack};
   background-color: ${colorWhite};
   font-size: ${fontMedium};
   font-weight: ${fontWeightBold};
+  margin: ${spacingSmall};
   padding: ${spacingSmall};
   display: flex;
   justify-content: center;
-  border-radius: 8px;
+  border-radius: ${borderRadius};
+  align-self: start;
 `;
 
 export default Wrapper;

@@ -6,6 +6,7 @@ import { BRAG, CONFESS } from '../../constants/roleActions';
 import { role } from '../../types';
 
 import { getRandomQuoteID } from '../../utils/quotesService';
+import ErrorBoundary from '../ErrorBoundary';
 import Navigation from '../Navigation';
 import Content from '../Content';
 import Wrapper from './Wrapper';
@@ -17,14 +18,16 @@ function ActionButtons({ role }) {
   const confessQuoteID = getRandomQuoteID(role, CONFESS);
 
   return (
-    <Wrapper>
-      <Content>
-        <Navigation>
-          <BragButton quoteID={bragQuoteID} role={role} data-testid={`${role}-${BRAG}-button`} />
-          <ConfessButton quoteID={confessQuoteID} role={role} data-testid={`${role}-${CONFESS}-button`} />
-        </Navigation>
-      </Content>
-    </Wrapper>
+    <ErrorBoundary>
+      <Wrapper>
+        <Content>
+          <Navigation>
+            <BragButton quoteID={bragQuoteID} role={role} data-testid={`${role}-${BRAG}-button`} />
+            <ConfessButton quoteID={confessQuoteID} role={role} data-testid={`${role}-${CONFESS}-button`} />
+          </Navigation>
+        </Content>
+      </Wrapper>
+    </ErrorBoundary>
   );
 }
 
