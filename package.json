@@ -18,6 +18,7 @@
     "deploy": "node ./deploy.js"
   },
   "dependencies": {
+    "focus-visible": "5.0.2",
     "lodash.includes": "4.3.0",
     "lodash.isempty": "4.4.0",
     "lodash.isequal": "4.5.0",
@@ -29,6 +30,7 @@
     "react": "16.8.6",
     "react-copy-to-clipboard": "5.0.1",
     "react-dom": "16.8.6",
+    "react-focus-lock": "2.0.4",
     "react-router-dom": "5.0.1",
     "react-scripts": "3.0.1",
     "react-spring": "8.0.25",
@@ -38,7 +40,7 @@
     "@testing-library/react": "8.0.1",
     "@testing-library/react-hooks": "1.1.0",
     "check-dependencies": "1.1.0",
-    "cypress": "3.4.0",
+    "cypress": "3.4.1",
     "eslint": "5.16.0",
     "eslint-config-prettier": "5.0.0",
     "eslint-plugin-import": "2.17.3",
