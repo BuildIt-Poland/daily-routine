@@ -7,7 +7,7 @@ jest.mock('../SpeechBubbleArtwork', () => 'SpeechBubbleArtwork');
 
 describe('COMPONENT - QuoteBubble Wrapper', () => {
   it('renders correctly', () => {
-    const component = create(<Wrapper calculatedHeight={144} />);
+    const component = create(<Wrapper />);
 
     expect(component.toJSON()).toMatchSnapshot();
   });

@@ -17,6 +17,15 @@ exports[`COMPONENT - Footer Hitbox renders correctly 1`] = `
   font-size: 1.4rem;
   font-weight: 400;
   color: rgba(34,34,34,0.4);
+  border-radius: 0.6rem;
+  outline: 0;
+  -webkit-transition: all 150ms linear;
+  transition: all 150ms linear;
+}
+
+.c0.focus-visible {
+  box-shadow: -0.4rem 0 0 0 #ffdcfa,0.4rem 0 0 0 #ffdcfa;
+  background-color: #ffdcfa;
 }
 
 <a

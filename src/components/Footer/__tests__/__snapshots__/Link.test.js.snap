@@ -17,13 +17,23 @@ exports[`COMPONENT - Footer Link renders correctly 1`] = `
   font-size: 1.4rem;
   font-weight: 400;
   color: rgba(34,34,34,0.4);
+  border-radius: 0.6rem;
+  outline: 0;
+  -webkit-transition: all 150ms linear;
+  transition: all 150ms linear;
   margin: 0 0.4rem;
   cursor: pointer;
+  height: 3rem;
   font-weight: 700;
   background-image: linear-gradient(180deg,undefined 50%,transparent 0);
   background-repeat: repeat-x;
   background-size: 2px 0.2rem;
-  background-position: 0 2.5rem;
+  background-position: 0 2.2rem;
+}
+
+.c0.focus-visible {
+  box-shadow: -0.4rem 0 0 0 #ffdcfa,0.4rem 0 0 0 #ffdcfa;
+  background-color: #ffdcfa;
 }
 
 @media (max-width:31.25em) {

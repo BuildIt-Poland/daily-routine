@@ -12,10 +12,5 @@ exports[`COMPONENT - QuoteBubble Wrapper renders correctly 1`] = `
 
 <section
   className="c0"
-  style={
-    Object {
-      "height": 144,
-    }
-  }
 />
 `;

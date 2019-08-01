@@ -73,6 +73,7 @@ exports[`COMPONENT - QuoteBubble renders correctly 1`] = `
   >
     <Quote
       data-testid="quote-error-message"
+      error={true}
     >
       <strong>
         4o4 Error

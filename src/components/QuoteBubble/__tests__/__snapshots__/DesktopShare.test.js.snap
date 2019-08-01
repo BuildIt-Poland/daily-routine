@@ -23,6 +23,13 @@ exports[`COMPONENT - QuoteBubble DesktopShare renders correctly for Facebook var
   min-height: 4rem;
   cursor: pointer;
   outline: 0;
+  -webkit-transition: all 150ms linear;
+  transition: all 150ms linear;
+  border-radius: 0.6rem;
+}
+
+.c0.focus-visible {
+  background-color: #ffdcfa;
 }
 
 <button
@@ -73,6 +80,13 @@ exports[`COMPONENT - QuoteBubble DesktopShare renders correctly for Twitter vari
   min-height: 4rem;
   cursor: pointer;
   outline: 0;
+  -webkit-transition: all 150ms linear;
+  transition: all 150ms linear;
+  border-radius: 0.6rem;
+}
+
+.c0.focus-visible {
+  background-color: #ffdcfa;
 }
 
 <button
