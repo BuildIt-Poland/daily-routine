@@ -2,9 +2,7 @@ import styled from 'styled-components';
 
 import { spacingMedium, zIndexDefault } from '../../styles/designTokens';
 
-const Wrapper = styled.section.attrs(props => ({
-  style: { height: props.calculatedHeight }
-}))`
+const Wrapper = styled.section`
   position: relative;
   width: 100%;
   height: 100%;
