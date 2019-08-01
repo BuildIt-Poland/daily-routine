@@ -9,13 +9,14 @@ const Link = styled(Hitbox).attrs({
 })`
   margin: 0 0.4rem;
   cursor: pointer;
+  height: 3rem;
   font-weight: ${fontWeightBold};
 
   color: ${({ theme }) => theme.secondaryColor};
   background-image: ${({ theme }) => `linear-gradient(180deg, ${theme.secondaryColor} 50%, transparent 0)`};
   background-repeat: repeat-x;
   background-size: 2px 0.2rem;
-  background-position: 0 2.5rem;
+  background-position: 0 2.2rem;
 
   ${media.phone`
     color: ${colorOpaqueBlack};

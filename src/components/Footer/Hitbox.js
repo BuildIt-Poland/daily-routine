@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { fontMedium, colorOpaqueBlack, fontWeightNormal } from '../../styles/designTokens';
+import { fontMedium, colorOpaqueBlack, colorPink, fontWeightNormal, borderRadius } from '../../styles/designTokens';
 
 const Hitbox = styled.a`
   display: flex;
@@ -11,6 +11,14 @@ const Hitbox = styled.a`
   font-size: ${fontMedium};
   font-weight: ${fontWeightNormal};
   color: ${colorOpaqueBlack};
+  border-radius: ${borderRadius};
+  outline: 0;
+  transition: all 150ms linear;
+
+  &.focus-visible {
+    box-shadow: -0.4rem 0 0 0 ${colorPink}, 0.4rem 0 0 0 ${colorPink};
+    background-color: ${colorPink};
+  }
 `;
 
 export default Hitbox;

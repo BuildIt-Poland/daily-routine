@@ -1,11 +1,9 @@
 import styled from 'styled-components';
 
-import { zIndexDefault } from '../../styles/designTokens';
-
 const Input = styled.input`
-  visibility: hidden;
+  opacity: 0;
   position: absolute;
-  z-index: ${zIndexDefault};
+  z-index: -1;
 `;
 
 export default Input;
