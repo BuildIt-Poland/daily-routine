@@ -14,6 +14,10 @@ const Label = styled.label`
   color: ${({ theme, checked }) => (checked ? colorWhite : theme.secondaryColor)};
   border: ${borderWidthThick} solid ${({ theme }) => theme.secondaryColor};
   border-left: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 
   :first-child {
     border-radius: ${borderRadius} 0 0 ${borderRadius};
