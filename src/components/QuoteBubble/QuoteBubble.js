@@ -52,7 +52,7 @@ function QuoteBubble({ location, ...props }) {
                 {item.quote ? (
                   <Quote>{trimQuote(item.quote)}</Quote>
                 ) : (
-                  <Quote data-testid="quote-error-message">
+                  <Quote error data-testid="quote-error-message">
                     <strong>4o4 Error</strong>
                     {ERROR_MESSAGE}
                   </Quote>

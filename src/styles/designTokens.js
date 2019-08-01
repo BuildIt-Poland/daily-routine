@@ -17,6 +17,8 @@ export const colorDarkBlue = '#1558a1';
 export const colorLightYellow = '#f2de6f';
 export const colorYellow = '#f5ca1d';
 export const colorDarkYellow = '#d18b13';
+export const colorPink = '#ffdcfa';
+export const colorDarkPink = '#ff8aed';
 
 // Spacing (mainly for paddings and margins)
 export const spacingLarge = '3rem';

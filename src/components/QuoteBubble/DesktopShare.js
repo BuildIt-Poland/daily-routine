@@ -8,18 +8,18 @@ import { FACEBOOK, TWITTER } from '../../constants/socialMedia';
 const socialMediaData = {
   [FACEBOOK]: {
     shareUrl: `http://www.facebook.com/sharer.php?u=${window.location.href}`,
-    Icon: Facebook,
+    icon: Facebook,
     testID: 'facebook-share-button'
   },
   [TWITTER]: {
     shareUrl: `http://www.twitter.com/share?url=${window.location.href}`,
-    Icon: Twitter,
+    icon: Twitter,
     testID: 'twitter-share-button'
   }
 };
 
 function DesktopShare({ variant }) {
-  const { Icon, shareUrl, testID } = socialMediaData[variant];
+  const { icon: Icon, shareUrl, testID } = socialMediaData[variant];
 
   const share = () =>
     window.open(

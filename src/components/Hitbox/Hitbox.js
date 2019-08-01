@@ -3,6 +3,8 @@
 
 import styled from 'styled-components';
 
+import { colorPink, colorDarkPink, borderRadius } from '../../styles/designTokens';
+
 const Hitbox = styled.button`
   position: relative;
   border: 0;
@@ -16,6 +18,12 @@ const Hitbox = styled.button`
   min-height: 4rem;
   cursor: pointer;
   outline: 0;
+  transition: all 150ms linear;
+  border-radius: ${borderRadius};
+
+  &.focus-visible {
+    background-color: ${props => (props.alternativeFocusStyle ? colorDarkPink : colorPink)};
+  }
 `;
 
 export default Hitbox;

@@ -6,6 +6,7 @@ import {
   colorWhite,
   colorGreen,
   colorDarkGreen,
+  colorDarkPink,
   fontLarge,
   fontWeightBold,
   borderRadius,
@@ -29,6 +30,8 @@ const StyledButton = styled.button`
   text-align: left;
   width: 100%;
   height: 7rem;
+  outline: 0;
+  transition: all 150ms linear;
 
   ${media.phone`
     height: 5rem;
@@ -37,6 +40,15 @@ const StyledButton = styled.button`
   &:not(:disabled) {
     cursor: pointer;
   }
+
+  &.focus-visible {
+    box-shadow: 0 0 0 0.6rem ${colorDarkPink};
+  }
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 `;
 
 export default animated(StyledButton);

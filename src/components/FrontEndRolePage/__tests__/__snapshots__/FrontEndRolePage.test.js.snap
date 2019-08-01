@@ -2,10 +2,10 @@
 
 exports[`COMPONENT - FrontEndRolePage renders correctly 1`] = `
 <Page
-  title="Front End Engineer"
+  title="Front End Developer"
 >
   <RoleBar
-    label="Front End Engineer"
+    label="Front End Developer"
   />
   <Section>
     <RoleContent>

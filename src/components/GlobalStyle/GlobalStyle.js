@@ -47,6 +47,16 @@ const GlobalStyle = createGlobalStyle`
   input, textarea, button, select, label, a, li {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
+
+  ::-moz-selection {
+    background: rgba(255, 138, 207, 0.6);
+    color: inherit;
+  }
+
+  ::selection {
+    background: rgba(255, 203, 207, 0.6);
+    color: inherit;
+  }
 `;
 
 export default GlobalStyle;

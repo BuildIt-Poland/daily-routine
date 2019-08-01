@@ -23,6 +23,13 @@ exports[`COMPONENT - QuoteBubble MobileShare renders correctly 1`] = `
   min-height: 4rem;
   cursor: pointer;
   outline: 0;
+  -webkit-transition: all 150ms linear;
+  transition: all 150ms linear;
+  border-radius: 0.6rem;
+}
+
+.c0.focus-visible {
+  background-color: #ffdcfa;
 }
 
 <button

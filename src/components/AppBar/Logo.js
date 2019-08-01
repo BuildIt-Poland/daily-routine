@@ -3,9 +3,10 @@ import { Link as LinkBase } from 'react-router-dom';
 import { withRouter } from 'react-router';
 import styled from 'styled-components';
 
+import media from '../../styles/media';
 import { location } from '../../types';
 import { RouteTransitionAnimationContext } from '../../context/RouteTransitionAnimationContext';
-import { colorBlack, spacingSmall, borderWidthThin } from '../../styles/designTokens';
+import { colorBlack, colorPink, spacingSmall, borderWidthThin, borderRadius } from '../../styles/designTokens';
 import { ROOT_PATH } from '../../constants/routes';
 import { Logo as LogoIcon } from '../Icons';
 
@@ -13,8 +14,24 @@ const Link = styled(LinkBase)`
   display: flex;
   text-decoration: none;
   align-items: center;
-  height: 100%;
+  height: 4.8rem;
+  border-radius: ${borderRadius};
   cursor: pointer;
+  outline: 0;
+  padding: 0 ${spacingSmall};
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  transition: all 150ms linear;
+
+  &.focus-visible {
+    background-color: ${colorPink};
+  }
+
+  ${media.phone`
+    padding: 0;
+  `};
 `;
 
 const LogoWrapper = styled.div`
