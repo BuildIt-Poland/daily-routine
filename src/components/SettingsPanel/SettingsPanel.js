@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import FocusLock from 'react-focus-lock';
 
+import useLockBodyScroll from '../../hooks/useLockBodyScroll';
 import SidePanel from '../SidePanel';
 import Subheadline from '../Subheadline';
 import GenderSettings from '../GenderSettings';
@@ -11,6 +12,8 @@ import CloseButton from './CloseButton';
 import Form from './Form';
 
 function SettingsPanel({ isVisible, onClose }) {
+  useLockBodyScroll(isVisible);
+
   return (
     <SidePanel isVisible={isVisible} onOverlayClick={onClose}>
       <FocusLock autoFocus={false}>
