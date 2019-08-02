@@ -39,7 +39,7 @@ If you want to make quotes contributions, please follow the quotes contribution 
 
 ### :loudspeaker: Quotes contribution
 
-Daily Routine is the tool for generating meeting quotes for confused IT employees :confused:, and quotes are the core element of our application. To make it more accurate, diverse and topical for IT industry we decided to open our quotes source for contribution :ok_hand:. In below section, you will find guides and rules on how to add new quotes or change the existing ones. We tried to make this process as easy as it can be, to include also non technician contributors, but if you have any feedback regarding our quotes contribution process, please let us know.
+Daily Routine is the tool for generating meeting quotes for confused IT employees :confused:, and quotes are the core element of our application. To make it more accurate, diverse and topical for IT industry we decided to open our quotes source for contribution :ok_hand:. In below section, you will find guides and rules on how to add new quotes or change the existing ones. We tried to make this process as easy as we could, to allow contribution also for non tech people. If you have any feedback regarding our quotes contribution process, please let us know.
 
 So lets go!
 
