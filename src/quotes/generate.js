@@ -47,7 +47,7 @@ function getActions() {
 function getOptions(role, action) {
   const roleLeaf = PHRASES[ROLES][role];
   const prefixLeaf = PHRASES[PREFIX][action];
-  // this order is not fluid and affects proper encoding, decoding
+  // This order is not fluid and affects proper encoding, decoding
   const arrayOfExpressions = [prefixLeaf[PAST], roleLeaf[PAST], prefixLeaf[FUTURE], roleLeaf[FUTURE]];
   if (arrayOfExpressions.includes(undefined)) {
     return [];

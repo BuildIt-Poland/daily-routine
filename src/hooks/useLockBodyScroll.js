@@ -12,10 +12,10 @@ function useLockBodyScroll(shouldLock = false) {
     if (shouldLock) {
       setBodyScroll('hidden');
     } else {
-      setBodyScroll('scroll');
+      setBodyScroll('auto');
     }
 
-    return () => setBodyScroll('scroll');
+    return () => setBodyScroll('auto');
   }, [shouldLock]);
 }
 
