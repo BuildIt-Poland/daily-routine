@@ -32,9 +32,44 @@ We welcome all forms of contribution! Bugs reports :bug:, feedback and feature r
 
 Please direct all bug reports :bug:, feature requests :pray: or other feedback to project **Github Issues**. This allows the Daily Routine maintainers to effectively review, triage and prioritise any incoming work.
 
-If you want to make code contributions, please follow the code contribution process :computer:. Whether you have a specific fix :wrench: or feature in mind already, or if you have spare time and just want to help out - we'd love to hear from you :muscle: !
+If you want to make code contributions, please follow the code contribution process :computer:. Whether you have a specific fix :wrench: or feature in mind already, or if you have spare time and just want to help out - we'd love to hear from you! :muscle:
 
-If you want to make quotes contributions, please follow the quotes contribution process. Daily routine is a collection of absurd and funny, but still realistic quotes. The bigger quotes amount, the better product quality. So let your imagination run wild, and add some ideas! :dizzy:
+If you want to make quotes contributions, please follow the quotes contribution process. Daily routine is a collection of absurd and funny, but still realistic quotes. The bigger amount of quotes, the better experience will be – let your imagination go wild! :dizzy:
+
+
+### :loudspeaker: Quotes contribution
+
+Daily Routine is the tool for generating meeting quotes for confused IT employees and quotes are the core element of our application. To make it more accurate, diverse and topical for IT industry we decided to open our quotes source for contribution. In below section, you will find guides and rules on how to add new quotes or change the existing ones. We tried to make this process as easy as it can be, to include also non technician contributors, but if you have any feedback regarding our quotes contribution process, please let us know.
+
+So lets go!
+
+**@marek_mollin** please add some instructions how quotes file are constructed, and how the quotes logic works (in short summary nothing really deep, just to allow contribution, even for non tech people)
+
+Once you are ready to add your quote to our app, use one of the below pull request templates
+
+For Prefix Quote:
+
+```text
+[QUOTE] PREFIX BRAG/CONFESS PAST/FUTURE
+
+Quote:
+`Sadly yesterday I have not`
+
+Additional comments (optional):
+`Additonal explanation for your quote`
+```
+
+For Roles Quote:
+
+```text
+[QUOTE] ROLE DEVOPS/BACKEND/FRONTEND PAST/FUTURE
+
+Quote:
+`completed fixing ingress path aliasing in periodically scheduled jobs.`
+
+Additional comments (optional):
+`Additonal explanation for your quote`
+```
 
 ### :computer: Code contribution
 
@@ -42,9 +77,9 @@ If you want to make quotes contributions, please follow the quotes contribution 
 
 The `master` branch always holds the most recent code and should always be in a releasable state (i.e. all commits that get merged into master have build cleanly, pass tests and have been peer-reviewed).
 
-Our build and deploy pipeline is configured to automatically build every commit on the master branch and deploy it to our production URL. :white_check_mark:
+Our build and deploy pipeline is configured to automatically build every commit on the master branch and deploy it to production. :white_check_mark:
 
-Contributors making changes or adding new features should always create a feature branch off of the current HEAD of master. These are short-lived branches that are deleted once the feature is complete and has been merged.
+Contributors making changes or adding new features should always create a feature branch off of the current **HEAD** of master. These are short-lived branches that are deleted once the feature is complete and has been merged.
 
 Only do one feature per branch. If you are working on several things in parallel, create separate branches for each.
 
@@ -97,5 +132,3 @@ import PropTypes from 'prop-types';
 import Headline from '../../Headline';
 import { SugarCat } from './Characters';
 ```
-
-### Quotes contribution
