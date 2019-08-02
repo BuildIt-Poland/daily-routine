@@ -23,8 +23,6 @@ jobs:
       - run:
           name: Upload Coverage Report to Codecov
           command: codecov
-  deploy:
-    steps:
       - run:
           name: Perform Test Application Build
           command: 'npm run build'
