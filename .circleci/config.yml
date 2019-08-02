@@ -11,27 +11,26 @@ jobs:
       - run:
           name: Install Dependencies
           command: npm install
-#      - run:
-#          name: Run Linter
-#          command: npm run lint
-#      - run:
-#          name: Code Formatting Check
-#          command: npm run format:check
-#      - run:
-#          name: Run Unit Tests With Code Coverage
-#          command: npm run test:ci
-#      - run:
-#          name: Install codecov
-#          command: npm install -g codecov
-#      - run:
-#          name: Upload Coverage Report to Codecov
-#          command: codecov
-#      - run:
-#          name: Run E2E tests on release ready code
-#          command: npm run e2e
-#      - run:
-#          name: Perform Test Application Build
-#          command: 'npm run build'
+      - run:
+          name: Run Linter
+          command: npm run lint
+      - run:
+          name: Code Formatting Check
+          command: npm run format:check
+      - run:
+          name: Run Unit Tests With Code Coverage
+          command: npm run test:ci
+      - run:
+          name: Install codecov
+          command: npm install -g codecov
+      - run:
+          name: Upload Coverage Report to Codecov
+          command: codecov
+  deploy:
+    steps:
+      - run:
+          name: Perform Test Application Build
+          command: 'npm run build'
       - deploy:
           name: Deploy DailyRoutine to production
           command: |
@@ -46,3 +45,4 @@ workflows:
       - cypress/run:
           start: npm start
           wait-on: 'http://localhost:3000'
+      - deploy
