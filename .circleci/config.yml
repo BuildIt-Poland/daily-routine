@@ -3,9 +3,6 @@ orbs:
   cypress: cypress-io/cypress@1.8.0
 jobs:
   build:
-    docker:
-      - image: mamolli/cypress_awscli
-    working_directory: ~/repo
     steps:
       - checkout
       - run:
@@ -45,4 +42,6 @@ workflows:
       - cypress/run:
           start: npm start
           wait-on: 'http://localhost:3000'
-      - deploy
+      - deploy:
+          requires:
+            - build
