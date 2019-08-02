@@ -39,11 +39,17 @@ If you want to make quotes contributions, please follow the quotes contribution 
 
 ### :loudspeaker: Quotes contribution
 
-Daily Routine is the tool for generating meeting quotes for confused IT employees and quotes are the core element of our application. To make it more accurate, diverse and topical for IT industry we decided to open our quotes source for contribution. In below section, you will find guides and rules on how to add new quotes or change the existing ones. We tried to make this process as easy as it can be, to include also non technician contributors, but if you have any feedback regarding our quotes contribution process, please let us know.
+Daily Routine is the tool for generating meeting quotes for confused IT employees :confused:, and quotes are the core element of our application. To make it more accurate, diverse and topical for IT industry we decided to open our quotes source for contribution :ok_hand:. In below section, you will find guides and rules on how to add new quotes or change the existing ones. We tried to make this process as easy as it can be, to include also non technician contributors, but if you have any feedback regarding our quotes contribution process, please let us know.
 
 So lets go!
 
 **@marek_mollin** please add some instructions how quotes file are constructed, and how the quotes logic works (in short summary nothing really deep, just to allow contribution, even for non tech people)
+
+Please make sure that your quotes **branch** names are correct. Start with type of PR (*quote*) followed by a slash and very short description at the end. For example:
+
+```text
+quote/devops-past-jenkins-image-build
+```
 
 Once you are ready to add your quote to our app, use one of the below pull request templates
 
@@ -71,6 +77,8 @@ Additional comments (optional):
 `Additonal explanation for your quote`
 ```
 
+The maintainers will then review the Quote PR and either merge into master (and then delete that feature branch), or request additional changes. Only do one quote per branch. If you are working on several quotes in parallel, create separate branches for each.
+
 ### :computer: Code contribution
 
 #### Branching strategy
@@ -87,7 +95,7 @@ Only do one feature per branch. If you are working on several things in parallel
 
 Once ready for review, the feature branch should be pushed to this Github repo and a pull request should be raised.
 
-The maintainers will then review the PR and either merge into develop (and then delete that feature branch), or request additional changes.
+The maintainers will then review the PR and either merge into master (and then delete that feature branch), or request additional changes.
 
 Please make sure that your **branch** names are correct. Start with type of PR (*feature/fix/chore*) followed by a slash, followed by Github issue ID and a very short description at the end. For example:
 
