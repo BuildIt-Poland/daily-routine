@@ -6,7 +6,7 @@ import { ADVERBS, ADJECTIVES, NOUNS } from './nicknameParts';
 
 // URL-NICKNAME ENCODING
 
-// domain assumes [0] -> repeating group, [1] -> static group
+// Domain assumes [0] -> repeating group, [1] -> static group
 const DOMAIN = [[ADVERBS, ADVERBS, ADJECTIVES], NOUNS];
 const REPEATL = DOMAIN[0].length;
 
@@ -29,7 +29,7 @@ function reduceEmptyOnNegative(prev, item) {
 
 export function convertToDigits(nickname) {
   const words = nickname.split('-');
-  // reversing twice to "mapRight"
+  // Reversing twice to "mapRight"
   const digits = words
     .reverse()
     .map(getInt)
@@ -40,7 +40,7 @@ export function convertToDigits(nickname) {
 }
 
 export function convertToNickname(digits) {
-  // reversing twice for processing without lazy generators
+  // Reversing twice for processing without lazy generators
   const nickName = digits
     .reverse()
     .map(getWord)

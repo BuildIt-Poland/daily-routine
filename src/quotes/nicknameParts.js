@@ -1,4 +1,5 @@
-// nickname generation parts
+// Nickname generation parts
+
 export const ADVERBS = [
   'neatly',
   'uncleanly',
@@ -24,6 +25,7 @@ export const ADJECTIVES = [
   'dense',
   'feisty'
 ];
+
 export const NOUNS = [
   'boxer',
   'walrus',
