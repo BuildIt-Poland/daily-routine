@@ -68,7 +68,7 @@ workflows:
           requires:
             - lint_and_test
             - cypress/run
-#          filters:
-#            branches:
-#              only:
-#                - master
+          filters:
+            branches:
+              only:
+                - master
