@@ -52,10 +52,7 @@ jobs:
           command: 'npm run build'
       - deploy:
           name: Deploy DailyRoutine to production
-          command: |
-            if [ "${CIRCLE_BRANCH}" == "master" ]; then
-              npm run deploy
-            fi
+          command: npm run deploy
 workflows:
   version: 2
   build_and_test:
