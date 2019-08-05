@@ -16,9 +16,11 @@ jobs:
           command: npm install
       - save_cache:
           paths:
-            - ./node_modules
+            - ~/repo/node_modules
           key: node-v1-{{ .Branch }}-{{ checksum "package-lock.json" }}
-      - run: ls -a
+      - persist_to_workspace:
+          root: .
+          paths: node_modules
       - run: ls -a
   lint_and_test:
     working_directory: ~/repo
@@ -29,10 +31,9 @@ jobs:
       - restore_cache:
           keys:
             - node-v1-{{ .Branch }}-{{ checksum "package-lock.json" }}
+      - attach_workspace:
+          at: ~/repo
       - run: ls -a
-      - run:
-          name: Install Dependencies
-          command: npm install
       - run:
           name: Run Linter
           command: npm run lint
