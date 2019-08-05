@@ -61,13 +61,13 @@ workflows:
   build_and_test:
     jobs:
       - lint_and_test
-#      - cypress/run:
-#          start: npm start
-#          wait-on: 'http://localhost:3000'
+      - cypress/run:
+          start: npm start
+          wait-on: 'http://localhost:3000'
       - deploy:
           requires:
             - lint_and_test
-          filters:
-            branches:
-              only:
-                - master
+#          filters:
+#            branches:
+#              only:
+#                - master
