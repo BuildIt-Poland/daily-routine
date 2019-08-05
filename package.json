@@ -123,7 +123,6 @@
   "jest": {
     "collectCoverageFrom": [
       "src/**/*.{js,jsx}",
-      "!src/e2eConfig.js",
       "!src/index.js",
       "!src/serviceWorker.js",
       "!src/setupTests.js",
