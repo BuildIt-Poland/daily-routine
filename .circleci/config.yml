@@ -18,6 +18,7 @@ jobs:
           paths:
             - ./node_modules
           key: node-v1-{{ .Branch }}-{{ checksum "package-lock.json" }}
+      - run: ls -a
   lint_and_test:
     working_directory: ~/repo
     docker:
@@ -27,6 +28,7 @@ jobs:
       - restore_cache:
           keys:
             - node-v1-{{ .Branch }}-{{ checksum "package-lock.json" }}
+      - run: ls -a
       - run:
           name: Run Linter
           command: npm run lint
