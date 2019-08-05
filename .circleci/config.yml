@@ -13,7 +13,7 @@ jobs:
           command: npm install
       - save_cache:
           paths:
-            - /root/repo/node_modules
+            - ~/repo/node_modules
           key: node-v1-{{ .Branch }}-{{ checksum "package-lock.json" }}
   lint_and_test:
     docker:
