@@ -25,7 +25,7 @@ jobs:
           command: npm run test:ci
       - run:
           name: Install codecov
-          command: npm install -g codecov
+          command: npm install codecov
       - run:
           name: Upload Coverage Report to Codecov
           command: codecov
@@ -67,3 +67,7 @@ workflows:
       - deploy:
           requires:
             - lint_and_test
+          filters:
+            branches:
+              only:
+                - master
