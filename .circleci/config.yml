@@ -1,8 +1,6 @@
 version: 2.1
 orbs:
   cypress: cypress-io/cypress@1.8.0
-commands:
-  e2e: cypress/run
 jobs:
   lint_and_test:
     working_directory: ~/repo
@@ -38,6 +36,7 @@ jobs:
       - persist_to_workspace:
           root: .
           paths: node_modules
+  e2e: cypress/run
   deploy:
     docker:
       - image: mamolli/cypress_awscli
@@ -66,7 +65,7 @@ workflows:
       - deploy:
           requires:
             - lint_and_test
-            - e2e
+            - cypress/e2e
           filters:
             branches:
               only:
