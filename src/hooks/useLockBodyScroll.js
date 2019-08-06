@@ -2,20 +2,17 @@
 // Most of time state of component such as isVisible, isAnimating should be passed
 
 import { useLayoutEffect } from 'react';
-
-function setBodyScroll(overflow) {
-  document.body.style.overflowY = overflow;
-}
+import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
 
 function useLockBodyScroll(shouldLock = false) {
   useLayoutEffect(() => {
     if (shouldLock) {
-      setBodyScroll('hidden');
+      disableBodyScroll();
     } else {
-      setBodyScroll('auto');
+      enableBodyScroll();
     }
 
-    return () => setBodyScroll('auto');
+    return () => clearAllBodyScrollLocks();
   }, [shouldLock]);
 }
 
