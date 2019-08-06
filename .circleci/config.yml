@@ -1,6 +1,8 @@
 version: 2.1
 orbs:
   cypress: cypress-io/cypress@1.8.0
+commands:
+  e2e: cypress/run
 jobs:
   lint_and_test:
     working_directory: ~/repo
@@ -58,13 +60,13 @@ workflows:
   build_and_test:
     jobs:
       - lint_and_test
-      - cypress/run:
+      - e2e:
           start: npm start
           wait-on: 'http://localhost:3000'
       - deploy:
           requires:
             - lint_and_test
-            - cypress/run
+            - e2e
           filters:
             branches:
               only:
