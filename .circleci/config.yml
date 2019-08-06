@@ -2,7 +2,7 @@ version: 2.1
 orbs:
   cypress: cypress-io/cypress@1.8.0
 jobs:
-  lint_and_test:
+  lint_and_unit_test:
     working_directory: ~/repo
     docker:
       - image: circleci/node:10.16.1
@@ -36,7 +36,7 @@ jobs:
       - persist_to_workspace:
           root: .
           paths: node_modules
-  e2e: cypress/run
+  e2e_test: cypress/run
   deploy:
     docker:
       - image: mamolli/cypress_awscli
@@ -58,14 +58,14 @@ workflows:
   version: 2
   build_and_test:
     jobs:
-      - lint_and_test
-      - e2e:
+      - lint_and_unit_test
+      - e2e_test:
           start: npm start
           wait-on: 'http://localhost:3000'
       - deploy:
           requires:
-            - lint_and_test
-            - cypress/e2e
+            - lint_and_unit_test
+            - e2e_test
           filters:
             branches:
               only:
