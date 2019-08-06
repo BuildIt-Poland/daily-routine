@@ -43,7 +43,16 @@ Daily Routine is the tool for generating meeting quotes for confused IT employee
 
 So lets go!
 
-**@marek_mollin** please add some instructions how quotes file are constructed, and how the quotes logic works (in short summary nothing really deep, just to allow contribution, even for non tech people)
+To extend quote collection, edit file: `/src/quotes/quotes.js`
+Inside the file you will notice two types of quotes: `const PREFIX_QUOTES` and `const (DEVOPS|FRONTEND|BACKEND)_QUOTES`.
+**Simply append one of the lists. Please take a look at how sentences are constructed both structurally and grammatically.**
+*You can just append to FRONTEND or perhaps provide new PREFIX, you do not have to keep the lengths of arrays equal.*
+
+Structure of sentences: **`PREFIX_QUOTES(PAST) + (DEVOPS|FRONTEND|BACKEND)_QUOTES(PAST) + PREFIX_QUOTES(FUTURE) + (DEVOPS|FRONTEND|BACKEND)_QUOTES(FUTURE)`**
+
+Grammar of sentences:
+**PREFIX_QUOTES** contain beginings(past) and continuations(future) of the sentences and define the character(brag or confess).
+**(DEVOPS|FRONTEND|BACKEND)_QUOTES** contain actions and objects of actions for a particular role. Past is usually past simple or present perfect, while future is in future simple verb tense.
 
 Please make sure that your quotes **branch** names are correct. Start with type of PR (*quote*) followed by a slash and very short description at the end. For example:
 
