@@ -9,8 +9,11 @@
     "test": "react-scripts test",
     "test:update": "npm test -- --watchAll=false --updateSnapshot",
     "test:ci": "npm test -- --watchAll=false --coverage --runInBand --no-cache",
-    "e2e:dev": "cypress open",
-    "e2e": "cypress run",
+    "e2e:dev": "concurrently 'npm run start' 'npm run cypress:dev'",
+    "e2e": "concurrently 'npm run start' 'npm run cypress'",
+    "cypress:dev": "npm run wait-on-server && cypress open",
+    "cypress": "npm run wait-on-server && cypress run",
+    "wait-on-server": "wait-on http://localhost:3000",
     "eject": "react-scripts eject",
     "lint": "eslint \"src/**/*.js\"",
     "format": "prettier --write \"src/**/*.js\"",
@@ -41,6 +44,7 @@
     "@testing-library/react": "8.0.1",
     "@testing-library/react-hooks": "1.1.0",
     "check-dependencies": "1.1.0",
+    "concurrently": "4.1.1",
     "cypress": "3.4.1",
     "eslint": "5.16.0",
     "eslint-config-prettier": "6.0.0",
@@ -52,7 +56,8 @@
     "prop-types": "15.7.2",
     "react-test-renderer": "16.8.6",
     "serve": "11.1.0",
-    "serve-handler": "6.1.0"
+    "serve-handler": "6.1.0",
+    "wait-on": "3.3.0"
   },
   "eslintConfig": {
     "extends": [
