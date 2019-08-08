@@ -20,16 +20,16 @@ jobs:
       - run:
           name: Install Dependencies
           command: npm install --verbose --prefer-offline
-      - save_cache:
-          paths:
-            - ~/repo/node_modules
-            - ~/repo/.npm
-          key: node-v1-{{ .Branch }}-{{ checksum "package-lock.json" }}
       - persist_to_workspace:
           root: .
           paths:
             - node_modules
             - .npm
+      - save_cache:
+          paths:
+            - ~/repo/node_modules
+            - ~/repo/.npm
+          key: node-v1-{{ .Branch }}-{{ checksum "package-lock.json" }}
   lint_and_unit_test:
     working_directory: ~/repo
     docker:
@@ -42,10 +42,7 @@ jobs:
       - attach_workspace:
           at: ~/repo
       - run:
-          name: 'before deps downloaded'
-          command: 'ls  -a'
-      - run:
-          name: 'after deps downloaded'
+          name: 'node_modules exists?'
           command: 'ls  -a'
       - run:
           name: Run Linter
