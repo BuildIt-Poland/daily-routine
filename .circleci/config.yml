@@ -53,10 +53,11 @@ jobs:
           name: Perform Test Application Build
           command: 'npm run build'
       - aws-s3/sync:
-          from: 'build'
+          from: build
           to: ${S3_BUCKET_PATH}
           arguments: |
-            --acl public-read
+            --acl public-read \
+            --delete
           overwrite: true
 workflows:
   version: 2
