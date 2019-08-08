@@ -55,8 +55,6 @@ jobs:
       - aws-s3/sync:
           from: 'build'
           to: S3_BUCKET_PATH
-          arguments: '--acl public-read'
-          overwrite: true
 workflows:
   version: 2
   build_and_test:
