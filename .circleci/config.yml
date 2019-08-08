@@ -55,7 +55,9 @@ jobs:
       - aws-s3/sync:
           from: 'build'
           to: S3_BUCKET_PATH
-          arguments: '--acl public-read'
+          arguments: |
+            --acl public-read \
+            --cache-control "max-age=86400"
           overwrite: true
 workflows:
   version: 2
