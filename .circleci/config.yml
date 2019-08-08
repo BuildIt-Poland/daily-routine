@@ -52,7 +52,7 @@ jobs:
           command: 'npm run build'
       - save_cache:
           paths:
-            - ~/repo/node_modules
+            - ~/repo/build
           key: node-v1-{{ .Branch }}-{{ checksum "package-lock.json" }}
       - persist_to_workspace:
           root: .
@@ -84,11 +84,11 @@ workflows:
 #      - e2e_test:
 #          start: npm start
 #          wait-on: 'http://localhost:3000'
-#      - build
-      - deploy
-#         requires:
+      - build
+      - deploy:
+         requires:
 #           - lint_and_unit_test
-#            - build
+            - build
 #            - e2e_test
 #          filters:
 #            branches:
