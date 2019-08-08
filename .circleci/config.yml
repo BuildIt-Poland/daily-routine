@@ -12,6 +12,8 @@ jobs:
       - restore_cache:
           keys:
             - node-v1-{{ .Branch }}-{{ checksum "package-lock.json" }}
+      - attach_workspace:
+          at: ~/repo
       - run:
           name: 'before deps downloaded'
           command: 'ls  -a'
