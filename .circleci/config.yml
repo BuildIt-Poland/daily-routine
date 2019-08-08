@@ -112,8 +112,8 @@ workflows:
           requires:
             - install_dependencies
       - e2e_test:
-#          start: npm start
-#          wait-on: 'http://localhost:3000'
+          start: npm start
+          wait-on: 'http://localhost:3000'
       - build:
           requires:
             - install_dependencies
