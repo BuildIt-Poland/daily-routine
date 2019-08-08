@@ -15,6 +15,9 @@ jobs:
       - run:
           name: 'before deps downloaded'
           command: 'ls  -a'
+      - run:
+          name: Install Dependencies
+          command: npm install --verbose --prefer-offline
       - save_cache:
           paths:
             - ~/repo/node_modules
