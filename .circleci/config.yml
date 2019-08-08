@@ -57,6 +57,7 @@ jobs:
           to: S3_BUCKET_PATH
           arguments: |
             --acl public-read \
+            --delete \
             --cache-control "max-age=86400"
 workflows:
   version: 2
