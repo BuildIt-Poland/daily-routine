@@ -61,6 +61,9 @@ jobs:
           root: .
           paths:
             - build
+      - run:
+          name: 'testing'
+          command: 'ls ./build -a'
   build_and_deploy:
     working_directory: ~/repo
     docker:
@@ -74,10 +77,10 @@ jobs:
           at: ~/repo
       - run:
           name: 'testing'
-          command: 'ls -a'
+          command: 'ls ./build -a'
       - aws-s3/sync:
-          from: 'build'
-          to: S3_BUCKET_PATH
+          from: './build'
+          to: '${S3_BUCKET_PATH}'
           arguments: |
             --acl public-read \
             --delete \
