@@ -37,9 +37,6 @@ jobs:
       - persist_to_workspace:
           root: .
           paths: node_modules
-      - run:
-          name: 'testing'
-          command: 'ls -a'
   e2e_test: cypress/run
   build:
     working_directory: ~/repo
@@ -61,10 +58,7 @@ jobs:
           root: .
           paths:
             - build
-      - run:
-          name: 'testing'
-          command: 'ls ./build -a'
-  build_and_deploy:
+  deploy:
     working_directory: ~/repo
     docker:
       - image: 'circleci/python:2.7'
@@ -75,9 +69,6 @@ jobs:
             - node-v1-{{ .Branch }}-{{ checksum "package-lock.json" }}
       - attach_workspace:
           at: ~/repo
-      - run:
-          name: 'testing'
-          command: 'ls ./build -a'
       - aws-s3/sync:
           from: './build'
           to: S3_BUCKET_PATH
@@ -93,11 +84,11 @@ workflows:
 #      - e2e_test:
 #          start: npm start
 #          wait-on: 'http://localhost:3000'
-      - build
-      - build_and_deploy:
+#      - build
+      - deploy:
           requires:
 #           - lint_and_unit_test
-            - build
+#            - build
 #            - e2e_test
 #          filters:
 #            branches:
