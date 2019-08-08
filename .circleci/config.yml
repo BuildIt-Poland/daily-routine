@@ -24,15 +24,9 @@ jobs:
       - run:
           name: 'after deps installed'
           command: 'ls  -a'
-      - persist_to_workspace:
-          root: .
-          paths:
-            - node_modules
-            - .npm
       - save_cache:
           paths:
             - ~/repo/node_modules
-            - ~/repo/.npm
           key: node-v1-{{ .Branch }}-{{ checksum "package-lock.json" }}
       - run:
           name: 'before exit'
@@ -46,8 +40,6 @@ jobs:
       - restore_cache:
           keys:
             - node-v1-{{ .Branch }}-{{ checksum "package-lock.json" }}
-      - attach_workspace:
-          at: ~/repo
       - run:
           name: 'node_modules exists?'
           command: 'ls  -a'
@@ -79,8 +71,6 @@ jobs:
       - restore_cache:
           keys:
             - node-v1-{{ .Branch }}-{{ checksum "package-lock.json" }}
-      - attach_workspace:
-          at: ~/repo
       - run:
           name: 'after restore cache'
           command: 'ls  -a'
