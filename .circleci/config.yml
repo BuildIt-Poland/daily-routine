@@ -41,6 +41,26 @@ jobs:
           name: 'testing'
           command: 'ls -a'
   e2e_test: cypress/run
+  build:
+    working_directory: ~/repo
+    docker:
+      - image: circleci/node:10.16.1
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - node-v1-{{ .Branch }}-{{ checksum "package-lock.json" }}
+      - run:
+          name: Perform Test Application Build
+          command: 'npm run build'
+      - save_cache:
+          paths:
+            - ~/repo/node_modules
+          key: node-v1-{{ .Branch }}-{{ checksum "package-lock.json" }}
+      - persist_to_workspace:
+          root: .
+          paths:
+            - build
   build_and_deploy:
     working_directory: ~/repo
     docker:
@@ -55,9 +75,6 @@ jobs:
       - run:
           name: 'testing'
           command: 'ls -a'
-      - run:
-          name: Perform Test Application Build
-          command: 'npm run build'
       - aws-s3/sync:
           from: 'build'
           to: S3_BUCKET_PATH
@@ -73,9 +90,11 @@ workflows:
 #      - e2e_test:
 #          start: npm start
 #          wait-on: 'http://localhost:3000'
+      - build
       - build_and_deploy:
           requires:
             - lint_and_unit_test
+            - build
 #            - e2e_test
 #          filters:
 #            branches:
