@@ -56,8 +56,7 @@ jobs:
           from: 'build'
           to: ${S3_BUCKET_PATH}
           arguments: |
-            --acl public-read \
-            --delete
+            --acl public-read
           overwrite: true
 workflows:
   version: 2
