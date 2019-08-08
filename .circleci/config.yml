@@ -13,8 +13,14 @@ jobs:
           keys:
             - node-v1-{{ .Branch }}-{{ checksum "package-lock.json" }}
       - run:
+          name: 'before deps downloaded'
+          command: 'ls  -a'
+      - run:
           name: Install Dependencies
           command: npm ci
+      - run:
+          name: 'after deps downloaded'
+          command: 'ls  -a'
       - run:
           name: Run Linter
           command: npm run lint
@@ -44,9 +50,15 @@ jobs:
       - image: circleci/node:10.16.1
     steps:
       - checkout
+      - run:
+          name: 'before restore cache'
+          command: 'ls  -a'
       - restore_cache:
           keys:
             - node-v1-{{ .Branch }}-{{ checksum "package-lock.json" }}
+      - run:
+          name: 'after restore cache'
+          command: 'ls  -a'
       - run:
           name: Perform Test Application Build
           command: 'npm run build'
@@ -64,10 +76,13 @@ jobs:
       - image: 'circleci/python:2.7'
     steps:
       - checkout
+      - run:
+          name: 'before attach workspace'
+          command: 'ls -a'
       - attach_workspace:
           at: ~/repo
       - run:
-          name: 'testing'
+          name: 'after attach workspace'
           command: 'ls ./build -a'
       - aws-s3/sync:
           from: './build'
