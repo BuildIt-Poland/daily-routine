@@ -37,7 +37,7 @@ jobs:
       - persist_to_workspace:
           root: .
           paths: node_modules
-    - run: 'ls -a'
+    - run: ls -a
   e2e_test: cypress/run
   build_and_deploy:
     working_directory: ~/repo
@@ -50,7 +50,7 @@ jobs:
             - node-v1-{{ .Branch }}-{{ checksum "package-lock.json" }}
       - attach_workspace:
           at: ~/repo
-      - run: 'ls -a'
+      - run: ls -a
       - run:
           name: Perform Test Application Build
           command: 'npm run build'
