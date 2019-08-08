@@ -85,8 +85,8 @@ workflows:
 #          start: npm start
 #          wait-on: 'http://localhost:3000'
 #      - build
-      - deploy:
-          requires:
+      - deploy
+#         requires:
 #           - lint_and_unit_test
 #            - build
 #            - e2e_test
