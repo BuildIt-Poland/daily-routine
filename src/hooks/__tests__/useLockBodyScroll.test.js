@@ -1,17 +1,20 @@
 import { renderHook } from '@testing-library/react-hooks';
+import * as bodyScrollLock from 'body-scroll-lock';
 
 import useLockBodyScroll from '../useLockBodyScroll';
 
 describe('HOOK - useLockBodyScroll', () => {
-  it("sets body overflow to 'auto' when falsy flag is passed", () => {
+  it("calls 'enableBodyScroll' when falsy flag is passed", () => {
+    const spy = jest.spyOn(bodyScrollLock, 'enableBodyScroll');
     renderHook(() => useLockBodyScroll(false));
 
-    expect(document.body.style.overflowY).toEqual('auto');
+    expect(spy).toHaveBeenCalledTimes(1);
   });
 
-  it("sets body overflow to 'hidden' when truthy flag is passed", () => {
+  it("calls 'disableBodyScroll' when truthy flag is passed", () => {
+    const spy = jest.spyOn(bodyScrollLock, 'disableBodyScroll');
     renderHook(() => useLockBodyScroll(true));
 
-    expect(document.body.style.overflowY).toEqual('hidden');
+    expect(spy).toHaveBeenCalledTimes(1);
   });
 });

@@ -18,6 +18,7 @@
     "deploy": "node ./deploy.js"
   },
   "dependencies": {
+    "body-scroll-lock": "2.6.4",
     "focus-visible": "5.0.2",
     "lodash.includes": "4.3.0",
     "lodash.isempty": "4.4.0",
