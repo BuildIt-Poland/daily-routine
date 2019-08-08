@@ -89,14 +89,14 @@ workflows:
   version: 2
   build_and_test:
     jobs:
-      - lint_and_unit_test
+#      - lint_and_unit_test
 #      - e2e_test:
 #          start: npm start
 #          wait-on: 'http://localhost:3000'
       - build
       - build_and_deploy:
           requires:
-            - lint_and_unit_test
+#           - lint_and_unit_test
             - build
 #            - e2e_test
 #          filters:
