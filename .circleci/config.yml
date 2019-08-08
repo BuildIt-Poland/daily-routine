@@ -9,17 +9,21 @@ jobs:
       - image: circleci/node:10.16.1
     steps:
       - checkout
+      - run:
+          name: 'before restore cache'
+          command: 'ls  -a'
       - restore_cache:
           keys:
             - node-v1-{{ .Branch }}-{{ checksum "package-lock.json" }}
-      - attach_workspace:
-          at: ~/repo
       - run:
-          name: 'before deps downloaded'
+          name: 'after cache retored'
           command: 'ls  -a'
       - run:
           name: Install Dependencies
           command: npm install --verbose --prefer-offline
+      - run:
+          name: 'after deps installed'
+          command: 'ls  -a'
       - persist_to_workspace:
           root: .
           paths:
@@ -30,6 +34,9 @@ jobs:
             - ~/repo/node_modules
             - ~/repo/.npm
           key: node-v1-{{ .Branch }}-{{ checksum "package-lock.json" }}
+      - run:
+          name: 'before exit'
+          command: 'ls  -a'
   lint_and_unit_test:
     working_directory: ~/repo
     docker:
