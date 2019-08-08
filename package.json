@@ -9,8 +9,11 @@
     "test": "react-scripts test",
     "test:update": "npm test -- --watchAll=false --updateSnapshot",
     "test:ci": "npm test -- --watchAll=false --coverage --runInBand --no-cache",
-    "e2e:dev": "node -e 'require(\"./src/e2eConfig\").e2eRunDev(\"http://localhost:3000\")'",
-    "e2e": "PUBLIC_URL=http://localhost:3000 npm run build && node -e 'require(\"./src/e2eConfig\").e2eRun(\"3000\")'",
+    "e2e:dev": "npm run cypress:dev & npm start",
+    "e2e": "npm run cypress & npm start",
+    "cypress:dev": "npm run wait-on-server && cypress open",
+    "cypress": "npm run wait-on-server && cypress run",
+    "wait-on-server": "wait-on http://localhost:3000",
     "eject": "react-scripts eject",
     "lint": "eslint \"src/**/*.js\"",
     "format": "prettier --write \"src/**/*.js\"",
@@ -53,7 +56,8 @@
     "prop-types": "15.7.2",
     "react-test-renderer": "16.8.6",
     "serve": "11.1.0",
-    "serve-handler": "6.1.0"
+    "serve-handler": "6.1.0",
+    "wait-on": "3.3.0"
   },
   "eslintConfig": {
     "extends": [
@@ -124,7 +128,6 @@
   "jest": {
     "collectCoverageFrom": [
       "src/**/*.{js,jsx}",
-      "!src/e2eConfig.js",
       "!src/index.js",
       "!src/serviceWorker.js",
       "!src/setupTests.js",

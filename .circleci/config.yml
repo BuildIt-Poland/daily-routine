@@ -1,14 +1,19 @@
-version: 2
+version: 2.1
+orbs:
+  cypress: cypress-io/cypress@1.8.0
 jobs:
-  build:
-    docker:
-      - image: mamolli/cypress_awscli
+  lint_and_unit_test:
     working_directory: ~/repo
+    docker:
+      - image: circleci/node:10.16.1
     steps:
       - checkout
+      - restore_cache:
+          keys:
+            - node-v1-{{ .Branch }}-{{ checksum "package-lock.json" }}
       - run:
           name: Install Dependencies
-          command: npm install
+          command: npm ci
       - run:
           name: Run Linter
           command: npm run lint
@@ -20,22 +25,48 @@ jobs:
           command: npm run test:ci
       - run:
           name: Install codecov
-          command: npm install -g codecov
+          command: sudo npm install -g codecov
       - run:
           name: Upload Coverage Report to Codecov
           command: codecov
-      - run:
-          name: Run E2E tests on release ready code
-          command: |
-            if [ "${CIRCLE_BRANCH}" == "master" ]; then
-              npm run e2e
-            fi
+      - save_cache:
+          paths:
+            - ~/repo/node_modules
+          key: node-v1-{{ .Branch }}-{{ checksum "package-lock.json" }}
+      - persist_to_workspace:
+          root: .
+          paths: node_modules
+  e2e_test: cypress/run
+  deploy:
+    docker:
+      - image: mamolli/cypress_awscli
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - restore_cache:
+            keys:
+              - node-v1-{{ .Branch }}-{{ checksum "package-lock.json" }}
+      - attach_workspace:
+          at: ~/repo
       - run:
           name: Perform Test Application Build
           command: 'npm run build'
       - deploy:
           name: Deploy DailyRoutine to production
-          command: |
-            if [ "${CIRCLE_BRANCH}" == "master" ]; then
-              npm run deploy
-            fi
+          command: npm run deploy
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - lint_and_unit_test
+      - e2e_test:
+          start: npm start
+          wait-on: 'http://localhost:3000'
+      - deploy:
+          requires:
+            - lint_and_unit_test
+            - e2e_test
+          filters:
+            branches:
+              only:
+                - master
