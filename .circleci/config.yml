@@ -11,64 +11,49 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - node-v1-{{ .Branch }}-{{ checksum "package-lock.json" }}
+            - npm-deps-{{ checksum "package-lock.json" }}
       - run:
-          name: 'node_modules exists?'
-          command: ls  -a
-      - run:
-          name: 'pwd'
-          command: pwd
+          name: Disable package-lock on CI
+          command: echo -e '\npackage-lock=false' >> .npmrc
       - run:
           name: Install Dependencies
-          command: npm install --prefer-offline
-#      - run:
-#          name: Run Linter
-#          command: npm run lint
-#      - run:
-#          name: Code Formatting Check
-#          command: npm run format:check
-#      - run:
-#          name: Run Unit Tests With Code Coverage
-#          command: npm run test:ci
-#      - run:
-#          name: Install codecov
-#          command: sudo npm install -g codecov
-#      - run:
-#          name: Upload Coverage Report to Codecov
-#          command: codecov
+          command: npm install
+      - run:
+          name: Run Linter
+          command: npm run lint
+      - run:
+          name: Code Formatting Check
+          command: npm run format:check
+      - run:
+          name: Run Unit Tests With Code Coverage
+          command: npm run test:ci
+      - run:
+          name: Install codecov
+          command: sudo npm install -g codecov
+      - run:
+          name: Upload Coverage Report to Codecov
+          command: codecov
       - save_cache:
           paths:
             - node_modules
-          key: node-v1-{{ .Branch }}-{{ checksum "package-lock.json" }}
-      - persist_to_workspace:
-          root: .
-          paths:
-            - node_modules
+          key: npm-deps-{{ checksum "package-lock.json" }}
   e2e_test: cypress/run
-  build:
+  build_app:
     working_directory: ~/repo
     docker:
       - image: circleci/node:10.16.1
     steps:
       - checkout
-      - run:
-          name: 'before restore cache'
-          command: 'ls  -a'
       - restore_cache:
           keys:
-            - node-v1-{{ .Branch }}-{{ checksum "package-lock.json" }}
-      - attach_workspace:
-          at: ~/repo
-      - run:
-          name: 'after restore cache'
-          command: 'ls  -a'
+            - npm-deps-{{ checksum "package-lock.json" }}
       - run:
           name: Perform Test Application Build
           command: 'npm run build'
       - save_cache:
           paths:
             - ~/repo/build
-          key: node-v1-{{ .Branch }}-{{ checksum "package-lock.json" }}
+          key: npm-deps-{{ checksum "package-lock.json" }}
       - persist_to_workspace:
           root: .
           paths:
@@ -79,14 +64,8 @@ jobs:
       - image: 'circleci/python:2.7'
     steps:
       - checkout
-      - run:
-          name: 'before attach workspace'
-          command: 'ls -a'
       - attach_workspace:
           at: ~/repo
-      - run:
-          name: 'after attach workspace'
-          command: 'ls ./build -a'
       - aws-s3/sync:
           from: './build'
           to: '${S3_BUCKET_PATH}'
@@ -99,24 +78,18 @@ workflows:
   ci:
     jobs:
       - lint_and_unit_test
-#      - e2e_test:
-#          start: npm start
-#          wait-on: 'http://localhost:3000'
-#          parallel: true
-#          parallelism: 4
-#      - build:
-#          requires:
-#            - lint_and_unit_test
-##          filters:
-##            branches:
-##              only:
-##                - master
-#      - deploy:
-#         requires:
-#            - lint_and_unit_test
-#            - build
-#            - e2e_test
-##          filters:
-##            branches:
-##              only:
-##                - master
+      - e2e_test:
+          start: npm start
+          wait-on: 'http://localhost:3000'
+      - build_app:
+          requires:
+            - lint_and_unit_test
+      - deploy:
+          requires:
+            - lint_and_unit_test
+            - build_app
+            - e2e_test
+          filters:
+            branches:
+              only:
+                - master
