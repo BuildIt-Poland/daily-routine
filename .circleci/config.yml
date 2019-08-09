@@ -16,9 +16,6 @@ jobs:
           name: Disable package-lock on CI
           command: echo -e '\npackage-lock=false' >> .npmrc
       - run:
-          name: 'node_modules exists?'
-          command: ls  -a
-      - run:
           name: Install Dependencies
           command: npm install
       - run:
@@ -56,17 +53,15 @@ jobs:
           name: Install Dependencies
           command: npm install
       - run:
-          name: Start
+          name: Start local server
           command: npm start
           background: true
-          working_directory: ''
       - run:
           name: Wait-on http://localhost:3000
           command: npx wait-on http://localhost:3000
       - run:
           name: Run Cypress tests
           command: npx cypress run
-          working_directory: ''
       - save_cache:
           paths:
             - node_modules
