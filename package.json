@@ -42,7 +42,7 @@
   },
   "devDependencies": {
     "@testing-library/jest-dom": "4.0.0",
-    "@testing-library/react": "8.0.1",
+    "@testing-library/react": "8.0.9",
     "@testing-library/react-hooks": "1.1.0",
     "check-dependencies": "1.1.0",
     "cypress": "3.4.1",
@@ -54,7 +54,7 @@
     "lint-staged": "8.2.0",
     "prettier": "1.18.2",
     "prop-types": "15.7.2",
-    "react-test-renderer": "16.8.6",
+    "react-test-renderer": "16.9.0",
     "serve": "11.1.0",
     "serve-handler": "6.1.0",
     "wait-on": "3.3.0"
