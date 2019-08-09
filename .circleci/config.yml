@@ -11,7 +11,7 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - npm-deps-v1-{{ .Branch }}-{{ checksum "package-lock.json" }}
+            - npm-deps-v4-{{ checksum "package-lock.json" }}
       - run:
           name: Disable package-lock on CI
           command: echo -e '\npackage-lock=false' >> .npmrc
@@ -39,7 +39,7 @@ jobs:
       - save_cache:
           paths:
             - node_modules
-          key: npm-deps-v1-{{ .Branch }}-{{ checksum "package-lock.json" }}
+          key: npm-deps-v4-{{ checksum "package-lock.json" }}
   e2e_test:
     working_directory: ~/repo
     docker:
@@ -48,13 +48,10 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - npm-deps-v1-{{ .Branch }}-{{ checksum "package-lock.json" }}
+            - npm-deps-v4-{{ checksum "package-lock.json" }}
       - run:
           name: Disable package-lock on CI
           command: echo -e '\npackage-lock=false' >> .npmrc
-      - run:
-          name: 'node_modules exists?'
-          command: ls  -a
       - run:
           name: Install Dependencies
           command: npm install
@@ -68,13 +65,13 @@ jobs:
           command: npx wait-on http://localhost:3000
       - run:
           name: Run Cypress tests
-          command: "npx cypress run \\\n   \\\n   \\\n  "
+          command: npx cypress run
           working_directory: ''
       - save_cache:
           paths:
             - node_modules
             - ~/.cache
-          key: npm-deps-v1-{{ .Branch }}-{{ checksum "package-lock.json" }}
+          key: npm-deps-v4-{{ checksum "package-lock.json" }}
   build_app:
     working_directory: ~/repo
     docker:
@@ -83,14 +80,14 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - npm-deps-v1-{{ .Branch }}-{{ checksum "package-lock.json" }}
+            - npm-deps-v4-{{ checksum "package-lock.json" }}
       - run:
           name: Perform Test Application Build
           command: npm run build
       - save_cache:
           paths:
             - ~/repo/build
-          key: npm-deps-v1-{{ .Branch }}-{{ checksum "package-lock.json" }}
+          key: npm-deps-v4-{{ checksum "package-lock.json" }}
       - persist_to_workspace:
           root: .
           paths:
