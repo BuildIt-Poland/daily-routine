@@ -111,17 +111,17 @@ workflows:
   version: 2
   ci:
     jobs:
-#      - lint_and_unit_test
+      - lint_and_unit_test
       - e2e_test
-#      - build_app:
-#          requires:
-#            - lint_and_unit_test
-#      - deploy:
-#          requires:
-#            - lint_and_unit_test
-#            - build_app
-#            - e2e_test
-#          filters:
-#            branches:
-#              only:
-#                - master
+      - build_app:
+          requires:
+            - lint_and_unit_test
+      - deploy:
+          requires:
+            - lint_and_unit_test
+            - build_app
+            - e2e_test
+          filters:
+            branches:
+              only:
+                - master
