@@ -12,7 +12,7 @@ const StyledButton = styled(RedirectButton)`
 
 function DevOpsButton() {
   return (
-    <StyledButton to={`/${DEV_OPS_ROLE}`} data-testid={`${DEV_OPS_ROLE}-button`}>
+    <StyledButton to={DEV_OPS_ROLE} data-testid={`${DEV_OPS_ROLE}-button`}>
       {DEV_OPS_ROLE_LABEL}
     </StyledButton>
   );

@@ -1,19 +1,29 @@
 import React from 'react';
-import { create } from 'react-test-renderer';
+import { render, cleanup, fireEvent } from '@testing-library/react';
+import { MemoryRouter } from 'react-router-dom';
 
+import { RouteTransitionAnimationContext } from '../../../context/RouteTransitionAnimationContext';
 import RedirectButton from '../RedirectButton';
 
-jest.mock('react-router-dom', () => ({
-  Link: 'Link'
-}));
-jest.mock('../../Icons', () => ({
-  LongArrow: 'LongArrow'
-}));
+afterEach(cleanup);
 
 describe('COMPONENT - RedirectButton', () => {
   it('renders correctly', () => {
-    const component = create(<RedirectButton to="/taylorswift">Taylor Swift</RedirectButton>);
+    const animateAndRedirect = jest.fn();
 
-    expect(component.toJSON()).toMatchSnapshot();
+    const { getByTestId } = render(
+      <MemoryRouter initialEntries={['/']} initialIndex={1}>
+        <RouteTransitionAnimationContext.Provider value={{ animateAndRedirect }}>
+          <RedirectButton to={'taylor-swift'} data-testid="taylors-button">
+            Taylor's Button
+          </RedirectButton>
+        </RouteTransitionAnimationContext.Provider>
+      </MemoryRouter>
+    );
+
+    expect(getByTestId('taylors-button')).toHaveTextContent("Taylor's Button");
+
+    fireEvent.click(getByTestId('taylors-button'));
+    expect(animateAndRedirect).toHaveBeenCalledWith('taylor-swift');
   });
 });

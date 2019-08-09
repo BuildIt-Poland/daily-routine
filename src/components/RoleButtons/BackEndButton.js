@@ -12,7 +12,7 @@ const StyledButton = styled(RedirectButton)`
 
 function BackEndButton() {
   return (
-    <StyledButton to={`/${BACK_END_ROLE}`} data-testid={`${BACK_END_ROLE}-button`}>
+    <StyledButton to={BACK_END_ROLE} data-testid={`${BACK_END_ROLE}-button`}>
       {BACK_END_ROLE_LABEL}
     </StyledButton>
   );

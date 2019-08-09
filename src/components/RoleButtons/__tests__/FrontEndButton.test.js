@@ -3,12 +3,7 @@ import { create } from 'react-test-renderer';
 
 import FrontEndButton from '../FrontEndButton';
 
-jest.mock('react-router-dom', () => ({
-  Link: 'Link'
-}));
-jest.mock('../../Icons', () => ({
-  LongArrow: 'LongArrow'
-}));
+jest.mock('../../RedirectButton', () => 'RedirectButton');
 
 describe('COMPONENT - RoleButtons FrontEndButton', () => {
   it('renders correctly', () => {

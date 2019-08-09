@@ -12,7 +12,7 @@ const StyledButton = styled(RedirectButton)`
 
 function FrontEndButton() {
   return (
-    <StyledButton to={`/${FRONT_END_ROLE}`} data-testid={`${FRONT_END_ROLE}-button`}>
+    <StyledButton to={FRONT_END_ROLE} data-testid={`${FRONT_END_ROLE}-button`}>
       {FRONT_END_ROLE_LABEL}
     </StyledButton>
   );

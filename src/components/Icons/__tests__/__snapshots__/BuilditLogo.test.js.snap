@@ -4,6 +4,7 @@ exports[`COMPONENT - Icons BuilditLogo renders correctly 1`] = `
 <svg
   aria-labelledby="buildit-logo-title"
   height="12"
+  role="img"
   viewBox="0 0 42 12"
   width="42"
   xmlns="http://www.w3.org/2000/svg"
