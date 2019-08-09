@@ -11,7 +11,7 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - npm-deps-v2-{{ checksum "package-lock.json" }}
+            - npm-deps-v1-{{ .Branch }}-{{ checksum "package-lock.json" }}
       - run:
           name: Disable package-lock on CI
           command: echo -e '\npackage-lock=false' >> .npmrc
@@ -39,7 +39,7 @@ jobs:
       - save_cache:
           paths:
             - node_modules
-          key: npm-deps-v1-{{ checksum "package-lock.json" }}
+          key: npm-deps-v1-{{ .Branch }}-{{ checksum "package-lock.json" }}
   e2e_test:
     working_directory: ~/repo
     docker:
@@ -48,7 +48,7 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - npm-deps-v1-{{ checksum "package-lock.json" }}
+            - npm-deps-v1-{{ .Branch }}-{{ checksum "package-lock.json" }}
       - run:
           name: Disable package-lock on CI
           command: echo -e '\npackage-lock=false' >> .npmrc
@@ -74,7 +74,7 @@ jobs:
           paths:
             - node_modules
             - ~/.cache
-          key: npm-deps-v1-{{ checksum "package-lock.json" }}
+          key: npm-deps-v1-{{ .Branch }}-{{ checksum "package-lock.json" }}
   build_app:
     working_directory: ~/repo
     docker:
@@ -83,14 +83,14 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - npm-deps-v1-{{ checksum "package-lock.json" }}
+            - npm-deps-v1-{{ .Branch }}-{{ checksum "package-lock.json" }}
       - run:
           name: Perform Test Application Build
           command: npm run build
       - save_cache:
           paths:
             - ~/repo/build
-          key: npm-deps-v1-{{ checksum "package-lock.json" }}
+          key: npm-deps-v1-{{ .Branch }}-{{ checksum "package-lock.json" }}
       - persist_to_workspace:
           root: .
           paths:
@@ -114,7 +114,7 @@ workflows:
   version: 2
   ci:
     jobs:
-      - lint_and_unit_test
+#      - lint_and_unit_test
       - e2e_test
 #      - build_app:
 #          requires:
