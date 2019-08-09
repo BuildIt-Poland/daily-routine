@@ -11,7 +11,7 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - npm-deps-{{ checksum "package-lock.json" }}
+            - npm-deps-v1-{{ checksum "package-lock.json" }}
       - run:
           name: Disable package-lock on CI
           command: echo -e '\npackage-lock=false' >> .npmrc
