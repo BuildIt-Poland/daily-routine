@@ -81,6 +81,7 @@ workflows:
       - e2e_test:
           start: npm start
           wait-on: http://localhost:3000
+          cache-key: npm-deps-v1-{{ checksum "package-lock.json" }}
       - build_app:
           requires:
             - lint_and_unit_test
