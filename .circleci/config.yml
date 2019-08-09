@@ -46,14 +46,14 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - npm-deps-{{ checksum "package-lock.json" }}
+            - npm-deps-v1-{{ checksum "package-lock.json" }}
       - run:
           name: Perform Test Application Build
           command: 'npm run build'
       - save_cache:
           paths:
             - ~/repo/build
-          key: npm-deps-{{ checksum "package-lock.json" }}
+          key: npm-deps-v1-{{ checksum "package-lock.json" }}
       - persist_to_workspace:
           root: .
           paths:
