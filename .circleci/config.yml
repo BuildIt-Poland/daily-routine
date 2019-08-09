@@ -12,6 +12,8 @@ jobs:
       - restore_cache:
           keys:
             - node-v1-{{ .Branch }}-{{ checksum "package-lock.json" }}
+            - node-v1-{{ .Branch }}-
+            - node-v1-
       - run:
           name: 'node_modules exists?'
           command: ls  -a
@@ -36,14 +38,14 @@ jobs:
 #      - run:
 #          name: Upload Coverage Report to Codecov
 #          command: codecov
+      - save_cache:
+          paths:
+            - node_modules
+          key: node-v1-{{ .Branch }}-{{ checksum "package-lock.json" }}
       - persist_to_workspace:
           root: .
           paths:
             - node_modules
-      - save_cache:
-          paths:
-            - ~/repo/node_modules
-          key: node-v1-{{ .Branch }}-{{ checksum "package-lock.json" }}
   e2e_test: cypress/run
   build:
     working_directory: ~/repo
