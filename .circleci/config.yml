@@ -1,6 +1,7 @@
 version: 2.1
 orbs:
   cypress: cypress-io/cypress@1.8.0
+  aws-s3: circleci/aws-s3@1.0.11
 jobs:
   lint_and_unit_test:
     working_directory: ~/repo
@@ -10,10 +11,13 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - node-v1-{{ .Branch }}-{{ checksum "package-lock.json" }}
+            - npm-deps-v1-{{ checksum "package-lock.json" }}
+      - run:
+          name: Disable package-lock on CI
+          command: echo -e '\npackage-lock=false' >> .npmrc
       - run:
           name: Install Dependencies
-          command: npm ci
+          command: npm install
       - run:
           name: Run Linter
           command: npm run lint
@@ -31,40 +35,59 @@ jobs:
           command: codecov
       - save_cache:
           paths:
-            - ~/repo/node_modules
-          key: node-v1-{{ .Branch }}-{{ checksum "package-lock.json" }}
-      - persist_to_workspace:
-          root: .
-          paths: node_modules
+            - node_modules
+          key: npm-deps-v1-{{ checksum "package-lock.json" }}
   e2e_test: cypress/run
-  deploy:
-    docker:
-      - image: mamolli/cypress_awscli
+  build_app:
     working_directory: ~/repo
+    docker:
+      - image: circleci/node:10.16.1
     steps:
       - checkout
       - restore_cache:
-            keys:
-              - node-v1-{{ .Branch }}-{{ checksum "package-lock.json" }}
-      - attach_workspace:
-          at: ~/repo
+          keys:
+            - npm-deps-v1-{{ checksum "package-lock.json" }}
       - run:
           name: Perform Test Application Build
           command: npm run build
-      - deploy:
-          name: Deploy DailyRoutine to production
-          command: npm run deploy
+      - save_cache:
+          paths:
+            - ~/repo/build
+          key: npm-deps-v1-{{ checksum "package-lock.json" }}
+      - persist_to_workspace:
+          root: .
+          paths:
+            - build
+  deploy:
+    working_directory: ~/repo
+    docker:
+      - image: circleci/python:2.7
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/repo
+      - aws-s3/sync:
+          from: ./build
+          to: '${S3_BUCKET_PATH}'
+          arguments: |
+            --acl public-read \
+            --delete \
+            --cache-control 'max-age=86400'
 workflows:
   version: 2
-  build_and_test:
+  ci:
     jobs:
       - lint_and_unit_test
       - e2e_test:
           start: npm start
-          wait-on: 'http://localhost:3000'
+          wait-on: http://localhost:3000
+      - build_app:
+          requires:
+            - lint_and_unit_test
       - deploy:
           requires:
             - lint_and_unit_test
+            - build_app
             - e2e_test
           filters:
             branches:

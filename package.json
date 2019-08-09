@@ -17,8 +17,7 @@
     "eject": "react-scripts eject",
     "lint": "eslint \"src/**/*.js\"",
     "format": "prettier --write \"src/**/*.js\"",
-    "format:check": "prettier --list-different \"src/**/*.js\"",
-    "deploy": "node ./deploy.js"
+    "format:check": "prettier --list-different \"src/**/*.js\""
   },
   "dependencies": {
     "body-scroll-lock": "2.6.4",
