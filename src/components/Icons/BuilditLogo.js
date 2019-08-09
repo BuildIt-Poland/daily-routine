@@ -7,6 +7,7 @@ function BuilditLogo() {
       width="42"
       height="12"
       viewBox="0 0 42 12"
+      role="img"
       aria-labelledby="buildit-logo-title"
     >
       <title id="buildit-logo-title">buildit @ wipro digital</title>
