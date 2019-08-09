@@ -21,21 +21,21 @@ jobs:
       - run:
           name: Install Dependencies
           command: npm install --prefer-offline
-      - run:
-          name: Run Linter
-          command: npm run lint
-      - run:
-          name: Code Formatting Check
-          command: npm run format:check
-      - run:
-          name: Run Unit Tests With Code Coverage
-          command: npm run test:ci
-      - run:
-          name: Install codecov
-          command: sudo npm install -g codecov
-      - run:
-          name: Upload Coverage Report to Codecov
-          command: codecov
+#      - run:
+#          name: Run Linter
+#          command: npm run lint
+#      - run:
+#          name: Code Formatting Check
+#          command: npm run format:check
+#      - run:
+#          name: Run Unit Tests With Code Coverage
+#          command: npm run test:ci
+#      - run:
+#          name: Install codecov
+#          command: sudo npm install -g codecov
+#      - run:
+#          name: Upload Coverage Report to Codecov
+#          command: codecov
       - persist_to_workspace:
           root: .
           paths:
