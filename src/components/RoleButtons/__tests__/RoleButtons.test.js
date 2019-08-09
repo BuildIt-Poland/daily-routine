@@ -2,7 +2,7 @@ import React from 'react';
 import { render, cleanup, fireEvent } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 
-import RoleButtons from '../RoleButtons';
+import { ROOT_PATH } from '../../../constants/routes';
 import { RouteTransitionAnimationContext } from '../../../context/RouteTransitionAnimationContext';
 import {
   BACK_END_ROLE,
@@ -12,7 +12,7 @@ import {
   FRONT_END_ROLE,
   FRONT_END_ROLE_LABEL
 } from '../../../constants/roles';
-import { ROOT_PATH } from '../../../constants/routes';
+import RoleButtons from '../RoleButtons';
 
 describe('COMPONENT - RoleButtons', () => {
   const animateAndRedirect = jest.fn();

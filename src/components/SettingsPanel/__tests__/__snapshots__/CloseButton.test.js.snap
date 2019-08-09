@@ -33,7 +33,7 @@ exports[`COMPONENT - SettingsPanel CloseButton renders correctly 1`] = `
 }
 
 <button
-  aria-label="Close"
+  aria-label="Close settings"
   className="c0"
   data-testid="close-button"
 >

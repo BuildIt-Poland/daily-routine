@@ -50,7 +50,7 @@ jobs:
           at: ~/repo
       - run:
           name: Perform Test Application Build
-          command: 'npm run build'
+          command: npm run build
       - deploy:
           name: Deploy DailyRoutine to production
           command: npm run deploy

@@ -3,12 +3,7 @@ import { create } from 'react-test-renderer';
 
 import DevOpsButton from '../DevOpsButton';
 
-jest.mock('react-router-dom', () => ({
-  Link: 'Link'
-}));
-jest.mock('../../Icons', () => ({
-  LongArrow: 'LongArrow'
-}));
+jest.mock('../../RedirectButton', () => 'RedirectButton');
 
 describe('COMPONENT - RoleButtons DevOpsButton', () => {
   it('renders correctly', () => {
