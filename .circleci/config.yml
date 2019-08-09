@@ -49,7 +49,7 @@ jobs:
             - npm-deps-v1-{{ checksum "package-lock.json" }}
       - run:
           name: Perform Test Application Build
-          command: 'npm run build'
+          command: npm run build
       - save_cache:
           paths:
             - ~/repo/build
@@ -67,7 +67,7 @@ jobs:
       - attach_workspace:
           at: ~/repo
       - aws-s3/sync:
-          from: './build'
+          from: ./build
           to: '${S3_BUCKET_PATH}'
           arguments: |
             --acl public-read \
@@ -80,7 +80,7 @@ workflows:
       - lint_and_unit_test
       - e2e_test:
           start: npm start
-          wait-on: 'http://localhost:3000'
+          wait-on: http://localhost:3000
       - build_app:
           requires:
             - lint_and_unit_test
