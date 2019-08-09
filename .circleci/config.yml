@@ -61,7 +61,7 @@ jobs:
   deploy:
     working_directory: ~/repo
     docker:
-      - image: 'circleci/python:2.7'
+      - image: circleci/python:2.7
     steps:
       - checkout
       - attach_workspace:
