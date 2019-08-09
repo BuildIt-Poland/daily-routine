@@ -3,34 +3,6 @@ orbs:
   cypress: cypress-io/cypress@1.8.0
   aws-s3: circleci/aws-s3@1.0.11
 jobs:
-  install_dependencies:
-    working_directory: ~/repo
-    docker:
-      - image: circleci/node:10.16.1
-    steps:
-      - checkout
-      - run:
-          name: 'before restore cache'
-          command: 'ls  -a'
-      - restore_cache:
-          keys:
-            - node-v1-{{ .Branch }}-{{ checksum "package-lock.json" }}
-      - run:
-          name: 'after cache retored'
-          command: 'ls  -a'
-      - run:
-          name: Install Dependencies
-          command: npm install --verbose --prefer-offline
-      - run:
-          name: 'after deps installed'
-          command: 'ls  -a'
-      - save_cache:
-          paths:
-            - ~/repo/node_modules
-          key: node-v1-{{ .Branch }}-{{ checksum "package-lock.json" }}
-      - run:
-          name: 'before exit'
-          command: 'ls  -a'
   lint_and_unit_test:
     working_directory: ~/repo
     docker:
@@ -43,6 +15,9 @@ jobs:
       - run:
           name: 'node_modules exists?'
           command: 'ls  -a'
+      - run:
+          name: Install Dependencies
+          command: npm install --prefer-offline
       - run:
           name: Run Linter
           command: npm run lint
@@ -58,6 +33,14 @@ jobs:
       - run:
           name: Upload Coverage Report to Codecov
           command: codecov
+      - persist_to_workspace:
+          root: .
+          paths:
+            - node_modules
+      - save_cache:
+          paths:
+            - ~/repo/node_modules
+          key: node-v1-{{ .Branch }}-{{ checksum "package-lock.json" }}
   e2e_test: cypress/run
   build:
     working_directory: ~/repo
@@ -71,6 +54,8 @@ jobs:
       - restore_cache:
           keys:
             - node-v1-{{ .Branch }}-{{ checksum "package-lock.json" }}
+      - attach_workspace:
+          at: ~/repo
       - run:
           name: 'after restore cache'
           command: 'ls  -a'
@@ -108,18 +93,19 @@ jobs:
             --cache-control 'max-age=86400'
 workflows:
   version: 2
-  build_and_test:
+  ci:
     jobs:
-      - install_dependencies
-      - lint_and_unit_test:
-          requires:
-            - install_dependencies
+      - lint_and_unit_test
       - e2e_test:
           start: npm start
           wait-on: 'http://localhost:3000'
       - build:
           requires:
-            - install_dependencies
+            - lint_and_unit_test
+#          filters:
+#            branches:
+#              only:
+#                - master
       - deploy:
          requires:
             - lint_and_unit_test
