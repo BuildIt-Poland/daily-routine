@@ -34,6 +34,7 @@ export function getQuoteFromID(role, action, quoteID) {
 }
 
 export function getRandomQuoteID(role, action) {
+  // eslint-disable-next-line
   const [_, quoteID] = getRandomQuoteAndID(role, action);
 
   return convertToNickname(quoteID);
