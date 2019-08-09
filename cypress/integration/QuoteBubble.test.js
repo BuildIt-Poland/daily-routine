@@ -29,7 +29,7 @@ describe('QuoteBubble', () => {
     });
   });
 
-  // FIXME: Skipped - fails locally:
+  // TODO Skipped, fails locally @michaelmoney
   // Stuck on confirmation modal triggered by clicking on copy button
   xdescribe('when Copy-to-clipboard button is clicked ', () => {
     it('should show notification', () => {
