@@ -7,7 +7,7 @@
 
 Check the [live version of Daily Routine](https://dailyroutine.buildit.digital/) app!
 
-## Getting started
+# Getting started
 
 A few easy steps to set up a project:
 
@@ -26,7 +26,7 @@ Other scripts which could be helpful:
 * `npm run test:update` - updates all tests' snapshots from scratch
 * `npm run format` - formats whole codebase with prettier
 
-## Contributing
+# Contributing
 
 We welcome all forms of **contribution**! Whether you have a specific fix :wrench: or feature in mind, or maybe just want to help out – we'd love to hear from you! :muscle:
 
@@ -36,13 +36,13 @@ Please direct all bug reports :bug:, feature requests :pray: or other feedback t
 
 If you want to make **code contribution**, please follow the [code contribution guidelines](#computer-code-contribution) :computer:.
 
-### :loudspeaker: Quotes contribution
+## :loudspeaker: Quotes contribution
 
 Quotes are the *core* component of our application. There are a few general rules on how to add new quotes or change the existing ones.
 
 All quotes are located in [/src/quotes/quotes.js](https://github.com/BuildIt-Poland/daily-routine/blob/master/src/quotes/quotes.js) file.
 
-#### Sentences structure and grammar
+### Sentences structure and grammar
 
 Typical quote structure: **`PREFIX_QUOTES[ACTION][PAST] + (DEVOPS|FRONTEND|BACKEND)_QUOTES[PAST] + PREFIX_QUOTES[ACTION][FUTURE] + (DEVOPS|FRONTEND|BACKEND)_QUOTES[FUTURE]`**
 
@@ -51,7 +51,7 @@ There are two types of quotes:
 * `PREFIX_QUOTES` – generic beginning of the sentence in *past* or *future* tense, related to *action* each character could take (`BRAG` and `CONFESS`)
 * `(DEVOPS|FRONTEND|BACKEND)_QUOTES` – essence of the quote, full of technical jargon for particular *role* (`DEVOPS`, `FRONTEND` or `BACKEND`); past is usually *past simple* or *present perfect*, while future is in *future simple*
 
-#### Adding new quote
+### Adding new quote
 
 **Simply append new quote to the lists. You do not have to keep the lengths of the arrays equal!**
 
@@ -71,15 +71,15 @@ Accurately describes devops existential crisys.
 
 Quote PR will be reviewed and either merged into `master`, or additional changes will be requested. Only do one quote per branch. If you are working on several quotes in parallel, create separate branches for each.
 
-#### Quotes merge rules
+### Quotes merge rules
 
 * every contributor can vote with 👍 or 👎
 * quote *pull request* needs at least 51% of 👍 votes to be merged
 * pull request will be approved and merged after successful voting ✅
 
-### :computer: Code contribution
+## :computer: Code contribution
 
-#### Branching strategy
+### Branching strategy
 
 The `master` branch always holds the most recent code and should always be in a releasable state.
 
@@ -89,7 +89,7 @@ Contributors making changes or adding new features should always create a **feat
 
 Do only one feature per branch.
 
-#### Adding feature / bugfix
+### Adding feature / bugfix
 
 Start by creating a [GitHub issue](https://github.com/BuildIt-Poland/daily-routine/issues) with an overview of proposed changes / bug fixes.
 
@@ -115,7 +115,7 @@ Added various robot character expressions
 - [x] Configured brag and confess routes for backend
 ```
 
-#### Coding style
+### Coding style
 
 Few simple rules (prettier and linter takes care of the rest):
 
