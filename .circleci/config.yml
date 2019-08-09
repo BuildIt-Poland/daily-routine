@@ -14,8 +14,10 @@ jobs:
             - node-v1-{{ .Branch }}-{{ checksum "package-lock.json" }}
       - run:
           name: 'node_modules exists?'
-          command: |
-            ls  -a  \ pwd \ ls node_modules -a
+          command: ls  node_modules -a
+      - run:
+          name: 'pwd'
+          command: pwd
       - run:
           name: Install Dependencies
           command: npm install --prefer-offline
