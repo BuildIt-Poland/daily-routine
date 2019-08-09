@@ -1,25 +1,34 @@
-PR template for features/fixes:
-# [JIRAID / FIX](https://digitalrig.atlassian.net/browse/DR-XX) Feature / Fix name
+Template for feature / bug fix:
 
-# Description 
-[Screenshoot if anything to show]
-Please include a summary of the change and which issue is fixed. Please also include relevant motivation and context. List any dependencies that are required for this change.
+# [GitHub Issue ID](https://github.com/BuildIt-Poland/daily-routine/issues/ISSUE-ID) Feature / fix name
 
-## Checklist:
+## Description 
+[Screenshoot, if anything to show]
+Please include a summary of the change. Please also include relevant motivation and context. List any dependencies that are required for this change.
+
+## Checklist
 - [ ] Relevant Checklist
 
------------------------------------------------------
+---
 
-PR template for role quotes:
-[DevOps/BackEnd/FrontEnd] #QUOTE_ID
+Template for prefix quote:
 
-# Quote
-```
-Please include full role quote
-```
+# [QUOTE] BRAG/CONFESS PAST/FUTURE
 
-## Merge rules
+## Quote
+`Please include full prefix quote`
 
-- Every contributor can vote with :thumbsup: or :thumbsdown: for role quotes
-- Quote pull request needs to have at lest 51% of :thumbsup: votes to be merged
-- Pull Request will be approved after successful voting :white_check_mark:
+## Additional comments (optional)
+Additonal explanation
+
+---
+
+Template for role quote:
+
+# [QUOTE] DEVOPS/BACKEND/FRONTEND PAST/FUTURE
+
+## Quote
+`Please include full role quote`
+
+## Additional comments (optional)
+Additonal explanation

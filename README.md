@@ -7,7 +7,7 @@
 
 Check the [live version of Daily Routine](https://dailyroutine.buildit.digital/) app!
 
-## Getting started
+# Getting started
 
 A few easy steps to set up a project:
 
@@ -26,121 +26,105 @@ Other scripts which could be helpful:
 * `npm run test:update` - updates all tests' snapshots from scratch
 * `npm run format` - formats whole codebase with prettier
 
-## Contributing
+# Contributing
 
-We welcome all forms of contribution! Bugs reports :bug:, feedback and feature requests :pray: can be just as valuable as code contributions!
+We welcome all forms of **contribution**! Whether you have a specific fix :wrench: or feature in mind, or maybe just want to help out – we'd love to hear from you! :muscle:
 
-Please direct all bug reports :bug:, feature requests :pray: or other feedback to project **Github Issues**. This allows the Daily Routine maintainers to effectively review, triage and prioritise any incoming work.
+Please direct all bug reports :bug:, feature requests :pray: or other feedback to project's [GitHub issues](https://github.com/BuildIt-Poland/daily-routine/issues). This allows us to effectively review, triage and prioritise any incoming work.
 
-If you want to make code contributions, please follow the code contribution process :computer:. Whether you have a specific fix :wrench: or feature in mind already, or if you have spare time and just want to help out - we'd love to hear from you! :muscle:
+*Daily Routine* is a collection of absurd and funny, yet still realistic quotes. The more quotes, the better experience – let your imagination go wild! For **quotes contributions**, please follow the [quotes contribution guidelines](#loudspeaker-quotes-contribution) :loudspeaker:. 
 
-If you want to make quotes contributions, please follow the quotes contribution process. Daily routine is a collection of absurd and funny, but still realistic quotes. The bigger amount of quotes, the better experience will be – let your imagination go wild! :dizzy:
+If you want to make **code contribution**, please follow the [code contribution guidelines](#computer-code-contribution) :computer:.
 
+## :loudspeaker: Quotes contribution
 
-### :loudspeaker: Quotes contribution
+Quotes are the *core* component of our application. There are a few general rules on how to add new quotes or change the existing ones.
 
-Daily Routine is the tool for generating meeting quotes for confused IT employees :confused:, and quotes are the core element of our application. To make it more accurate, diverse and topical for IT industry we decided to open our quotes source for contribution :ok_hand:. In below section, you will find guides and rules on how to add new quotes or change the existing ones. We tried to make this process as easy as we could, to allow contribution also for non tech people. If you have any feedback regarding our quotes contribution process, please let us know.
+All quotes are located in [/src/quotes/quotes.js](https://github.com/BuildIt-Poland/daily-routine/blob/master/src/quotes/quotes.js) file.
 
-So lets go!
+### Sentences structure and grammar
 
-To extend quote collection, edit file: `/src/quotes/quotes.js`
-Inside the file you will notice two types of quotes: `const PREFIX_QUOTES` and `const (DEVOPS|FRONTEND|BACKEND)_QUOTES`.
-**Simply append one of the lists. Please take a look at how sentences are constructed both structurally and grammatically.**
-*You can just append to FRONTEND or perhaps provide new PREFIX, you do not have to keep the lengths of arrays equal.*
+Typical quote structure: **`PREFIX_QUOTES[ACTION][PAST] + (DEVOPS|FRONTEND|BACKEND)_QUOTES[PAST] + PREFIX_QUOTES[ACTION][FUTURE] + (DEVOPS|FRONTEND|BACKEND)_QUOTES[FUTURE]`**
 
-Structure of sentences: **`PREFIX_QUOTES(PAST) + (DEVOPS|FRONTEND|BACKEND)_QUOTES(PAST) + PREFIX_QUOTES(FUTURE) + (DEVOPS|FRONTEND|BACKEND)_QUOTES(FUTURE)`**
+There are two types of quotes:
 
-Grammar of sentences:
-**PREFIX_QUOTES** contain beginings(past) and continuations(future) of the sentences and define the character(brag or confess).
-**(DEVOPS|FRONTEND|BACKEND)_QUOTES** contain actions and objects of actions for a particular role. Past is usually past simple or present perfect, while future is in future simple verb tense.
+* `PREFIX_QUOTES` – generic beginning of the sentence in *past* or *future* tense, related to *action* each character could take (`BRAG` and `CONFESS`)
+* `(DEVOPS|FRONTEND|BACKEND)_QUOTES` – essence of the quote, full of technical jargon for particular *role* (`DEVOPS`, `FRONTEND` or `BACKEND`); past is usually *past simple* or *present perfect*, while future is in *future simple*
 
-Please make sure that your quotes **branch** names are correct. Start with type of PR (*quote*) followed by a slash and very short description at the end. For example:
+### Adding new quote
 
-```text
-quote/devops-past-jenkins-image-build
-```
+**Simply append new quote to the lists. You do not have to keep the lengths of the arrays equal!**
 
-Once you are ready to add your quote to our app, use one of the below pull request templates
+Please make sure that your quote **branch** is named correctly. Start with type of PR (*quote*) followed by a slash and very short description at the end. For instance: `quote/devops-past-jenkins-image-build`.
 
-For Prefix Quote:
+Once you are ready to issue *pull request*, use [appropriate PR template](https://github.com/BuildIt-Poland/daily-routine/blob/master/.github/pull_request_template.md). For example:
 
 ```text
-[QUOTE] PREFIX BRAG/CONFESS PAST/FUTURE
+# [QUOTE] DEVOPS PAST
 
-Quote:
-`Sadly yesterday I have not`
-
-Additional comments (optional):
-`Additonal explanation for your quote`
-```
-
-For Roles Quote:
-
-```text
-[QUOTE] ROLE DEVOPS/BACKEND/FRONTEND PAST/FUTURE
-
-Quote:
+## Quote
 `completed fixing ingress path aliasing in periodically scheduled jobs.`
 
-Additional comments (optional):
-`Additonal explanation for your quote`
+## Additional comments (optional)
+Accurately describes devops existential crisys.
 ```
 
-The maintainers will then review the Quote PR and either merge into master (and then delete that feature branch), or request additional changes. Only do one quote per branch. If you are working on several quotes in parallel, create separate branches for each.
+Quote PR will be reviewed and either merged into `master`, or additional changes will be requested. Only do one quote per branch. If you are working on several quotes in parallel, create separate branches for each.
 
-### :computer: Code contribution
+### Quotes merge rules
 
-#### Branching strategy
+* every contributor can vote with 👍 or 👎
+* quote *pull request* needs at least 51% of 👍 votes to be merged
+* pull request will be approved and merged after successful voting ✅
 
-The `master` branch always holds the most recent code and should always be in a releasable state (i.e. all commits that get merged into master have build cleanly, pass tests and have been peer-reviewed).
+## :computer: Code contribution
 
-Our build and deploy pipeline is configured to automatically build every commit on the master branch and deploy it to production. :white_check_mark:
+### Branching strategy
 
-Contributors making changes or adding new features should always create a feature branch off of the current **HEAD** of master. These are short-lived branches that are deleted once the feature is complete and has been merged.
+The `master` branch always holds the most recent code and should always be in a releasable state.
 
-Only do one feature per branch. If you are working on several things in parallel, create separate branches for each.
+Our build and deploy pipeline is configured to automatically build every commit on the `master` branch and deploy it to production. :white_check_mark:
 
-#### Issuing PR
+Contributors making changes or adding new features should always create a **feature branch** off of the current `HEAD` of `master`. These are short-lived branches that are deleted once the feature is complete and has been merged.
 
-Once ready for review, the feature branch should be pushed to this Github repo and a pull request should be raised.
+Do only one feature per branch.
 
-The maintainers will then review the PR and either merge into master (and then delete that feature branch), or request additional changes.
+### Adding feature / bugfix
 
-Please make sure that your **branch** names are correct. Start with type of PR (*feature/fix/chore*) followed by a slash, followed by Github issue ID and a very short description at the end. For example:
+Start by creating a [GitHub issue](https://github.com/BuildIt-Poland/daily-routine/issues) with an overview of proposed changes / bug fixes.
 
-```text
-feature-107/robot-expressions
+Once ready for review, push feature branch and raise *pull request*.
+
+Please make sure that your **branch** name is correct. Start with type of PR (*feature/fix/chore*) followed by a slash, followed by *GitHub issue ID* and a very short description at the end. For example: `feature-107/robot-expressions`.
+
+For the *pull request* title use **GitHub ID** in brackets followed by short description: `[107] Robot expressions`. Put short summary of your contribution in a description field, complete checklist and in case of *components* attach an example screenshot. For instance:
+
 ```
+# [107](https://github.com/BuildIt-Poland/daily-routine/issues/107) Robot expressions
 
-For the *pull request* title use **Github ID** in brackets followed by short description: `[107] Robot expressions`. Put short summary of your contribution in PR's description field, add link to the Github issue, checklist, and in case of *components* attach an example screenshot. For example:
+## Description
+Added various robot character expressions
 
-```
-[107](https://github.com/BuildIt-Poland/daily-routine/issues/107) Example Pull Request
+## Screenshots
+![uber-robot.jpg](`example screenshoot URL`)
 
-# Description
-Short pull request summary
-
-# Screenshots:
-![Screenshot 2019-06-14 at 15 52 50](`Example screenshoot URL`)
-
-# Checklist
+## Checklist
 - [x] Created robot sad, confused and confident poses
 - [x] Robot could be female too
 - [x] Added common types and constants for gender and character moods
 - [x] Configured brag and confess routes for backend
-- [x] Added start:build script to test production version locally
 ```
 
-#### Coding style
+### Coding style
 
-Please follow a few simple rules (prettier and linter takes care of the rest):
+Few simple rules (prettier and linter takes care of the rest):
 
 * use regular **function()** instead of **arrow functions** at the top level (applies for functional components as well)
 * use **arrow functions** for anonymous functions
 * for targeting components directly in tests (e2e and unit) use **data-testid** property, for example: `<button data-testid="forontend-role-button">Front End Developer</button>`
 * follow TODO comments with @ symbol and your GitHub handle, for instance: `// TODO Implement something important @myhandle`
 * separate external and internal imports with new line
-* keep your imports order correct -- the higher a file is in directory structure, the higher on the list it should be:
+* keep your imports order correct – the higher a file is in directory structure, the higher on the list it should be:
 
 ```js
 import React from 'react';
