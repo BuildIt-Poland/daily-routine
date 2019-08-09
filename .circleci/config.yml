@@ -1,6 +1,4 @@
 version: 2.1
-orbs:
-  cypress: cypress-io/cypress@1.8.0
   aws-s3: circleci/aws-s3@1.0.11
 jobs:
   lint_and_unit_test:
@@ -53,14 +51,14 @@ jobs:
           name: Install Dependencies
           command: npm install
       - run:
-          name: Start local server
+          name: Start Local Server
           command: npm start
           background: true
       - run:
           name: Wait-on http://localhost:3000
           command: npx wait-on http://localhost:3000
       - run:
-          name: Run Cypress tests
+          name: Run Cypress E2E Tests
           command: npx cypress run
       - save_cache:
           paths:
