@@ -36,7 +36,7 @@ jobs:
       - save_cache:
           paths:
             - node_modules
-          key: npm-deps-{{ checksum "package-lock.json" }}
+          key: npm-deps-v1-{{ checksum "package-lock.json" }}
   e2e_test: cypress/run
   build_app:
     working_directory: ~/repo
