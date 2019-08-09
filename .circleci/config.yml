@@ -37,7 +37,32 @@ jobs:
           paths:
             - node_modules
           key: npm-deps-v1-{{ checksum "package-lock.json" }}
-  e2e_test: cypress/run
+  e2e_test:
+    docker:
+      - image: cypress/base:10
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - npm-deps-v1-{{ checksum "package-lock.json" }}
+      - run:
+          name: Disable package-lock on CI
+          command: echo -e '\npackage-lock=false' >> .npmrc
+      - run:
+          name: Install Dependencies
+          command: npm install
+      - run:
+          name: Start
+          command: npm start
+          background: true
+          working_directory: ''
+      - run:
+          name: Wait-on http://localhost:3000
+          command: npx wait-on http://localhost:3000
+      - run:
+          name: Run Cypress tests
+          command: "npx cypress run \\\n   \\\n   \\\n  "
+          working_directory: ''
   build_app:
     working_directory: ~/repo
     docker:
@@ -77,20 +102,17 @@ workflows:
   version: 2
   ci:
     jobs:
-      - lint_and_unit_test
-      - e2e_test:
-          start: npm start
-          wait-on: http://localhost:3000
-          cache-key: npm-deps-v1-{{ checksum "package-lock.json" }}
-      - build_app:
-          requires:
-            - lint_and_unit_test
-      - deploy:
-          requires:
-            - lint_and_unit_test
-            - build_app
-            - e2e_test
-          filters:
-            branches:
-              only:
-                - master
+#      - lint_and_unit_test
+      - e2e_test
+#      - build_app:
+#          requires:
+#            - lint_and_unit_test
+#      - deploy:
+#          requires:
+#            - lint_and_unit_test
+#            - build_app
+#            - e2e_test
+#          filters:
+#            branches:
+#              only:
+#                - master
