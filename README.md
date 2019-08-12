@@ -42,14 +42,14 @@ Quotes are the *core* component of our application. There are a few general rule
 
 All quotes are located in [/src/quotes/quotes.js](https://github.com/BuildIt-Poland/daily-routine/blob/master/src/quotes/quotes.js) file.
 
-### Sentences structure and grammar
-
-Typical quote structure: **`PREFIX_QUOTES[ACTION][PAST] + (DEVOPS|FRONTEND|BACKEND)_QUOTES[PAST] + PREFIX_QUOTES[ACTION][FUTURE] + (DEVOPS|FRONTEND|BACKEND)_QUOTES[FUTURE]`**
+### Quotes structure & grammar
 
 There are two types of quotes:
 
 * `PREFIX_QUOTES` – generic beginning of the sentence in *past* or *future* tense, related to *action* each character could take (`BRAG` and `CONFESS`)
 * `(DEVOPS|FRONTEND|BACKEND)_QUOTES` – essence of the quote, full of technical jargon for particular *role* (`DEVOPS`, `FRONTEND` or `BACKEND`); past is usually *past simple* or *present perfect*, while future is in *future simple*
+
+Typical quote structure: **`PREFIX_QUOTES[ACTION][PAST] + (DEVOPS|FRONTEND|BACKEND)_QUOTES[PAST] + PREFIX_QUOTES[ACTION][FUTURE] + (DEVOPS|FRONTEND|BACKEND)_QUOTES[FUTURE]`**
 
 ### Adding new quote
 
