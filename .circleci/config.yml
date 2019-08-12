@@ -10,7 +10,7 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - npm-deps-v4-{{ checksum "package-lock.json" }}
+            - npm-deps-v4-{{ checksum "package-lock.json" }}-X
       - run:
           name: Disable package-lock on CI
           command: echo -e '\npackage-lock=false' >> .npmrc
@@ -35,7 +35,8 @@ jobs:
       - save_cache:
           paths:
             - node_modules
-          key: npm-deps-v4-{{ checksum "package-lock.json" }}
+            - ~/.cache
+          key: npm-deps-v4-{{ checksum "package-lock.json" }}-X
   e2e_test:
     working_directory: ~/repo
     docker:
@@ -44,13 +45,7 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - npm-deps-v4-{{ checksum "package-lock.json" }}
-      - run:
-          name: Disable package-lock on CI
-          command: echo -e '\npackage-lock=false' >> .npmrc
-      - run:
-          name: Install Dependencies
-          command: npm install
+            - npm-deps-v4-{{ checksum "package-lock.json" }}-X
       - run:
           name: Start Local Server
           command: npm start
@@ -61,11 +56,6 @@ jobs:
       - run:
           name: Run Cypress E2E Tests
           command: npx cypress run
-      - save_cache:
-          paths:
-            - node_modules
-            - ~/.cache
-          key: npm-deps-v4-{{ checksum "package-lock.json" }}
   build_app:
     working_directory: ~/repo
     docker:
@@ -74,14 +64,14 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - npm-deps-v4-{{ checksum "package-lock.json" }}
+            - npm-deps-v4-{{ checksum "package-lock.json" }}-X
       - run:
           name: Perform Test Application Build
           command: npm run build
       - save_cache:
           paths:
             - ~/repo/build
-          key: npm-deps-v4-{{ checksum "package-lock.json" }}
+          key: npm-deps-v4-{{ checksum "package-lock.json" }}-X
       - persist_to_workspace:
           root: .
           paths:
