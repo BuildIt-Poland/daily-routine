@@ -106,7 +106,9 @@ workflows:
   ci:
     jobs:
       - lint_and_unit_test
-      - e2e_test
+      - e2e_test:
+          requires:
+            - lint_and_unit_test
       - build_app:
           requires:
             - lint_and_unit_test
