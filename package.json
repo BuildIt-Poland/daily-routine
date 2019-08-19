@@ -35,7 +35,7 @@
     "react-dom": "16.9.0",
     "react-focus-lock": "2.0.4",
     "react-router-dom": "5.0.1",
-    "react-scripts": "3.0.1",
+    "react-scripts": "3.1.1",
     "react-spring": "8.0.27",
     "styled-components": "4.3.2"
   },
@@ -43,9 +43,7 @@
     "@testing-library/jest-dom": "4.0.0",
     "@testing-library/react": "8.0.9",
     "@testing-library/react-hooks": "1.1.0",
-    "check-dependencies": "1.1.0",
     "cypress": "3.4.1",
-    "eslint": "5.16.0",
     "eslint-config-prettier": "6.0.0",
     "eslint-plugin-import": "2.18.2",
     "husky": "2.4.0",
